@@ -1,0 +1,2047 @@
+admin.Abbreviation,Abbreviation,1
+admin.about.AdminDirectoryChanged,Admin Directory Changed:,1
+admin.about.Details,Details,1
+admin.about.FreeShippingRateSelection,Free Shipping Rate Selection:,1
+admin.about.FreeShippingThreshold,Free Shipping Threshold:,1
+admin.about.GatewayInformation,Gateway Information:,1
+admin.about.LicenseInformation,License Information:,1
+admin.about.LocalizationInformation,Localization Information:,1
+admin.about.LocalizationStoreCurrency,Localization Store Currency:,1
+admin.about.LocalizationStoreCurrencyCode,Localization Store Currency Code:,1
+admin.about.OriginCountry,Origin Country:,1
+admin.about.OriginState,Origin State:,1
+admin.about.OriginZip,Origin Zip:,1
+admin.about.ShippingCalculation,Shipping Calculation:,1
+admin.about.ShippingInformation,Shipping Information:,1
+admin.about.SystemInformation,System Information:,1
+admin.AddState,Create State,1
+admin.adhoccharge.OriginalOrderLastFour,(Original Order Last4: {0},1
+admin.adhoccharge.ViewedCardNumber,Viewed card number: {0} while making adhoc charge from order: {1},1
+admin.adjustcharge.AdjustChargeForOrder,Adjust Charge CAPTURE Total For Order:,1
+admin.adjustcharge.AppliesToAuthWarning,This capability ONLY applies to AUTH transactions before CAPTURE!,1
+admin.adjustcharge.CustomerServiceNotes,Customer Service Notes For Order:,1
+admin.adjustcharge.ManualAdjustWarning,Manually adjust the order total before CAPTURING it.,1
+admin.adjustcharge.NewOrderTotal,New Order Total:,1
+admin.affiliate.Create,Create Affiliate,1
+admin.Affiliate.Edit,Edit Affiliate,1
+admin.affiliates.Affiliates,Manage Affiliates,1
+admin.amazontransaction.UpdateTransaction,UPDATE TRANSACTION:,1
+admin.appconfig.AddSettings,Create Setting,1
+admin.appconfig.ConfigGroups,Setting Group:,1
+admin.appconfig.SearchFields,"Search Name, Description, Value",1
+admin.appconfig.SettingUpdated,Setting Updated,1
+admin.atom.integerError,Invalid Number for {0}. Make sure to check MoreStore settings.,1
+admin.atom.moreStoreSettings,MoreStore Settings,1
+admin.avalara.NotEnabled,AvaTax is not enabled. Enable AvaTax by setting the AvalaraTax.Enabled Setting to True.,1
+admin.avalara.TestFailureError,AvaTax connection was not successful. AvaTax returned the following message: {0},1
+admin.avalara.TestFailureException,Connection test failed due to an exception:<br />,1
+admin.avalara.TestFailureGeneric,AvaTax connection was not successful. Please review your configuration.,1
+admin.avalara.TestSuccess,Successfully connected to AvaTax.,1
+admin.BadWord.EnterBadWordBelow,"Enter Bad Word Below, then click Save:",1
+admin.BadWord.EntryRequired,Please enter the bad word to add,1
+admin.BadWord.ExistingBadWord,Bad word entry already exists!,1
+admin.BadWord.OnlyForNewComments,Only For New Comments,1
+admin.braintree.notransactionid,No stored Braintree transaction ID found for this order!,1
+admin.bulkeditprices.bulkclearsalesprice,Bulk Clear Prices,1
+admin.bulkeditprices.bulksavesalesprice,Bulk Set Prices,1
+admin.bulkeditprices.ConfirmBatchClear,Are you sure you want to clear all product sale prices? Only products returned from the search below will be updated.,1
+admin.bulkeditprices.ConfirmBatchUpdate,Are you sure you want to update all product sale prices?  Only products returned from the search below will be updated.,1
+admin.bulkeditprices.integerrequired,Please enter a number.,1
+admin.bulkeditprices.invalidformat,Invalid format,1
+admin.bulkeditprices.pricesupdated,Variants have been updated successfully.,1
+admin.bulkeditprices.rangerequired,A number between 1 and 100 is required.,1
+admin.bulkeditprices.salespricesnotupdated,Variants sale prices were not updated.,1
+admin.bulkeditprices.salespricesupdated,Variant sale prices have been updated successfully.,1
+admin.bulkeditprices.setsalesdiscount,Set Sales Discount:,1
+admin.bulkeditweights.weightsupdated,Weights & Dimensions have been successfully updated.,1
+admin.changeencrypt.ChangeEncryptKey,Would you like to change your Encrypt Key? &nbsp; &nbsp;,1
+admin.changeencrypt.MachineKeyGeneration,Machine Key Generation Method: &nbsp; &nbsp;,1
+admin.changeencrypt.NewDecryptKey,Enter New Decryption Key:,1
+admin.changeencrypt.PrimaryEncryptKey,Primary Encrypt Key:,1
+admin.changeencrypt.PrimaryEncryptKey.Confirm,Confirm Primary Encrypt Key:,1
+admin.changeencrypt.PrimaryEncryptKey.DoesntMatch,Primary encrypt keys do not match.,1
+admin.changeencrypt.PrimaryEncryptKey.Confirm.Required,Primary encrypt key confirmation required.,1
+admin.changeencrypt.SecondaryEncryptKey,Secondary Encrypt Key (Optional):,1
+admin.changeencrypt.SecondaryEncryptKey.Confirm,Confirm Secondary Encrypt Key:,1
+admin.changeencrypt.SecondaryEncryptKey.Confirm.Required,Secondary encrypt key confirmation required.,1
+admin.changeencrypt.SecondaryEncryptKey.DoesntMatch,Secondary encrypt keys do not match.,1
+admin.changeencrypt.NewValidationKey,Enter New Validation Key:,1
+admin.changeencrypt.SetChangeMachineKey,Would you like to set or change your static machine key? &nbsp; &nbsp;,1
+admin.changeencrypt.tooltip.imgMachineKeyGeneration,"If set to auto, a random secure machine key will be generated and inserted into the web.config. If set to manual, you must specify the key.",1
+admin.changeencrypt.UpdateEncryptKey,Save,1
+admin.changeencryptkey.Explanation,"To be PCI compliant, you must create an encrypt key with two people each specifying a different part of the key and then encrypt your web.config. Your primary and secondary encrypt keys combined should be at least eight (8), and at most fifty (50), alphanumeric characters long. The secondary encryption key is optional but required to be PCI compliant.",1
+admin.changeencryptkey.AtLeast,"Your primary and secondary encrypt keys combined should be at least eight (8), and at most fifty (50), alphanumeric characters long.",1
+admin.changeencryptkey.Auto,Auto,1
+admin.changeencryptkey.Backup,"MAKE A FULL BACKUP OF YOUR WEBSITE AND DATABASE BEFORE PROCEEDING.  Otherwise, should this process fail to complete (due to a server crash, improper web.config file permissions, or some other error), permanent data loss or site failure could result.  It is your responsibility to ensure that your site and data are adequately protected.",1
+admin.changeencryptkey.BePatient,"Please be patient, as we may have to update many thousands of records in your database. Do not cancel this operation or navigate away from this page until the process has completed.",1
+admin.changeencryptkey.DecryptKeyAtLeast,Your 'Decryption Key' must be EXACTLY twenty-four (24) alphanumeric characters in length.,1
+admin.changeencryptkey.Done,Done!,1
+admin.changeencryptkey.MachineKeyDescription,"Your Machine Key is made up of two separate keys; a 'Validation Key' and a 'Decryption Key'. The 'Validation Key' must be AT LEAST thirty-two (32), and AT MOST sixty-four (64), alphanumeric characters in length. The `Decryption Key` must be EXACTLY twenty-four (24) alphanumeric characters in length.",1
+admin.changeencryptkey.MachineKeyLogout,(NOTE: Changing your Machine Key will end ALL sessions (both Customer and Admin) - you will be redirected to the login page once this operation executes.),1
+admin.changeencryptkey.Manual,Manual,1
+admin.changeencryptkey.Recommendation,We recommend that you change your encrypt key at least every 90 days.,1
+admin.changeencryptkey.RequireCreditCardStorage,You are using Recurring Billing products that require Credit Card storage in the Database:,1
+admin.changeencryptkey.StoringCreditCards,You Are Storing Credit Cards:,1
+admin.changeencryptkey.ValidationKeyAtLeast,"Your 'Validation Key` must be AT LEAST thirty-two (32), and AT MOST sixty-four (64), alphanumeric characters in length.",1
+admin.common.Active,Active,1
+admin.common.Add,Add,1
+admin.common.AddNew,Create,1
+admin.common.Address,Address,1
+admin.common.affiliate,Affiliate,1
+admin.common.All,All,1
+admin.common.AllLocalesUC,All Locales,1
+admin.common.Amount,Amount,1
+admin.common.AppConfig,Setting,1
+admin.common.AppConfigs,Settings,1
+admin.common.applyfilter,Apply Filter,1
+admin.common.AssemblyInfo,Assembly Information,1
+admin.common.Back,Back,1
+admin.common.BackupDBBeforeImports,"You will have a chance to review the import before accepting it, but it is important to back up your site's database before proceeding.  If possible, test your import document on a separate test site before running it on your live site.",1
+admin.common.breadcrumbseparator,&rsaquo;,1
+admin.common.Cancel,Cancel,1
+admin.common.CapsDisable,DISABLE,1
+admin.common.CapsEnable,ENABLE,1
+admin.common.Category,Category,1
+admin.common.clearfilter,Clear Filter,1
+admin.common.ClickHere,Click Here,1
+admin.common.ClickHereToAcceptImportUC,CLICK HERE TO ACCEPT IMPORT,1
+admin.common.Clickheretodeleteimage,{0}Click here{1} to delete the current image,1
+admin.common.ClickHereToUndoImportUC,CLICK HERE TO UNDO THE IMPORT,1
+admin.common.Clone,Clone,1
+admin.common.Close,Close,1
+admin.common.Color,Color,1
+admin.common.CommaDelimitedFilesPrompt,"Please submit only XML, XLS (Excel), or CSV (comma delimited) files.",1
+admin.common.ConfigurationInfo,Configuration Information,1
+admin.common.ConfirmDeletion,Confirm Delete?,1
+admin.common.ConfirmUnDeletion,Confirm UnDelete?,1
+admin.common.Contact,Contact Info,1
+admin.common.Copy,Copy,1
+admin.common.Cost,Cost,1
+admin.common.CouldNotBeDeleted,Cart Upsell could not be deleted.,1
+admin.common.Count,Count,1
+admin.common.Country,Country,1
+admin.common.CreditCard,Credit Card,1
+admin.common.CstMsg9,This customer has active recurring (auto-ship) orders.,1
+admin.common.Customer,Customer,1
+admin.common.CustomerID,Customer ID,1
+admin.common.CustomerLevel,Customer Level,1
+admin.common.CustomerLevels,Customer Levels,1
+admin.common.ddNone, --NONE--,1
+admin.common.Debug,Debug,1
+admin.common.Delete,Delete,1
+admin.common.Deleted,Deleted,1
+admin.common.DeleteNA,Delete n/a,1
+admin.common.DeleteNAInfoRecurring,This product can not be deleted because it is part of at least one active recurring order.,1
+admin.common.DepthError,"Depth must be in Decimal Format, such as 1 or 12.75<br />",1
+admin.common.DepthInfo,Dimensions (Width x Height x Depth):,1
+admin.common.Description,Description,1
+admin.common.DisplayOrder,Display Order:,1
+admin.common.DisplayOrderHeader,Display Order,1
+admin.common.Distributor,Distributor,1
+admin.common.DownloadFile,Download File,1
+admin.common.E-Mail,E-Mail,1
+admin.common.Edit,Edit,1
+admin.common.editproduct,Edit Product,1
+admin.common.Email,E-Mail,1
+admin.common.EmptyDataTemplate.NoLowStockItemsFound,No Low Stock Items Found,1
+admin.common.EmptyDataTemplate.NoResults,No results found. Please try different filter settings.,1
+admin.common.EmptyDataTemplate.NoShippingMethodsFound,No shipping methods found.,1
+admin.common.EmptyDataTemplate.NoShippingMethodsRealtime,No methods found. Realtime methods are created the first time you run through checkout.,1
+admin.common.EnterDisplayOrder,Enter Display Order,1
+admin.common.ErrDeleteDB,Couldn't delete from database: {0},1
+admin.common.ErrUpdateDB,Couldn't update database: {0},1
+admin.common.ExpiresOn,Expires On,1
+admin.common.Export,Export,1
+admin.common.ExportResults,Export Results,1
+admin.common.ExportToExcel,Export to Excel,1
+admin.common.FieldRequiredToLeft,Required,1
+admin.common.FileContentsWereEmpty,The file contents were empty.,1
+admin.common.FileInfo,File Information,1
+admin.common.FileUploadedPleaseReviewBelow,"File Uploaded, please review below.",1
+admin.common.FillinDescription,Fill in Description,1
+admin.common.FillinEndDate,Fill in End Date,1
+admin.common.FillinExpirationDate,Fill in Expiration Date,1
+admin.common.FillinName,Fill in Name,1
+admin.common.FillinShippedDate,Fill in Shipped Date,1
+admin.common.FillinStartDate,Fill in Start Date,1
+admin.common.FillOutNamePrompt,Please fill out the Name,1
+admin.common.FilterLabel,Filter,1
+admin.common.FirstName,First Name,1
+admin.common.FixedAmount,Fixed Amount,1
+admin.common.Go,Go,1
+admin.common.HasBeenDeleted,has been deleted.,1
+admin.common.HasBeenPublished,has been published,1
+admin.common.HasBeenRestored,has been restored.,1
+admin.common.HasBeenUnPublished,has been unpublished,1
+admin.common.HeightError,"Height must be in Decimal Format, such as 1 or 12.75<br />",1
+admin.common.Icon,Icon,1
+admin.common.ID,ID,1
+admin.common.Import,Import,1
+admin.common.ImportAcceptedUC,IMPORT ACCEPTED,1
+admin.common.ImportExcession,Maximum number of allowed products exceeded. ,1
+admin.common.ImportHasBeenUndone,IMPORT HAS BEEN UNDONE,1
+admin.common.Info,Info.,1
+admin.common.InfoType,Info. Type,1
+admin.common.InsufficientPermissions,INSUFFICIENT PERMISSIONS!,1
+admin.common.IntegerInvalid,Please enter a valid integer,1
+admin.common.InvalidParameters,Invalid Parameters,1
+admin.common.InvalidPercent,Invalid Percent,1
+admin.common.Inventory,Inventory,1
+admin.common.IsDefault,Is Default,1
+admin.common.IsDefaultVariant,Is Default Variant,1
+admin.common.IsShipSeparately,Ship Separately,1
+admin.common.ItemDeleted,Item Deleted,1
+admin.common.ItemUpdated,Item Updated,1
+admin.common.LastName,Last Name,1
+admin.common.Loading,Loading...,1
+admin.common.Locale,Locale,1
+admin.common.Manufacturer,Manufacturer,1
+admin.common.MatchingOrders,Matching Orders,1
+admin.common.MaximumInventory,Maximum Inventory,1
+admin.common.MaximumPrice,Maximum Price,1
+admin.common.MaximumSalePrice,Maximum Sale Price,1
+admin.common.MaximumWeight,Maximum Weight,1
+admin.common.MinimumInventory,Minimum Inventory,1
+admin.common.MinimumPrice,Minimum Price,1
+admin.common.MinimumSalePrice,Minimum Sale Price,1
+admin.common.MinimumWeight,Minimum Weight,1
+admin.common.MSRP,MSRP,1
+admin.common.NA,N/A,1
+admin.common.Name,Name,1
+admin.common.NeedUpgrade,"To add additional entities, please delete some entities or upgrade to a non-Express license.",1
+admin.common.No,No,1
+admin.common.NoDatatoimport,No data to import,1
+admin.common.NoDownloadProductsFound,No Download Products Found,1
+admin.common.None,None,1
+admin.common.NoOrdersFound,No Orders Found!,1
+admin.common.NoProductsFound,No Products Found,1
+admin.common.NothingToPrint,Nothing To Print,1
+admin.common.Notification.UnAuthorized,You are not allowed to view this page because of insufficient authority associated with your account.,1
+admin.common.Off,Off,1
+admin.common.OffUC,OFF,1
+admin.common.On,On,1
+admin.common.OnUC,ON,1
+admin.common.Or,OR,1
+admin.common.Order,Order,1
+admin.common.OrderDate,Order Date,1
+admin.common.OrderNotFoundUC,ORDER NOT FOUND,1
+admin.common.OrderNumber,Order Number,1
+admin.common.OrderOption,Cart Upsell,1
+admin.common.OrderTotal,Order Total,1
+admin.common.PatchInfo,Patch Information,1
+admin.common.PaymentMethodErrorPrompt,Payment method is required,1
+admin.common.Percent,Percent,1
+admin.common.PermissionDeniedUC,PERMISSION DENIED,1
+admin.common.postalcodeerrormessage,Please enter your postal code in the following format:,1
+admin.common.Price,Price,1
+admin.common.Process,Process,1
+admin.common.processing,Processing,1
+admin.common.Product,Product,1
+admin.common.ProductFields,Product Fields,1
+admin.common.ProductID,Product ID,1
+admin.common.ProductName,Product Name,1
+admin.common.Products,Products,1
+admin.common.Published,Published,1
+admin.common.Quantity,Quantity,1
+admin.common.Receipt,Receipt,1
+admin.common.Refund,Refund,1
+admin.common.Reset,Reset,1
+admin.common.ResetCache,Refresh Store,1
+admin.common.ResetPassword,Reset Password,1
+admin.common.ReviewLogStatus,"Please review the log status shown below, and then test your store web site, to double check that the import worked properly",1
+admin.common.ReviewUpload,Review Upload,1
+admin.common.SalePrice,Sale Price,1
+admin.common.Save,Save,1
+admin.common.SaveAndClose,Save and Close,1
+admin.common.Search,Search,1
+admin.common.Section,Department,1
+admin.common.SecurityException,Security Exception. Not Allowed,1
+admin.common.Select,Select,1
+admin.common.Shipping,Shipping,1
+admin.common.ShippingStatus,Shipping Status,1
+admin.common.Size,Size,1
+admin.common.skin,Skin,1
+admin.common.SKU,SKU,1
+admin.common.StoreName,Store Name,1
+admin.common.Submit,Submit,1
+admin.common.TaxRate,Tax Rate,1
+admin.common.topic,Topic,1
+admin.common.TopicPageTitlePrompt,Please enter the topic page title,1
+admin.common.UnableToRetrieveData,Unable to retrieve data.,1
+admin.common.UnnamedVariant,(Unnamed Variant),1
+admin.common.unspecified,Any,1
+admin.common.Update,Update,1
+admin.common.Updated,Updated,1
+admin.common.UpdateFailed,Update Failed,1
+admin.common.Upload,Upload,1
+admin.common.ValidatorMessage,!!,1
+admin.common.ValidDollarAmountPrompt,"Please enter a valid dollar amount, e.g. 10.00 without the leading $ sign!",1
+admin.common.ValidIntegerNumberPrompt,"Please enter a valid integer number, e.g. 250!",1
+admin.common.Value,Value,1
+admin.common.Variant,Variant,1
+admin.common.VariantID,Variant ID,1
+admin.common.VariantName,Variant Name,1
+admin.common.VariantPricePrompt,Please enter the variant price,1
+admin.common.Variants,Variants,1
+admin.common.VariantSKUSuffix,Variant SKU Suffix,1
+admin.common.VersionInfo,Version Information,1
+admin.common.View,View,1
+admin.common.ViewedCreditCard.Success,Viewed Credit Card Success,1
+admin.common.ViewImportLog,{0}View Import Log{1},1
+admin.common.viewrealtimeshippingmethods,View Real-time Shipping Methods,1
+admin.common.viewshippingmethods,View Shipping Methods,1
+admin.common.viewshippingzones,View Shipping Zones,1
+admin.common.Weight,Weight,1
+admin.common.WholeNumber,Value must be a whole number,1
+admin.common.WidthError,"Width must be in Decimal Format, such as 1 or 12.75<br />",1
+admin.common.Yes,Yes,1
+admin.countries.Country,Country:,1
+admin.countries.FillInISO,Fill in ISO!!:,1
+admin.countries.FirstPage,<< First Page,1
+admin.countries.LastPage,Last Page >>,1
+admin.countries.NumericISOCode,Numeric ISO Code:,1
+admin.countries.PostalCodeExample,Postal Code Example:,1
+admin.countries.PostalCodeRegex,Postal Code Regex:,1
+admin.countries.PostalCodeRequired,Postal Code Required:,1
+admin.countries.Published,Published:,1
+admin.countries.ThreeLetterISOCode,3 Letter ISO Code:,1
+admin.countries.tooltip.img2LetterISOCode,ex. US,1
+admin.countries.tooltip.img3LetterISOCode,ex. USA,1
+admin.countries.tooltip.imgCountryName,ex. United States,1
+admin.countries.tooltip.imgNumericISOCode,ex. 840,1
+admin.countries.TwoLetterISOCode,2 Letter ISO Code:,1
+admin.coupons.ExpirationDate,Expiration Date,1
+admin.createorder.confirm,This will end your current admin session and send you to the front end of this site as the chosen customer.  Continue?,1
+admin.createorder.error,There was an error starting impersonation.,1
+admin.creditcards.CardType,Card Type,1
+admin.creditcards.CouldntUpdateDatabase,Couldn't update database: {0} {1},1
+admin.creditcards.createCCType,Create Credit Card Type,1
+admin.creditcards.CreditCardAdded,Credit Card Added,1
+admin.creditcards.CreditCards,Credit Card Types,1
+admin.creditcards.tooltip.imgInfo,ex: Visa,1
+admin.cst_account_process.event.AdminResetCustomerPassword.Success,Admin Reset Customer Password Success,1
+admin.cst_account.ResetPassword,Reset Password:,1
+admin.cst_history.CustomerServiceNotes,Customer Service Notes,1
+admin.cst_history.DownloadListPendingPayment,Download List Pending Payment,1
+admin.cst_history.FullRefundResult,Full Refund Result:,1
+admin.cst_history.NotYetShipped,Not Yet Shipped,1
+admin.cst_history.PartialRefundResult,Partial Refund Result:,1
+admin.cst_history.PaymentStatus,Payment Status,1
+admin.cst_history.PrintableReceipt,Printable Receipt,1
+admin.cst_history.RestartPaymentResult,Restart Payment Result:,1
+admin.cst_history.RetryPaymentResult,Retry Payment Result:,1
+admin.cst_history.StopBillingResult,Stop Billing Result:,1
+admin.cst_recurring.OrderHistory,Order History,1
+admin.currencies.advancedLiveRates,Live Rates (Advanced),1
+admin.currencies.Code,Code,1
+admin.currencies.conversionTest,Conversion Test,1
+admin.currencies.createCurrency,Create Currency,1
+admin.currencies.created,Currency Created,1
+admin.currencies.CurrencyCodeValidity,You MUST set this to a valid currency code or the store will not know to apply the exchange rates in the table. This may or may not be the same as your Localization.StoreCurrency setting.,1
+admin.currencies.CurrencyFeedBaseCurrencyCode,Currency Feed Base Currency Code:,1
+admin.currencies.CurrencyFeedUrl,Currency Feed Url {0}:,1
+admin.currencies.CurrencyFeedXmlPackage,Currency Feed XmlPackage:,1
+admin.currencies.decimalRequired,*Please enter a decimal value,1
+admin.currencies.deleted,Currency Deleted,1
+admin.currencies.DisplayLocale,Display Locale,1
+admin.currencies.DisplaySpec,Display Spec,1
+admin.currencies.EmptyString,"If you will be maintaining your exchange rate table manually, set this setting to an empty string.",1
+admin.currencies.ExchangeRate,Exchange Rate,1
+admin.currencies.GetLiveRates,Get Live Rates,1
+admin.currencies.installed,Installed Currencies,1
+admin.currencies.integerRequired,*Please enter an integer,1
+admin.currencies.invalidLocale,The locale entered is invalid,1
+admin.currencies.LastUpdatedOn,Last Updated On,1
+admin.currencies.Published,Published,1
+admin.currencies.rateMinimum,*Rate must be greater than zero,1
+admin.currencies.required,*Required,1
+admin.currencies.Target,Target:,1
+admin.currencies.testAmount,Test Amount:,1
+admin.currencies.TransformMasterXml,Transform Master Xml,1
+admin.currencies.updated,Currencies Updated,1
+admin.currencies.XmlPackageDoc,XMLPackage Doc (Raw Response From Rates URL),1
+admin.customer.AccountLocked,Account Locked:,1
+admin.customer.Affiliate,Affiliate:,1
+admin.customer.AssignedtoStore,Assigned to Store:,1
+admin.customer.BanIP,Ban This IP Address,1
+admin.customer.CanViewCC,Can View Credit Card Numbers:,1
+admin.customer.ClearFailedTransactions,Reset Failed Transaction Count,1
+admin.customer.ClearSession,Clear Session,1
+admin.customer.ClearSession2,Clear Session,1
+admin.customer.ConfirmBanIP,This will ban the customer's IP Address.  Any user coming from that IP will be denied access to your site.  Are you sure you want to proceed?,1
+admin.customer.ConfirmClearSession,"This will clear the customer's session.  This is generally safe, however if the customer is currently in the process of checking out, they may have to start the checkout process again.  Are you sure you want to proceed?",1
+admin.customer.ConfirmDelete,Are you sure you want to delete this contact?,1
+admin.customer.ConfirmFailedTransaction,This will reset the customer's failed transaction count to zero.  This action cannot be undone.  Are you sure you want to proceed?,1
+admin.customer.confirmManualPassword,This will reset the customer's password to the value you have specified and send them an e-mail with the temporary password. This action cannot be undone. Are you sure you want to proceed?,1
+admin.customer.ConfirmRandomPassword,This will reset the customer's password to a random value and send them an e-mail with the temporary password.  This action cannot be undone.  Are you sure you want to proceed?,1
+admin.customer.ConfirmUnbanIP,This will unban the customer's IP Address.  Any user coming from that IP will be allowed access to your site.  Are you sure you want to proceed?,1
+admin.customer.ConfirmUnDelete,Are you sure you want to un-delete this contact?,1
+admin.customer.CreatedOn,Created On:,1
+admin.customer.CreateNew,Create Contact,1
+admin.customer.CreateOrder,Create Order,1
+admin.customer.CustomerCreated,New contact created successfully.,1
+admin.customer.CustomerCreatedEmailFailed,"The new contact was created, however sending the welcome e-mail failed. You must contact this customer to notify them that their account has been created. Refer to the system log for more information. ",1
+admin.customer.CustomerID,ID:,1
+admin.customer.CustomerIsMarkedAsDeleted,"Customer is marked as deleted. Undelete the customer to edit. <a href=""{0}""> Return</a>",1
+admin.customer.CustomerLevel,Customer Level:,1
+admin.customer.CustomerSession,Clear Customer Session:,1
+admin.customer.CustomerSessionCleared,The customer's session has been cleared,1
+admin.customer.CustomerUpdated,Contact Updated,1
+admin.customer.DeleteTooltip,Delete Contact,1
+admin.customer.EditCustomer,Edit Contact,1
+admin.customer.EditCustomerAddresses,Addresses,1
+admin.customer.Email,E-Mail:,1
+admin.customer.EmailInUse,Error: The specified e-mail address is already in use and your site is set not to allow duplicate e-mail addresses.,1
+admin.customer.EmailValidationFailed,Error: This does not appear to be a valid e-mail address,1
+admin.customer.FailedTransactions,Failed Transactions:,1
+admin.customer.FailedTransactionsCleared,The customer's failed transaction history has been cleared,1
+admin.customer.FirstName,First Name:,1
+admin.customer.IPAddress,IP Address:,1
+admin.customer.IPAddressBanned,The customer's IP Address has been banned from the site,1
+admin.customer.IPAddressUnbanned,The customer's IP Address has been unbanned,1
+admin.customer.IsRegistered,Customer is Registered:,1
+admin.customer.LastName,Last Name:,1
+admin.customer.level.CreateCustomerLevel,Create Customer Level,1
+admin.customer.level.DiscountPercentAmount,Please Enter a Discount Amount,1
+admin.customer.level.DiscountPercentRequired,Please Enter a Discount Percent,1
+admin.customer.level.SaveNewFailed,An Error Occurred While Saving,1
+admin.customer.level.SaveNewSuccessful,New Customer Level Added,1
+admin.customer.level.UpdateFailed,An Error Occurred While Updating,1
+admin.customer.level.UpdateSuccessful,Customer Level Updated,1
+admin.customer.LocaleSetting,Locale Setting,1
+admin.customer.ManuallySetPassword,Manually Set Password,1
+admin.customer.Notes,Notes:,1
+admin.customer.OKToEmail,OK To e-mail:,1
+admin.customer.Over13,Over 13:,1
+admin.customer.Password,*Password:,1
+admin.customer.passwordResetEmailFailed,"Password was reset, however the e-mail could not be sent. You will need to contact the customer to provide their new password. Refer to the system log for more information.",1
+admin.customer.passwordResetError,Error: The password could not be reset.  See the system log for more information.,1
+admin.customer.passwordResetSuccessful,Password was reset successfully and the customer has been e-mailed the new password.,1
+admin.customer.PasswordValidationFailed,Error: Password must be at least 5 characters long,1
+admin.customer.Phone,Phone:,1
+admin.customer.PrimaryBillingAddress,Primary Billing Address,1
+admin.customer.PrimaryShippingAddress,Primary Shipping Address,1
+admin.customer.ResetPassword,Reset Password:,1
+admin.customer.ResetToRandomPassword,Reset To Random Password,1
+admin.customer.UnBanIP,Unban This IP Address,1
+admin.customer.UnDeleteTooltip,Un-Delete Contact,1
+admin.customer.VATRegistrationID,VAT Registration ID:,1
+admin.customer.VATValidationFailed,Error: This does not appear to be a valid VAT Registration ID,1
+admin.customerlevel.AddToLevel,Add to Level,1
+admin.customerlevel.AlreadyExistsInLevel,Customer Already Belongs to Customer Level,1
+admin.customerlevel.CustomerAdded,Customer Added to Customer Level,1
+admin.customerlevel.EnterCustomerInfo,Enter CustomerID or e-mail to add to level,1
+admin.customerlevel.IdOrEmailRequired,Customer ID or e-mail is Required,1
+admin.customerlevel.NotInDatabase,Customer does not Exist or has been Deleted,1
+admin.customerlevel.RemovedFromLevel,Customer has been Removed from Level,1
+admin.customerlevel.RemoveFromLevel,Remove from Level,1
+admin.CustomerLevelgrid.UnDeleted,Has Been Un-Deleted,1
+admin.customerlevels.CustomerLevelId,Customer Level ID,1
+admin.customerlevels.DeleteCustomerLevel,Are you sure you want to delete Customer Level:,1
+admin.customerlevels.Name,Customer Level Name,1
+admin.customerlevels.ViewCustomerLevel,View Customers Of This Level,1
+admin.dashboard.AcceptPayPal,Accept PayPal,1
+admin.dashboard.ActivePromotions,Active Promotions,1
+admin.dashboard.CompletedOrders,Completed Orders,1
+admin.dashboard.Contacts,Contacts,1
+admin.dashboard.Customers,Customers,1
+admin.dashboard.header,Dashboard,1
+admin.dashboard.News,Hints and Tips,1
+admin.dashboard.PublishedProducts,Published Products,1
+admin.dashboard.QuickLook,Quick Look,1
+admin.dashboard.Version,Version,1
+admin.default.auditsummary,"You have {0} security issue(s) and {1} configuration issue(s) to address.  Click <a href=""about.aspx"">here</a> to find out more.",1
+admin.default.CachingIs,Caching Is:,1
+admin.default.CardinalEnabled,Cardinal Enabled:,1
+admin.default.ChangeEncryptKey,Time To Change Your Encrypt Key!,1
+admin.default.CommonLinks,Common Links,1
+admin.default.CurrentServerDateTime,Current Server Date/Time:,1
+admin.default.CustomerLocaleSetting,Customer Locale Setting:,1
+admin.default.ExecutionMode,Execution Mode:,1
+admin.default.GatewayMode,Gateway Mode:,1
+admin.default.IsSecureConnection,Is Secure Connection:,1
+admin.default.LatestOrders,Latest Orders,1
+admin.default.LatestOrdersCustomer,Customer,1
+admin.default.LatestOrdersDate,Date,1
+admin.default.LatestOrdersOrder,Order,1
+admin.default.LatestOrdersShipping,Shipping,1
+admin.default.LatestOrdersTotal,Total,1
+admin.default.MicroPayEnabled,MicroPay Enabled:,1
+admin.default.OnLiveServer,On Live Server:,1
+admin.default.PaymentGateway,Payment Gateway:,1
+admin.default.PaymentMethods,Payment Methods:,1
+admin.default.PrimaryStoreCurrency,Primary Store Currency:,1
+admin.default.PrimaryStoreLocaleSetting,Primary Store Locale Setting:,1
+admin.default.RevenueHeader,Revenue,1
+admin.default.SecurityAudit,Security & E-commerce Audit,1
+admin.default.SQLLocaleSetting,SQL Locale Setting:,1
+admin.default.StoreCreditCards,Store Credit Cards:,1
+admin.default.SystemInformation,System Information,1
+admin.default.TopProductsHeader,Top 10 Products by Sales,1
+admin.default.TransactionMode,Transaction Mode:,1
+admin.default.TrustLevel,Trust Level:,1
+admin.default.UseSSL,Use SSL:,1
+admin.default.UsingGatewayRecurringBilling,Using Gateway Recurring Billing:,1
+admin.default.Version,Version (Code/DB):,1
+admin.default.ViewManageProducts,View/Manage Products,1
+admin.default.ViewOrders,View Orders,1
+admin.defineextendedprices,Define Extended Prices by Customer Level,1
+admin.displayorder.HeaderTip,"This page enables you to set the display order for Product Groups, which controls the order in which they appear on the front-end of your site. Click Refresh Store when finished.",1
+admin.editaddress.Address1,Address1,1
+admin.editaddress.Address2,Address2,1
+admin.editaddress.City,City,1
+admin.editaddress.Company,Company,1
+admin.editaddress.Country,Country,1
+admin.editaddress.EditAddresses,Edit Addresses,1
+admin.editaddress.Email,E-Mail,1
+admin.editaddress.FirstName,FirstName,1
+admin.editaddress.LastName,LastName,1
+admin.editaddress.MakePrimaryBilling,Make Primary Billing Address,1
+admin.editaddress.MakePrimaryShipping,Make Primary Shipping Address,1
+admin.editaddress.Nickname,NickName,1
+admin.editaddress.Phone,Phone,1
+admin.editaddress.ResidenceType,Residence Type,1
+admin.editaddress.State,State/Province,1
+admin.editaddress.Suite,Suite,1
+admin.editaddress.Zip,Postal Code,1
+admin.editaddressrecurring.CardExpirationMonthNotification,Please specify the Card Expiration Month.,1
+admin.editaddressrecurring.CardExpirationYearNotification,Please specify the Card Expiration Year,1
+admin.editaddressrecurring.CardNameIsRequired,Card Name Is Required.,1
+admin.editaddressrecurring.CardNumberIsRequired,Card Number Is Required.,1
+admin.editaddressrecurring.CardTypeIsRequired,Card Type Is Required.,1
+admin.editAffiliates.Address1,Address1:,1
+admin.editAffiliates.Address2,Address2:,1
+admin.editAffiliates.City,City:,1
+admin.editAffiliates.EnterEmailAddress,Please enter E-Mail Address,1
+admin.editAffiliates.ErrorMessageFirstName,Fill in First Name,1
+admin.editAffiliates.FirstName,First Name,1
+admin.editAffiliates.InvalidEmailFormat,Invalid e-mail format,1
+admin.editAffiliates.InvalidPasswordExpression,"Password validation expression is invalid, please notify site administrator",1
+admin.editAffiliates.InvalidPasswordValidation,Invalid Password Validation Pattern,1
+admin.editAffiliates.LastName,Last Name:,1
+admin.editAffiliates.NickName,Nick Name:,1
+admin.editAffiliates.ParentAffiliate,Parent Affiliate:,1
+admin.editAffiliates.RepeatPassword,Repeat Password:,1
+admin.editAffiliates.TakenEmailAddress,E-mail address has already been used for another affiliate.,1
+admin.editAffiliates.WebSiteDescription,Web Site Description:,1
+admin.editAffiliates.WebSiteInformation,Web Site Information:,1
+admin.editAffiliates.WebSiteName,Web Site Name:,1
+admin.editAffiliates.WebSiteNotification,Enter these fields if the affiliate will be using a web site to link to us.,1
+admin.editAffiliates.WebSiteUrl,Web Site URL:,1
+admin.editAffiliates.Zip,Zip:,1
+admin.editCustomerLevel.AddingCLevel,Adding New Customer Level:,1
+admin.editCustomerLevel.EditingCLevel,Editing Customer Level: {0} (ID={1}),1
+admin.editCustomerLevel.EnterCLevelInfo,Please enter the following information about this Customer Level.,1
+admin.editCustomerLevel.IfYesCustomerCoupon,"if yes, then if the customer enters a valid promotion, that promotion discount will be applied to the ENTIRE ORDER, ON TOP of any level extended prices and level discounts. If no, then these customers are not allowed to enter promotion codes.",1
+admin.editCustomerLevel.IfYesCustomerOrders,"if yes, then all customer orders for this level will have $0 tax charged, regardless of their address.",1
+admin.editCustomerLevel.IfYesDiscountAmount,"if yes, then percentage customer level discounts will be applied ON TOP of level extended prices. If no, then if an extended price exists for a product, that price is used as is.  Amount discounts are not affected by this setting, that discount is always taken at the end.",1
+admin.editCustomerLevel.IfYesFreeShipping,"if yes, then all customer orders for this level will have $0 shipping charges on their order.",1
+admin.editCustomerLevel.IfYesQuantityDiscount,"if yes, then all quantity discount tables (specified elsewhere) are applied on a product by product basis, based on quantity. Discounts are applied after extended price, or level discounted price is applied.",1
+admin.editCustomerLevel.LevelAllowsCouponsOnOrders,Level Allows Promotions On Orders,1
+admin.editCustomerLevel.LevelAllowsQuantityDiscounts,Level Allows Quantity Discounts,1
+admin.editCustomerLevel.LevelDiscountAmount,Level Discount Amount,1
+admin.editCustomerLevel.LevelDiscountExtendedPricing,Level Discount Also Apply To Extended Prices,1
+admin.editCustomerLevel.LevelDiscountPercent,Level Discount Percent,1
+admin.editCustomerLevel.LevelIncludesFreeShipping,Level Includes Free Shipping,1
+admin.editCustomerLevel.LevelNoTaxOnOrders,Level Has No Tax On Orders,1
+admin.editCustomerLevel.Notification,"Enter the name for this level (e.g. Reseller, Wholesaler, Platinum, Gold, Preferred, etc. Short names work best.",1
+admin.editCustomerLevel.NotificationValue,"(Enter 0, or a percentage like 5 or 7.5) if non-zero, this each product price will be discounted by this amount for customers of this level. If Level Discounts also apply to extended prices is also checked, this discount percentage will ALSO be applied to any level specific extended prices. Generally, if you are going to the trouble of setting up extended pricing schemes, this percentage should be 0, and the extended prices should be the actual level price. If you don't want go to all the work of setting up extended prices for each product, this percentage discount is the best way to go to offer reseller/wholsale pricing to certain customers.",1
+admin.editCustomerLevel.NotificationValues,"(Enter 0, or a dollar amount like 2.50 or 10.00) if non-zero, this amount will be subtracted from the entire order total, after all other criteria/discounts etc are applied. It will be unusual to apply this kind of level discount, but you can.",1
+admin.editCustomerLevel.Warning,"WARNING: You can easily define a pricing/level/extended pricing/quantity pricing/promotion scheme that NO ONE could possibly figure out how the actual pricing was computed. Our suggestion is to KEEP IT SIMPLE. If you use Discount Percents for levels, DON'T USE extended pricing, and TURN OFF promotions for the level, etc... If you want to define extended pricing for each product variant, then set ALL level discounts to 0, disallow promotions, etc... AspDotNetStorefront will ALWAYS compute a price for each product and the entire order, but YOU may not be able to explain how the price was arrived at to your customers. KEEP IT SIMPLE!",1
+admin.editextendedprices.CustomerLevel,Customer Level,1
+admin.editextendedprices.ExtendedPrice,Extended Price,1
+admin.editfeed.AutoFTP,Auto FTP:,1
+admin.editfeed.buttonExecuteFeed,Execute Feed,1
+admin.editfeed.FeedName,*Feed Name:,1
+admin.editfeed.FTPFilename,FTP Filename:,1
+admin.editfeed.FTPPassword,FTP Password:,1
+admin.editfeed.FTPPort,FTP Port:,1
+admin.editfeed.FTPServer,FTP Server:,1
+admin.editfeed.FTPUsername,FTP Username:,1
+admin.editfeed.msgEnterFeedName,Please enter the feed name,1
+admin.editfeed.msgPortNumber,The port number must be a value between 1 and 65535,1
+admin.editfeed.msgselectStore,Please select a Store,1
+admin.editfeed.Store,*Store:,1
+admin.editfeed.tooltip.imgFtpFileName,"Include full remote path here if required, as specified by your feed provider manual, e.g. /uploaddirectory/myaccount/feedfilename.txt",1
+admin.editfeed.tooltip.imgFtpPort,The default FTP port is 21,1
+admin.editfeed.tooltip.imgFtpPwd,Leave blank only if the ftp server allows anonymous login,1
+admin.editfeed.tooltip.imgFtpServer,e.g. ftp.feedsrus.com,1
+admin.editfeed.tooltip.imgFtpUserName,Leave blank only if the ftp server allows anonymous login,1
+admin.editfeed.tooltip.imgStoreID,Feeds will be created based on the store selected.,1
+admin.editfeed.XMLPackage,*XmlPackage:,1
+admin.editgiftcard.Action,Action,1
+admin.editgiftcard.Certificate,Certificate,1
+admin.editgiftcard.ClickHere,"To update or view the transaction history for this gift card, or to add or remove funds from this gift card, click",1
+admin.editgiftcard.EmailBody,E-Mail Body,1
+admin.editgiftcard.EmailSubject,E-Mail Subject,1
+admin.editgiftcard.EmailTo,E-Mail To,1
+admin.editgiftcard.EnterEmailPreferences,Please fill out the E-Mail preferences.,1
+admin.editgiftcard.EnterValue,Please enter the initial gift card value.,1
+admin.editgiftcard.ExistingGIftCard,There is already another Gift Card with that Serial Number,1
+admin.editgiftcard.FillSerialNumber,Fill in Serial Number,1
+admin.editgiftcard.GiftCardAdded,Gift Card Added.,1
+admin.editgiftcard.GiftCardDetails,Gift Card Details,1
+admin.editgiftcard.GiftCardType,Gift Card Type,1
+admin.editgiftcard.GiftCardUpdated,Gift Card Updated.,1
+admin.editgiftcard.IfGiftCard,If gift card is,1
+admin.editgiftcard.InitialAmount,Initial Amount,1
+admin.editgiftcard.InvalidEmail,Invalid e-mail,1
+admin.editgiftcard.NACustomer,Customer Name: N/A,1
+admin.editgiftcard.NewGiftCard,New Gift Card,1
+admin.editgiftcard.OriginalOrderNumber,Original Order Number,1
+admin.editgiftcard.Physical,Physical,1
+admin.editgiftcard.Purchaser,E-mail address of purchaser (must already exist),1
+admin.editgiftcard.RemainingBalance,Remaining Balance,1
+admin.editgiftcard.SelectGiftCardType,Select Gift Card Type!,1
+admin.editgiftcard.SelectType,Select Type,1
+admin.editgiftcard.SerialNumber,Serial Number,1
+admin.editgiftcard.tooltip.imgCustomer,Begin to type an existing e-mail and watch for the drop down to select the one you want.,1
+admin.editgiftcard.tooltip.imgEmailBody,The message of the E-Mail,1
+admin.editgiftcard.tooltip.imgEmailName,The subject of the E-Mail,1
+admin.editgiftcard.tooltip.imgEmailTo,The E-Mail address of recipient,1
+admin.editgiftcard.tooltip.imgSerial,"We will auto-generate a unique serial number but you can create your own - keep them unique though, please!",1
+admin.editgiftcard.tooltip.imgType,The type of Gift Card,1
+admin.editnews.AddingNews,Create News Item,1
+admin.editnews.EditingNews,Edit News Item,1
+admin.editnews.ExpirationDate,Expiration Date:,1
+admin.editnews.Headline,Headline:,1
+admin.editnews.NewsCopy,News Copy:,1
+admin.editorderoption.CreateOrderOption,Create Cart Upsell,1
+admin.editorderoption.EditingOrderOption,Editing Cart Upsell: {0} (ID={1}),1
+admin.editproducttype.UpdateSuccessful,Product Type Updated.,1
+admin.editproductvariant.Color,Color,1
+admin.editproductvariant.Colors,Colors,1
+admin.editproductvariant.ColorSizeSummary,Color/Size Summary,1
+admin.editproductvariant.ColorSkuModifier,Color SKU Modifier,1
+admin.editproductvariant.ColorSkuModifiers,Color SKU Modifiers,1
+admin.editproductvariant.DimensionsAllOrNone,Enter all Dimension Fields or None of them,1
+admin.editproductvariant.Size,Size,1
+admin.editproductvariant.Sizes,Sizes,1
+admin.editproductvariant.SizeSkuModifier,Size SKU Modifier,1
+admin.editproductvariant.SizeSkuModifiers,Size SKU Modifiers,1
+admin.editproductvariant.tooltip.ActualCost,"Your cost for this item.  This field is not required and is not used by AspDotNetStorefront, however it is useful if you wish to generate custom profitability reports.",1
+admin.editproductvariant.tooltip.Colors,"If this item has a choice of colors, enter them here as a comma separated list (such as Red,Green,Blue).  If certain colors cost more than others, you can add a price modifier as well using square brackets,  For example, if Red costs $3.00 more than blue, you can enter the colors as Red[3.00],Blue.  If someone selects red, $3.00 will be added to the price.  DO NOT ENTER SPECIAL CHARACTERS SUCH AS AMPERSANDS OR SLASHES INTO COLOR NAMES.",1
+admin.editproductvariant.tooltip.ColorSkuMods,"If this item has colors and the SKU varies by color, enter a comma separated list of the sku modifiers here.  These will be added to the end of the SKU when a customer purchases this item/color combination.  For example, if you sell Red, Green, and Blue shirts, you could enter r,g,b here, and when this item is ordered in red, the sku would be 12345r (where ""r"" was the sku modifier you specified for red).",1
+admin.editproductvariant.tooltip.Condition,This setting is used by certain comparison shopping engines such as GoogleBase to categorize items.,1
+admin.editproductvariant.tooltip.CurrentInventory,Allows you to adjust the inventory on hand for this item.,1
+admin.editproductvariant.tooltip.CustomerEntersPrice,"If set to yes, the customer will be provided with a text box to enter the price they wish to pay for this item.  This is useful in situations where you want to allow customers to purchase gift cards for any amount or give donations through your website.",1
+admin.editproductvariant.tooltip.CustomerEntersPricePrompt,"The message the customer will be shown asking what price they would like to pay.  For example, if this item is a donation, you might enter ""Enter the amount you would like to donate"" here.",1
+admin.editproductvariant.tooltip.Dimensions,"Enter the WIDTH x HEIGHT x DEPTH as a decimal in INCHES in the format 0.00 x 0.00 x 0.00   For example, 6.5 x 10.0 x 12.75",1
+admin.editproductvariant.tooltip.Download,"If set to Yes, this item will be treated as a downloadable item. After purchase, customers will (depending on your configuration settings) be either manually or automatically sent an e-mail containing a download link for this product.",1
+admin.editproductvariant.tooltip.DownloadLocation,"The RELATIVE path to your downloadable file.  For example, if the download is located at http://www.yoursite.come/download/MyDownload.exe, then you would enter ""download/MyDownload.exe"" here.  If you choose to place the file in your site's download directory, and your site's OrderDownloads folder is writable, the file will be copied to a unique location in the OrderDownloads directory before the link is sent, helping to prevent customers from guessing download links.",1
+admin.editproductvariant.tooltip.FreeShipping,"Indicate whether shipping for this item has a cost, is free, or is not required.",1
+admin.editproductvariant.tooltip.ImageFilenameOverride,"If you wish to manually upload images for your product using your own naming convention, enter the filename you wish this item to use in the preceding field.  This image must then be MANUALLY uploaded to your site's images/ProductVariant/{image size} directory.  The filename should not contain a path, but should be entered as ""imagename.gif""",1
+admin.editproductvariant.tooltip.IsTaxable,"Determines whether or not tax will be calculated on this item.  If set to false, this item's price will be excluded from any tax computations.",1
+admin.editproductvariant.tooltip.MinimumQty,"Enter the minimum quantity of this item the customer is allowed to purchase.  They will not be allowed to purchase less than this amount.  If left blank, the customer may purchase any quantity.",1
+admin.editproductvariant.tooltip.MSRP,The Manufacturer's Suggested Retail Price for this item.  THIS VALUE IS NOT SHOWN TO THE CUSTOMER.,1
+admin.editproductvariant.tooltip.Price,Enter the normal selling price for this item.  This is the price that customers will pay if the item is not on sale and the customer does not receive any special discounts (such as promotions or customer level discounts).,1
+admin.editproductvariant.tooltip.restrictedqty,"Enter a comma separated list of quantities you want this item to be restricted to.  For example, if you enter 10,20 the customer will only have a choice of purchasing 10 or 20 of these items at a time.  Instead of a quantity textbox that allows them to enter any quantity, they will receive a dropdown list of the values you enter here.  If left blank, the customer will be able to choose whatever quantity they desire.",1
+admin.editproductvariant.tooltip.SalePrice,"If you wish this item to be show as ""On Sale"" enter the sale price here.  If left blank, customers will pay the normal price.",1
+admin.editproductvariant.tooltip.ShippingCost,"When using Per Item shipping, this determines the cost the customer will be charged for shipping on this item.",1
+admin.editproductvariant.tooltip.ShipSeparately,"If set to true, and when using realtime shipping, this option will send this item, include weight and dimensions, to the shipping provider as a separate package.  This is useful if you have large/bulky items that cannot ship in the same package as other items.",1
+admin.editproductvariant.tooltip.Sizes,"If this item has a choice of size, enter them here as a comma separated list (such as Small,Medium,Large,XLarge).  If certain sizes cost more than others, you can add a price modifier as well using square brackets,  For example, if XLarge costs $3.00 more than other sizes, you can enter the sizes as Small,Medium,Large,XLarge[3.00].  If someone selects XLarge, $3.00 will be added to the price.  DO NOT ENTER SPECIAL CHARACTERS SUCH AS AMPERSANDS OR SLASHES INTO SIZES.",1
+admin.editproductvariant.tooltip.SizeSkuMods,"If this item has sizes and the SKU varies by size, enter a comma separated list of the sku modifiers here.  These will be added to the end of the SKU when a customer purchases this item/size combination.  For example, if you sell Small, Medium, and Large shirts, you could enter s,m,l here, and when this item is ordered in medium, the sku would be 12345m (where ""m"" was the sku modifier you specified for medium).",1
+admin.editproductvariant.tooltip.Weight,"Enter the product weight as a decimal (0.00).  While this field defaults to POUNDS, you can change the weight unit in the Localization.WeightUnits setting.  Before changing this however, ensure your shipping carrier supports being sent weights using your chosen weight unit.",1
+admin.editquantitydiscount.AddNewQuantityDiscount,Create Quantity Discount,1
+admin.editquantitydiscount.EditingQuantityDiscounts,Editing Quantity Discount,1
+admin.editquantitydiscount.EnterQuantityDiscount,Please enter the quantity discount table name.,1
+admin.editquantitydiscounttable.EnterInteger,Please enter an integer!,1
+admin.editsalesprompt.CreateSalesPrompt,Create Sales Prompt,1
+admin.editshippingmethod.MappedStores,Mapped Stores,1
+admin.editshippingmethod.Sample,"(e.g. fedex_ground.frp, no leading slash, with extension)",1
+admin.editshippingzone.AddNewShippingZone,Create Shipping Zone,1
+admin.editshippingzone.EditingShippingZone,Editing Shipping Zone,1
+admin.editshippingzone.EnterTarget,"Enter the target zip code prefixes to match against, e.g. 850, 851, 004-005, etc.<br/>Use a comma separated list of 3 digit prefixes.<br/>Ranges can be entered as NNN-MMM.",1
+admin.editshippingzone.EnterZipCodes,One of more of the zip codes is not in valid format. Please enter the zip code(s) in the format: ##### or #####-####,1
+admin.editshippingzone.ManageShippingZones,Manage Shipping Zones,1
+admin.editshippingzone.ZipCodes,Zip Codes,1
+admin.editshippingzone.ZoneName,Zone Name,1
+admin.EditState,Editing State,1
+admin.editstringresource.Edit,Edit Prompt,1
+admin.editstringresource.New,Create Prompt,1
+admin.edittopic.TopicName,Topic Name,1
+admin.entity.IdSearch,ID,1
+admin.entity.invalidRelationship.Message,Invalid Product Group relationships detected.,1
+admin.entity.invalidRelationship.Details,"ProductID {0} is mapped to a Product Group that, through one or more parent/child Product Group mappings, is creating a circular reference (For example: ProdGroup A -> is child of -> ProdGroup B -> is child of -> ProdGroup A).",1
+admin.entity.NameSearch,Name,1
+admin.entity.Products,Products,1
+admin.entity.SelectEntityType,Select Entity Type:,1
+admin.entityBulkDownloadFiles.DownloadUpdate,Save Downloads,1
+admin.entityBulkPrices.Format,(in format x.xx),1
+admin.entityBulkPrices.PricesUpdate,Save Prices,1
+admin.entityBulkSE.Patient,Please be patient. This will take a minute to validate all SE fields!,1
+admin.entityBulkSE.SearchEngineUpdate,Search Engine Update,1
+admin.entityBulkShipping.ShippingUpdate,Save Shipping,1
+admin.entityEdit.Address2,Address 2,1
+admin.entityEdit.AltText,Alt Text,1
+admin.entityEdit.AptSuite,Apt/Suite #,1
+admin.entityEdit.BulkProducts,Bulk Products,1
+admin.entityEdit.City,City,1
+admin.entityEdit.Columns,Number of products across the page,1
+admin.entityEdit.DisplayFormatXmlPackage,Page Layout,1
+admin.entityEdit.ExtensionData,Custom Field,1
+admin.entityEdit.Fax,Fax,1
+admin.entityEdit.ImageFilenameOverride,Image Filename Override,1
+admin.entityEdit.Keywords,Keywords,1
+admin.entityEdit.Large,Large,1
+admin.entityEdit.Medium,Medium,1
+admin.entityEdit.OrderProductsByLooks,Order Products By # Of Views,1
+admin.entityEdit.PageSize,Page Size,1
+admin.entityEdit.PageTitle,Page Title,1
+admin.entityEdit.Parent,Parent,1
+admin.entityEdit.QuantityDiscountTable,Quantity Discount Table,1
+admin.entityEdit.ShowProductBrowser,Show in Product Browser,1
+admin.entityEdit.State,State,1
+admin.entityedit.tooltip.ColumnWidth,"For display formats that use a grid, this setting determins how many columns are created before creating a new row.  To avoid breaking your skin, we recommend no more than 3 to 4 for this setting, and if you use large icon pictures, you may have to set this lower.",1
+admin.entityedit.tooltip.Fax,Your distributor's Fax number,1
+admin.entityedit.tooltip.PageSize,"Determines how many sub-entities or products are displayed on a page when browsing this entity.  If there are more items in the entity than the page size, a page number block will be created so customers can navigate to additional pages.",1
+admin.entityedit.tooltip.Phone,Your distributor's phone number,1
+admin.entityedit.tooltip.Website,The url for your distributor's website,1
+admin.entityedit.tooltip.XMLPackage,AspDotNetStorefront allows you to run many different templates for your product group & sub-group set. Choose the template that best suits your needs for each product group.,1
+admin.entityEdit.UseSkinID,Use Skin ID,1
+admin.entityEdit.UseSkinTemplate,Use Skin Template,1
+admin.entityEdit.Website,Website,1
+admin.entityEdit.ZipCode,Zip Code,1
+admin.entityeditproduct.ToolTip.CallToOrder,"If set to true, instead of being show a form to add this item to their cart, customers will see a prompt stating ""Call to Order.""",1
+admin.entityeditproduct.ToolTip.ColumnWidth,"When using an XML Package that formats variants as a grid, this setting determines how many columns of variants are created before stating a new row.",1
+admin.entityeditproduct.ToolTip.Featured,Whether or not to display this product as a featured item on your home page,1
+admin.entityeditproduct.ToolTip.HidePriceUntilCart,"If set to true, the price of the item will not be shown on the product page.  Customers will have to add the item to their cart to see the price.",1
+admin.entityeditproduct.ToolTip.RelatedProducts,"Enter a comma separated list of Product IDs that you wish to be shown in the ""related products"" section on the product page, or leave blank for no related products.  A related product might also be referred to as a substitute product.",1
+admin.entityeditproduct.ToolTip.RequiresProducts,"If this item MUST be purchased in conjunction with another item(s), enter the Product ID(s) of the required item(s) here as a comma separated list.  If a customer adds this item to the cart and the other items are not in the cart as well, they will automatically be added.",1
+admin.entityeditproduct.ToolTip.RequiresTextField,"If set to true, a text box is shown on the product page that must be filled in before the item can be added to the cart.  This is useful for products that require personalization such as engraving.",1
+admin.entityeditproduct.ToolTip.ShowBuyButton,"If disabled, customers will not be able to add this item to the cart as there will be no Add to Cart button.  This is useful if you are creating content pages.",1
+admin.entityeditproduct.ToolTip.TrackInventoryBySizeAndColor,"Setting this to true will enable you to enter inventory levels for every size/color combination this product's variants are available in. NOTE: If you have this on for a product, it is important to clear out the Inventory for the size/color combinations before turning this setting back off.",1
+admin.entityeditproduct.ToolTip.UpsellProductDiscount,"Enter a value to be used as the discount percentage, or leave blank for no discount.  If a value is entered here, if a customer chooses to add the upsell item(s) to the cart at the SAME TIME that they add the main product, the discount will be applied to the upsell items.",1
+admin.entityeditproduct.ToolTip.UpsellProducts,Upsell products (sometimes referred to as accessories or add-on products) can be entered here as a comma separated list of Product IDs.  Customers will have the option of checking a checkbox to add these items to the cart at the same time they add they add the main product they are viewing.,1
+admin.entityeditproduct.ToolTip.Weight,"The product's weight, which defaults to pounds.  Enter as a decimal (example: 12.5).  You can change the default weight unit using the Localization.WeightUnits setting.  If a weight is set on a product variant, it will override this setting.",1
+admin.entityeditproduct.ToolTip.XMLPackage,AspDotNetStorefront allows you to run many different templates for your product/variant set. Choose the template that best suits your needs for each product.,1
+admin.entitygrid.DeleteConfirm,Are you sure you want to delete this?,1
+admin.entitygrid.DeleteTooltip,Delete,1
+admin.entitygrid.NameTooltip,Click Here to Edit Item,1
+admin.entitygrid.publish,Publish,1
+admin.entitygrid.PublishTooltip,Publish,1
+admin.entitygrid.UnDeleteConfirm,Are you sure you want to undelete this?,1
+admin.entitygrid.UnDeleteTooltip,Un-Delete,1
+admin.entitygrid.unpublish,Unpublish,1
+admin.entitygrid.UnpublishTooltip,Un-Publish,1
+admin.entityProducts.Clone,Clone,1
+admin.entityProductVariantsOverview.VariantCloned,Variant Cloned.  The new variant is set to UNPUBLISHED.,1
+admin.eventhandler.CalloutUrl,Callout URL,1
+admin.eventhandler.DuplicateEventHandler,There is already another EventHandler parameter with that name!,1
+admin.eventhandler.EnterEventHandler,Please enter the EventHandler Name to add.,1
+admin.eventhandler.EventHandlerName,Event Handler Name,1
+admin.eventhandler.EventName,Event Name,1
+admin.eventhandler.SelectPackage,Select a Package,1
+admin.eventhandler.XMLpackage,XML Package,1
+admin.exportProductPricing.CSV,Comma Delimited (csv),1
+admin.exportProductPricing.Excel,Excel (xls),1
+admin.exportProductPricing.ExportPrices,Export Prices,1
+admin.exportProductPricing.FilterCategory,Filter By Category,1
+admin.exportProductPricing.FilterDistributor,Filter By Distributor,1
+admin.exportProductPricing.FilterManufacturer,Filter By Manufacturer,1
+admin.exportProductPricing.FilterSection,Filter By Department,1
+admin.exportProductPricing.SelectFormat,Select Export Format,1
+admin.exportProductPricing.XML,XML,1
+admin.feeds.AddNewFeed,Create Feed,1
+admin.feeds.Delete,Delete,1
+admin.feeds.DeleteFeed,Delete Feed,1
+admin.feeds.Edit,Edit,1
+admin.feeds.EditFeed,Edit Feed,1
+admin.feeds.Execute,Execute,1
+admin.feeds.ExecuteFeed,Execute Feed,1
+admin.feeds.FeedName,Feed Name,1
+admin.feeds.header,Please refer to your feed provider manual for the correct values for all fields entered.,1
+admin.feeds.msgconfirmdeletion,Are you sure you want to delete this feed?,1
+admin.feeds.ProductFeeds,Product Feeds,1
+admin.feeds.StoreName,Store Name,1
+admin.feeds.XMLPackage,XMLPackage,1
+admin.gallery.DeleteImage,Delete Image,1
+admin.giftcard.CannotUpdate,Couldn't update database:,1
+admin.giftcard.CreateGiftCard,Create Gift Card,1
+admin.giftcard.Disable,Are you sure you want to disable this Gift Card?,1
+admin.giftcard.Disabled,Gift Card Was Disabled,1
+admin.giftcard.Enable,Are you sure you want to enable this Gift Card?,1
+admin.giftcard.Enabled,Gift Card Was Enabled,1
+admin.giftcard.GiftCards,Manage Gift Cards,1
+admin.giftcards.Action,Action,1
+admin.giftcards.CreatedOn,Created On,1
+admin.giftcards.InitialValue,Initial Value,1
+admin.giftcards.RemainingAmount,Remaining Amount,1
+admin.giftcards.SerialHeader,<span style='white-space: nowrap;'>Serial Number</span>,1
+admin.giftcards.Usage,USAGE,1
+admin.giftcards.UsageHistory,Usage History,1
+admin.giftcardusage.ActivityReason,Activity Reason,1
+admin.giftcardusage.AddFunds,Add Funds,1
+admin.giftcardusage.AddUsage,Add Usage,1
+admin.giftcardusage.Adjust,Adjust Gift Card:,1
+admin.giftcardusage.Amount,By Amount:,1
+admin.giftcardusage.Balance,Current Balance:,1
+admin.giftcardusage.ByCustomer,By Customer,1
+admin.giftcardusage.DecrementFunds,Decrement Funds,1
+admin.giftcardusage.FundsAdded,The gift card balance has been increased,1
+admin.giftcardusage.FundsDecremented,The gift card balance has been decremented.,1
+admin.giftcardusage.giftcardnotfound,The gift card id can not be found.,1
+admin.giftcardusage.OrderNumber,Order #,1
+admin.giftcardusage.RecordDate,Record Date,1
+admin.giftcardusage.Serial,Serial Number:,1
+admin.giftcardusage.Usage,Gift Card Usage,1
+admin.globalconfig.DoesNotExist,Attempted to access non-existent GlobalConfig: {0},1
+admin.importProductPricing.FileToImport,Select a file to Import,1
+admin.importProductPricing.ImportOK,Prices Imported OK.,1
+admin.importProductPricing.InvalidFileType,Invalid File Type Submitted. {0},1
+admin.importProductPricing.NothingToImport,There is nothing to import.,1
+admin.importProductsFromExcel.ExcelInfo,Choose the local Excel file that you want to upload. This file must conform to our Excel Product Import File Format Specifications defined in the manual.<br />This file should be on your own computer.,1
+admin.importProductsFromExcel.UploadError,File Upload Error: <br />{0},1
+admin.importProductsFromXML.UploadError,Please select a File to Upload,1
+admin.importProductsFromXML.XMLInfo,Choose the local XML file that you want to upload. This file must conform to our XML Product Import File Format Specifications defined in the manual.<br />This file should be on your own computer.,1
+admin.importstringresourcefile1.ReloadReview,Reload Review,1
+admin.importstringresourcefile1.UploadError,Couldn't upload file: {0},1
+admin.importstringresourcefile1.UploadSuccessful,Upload successful. Click here to preview the recent upload information.,1
+admin.importstringresourcefile2.Back,Back to Prompts,1
+admin.importstringresourcefile2.BeginImport,Begin Import Processing,1
+admin.importstringresourcefile2.BeginReload,Begin Reload Processing,1
+admin.importstringresourcefile2.CancelReload,Cancel Reload,1
+admin.importstringresourcefile2.Done,Done,1
+admin.importstringresourcefile2.ErrorProcessingStrings,Error Processing Prompts: {0},1
+admin.importstringresourcefile2.Good,<b>If the preview data below looks good:</b>,1
+admin.importstringresourcefile2.NotImported,Not Imported (was already modified),1
+admin.importstringresourcefile2.NotImportedDuplicate,Not Imported (existing duplicate),1
+admin.importstringresourcefile2.ProcessingFile,Processing File: {0},1
+admin.importstringresourcefile2.ReloadLocale,Reloading all prompts for locale: {0},1
+admin.importstringresourcefile2.Row,Row,1
+admin.importstringresourcefile2.Status,Status,1
+admin.importstringresourcefile2.StoreID,Store ID,1
+admin.importstringresourcefile2.StringValue,Prompt Value,1
+admin.InvalidRequest.aspx.1,An error was encountered.  Please click the image above for a detailed error report.,1
+admin.InventoryControl.DisplayOutOfStockProducts,Display in-stock/out-of-stock labels,1
+admin.InventoryControl.EnterGreaterThan0,Please input number greater than 0 to enable this setting.,1
+admin.InventoryControl.EntityInStockMessage,Label text when product is in stock,1
+admin.InventoryControl.EntityOutOfStockMessage,Label text when product is below inventory threshold,1
+admin.InventoryControl.Header.BottomSection,Kit Inventory Options,1
+admin.InventoryControl.Header.BottomSection.Subtext,Use these settings to turn on out-of-stock messaging  for variants when they are used as kit items.  Note that 'out-of-stock' messages are not shown for kit items unless they are also variants.<br /><br />You can use these options to specify whether or not an 'out-of-stock' kit item can be ordered.,1
+admin.InventoryControl.Header.MiddleSection,In-stock / Out-of-stock labels,1
+admin.InventoryControl.Header.MiddleSection.EntityPages,"Labels on Product Listing pages (e.g. Category pages, etc.)",1
+admin.InventoryControl.Header.MiddleSection.ProductPages,Labels on Product Detail pages,1
+admin.InventoryControl.Header.MiddleSection.Subtext,In-stock / Out-of-stock labels appear only if the Behavior settings (above) allow products to appear on the page.,1
+admin.InventoryControl.Header.TopSection,Behavior Based on Inventory levels,1
+admin.InventoryControl.HideProductsWithLessThanThisInventoryLevel,Hide products with less than this inventory level,1
+admin.InventoryControl.InputNumber,Please input number,1
+admin.InventoryControl.KitItemOutOfStockSellAnyway,"'Out of stock but buy it anyway' label text",1
+admin.InventoryControl.Kits.AllowSaleOfOutOfStock,"Allow purchase, even when out-of-stock",1
+admin.InventoryControl.Kits.ShowOutOfStock,Show 'out-of-stock' labels,1
+admin.InventoryControl.LimitCartInQuantityInHand,Limit cart to quantity on hand,1
+admin.InventoryControl.OutOfStockThreshold,Out-of-stock label display threshold,1
+admin.InventoryControl.ProductInStockMessage,Label text when product is in stock,1
+admin.InventoryControl.ProductOutOfStockMessage,Label text when product is below inventory threshold,1
+admin.InventoryControl.ProductPageOutOfStockRedirect,"Redirect to 'Page Not Found' if product is hidden",1
+admin.InventoryControl.SendLowStockWarningsThreshold,What is your admin alert level (low stock warning)? (this is likely your re-order level),1
+admin.InventoryControl.ShowInEntityPages,Show in-stock / out-of-stock labels,1
+admin.InventoryControl.ShowInProductPages,Show in-stock / out-of-stock labels,1
+admin.InventoryControl.Tooltip.DisplayOutOfStockProducts,"If enabled, 'Out-of-Stock' or 'In-stock' labels appear depending on product inventory levels. If the inventory is less than the 'Out-of-stock Label Display Threshold' value, 'Out-of-Stock' labels appear; otherwise, 'In-stock" labels will appear.",1
+admin.InventoryControl.Tooltip.EntityInStockMessage,The label text which appears on product listing pages when a product's quantity is greater than the 'Out-of-Stock label display threshold.',1
+admin.InventoryControl.Tooltip.EntityOutOfStockMessage,The label text which appears on product pages when a product's quantity is less than the 'Out-of-stock label display threshold.',1
+admin.InventoryControl.Tooltip.HideProductsWithLessThanThisInventoryLevel,"Hides from all pages products whose inventory falls *below* the value you set here. For example, to hide all products with inventory of 5, set this value to 6. Set this value to -1 to show all products regardless of inventory level.",1
+admin.InventoryControl.Tooltip.KitAllowOutOfStockPurchase,"If enabled, allows shoppers to purchase a kit item even when the kit item is out of stock.",1
+admin.InventoryControl.Tooltip.KitItemOutOfStockSellAnyway,Label text which appears when you allow users to buy a kit item that is out of stock.,1
+admin.InventoryControl.Tooltip.KitShowOutOfStock,"If enabled, 'Out-of-Stock' or 'In-stock' labels appear on product kit pages.",1
+admin.InventoryControl.Tooltip.LimitCartInQuantityInHand,"If enabled, add-to-cart buttons display a warning if shoppers add quantity greater than inventory on-hand. Further, the quantity value reverts to quantity on hand, making it impossible for shoppers to add a greater quantity than you may have on hand. Disabling this setting turns off these limitations, enabling shoppers to order greater quantities than you may have on hand.",1
+admin.InventoryControl.Tooltip.OutOfStockThreshold,The quantity *below* which an item is considered out-of-stock. Has no affect if 'Display in-stock/out-of-stock labels' is disabled.,1
+admin.InventoryControl.Tooltip.ProductInStockMessage,The label text which appears on product pages when a product's quantity is greater than the 'Out-of-Stock label display threshold.',1
+admin.InventoryControl.Tooltip.ProductOutOfStockMessage,The label text which appears on product pages when a product's quantity is less than the 'Out-of-stock label display threshold.',1
+admin.InventoryControl.Tooltip.ProductPageOutOfStockRedirect,"If enabled, instead of showing an 'Out of Stock' message, 'hidden' product pages will redirect to a 404 'page not found' error pages. Be aware that search engines remove from their records such 404 pages, which will negatively affect search engine rankings. Enable this only for sites selling one-off or limited run products.",1
+admin.InventoryControl.Tooltip.ShowInEntityPages,"If enabled, 'Out-of-Stock' or 'In-stock' labels appear on product listing pages (entities) such as category pages. Has no affect if 'Display in-stock/out-of-stock labels' is disabled.",1
+admin.InventoryControl.Tooltip.ShowInProductPages,"If enabled, 'Out-of-Stock' or 'In-stock' labels appear depending on product inventory levels. If the inventory is less than the 'Out-of-stock Label Display Threshold' value, 'Out-of-Stock' labels appear; otherwise, 'In-stock' labels will appear.",1
+admin.label.CustomerID,Customer ID,1
+admin.label.CustomerName,Customer Name,1
+admin.locales.CreateLocale,Create Locale,1
+admin.locales.ManageLocales,Manage Locales,1
+admin.localesettings.DefaultCurrency,Default Currency,1
+admin.localesettings.DisplayOrder,Display Order,1
+admin.localesettings.EditUpload,Edit/Upload,1
+admin.localesettings.ExistingLocale,There is already another Locale with that name.,1
+admin.localesettings.LocaleAdded,Locale Added,1
+admin.localesettings.LocaleExists,Locale already exists,1
+admin.localesettings.Sample,"(e.g. en-US, must be valid asp.net locale setting)",1
+admin.localesettings.SelectCurrency,Select Currency,1
+admin.LowStockHeader,The following products are below the inventory level you specified in the SendLowStockWarningsThreshold setting and may need to be reordered!,1
+admin.LowStockWarningBody,"After a recent purchase, your store is running low on these products:",1
+admin.LowStockWarningTitle,Low Stock Warning,1
+admin.mailingtest.ConfigSavedSuccessfully,All settings saved successfully.,1
+admin.mailingtest.EnterAdminEmail,Please enter the administrative e-mail address to which new order notifications are sent.,1
+admin.mailingtest.EnterAdminEmailFrom,Please enter the administrative e-mail address from which new order notifications are sent.,1
+admin.mailingtest.EnterDNS,Please enter the DNS for your Mail Server,1
+admin.mailingtest.EnterEmail,Please enter the e-mail address from which receipts are sent.,1
+admin.mailingtest.EnterTCP,Please enter the TCP Port for your Mail Server (default is 25),1
+admin.mailingtest.MailServerDNS,Mail Server DNS,1
+admin.mailingtest.MailServerPassword,Mail Server Password (optional),1
+admin.mailingtest.MailServerRequiresSSL,Mail Server Requires SSL,1
+admin.mailingtest.MailServerTCP,Mail Server TCP Port,1
+admin.mailingtest.MailServerUsername,Mail Server Username (optional),1
+admin.mailingtest.NewOrderSendFromEmail,New Order Notifications send from (E-Mail Address),1
+admin.mailingtest.NewOrderSendFromName,New Order Notifications send from (Name),1
+admin.mailingtest.NewOrderSendToEmail,New Order Notifications send to (E-Mail Address),1
+admin.mailingtest.NewOrderSendToName,New Order Notifications send to (Name),1
+admin.mailingtest.ReceiptEmailSendsFrom,Receipt E-Mail sends from (E-Mail Address),1
+admin.mailingtest.ReceiptEmailSendsFromName,Receipt e-mail sends from (Name),1
+admin.mailingtest.ReceiptEmailsSendFrom,Receipt e-mails send from,1
+admin.mailingtest.ReceiptEmailWithXML,Receipt e-mails send with XML Package,1
+admin.mailingtest.SendNewOrderNotifications,Send New Order Notifications,1
+admin.mailingtest.SendNewOrderWithXML,Send New Order Notifications send with XML Package,1
+admin.mailingtest.SendReceiptEmail,Send Receipt E-Mails,1
+admin.mailingtest.SendShippedEmails,Send Shipped E-Mails,1
+admin.mailingtest.SendTest,Send Test,1
+admin.mailingtest.SendTestOrderNotification,Send Test Order Notification,1
+admin.mailingtest.SendTestReceipt,Send Test Receipt,1
+admin.mailingtest.SendTestShippedEmail,Send Test Shipped E-Mail,1
+admin.mailingtest.ShippedEmailsWithXML,Shipped e-mails send with XML Package,1
+admin.mailingtest.TestAll,Test All,1
+admin.manageratings.Comments,Comments,1
+admin.manageratings.confirmdelete,Are you sure you want to permanently delete this rating?,1
+admin.manageratings.Date,Date,1
+admin.manageratings.HasBadWords,Has Bad Words,1
+admin.manageratings.MarkedHelpful,Marked Helpful,1
+admin.manageratings.MarkedUnhelpful,Marked Unhelpful,1
+admin.manageratings.ProductID,Product ID,1
+admin.manageratings.Rating,Rating,1
+admin.menu.About,About,1
+admin.menu.AppConfigParameters,Settings,1
+admin.menu.Affiliates,Affiliates,1
+admin.menu.BadWord,Manage BadWords,1
+admin.menu.Categories,Categories,1
+admin.menu.ChangeEncryptKey,Change EncryptKey,1
+admin.menu.Configuration,Configuration,1
+admin.menu.Content,Content,1
+admin.menu.Countries,Manage Country Codes,1
+admin.menu.CreateOrder,Create New Order,1
+admin.menu.CreditCards,Credit Card Types,1
+admin.menu.Currencies,Manage Currencies,1
+admin.menu.CustomerAdd,Create Contact,1
+admin.menu.CustomerLevels,Customer Levels,1
+admin.menu.Customers,Contacts,1
+admin.menu.customersMgr,Manage Contacts,1
+admin.menu.DisplayOrder,Product Group Display Order,1
+admin.menu.Distributors,Distributors,1
+admin.menu.entities,Product Groups,1
+admin.menu.EventHandlerParameters,Configure Event Handler,1
+admin.menu.FailedTransactions,Failed Transactions,1
+admin.menu.FraudOrders,Fraudulent Transactions,1
+admin.menu.FullTextSearch,Setup Full-Text Search,1
+admin.menu.GiftCards,Manage Gift Cards,1
+admin.menu.GlobalConfigParameters,GlobalConfig Parameters,1
+admin.menu.header,Dashboard,1
+admin.menu.Help,Help,1
+admin.menu.InventoryControl,Inventory Control,1
+admin.menu.LocaleSettings,Manage Locales,1
+admin.menu.Mailing,Mailing Manager,1
+admin.menu.MailingTest,Setup E-Mail,1
+admin.menu.Maintenance,Maintenance,1
+admin.menu.ManageOrders,Manage Orders,1
+admin.menu.Manufacturers,Manufacturers,1
+admin.menu.marketing,Marketing,1
+admin.menu.MonthlyMaintenance,Monthly Maintenance,1
+admin.menu.OnlineManual,Online Manual,1
+admin.menu.OrderManage,View/Manage Orders,1
+admin.menu.OrderOptions,Cart Upsells,1
+admin.menu.OrderRecurring,Recurring Orders,1
+admin.menu.OrderRecurringImport,Recurring Shipments,1
+admin.menu.OrderRecurringPending,Recurring Orders,1
+admin.menu.Orders,Orders,1
+admin.menu.Payment,Payment,1
+admin.menu.PaymentMethods,Payment Methods,1
+admin.menu.PayPalCredit,Promote PayPal Credit,1
+admin.menu.PriceExport,Export Prices to Excel/XML,1
+admin.menu.PriceImport,Import Prices from Excel/XML,1
+admin.menu.PricesInventory,Prices & Inventory,1
+admin.menu.ProductImportExport,Import/Export,1
+admin.menu.ProductLoadFromExcel,Excel Product Import,1
+admin.menu.ProductLoadFromXml,XML Product Import,1
+admin.menu.ProductMgr,Manage Products,1
+admin.menu.Products,Products,1
+admin.menu.ProductTypes,Product Types,1
+admin.menu.Promotions,Manage Promotions,1
+admin.menu.QuantityDiscounts,Quantity Discounts,1
+admin.menu.quickstart,Getting Started,1
+admin.menu.Rating,Manage Rating,1
+admin.menu.Ratings,Manage Ratings,1
+admin.menu.Reports,Reports,1
+admin.menu.RunSQL,Run SQL,1
+admin.menu.SalesPrompts,Sales Prompts,1
+admin.menu.Sections,Departments,1
+admin.menu.Shipping,Shipping,1
+admin.menu.ShippingImportExport,Manage Carrier Tracking,1
+admin.menu.ShippingRates,Shipping Calculation,1
+admin.menu.Skins,Skins,1
+admin.menu.SkinSelector,Manage Skins,1
+admin.menu.States,Manage States/Provinces,1
+admin.menu.storemappings,Store Mappings,1
+admin.menu.stores,Manage Stores,1
+admin.menu.StoreWide,Store Wide Maintenance,1
+admin.menu.StringResources,Manage Prompts,1
+Admin.Menu.TaxClass,Tax Classes,1
+admin.menu.Taxes,Taxes,1
+admin.menu.TaxZip,Tax by Zip Code,1
+admin.menu.Topics,Manage Topics,1
+admin.menu.viewsystemlog,View System Log,1
+admin.menu.Wizard,Site Setup Wizard,1
+admin.monthlymaintenance.90,90 Days old,1
+admin.monthlymaintenance.CleanupLocalizationData,Clear old localization data,1
+admin.monthlymaintenance.CleanupSecurityLog, Clear old Security Log entries,1
+admin.monthlymaintenance.ClearAll,Clear All Regardless of Date,1
+admin.monthlymaintenance.ClearAllShoppingCarts,Clear Shopping Carts Older Than,1
+admin.monthlymaintenance.ClearAllWishlists,Clear Wishlists Older Than,1
+admin.monthlymaintenance.ClearProfiles,Clear Profiles Older Than:,1
+admin.monthlymaintenance.ClearRTShippingData,Clear RT Shipping Request/Response Older Than:,1
+admin.monthlymaintenance.ClearSearchLog,Clear Search Logs Older Than:,1
+admin.monthlymaintenance.ClearViews,Clear Product Views Older Than:,1
+admin.monthlymaintenance.Done,We're Done!,1
+admin.monthlymaintenance.EraseCCInfo,Erase Credit Cards/eCheck from Order records,1
+admin.monthlymaintenance.EraseCCInfoFromAddress,Erase Credit Cards/eCheck from Address records,1
+admin.monthlymaintenance.Finished,When maintenance is finished running all users will be logged out (including you) and you will be redirected to the signin page.,1
+admin.monthlymaintenance.Info,"Running this maintenance process will log out all users from the admin site, including the user running the maintenance",1
+admin.monthlymaintenance.LeaveUnchanged,Leave Unchanged,1
+admin.monthlymaintenance.MaintenanceRunning,Monthly Maintenance Running,1
+admin.monthlymaintenance.MoreThan120,>120 Days old,1
+admin.monthlymaintenance.MoreThan150,>150 Days old,1
+admin.monthlymaintenance.MoreThan180,>180 Days old,1
+admin.monthlymaintenance.MoreThan30,>30 Days old,1
+admin.monthlymaintenance.MoreThan60,>60 Days old,1
+admin.monthlymaintenance.overdue,"It has been more than 1 month since <a href=""monthlymaintenance.aspx"">Monthly Maintenance</a> was run on your site.  Not performing this maintenance regularly can lead to slow site performance and possible support issues.",1
+admin.monthlymaintenance.PageInfo,"This page helps you perform recommended maintenance on your storefront database. You should run this maintenance when site activity is minimal, as the store database could be locked for several minutes during these operations. We stronly recommended that you perform this maintenance frequently, at least once per month, but much more frequently on busy sites.",1
+admin.monthlymaintenance.Processing,Processing,1
+admin.monthlymaintenance.PurgeAll,Purge all records that are marked as Deleted,1
+admin.monthlymaintenance.PurgeAnon,Purge Anon Customers,1
+admin.monthlymaintenance.SaveSettings,Save Settings,1
+admin.monthlymaintenance.tooltip.imgClearAllShoppingCarts,"If activated, all shopping cart items will be cleared that are older than the # of days specified (wishlists and recurring orders not affected by this checkbox). If you wish to set the aging # days for all shopping carts, see Setting: AgeCartDays.",1
+admin.monthlymaintenance.tooltip.imgClearAllWishLists,"If activated, all wishlist items will be cleared that are older than the # of days specified.",1
+admin.monthlymaintenance.tooltip.imgClearProductViewsOlderThan,"If activated, product views older than the # of days selected will be cleared.",1
+admin.monthlymaintenance.tooltip.imgClearRTShippingDataOlderThan,This will clear the RTShippingRequests and RTShippingResponses stored in the database.,1
+admin.monthlymaintenance.tooltip.imgClearSearchLogOlderThan,"If activated, all search logs will be cleared that are older than the # of days specified.",1
+admin.monthlymaintenance.tooltip.imgEraseAddressCreditCards,"This option allows you to remove the customer credit card information (which is encrypted) from the Address records which are older than the # of days specified. The credit card information is almost never needed after an order has been successfully processed and shipped and then nothing has been heard back from the customer for 30 days. This does not affect the customer's main account record, and their credit card information remains in that account record, intact, in an encrypted state if Setting: StoreCCInDB is set to Yes.",1
+admin.monthlymaintenance.tooltip.imgEraseOrderCreditCards,"Since order records contain a complete snapshot of all customer data, this option allows you to remove the customer credit card information (which is encrypted) from the order records which are older than the # of days specified. The credit card information is almost never needed after an order has been successfully processed and shipped and then nothing has been heard back from the customer for 30 days. This does not affect the customer's main account record, and their credit card information remains in that account record, intact, in an encrypted state if Setting: StoreCCInDB is set to Yes.",1
+admin.monthlymaintenance.tooltip.imgLocalizationData,"If checked, data for locales that no longer exist will be cleaned out of the LocalizedObjectName table.  Note that this only affects localization data used for the product and entity grids in the admin console.",1
+admin.monthlymaintenance.tooltip.imgProfile,"If activated, profiles older than the # of days selected will be cleared.",1
+admin.monthlymaintenance.tooltip.imgPurgeAnonUsers,"If checked, the store will delete all customer records that belong to Anonymous customers. Anonymous customers are those who have added something to their cart (or take an action on the store which requires them to have a record in the Customer database table) but they have never registered, checked out, etc. These are records that can be safely deleted. If a purged Anonymous customer returns to the store later, they will simply get a new customer record automatically created for them.",1
+admin.monthlymaintenance.tooltip.imgPurgeDeletedRecords,"This will permanently delete records in the database that are marked as deleted. Includes: Products, Entities, Topics, ShippingZones, SalesPrompts, Promotions, Affiliates, Customers, and Addresses.",1
+admin.monthlymaintenance.tooltip.imgSaveSettings,Select this option if you want to save your settings for next time.,1
+admin.monthlymaintenance.tooltip.imgSecurityLog,"If activated, all Security Log entries older than 1 year will be cleared.",1
+admin.monthlymaintenance.tooltip.imgTuneIndexes,"Select this option to tune the table indexes. Periodically, they can require some reorganization for maximum performance. If you select this option, your database may be locked for several minutes while the indexes are tuned.",1
+admin.monthlymaintenance.tooltip.imgUpdateStats,Select this option to update database statistics used for optimizing SQL query run times.  This can cause monthly maintenance to take significantly longer to run on sites with lots of data.,1
+admin.monthlymaintenance.TuneIndexes,Tune Indexes,1
+admin.monthlymaintenance.UpdateStatistics,Update Statistics,1
+admin.multiimage.ColorImage,Color\Image#,1
+admin.multiimage.NoColorSelected,(No Color Selected),1
+admin.multiimage.PageInfo,"Manage images for this product by image # and color. You can have up to 10 images for a product, and an image for each color, so this forms a 2 dimensional grid if images: image number x color. Each slot can have a separate picture. You should also load the image pic on the product page...that image is used by default for most page displays. These images are only used on the product page, when the user actively selects a different image number icon and/or color selection.",1
+admin.multiimage.ProductPrompt,Product:,1
+admin.multiimage.ResetConfim,Do you want to reset all fields to their starting values?,1
+admin.multiimage.SizePrompt,Size:,1
+admin.newentities.editDisplayOrder,Edit Display Order,1
+admin.news.createNews,Create News,1
+admin.news.ExpirationRequired,Expiration Date is Required,1
+admin.news.HeadlineRequired,Headline is Required,1
+admin.nolinktext,<i>(no data specified)</i>,1
+admin.order.Affiliate,Affiliate:,1
+admin.order.ChangeEmailError,"E-mail was changed, but the new address did not match an existing account so the order's CustomerID was not updated.",1
+admin.order.Company,Company:,1
+admin.order.CustomerEmail,Customer E-Mail:,1
+admin.order.CustomerName,Customer Name:,1
+admin.order.ForStore,For Store:,1
+admin.order.ImpersonationNote,This order was placed for the customer by {0},1
+admin.order.NameSearch,"E-mail, Name, or Company:",1
+admin.order.OrderNumberTransactionSubscriptionID,Order ID:,1
+admin.order.PaymentMethod,Payment Method:,1
+admin.order.ShipToState,Ship to State:,1
+admin.order.SKU,SKU or Product/Variant Name:,1
+admin.order.TransactionState,Transaction State:,1
+admin.order.TransactionStateAuthorized,AUTHORIZED,1
+admin.order.TransactionStateCaptured,CAPTURED,1
+admin.order.TransactionStateForceVoided,FORCE VOIDED,1
+admin.order.TransactionStateFraud,FRAUD,1
+admin.order.TransactionStatePending,PENDING,1
+admin.order.TransactionStateRefunded,REFUNDED,1
+admin.order.TransactionStateVoided,VOIDED,1
+admin.orderdetails.BillingAddress,Billing Address,1
+admin.orderdetails.ChildOrders,Child Orders:,1
+admin.orderdetails.ContainsRecurringItems,Contains Recurring Items: ,1
+admin.orderdetails.CustomerInfo,Customer Details,1
+admin.orderdetails.DebugInfo,Debug Details,1
+admin.orderdetails.DeliveryInfo,Delivery Details,1
+admin.orderdetails.DistributorInfo,Distributor Details,1
+admin.orderdetails.DownloadFileLocation,Download File Location,1
+admin.orderdetails.DownloadValidDates,Download Valid Dates,1
+admin.orderdetails.More,More,1
+admin.orderdetails.OrderInfo,Order Details,1
+admin.orderdetails.OrderStatus,Order Status,1
+admin.orderdetails.PaymentInfo,Payment Details,1
+admin.orderdetails.PreviousOrders,({0} total orders),1
+admin.orderdetails.ProductDetails,Product Details,1
+admin.orderdetails.Qty,Qty,1
+admin.orderdetails.RegenerateReceipt,Regenerate Receipt,1
+admin.orderdetails.RegisteredOn,Registered On:,1
+admin.orderdetails.ReturnActions,Order Processing Actions:,1
+admin.orderdetails.RTShippingRequest,RTShipping Request,1
+admin.orderdetails.RTShippingResponse,RTShipping Response,1
+admin.orderdetails.ShippingAddress,Shipping Address,1
+admin.orderdetails.UpdateSuccessful,Updated,1
+admin.orderdetails.ValidDecimal,Please enter a valid decimal in ##.## format.,1
+admin.orderframe.3DSecureLookupResult,3D Secure Lookup Result:,1
+admin.orderframe.AdjustOrderTotal,Adjust Order Total,1
+admin.orderframe.AdjustWeight,Adjust Weight,1
+admin.orderframe.AffiliateID,Affiliate ID:,1
+admin.orderframe.AllDownloadItems,All Download Items:,1
+admin.orderframe.AuthorizationCode,Authorization Code:,1
+admin.orderframe.AuthorizationResult,Authorization Result:,1
+admin.orderframe.AuthorizedOn,Authorized On:,1
+admin.orderframe.AVSResult,AVS Result:,1
+admin.orderframe.Capture,Capture,1
+admin.orderframe.CapturedOn,Captured On:,1
+admin.orderframe.CaptureTXCommand,Capture TX Command:,1
+admin.orderframe.CaptureTXResult,Capture TX Result:,1
+admin.orderframe.CardExpiration,Card Expiration:,1
+admin.orderframe.CardinalAuthenticateResult,Cardinal Authenticate Result:,1
+admin.orderframe.CardinalLookupResult,Cardinal Lookup Result:,1
+admin.orderframe.CardIssueNumber,Card Issue Number:,1
+admin.orderframe.CardNumber,Card Number:,1
+admin.orderframe.CardStartDate,Card Start Date:,1
+admin.orderframe.CardType,Card Type:,1
+admin.orderframe.Carrier,Carrier: ,1
+admin.orderframe.ChangeOrderEmail,Save Updated E-mail,1
+admin.orderframe.ClearFraudFlag,Clear Fraud Flag,1
+admin.orderframe.CreateAdhocChargeRefund,Create Ad-Hoc Charge / Refund,1
+admin.orderframe.CustomerPhone,Customer Phone:,1
+admin.orderframe.CustomerServiceNotes,CUSTOMER SERVICE NOTES (VISIBLE BY CUSTOMER:,1
+admin.orderframe.DistributorEmailSentOn,Distributor E-Mail Sent On:,1
+admin.orderframe.EditableHere,EDITABLE HERE:,1
+admin.orderframe.FinalizationData,"FINALIZATION DATA (VISIBLE BY CUSTOMER: NO, EDITABLE HERE: NO)",1
+admin.orderframe.ForceRefund,Mark as Refunded,1
+admin.orderframe.ForceVoid,Mark as Voided,1
+admin.orderframe.ForceVoidWarning,NOTE: This will mark the order as VOIDed in AspDotNetStorefront - but will NOT send any VOID calls to any Gateways.,1
+admin.orderframe.FraudedOn,Frauded On:,1
+admin.orderframe.GatewayAutoBillSubscriptionID,Gateway AutoBill Subscription ID:,1
+admin.orderframe.GetMaxMind,Get MaxMind,1
+admin.orderframe.GiftWPurchase,Gift,1
+admin.orderframe.HasDistributorDropShipItems,Has Distributor Drop-Ship Items:,1
+admin.orderframe.HasDownloadItems,Has Download Items:,1
+admin.orderframe.HasMultipleShippingAddresses,Has Multiple Shipping Addresses:,1
+admin.orderframe.LastFour,Last 4:,1
+admin.orderframe.LineItemDiscount,Line Item Discount,1
+admin.orderframe.LocaleSetting,Locale Setting:,1
+admin.orderframe.MarkAsFraud,Mark As Fraud,1
+admin.orderframe.MarkAsShipped,Mark As Shipped,1
+admin.orderframe.MaxMindFraudExplanation,Explanation,1
+admin.orderframe.MaxMindFraudScore,MaxMind Fraud Score:,1
+admin.orderframe.Notes,Notes,1
+admin.orderframe.NotStored,Not Stored,1
+admin.orderframe.OpenNewReceiptWindowHere,View Receipt,1
+admin.orderframe.OrderDate,Order Date:,1
+admin.orderframe.OrderHistory,Order History:,1
+admin.orderframe.OrderLevelDiscount,Order Level Discount,1
+admin.orderframe.OrderNotes,"ORDER NOTES AS ENTERED BY CUSTOMER (VISIBLE BY CUSTOMER: YES, EDITABLE HERE: NO)",1
+admin.orderframe.OrderNotFoundOrOrderHasBeenDeleted,ORDER NOT FOUND or ORDER HAS BEEN DELETED,1
+admin.orderframe.OrderTotal,Order Total:,1
+admin.orderframe.OrderWeight,Order Weight:,1
+admin.orderframe.ParentOrder,Parent Order:,1
+admin.orderframe.PrivateNotes,"PRIVATE NOTES (VISIBLE BY CUSTOMER: NO, MIGRATED FROM CUSTOMER RECORD ON ORDER CREATION, EDITABLE HERE: YES)",1
+admin.orderframe.PromotionCode,Promotion Code,1
+admin.orderframe.PromotionUsage,Promotion Usage:,1
+admin.orderframe.QueryChange,Are you sure you want to update this order?,1
+admin.orderframe.QueryMark,Are you sure you want to proceed?  This action cannot be undone.,1
+admin.orderframe.QuerySendDistributorEmail,"Are you sure you want to send the distributor drop-ship e-mails for this order? This action will most likely cause the distributor to ship the items to the customer, so make sure you have cleared the order payment first!",1
+admin.orderframe.QuerySendReceiptEmail,"Are you sure you want to send the receipt e-mail for this order? This action will send an e-mail with to the customer, so make sure you have cleared the order payment first!",1
+admin.orderframe.Re,RE:,1
+admin.orderframe.Reauthorize,Reauthorize,1
+admin.orderframe.ReceiptEmailSentOn,Receipt E-Mail Sent On:,1
+admin.orderframe.RecurringBillingSubscriptionCreateCommand,Recurring Billing Subscription Create Command:,1
+admin.orderframe.RecurringBillingSubscriptionCreateResult,Recurring Billing Subscription Create Result:,1
+admin.orderframe.Referrer,Referrer:,1
+admin.orderframe.RefundedOn,Refunded On:,1
+admin.orderframe.RefundTXCommand,Refund TX Command:,1
+admin.orderframe.RefundTXResult,Refund TX Result:,1
+admin.orderframe.RelatedOrder,Related Order:,1
+admin.orderframe.RequestForQuote,REQUEST FOR QUOTE,1
+admin.orderframe.ReSendDistributorEmails,Re-Send Distributor E-Mail(s),1
+admin.orderframe.ReSendReceiptEmail,Re-Send Receipt E-Mail,1
+admin.orderframe.ReSendToFedExShipManager,Re-Send To FedExShipManager,1
+admin.orderframe.RTShipping,RTShipping:,1
+admin.orderframe.RTShippingInfo,RT Shipping Info,1
+admin.orderframe.SendDistributorEmails,Send Distributor E-Mail(s),1
+admin.orderframe.SendReceiptEmail,Send Receipt E-Mail,1
+admin.orderframe.SendToFedExShipManager,Send To FedExShipManager,1
+admin.orderframe.SendTrackingNumber,Send Tracking Number,1
+admin.orderframe.ShippedOn,Shipped On:,1
+admin.orderframe.ShippingDiscount,Shipping Discount,1
+admin.orderframe.ShippingMethod,Shipping Method:,1
+admin.orderframe.ShippingPricePaid,Shipping Price Paid:,1
+admin.orderframe.ShippingStatus,Shipping Status:,1
+admin.orderframe.StopFutureBillingAndRefund,Stop Future Billing and Refund,1
+admin.orderframe.TotalDiscount,Total Discount,1
+admin.orderframe.TrackingNumber,Tracking Number: ,1
+admin.orderframe.Transaction,Transaction:,1
+admin.orderframe.TransactionCommand,Transaction Command,1
+admin.orderframe.ViewedCardNumber,Viewed Card Number:,1
+admin.orderframe.ViewedCardNumberOnOrderNumber,on Order Number: ,1
+admin.orderframe.Void,Void,1
+admin.orderframe.VoidedOn,Voided On:,1
+admin.orderframe.VoidTXCommand,Void TX Command:,1
+admin.orderframe.VoidTXResult,Void TX Result:,1
+admin.orderoption.DeleteTooltip,Delete Cart Upsell,1
+admin.orderOption.OptionName,Name,1
+admin.orderOption.TaxClass,Tax Class,1
+admin.orderoptions.ConfirmDelete,Are you sure you want to delete this cart upsell?,1
+admin.orders.BulkPrinting.IsPrinted,Printed?,1
+admin.orders.BulkPrinting.Items,Items,1
+admin.orders.EndDate,End Date:,1
+admin.orders.MaximumOrderTotal,Maximum Order Total:,1
+admin.orders.MinimumOrderTotal,Minimum Order Total:,1
+admin.orders.new,New:,1
+admin.orders.printed,Printed:,1
+admin.orders.PromotionCode,Promotion Code:,1
+admin.orders.StartDate,Start Date:,1
+admin.PageNotFound,Page not found.,1
+admin.paypalreauthorder.CapturedOn,The payment for this order was already captured on {0}.,1
+admin.paypalreauthorder.NotAuth,The transaction state ({0}) is not set to AUTH.,1
+admin.paypalreauthorder.ReAuthorizeOrder,<b>REAUTHORIZE ORDER: {0}<b><br/><br/>,1
+admin.paypalreauthorder.ReAuthorizeResponse,<br>ReAuthorize Response: <br/>{0}<br/><br/>,1
+admin.primarybillingchanged,Primary Billing Address Changed,1
+admin.primaryshippingchanged,Primary Shipping Address Changed,1
+admin.printreceipts.ShippingMethod,SHIPPING METHOD: {0},1
+admin.product.DefaultVariant,Default Variant Information:,1
+admin.product.IdSearch,ProductID,1
+admin.product.NameSearch,Name,1
+admin.product.ProductFeedDescription,Description without HTML - Ideal for Product Feeds,1
+admin.product.SkuSearch,SKU,1
+admin.product.variantgrid.CloneTooltip,Clone Variant,1
+admin.product.variantgrid.UpdatedOrderAndDefault,Display order and default variant updated.,1
+admin.productgrid.AddEditVariantTooltip,Add/Edit a Variant,1
+admin.productgrid.CloneTooltip,Clone Product,1
+admin.productgrid.DeleteConfirm,Are you sure you want to delete this product?,1
+admin.productgrid.Deleted,has been deleted.,1
+admin.productgrid.DeleteTooltip,Delete Product,1
+admin.productgrid.NameTooltip,Click Here to Edit Item,1
+admin.productgrid.ProductCloned,has been cloned and the new product has been set to unpublished.,1
+admin.productgrid.ProductNotCloned,could not be cloned.,1
+admin.productgrid.publish,Publish,1
+admin.productgrid.Published,has been published.,1
+admin.productgrid.PublishTooltip,Publish Product,1
+admin.productgrid.UnDeleteConfirm,Are you sure you want to undelete this product?,1
+admin.productgrid.UnDeleted,has been restored.,1
+admin.productgrid.UnDeleteTooltip,Un-Delete Product,1
+admin.productgrid.unpublish,Unpublish,1
+admin.productgrid.UnPublished,has been un-published.,1
+admin.productgrid.UnpublishTooltip,Un-Publish Product,1
+admin.products.AddNew,Create Product,1
+admin.producttype.addnew,Create Product Type,1
+admin.PromotionEditor.ActiveHeaderText,Active,1
+admin.PromotionEditor.ActiveLabel,Promo Status:,1
+admin.PromotionEditor.AmountRequiredLabel,Amount Required: ,1
+admin.PromotionEditor.AutoAssignedHeaderText,Auto Applied,1
+admin.PromotionEditor.AutoAssignedLabel,Auto Applied:,1
+admin.PromotionEditor.CallToActionLabel,Product Discount Alert,1
+admin.PromotionEditor.CategoriesLabel,Categories: ,1
+admin.PromotionEditor.cbSectionTitle,Promotions Editor,1
+admin.PromotionEditor.cbTitle,Manage Promotions,1
+admin.PromotionEditor.CodeHeaderText,Promo Code,1
+admin.PromotionEditor.CodeLabel,Promo Code:,1
+admin.PromotionEditor.CodeRequired,Promo Code is required,1
+admin.PromotionEditor.CollapseAllButton,Collapse All,1
+admin.PromotionEditor.CountryNamesLabel,Country Names:,1
+admin.PromotionEditor.CustomerLevelLabel,Customer Level:,1
+admin.PromotionEditor.DescriptionLabel,Description:,1
+admin.PromotionEditor.DescriptionRequired,Description is required,1
+admin.PromotionEditor.DiscountAmountLabel,Discount Amount: ,1
+admin.PromotionEditor.DiscountApplicableLineItemLiteral,Discount Applicable Line Items,1
+admin.PromotionEditor.DiscountLiteral,Setup Promo Discount,1
+admin.PromotionEditor.DiscountOrderLiteral,Discount Order,1
+admin.PromotionEditor.DiscountPercentageLabel,Discount Percentage: ,1
+admin.PromotionEditor.DiscountShippingLiteral,Discount Shipping,1
+admin.PromotionEditor.DiscountShippingOnlyLiteral,Discount Shipping Only,1
+admin.PromotionEditor.DiscountTypeLabel,Discount Type: ,1
+admin.PromotionEditor.DropDownValuesFixed,Fixed,1
+admin.PromotionEditor.DropDownValuesPercentage,Percentage,1
+admin.PromotionEditor.EmailAddressesLabel,E-Mail Addresses: ,1
+admin.PromotionEditor.EnableCategoryRequirementLiteral,Enable Category Requirement,1
+admin.PromotionEditor.EnableCustomerLevelRequirementLiteral,Enable Customer Level Requirement,1
+admin.PromotionEditor.EnableEmailAddressRequirementLiteral,Enable E-Mail Address Requirement,1
+admin.PromotionEditor.EnableExpirationDateLiteral,Enable Expiration Date/Time,1
+admin.PromotionEditor.EnableManufacturerRequirementLiteral,Enable Manufacturer Requirement,1
+admin.PromotionEditor.EnableMaximumNumberofUsesLiteral,Enable Maximum Number of Uses,1
+admin.PromotionEditor.EnableMinimumCartSubtotalRequirementLiteral,Enable Minimum Cart Subtotal Requirement,1
+admin.PromotionEditor.EnableMinimumNumberofPastOrdersLiteral,By Number of Past Orders,1
+admin.PromotionEditor.EnablePastOrdersMinimumAmountLiteral,By Amount Spent on Past Purchases,1
+admin.PromotionEditor.EnablePastOrdersMinimumNumberofProductsLiteral,By Number of Products Purchased,1
+admin.PromotionEditor.EnablePastOrdersValueofProductsLiteral,By Total Spent on Products Purchased,1
+admin.PromotionEditor.EnableProductRequirementLiteral,Enable Product Requirement,1
+admin.PromotionEditor.EnableSectionRequirementLiteral,Enable Department Requirement,1
+admin.PromotionEditor.EnableShippingCountryRequirementLiteral,Enable Shipping Country Requirement,1
+admin.PromotionEditor.EnableShippingStateRequirementLiteral,Enable Shipping State Requirement,1
+admin.PromotionEditor.EnableShippingZipCodeRequirementLiteral,Enable Shipping Zip Code Requirement,1
+admin.PromotionEditor.EnableStartDateLiteral,Enable Start Date/Time,1
+admin.PromotionEditor.EndDateLabel,End Date: ,1
+admin.PromotionEditor.ErrorCodeInUse,That code is already in use.,1
+admin.PromotionEditor.ErrorDiscountApplicableLineItem,Discount Applicable Line Item requires a discount amount to be specified.,1
+admin.PromotionEditor.ErrorDiscountOrder,Discount Order requires a discount amount to be specified.,1
+admin.PromotionEditor.ErrorDiscountShipping,Discount Shipping requires a discount amount to be specified.,1
+admin.PromotionEditor.ErrorExpirationRuleExpiresAfterNumberOfUses,Expires After Number Of Uses requires a maximum number of allowed uses to be specified.,1
+admin.PromotionEditor.ErrorExpirationRuleExpiresOnADate,Expiration Date/Time requires a date to be specified.,1
+admin.PromotionEditor.ErrorGiftWithPurchase,Discount Gift With Purchase requires a discount amount to be specified.,1
+admin.PromotionEditor.ErrorLoyaltyRuleEnableCategoryRequirement,Enable Category Requirement requires at least one category to be specified.,1
+admin.PromotionEditor.ErrorLoyaltyRuleEnableEmailAddressRequirement,Enable E-Mail Address Requirement requires an e-mail address to be specified.,1
+admin.PromotionEditor.ErrorLoyaltyRuleEnableEmailAddressRequirementCustLevel,Enable Customer Level Requirement requires a customer level to be specified.,1
+admin.PromotionEditor.ErrorLoyaltyRuleEnableManufacturerRequirement,Enable Manufacturer Requirement requires at least one manufacturer to be specified.,1
+admin.PromotionEditor.ErrorLoyaltyRuleEnableMinimumCartSubtotalRequirement,Enable Minimum Cart Subtotal Requirement requires a minimum amount to be specified.,1
+admin.PromotionEditor.ErrorLoyaltyRuleEnableProductRequirement,Enable Product Requirement requires at least one product to be specified.,1
+admin.PromotionEditor.ErrorLoyaltyRuleEnableSectionRequirement,Enable Department Requirement requires at least one section to be specified.,1
+admin.PromotionEditor.ErrorLoyaltyRuleEnableShippingCountryRequirement,Enable Shipping Country Requirement requires a country to be specified.,1
+admin.PromotionEditor.ErrorLoyaltyRuleEnableShippingStateRequirement,Enable Shipping State Requirement requires a state to be specified.,1
+admin.PromotionEditor.ErrorLoyaltyRuleEnableShippingZipCodeRequirement,Enable Shipping Zip Code Requirement requires a zip code to be specified.,1
+admin.PromotionEditor.ErrorLoyaltyRuleMinimumNumberofOrdersNeededEndDate,Number of Past Orders requires an end date to be specified.,1
+admin.PromotionEditor.ErrorLoyaltyRuleMinimumNumberofOrdersNeededMin,Number of Past Orders requires a minimum to be specified.,1
+admin.PromotionEditor.ErrorLoyaltyRuleMinimumNumberofOrdersNeededStartDate,Number of Past Orders requires a start date to be specified.,1
+admin.PromotionEditor.ErrorLoyaltyRuleMinimumNumberofOrdersStartDateAfterEndDate,Minimum Number of Past Orders - Start Date is after End Date,1
+admin.PromotionEditor.ErrorLoyaltyRuleMinimumNumberofProductsOrdered,Number of Products Purchased requires a minimum to be specified.,1
+admin.PromotionEditor.ErrorLoyaltyRuleMinimumNumberofProductsOrderedEndDate,Number of Products Purchased requires an end date to be specified.,1
+admin.PromotionEditor.ErrorLoyaltyRuleMinimumNumberofProductsOrderedProductIds,Number of Products Purchased - Requires at least one product to be specified.,1
+admin.PromotionEditor.ErrorLoyaltyRuleMinimumNumberofProductsOrderedStartDate,Number of Products Purchased requires a start date to be specified.,1
+admin.PromotionEditor.ErrorLoyaltyRuleMinimumNumberofProductsOrderedStartDateAfterEndDate,Number of Products Purchased - Start Date is after End Date,1
+admin.PromotionEditor.ErrorLoyaltyRuleMinimumOrderAmountNeededEndDate,Amount Spent on Past Purchase requires an end date to be specified.,1
+admin.PromotionEditor.ErrorLoyaltyRuleMinimumOrderAmountNeededMin,Amount Spent on Past Purchases requires a minimum to be specified.,1
+admin.PromotionEditor.ErrorLoyaltyRuleMinimumOrderAmountNeededStartDate,Amount Spent on Past Purchases requires a start date to be specified.,1
+admin.PromotionEditor.ErrorLoyaltyRuleMinimumOrderAmountNeededStartDateAfterEndDate,Amount Spent on Past Purchase - Start Date is after End Date,1
+admin.PromotionEditor.ErrorLoyaltyRuleMinimumOrderAmountOfAProductNeededEndDate,Total Spent on Products Purchased requires an end date to be specified.,1
+admin.PromotionEditor.ErrorLoyaltyRuleMinimumOrderAmountOfAProductNeededMin,Total Spent on Products Purchased requires a minimum to be specified.,1
+admin.PromotionEditor.ErrorLoyaltyRuleMinimumOrderAmountOfAProductNeededProductIds,Total Spent on Products Purchased - Requires at least one product to be specified.,1
+admin.PromotionEditor.ErrorLoyaltyRuleMinimumOrderAmountOfAProductNeededStartDate,Total Spent on Products Purchased requires a start date to be specified.,1
+admin.PromotionEditor.ErrorLoyaltyRuleMinimumOrderAmountOfAProductNeededStartDateAfterEndDate,Total Spent on Products Purchased - Start Date is after End Date,1
+admin.PromotionEditor.ErrorStartOnADate,Start Date/Time requires a date to be specified.,1
+admin.PromotionEditor.ExpandAllButton,Expand All,1
+admin.PromotionEditor.ExpirationDateLabel,Expiration Date: ,1
+admin.PromotionEditor.GeneralInfoAutomaticallyAdd,This promotion will automatically add the specified product(s) to the cart with the specified discount.,1
+admin.PromotionEditor.GeneralInfoCustomerLevels,This promotion will only be valid for users with one of the specified customer levels.,1
+admin.PromotionEditor.GeneralInfoEmailAddressIncluded,This promotion will only be valid for users whose e-mail address is included in the specified comma-separated list. ,1
+admin.PromotionEditor.GeneralInfoEntireOrder,This promotion will be applied to the entire order.,1
+admin.PromotionEditor.GeneralInfoLineItems,This promotion will be applied to applicable line items.,1
+admin.PromotionEditor.GeneralInfoMaxUses,After the maximum number of uses this promotion will not longer be valid.,1
+admin.PromotionEditor.GeneralInfoMorePastOrders,This promotion will only be valid for users who have more past orders within the given date range than the number specified.,1
+admin.PromotionEditor.GeneralInfoNotValidUntilStartDate,This promotion will not be valid until the start date and time of the Current Hosting Server. (NOTE: The Current Server Date/Time is {0}),1
+admin.PromotionEditor.GeneralInfoPastOrdersProducts,This promotion will only be valid for users who have past orders within the given date range that contain more of the specified products than the given value.,1
+admin.PromotionEditor.GeneralInfoPastOrdersPRoductSum,"This promotion will only be valid for users who have past orders within the given date range that contain products that, when summed, are worth more than the given value.",1
+admin.PromotionEditor.GeneralInfoPastOrdersSum,This promotion will only be valid for users who have past orders within the given date range that sum to more than value specified.,1
+admin.PromotionEditor.GeneralInfoProductFromCategory,This promotion will only be valid if the shopper's cart includes a product from one of the selected categories.,1
+admin.PromotionEditor.GeneralInfoProductFromManufacturer,This promotion will only be valid if the shopper's cart includes a product from one of the selected manufactuers.,1
+admin.PromotionEditor.GeneralInfoProductFromSection,This promotion will only be valid if the shopper's cart includes a product from one of the selected departments.,1
+admin.PromotionEditor.GeneralInfoPromoAutoAssigned,"If this is checked, the site will try to apply the promotion to every customer's cart. Those who qualify based on the following promotion conditions (Discount, Limits, Requirements and Customer Targeting) will automatically get this discount.",1
+admin.PromotionEditor.GeneralInfoPromoCode,"Enter the letters/numbers that you want customers to enter on the shopping cart page in order to activate the promo, i.e. Spring2012 or Save50. Promo codes are case insensitive.",1
+admin.PromotionEditor.GeneralInfoPromoDescription,"Enter a brief description of what this promotion does, it will display to customers in the shopping cart.",1
+admin.PromotionEditor.GeneralInfoPromoPriority,"This is an integer value (1,2,3,42, etc). If all promotions are the same priority, all applicable promotions are applied. If you have multiple promotions that would normally apply, for example a priority '1' promotion and priority '2' promotion, the higher priority '1' promotion will be applied. NOTE: Priority 0 means that the promo can always be combined with any other promotion!",1
+admin.PromotionEditor.GeneralInfoPromoProductMessage,This text will appear on products that this promotion applies to (can be left blank).,1
+admin.PromotionEditor.GeneralInfoPromoStatus,This will enable/disable this promotion for use by customers.,1
+admin.PromotionEditor.GeneralInfoPromoStores,"If you have MoreStores, select the stores for which this Promo will be valid.",1
+admin.PromotionEditor.GeneralInfoPromoTitle,Enter the title of the promotion. Not viewable by customers.,1
+admin.PromotionEditor.GeneralInfoPromoUsage,This text will appear next to each item on the shopping cart that a line item or gift promotion applies to (can be left blank).,1
+admin.PromotionEditor.GeneralInfoShipping,This promotion will only be applied to shipping.,1
+admin.PromotionEditor.GeneralInfoShippingAddressCountry,This promotion will only be valid for users whose shipping address's full country name is specified in the comma separated list below. Users will need to enter an address BEFORE entering this promotion code.,1
+admin.PromotionEditor.GeneralInfoShippingAddressState,This promotion will only be valid for users whose shipping address's state's two letter code is specified in the comma separated list below. Users will need to enter an address BEFORE entering this promotion code. ,1
+admin.PromotionEditor.GeneralInfoShippingAddressZip,This promotion will only be valid for users whose shipping address's zip code is specified in the comma separated list below. Users will need to enter an address BEFORE entering this promotion code. ,1
+admin.PromotionEditor.GeneralInfoShippingDiscount,This promotion will apply a shipping discount for the specified shipping methods.,1
+admin.PromotionEditor.GeneralInfoSubtotalGreater,This promotion will only be valid if the shopper's cart has a subtotal greater than the value specified.,1
+admin.PromotionEditor.GeneralInfoValidForProducts,This promotion will only be valid for the products selected. Required quantity must be met for the product to be matched.,1
+admin.PromotionEditor.GeneralInfoValidForSKUs,This promotion will only be valid for the SKUs listed.,1
+admin.PromotionEditor.GeneralInfoValidUntilExpiration,This promotion will be valid until the expiration date and time of the Current Hosting Server. (NOTE: The Current Server Date/Time is {0}),1
+admin.PromotionEditor.GiftWithPurchaseLiteral,Gift With Purchase,1
+admin.PromotionEditor.LimitsHeaderLiteral,Select Promo Limits,1
+admin.PromotionEditor.LoyaltyHeaderLiteral,Setup Customer  Targeting,1
+admin.PromotionEditor.ManufacturersLabel,Manufacturers: ,1
+admin.PromotionEditor.MatchQuantitesLabel,Per Qualifying Product:,1
+admin.PromotionEditor.MaximumNumberofUsesLabel,Maximum Number of Uses:,1
+admin.PromotionEditor.MinimumAmountLiteral,Minimum Amount: $ ,1
+admin.PromotionEditor.MinimumNumberofPastOrdersLabel,Minimum Number of Past Orders: ,1
+admin.PromotionEditor.MinimumRequiredLabel,Minimum Amount Spent: $ ,1
+admin.PromotionEditor.NameHeaderText,Promo Title,1
+admin.PromotionEditor.PerCustomerLiteral,Per Customer,1
+admin.PromotionEditor.PriorityHeaderText,Priority,1
+admin.PromotionEditor.PriorityLabel,Priority:,1
+admin.PromotionEditor.PriorityRequired,Priority is required,1
+admin.PromotionEditor.ProductIdsLabel,Products: ,1
+admin.PromotionEditor.ProductsLabel,Products: ,1
+admin.PromotionEditor.QuantityRequiredLabel,Quantity Required: ,1
+admin.PromotionEditor.RequireLabel,Require: ,1
+admin.PromotionEditor.RequirementsLiteral,Select Promo Requirements,1
+admin.PromotionEditor.RequireQuantityLabel,Require Quantity: ,1
+admin.PromotionEditor.SectionsLabel,Departments: ,1
+admin.PromotionEditor.ShippingMethodsLabel,Shipping Methods: ,1
+admin.PromotionEditor.StartDateLabel,Start Date: ,1
+admin.PromotionEditor.StatesLabel,States:,1
+admin.PromotionEditor.StoreLabel,Stores:,1
+admin.PromotionEditor.TitleLabel,Promo Title:,1
+admin.PromotionEditor.TitleRequired,Promo Title is required,1
+admin.PromotionEditor.UploadButton,Upload,1
+admin.PromotionEditor.UploadfromcsvfileLiteral,Upload from csv file: ,1
+admin.PromotionEditor.UsageLabel,Discount Description Message:,1
+admin.PromotionEditor.ValidationIncorrectNumberFormat,"Positive numeric value required. Characters such as $, %, ""abc"" are not allowed.",1
+admin.PromotionEditor.ZipCodesLabel,Zip Codes:,1
+admin.promotions.CreatePromotion,Create Promotion,1
+admin.promotions.EditPromotion,Edit Promotion,1
+admin.quantitydiscount.Create,Create Qty Discount,1
+admin.quantitydiscount.FillInDisplayOrder,Fill in Display Order,1
+admin.quantitydiscount.HighQuantityMustBeInt,High quantity must be an integer,1
+admin.quantitydiscount.LowQuantityMustBeInt,Low quantity must be an integer,1
+admin.quantitydiscount.new,New,1
+admin.quantitydiscount.QuantityDiscountInfo,Please enter the following information about this quantity discount.,1
+admin.quantitydiscount.TableRows,Quantity Discount Table Rows,1
+admin.quickadd.ChildCategoryQuestion,Is this a child category?,1
+admin.quickadd.CustomerLevelLink,Customer Level Quick Add,1
+admin.quickadd.CustomerLevelName,Customer Level Name,1
+admin.quickadd.discount,Discount,1
+admin.quickadd.DiscountAmount,Discount Amount,1
+admin.quickadd.DiscountFormat,Discount should be formatted as a number without $ or %,1
+admin.quickadd.DiscountType,Discount Type,1
+admin.quickadd.EmailRequired,Email is Required,1
+admin.quickadd.ExampleDecimal,(ex. 10.00),1
+admin.quickadd.ExampleFive,(ex. 5),1
+admin.quickadd.ExampleTwentyFive,(ex. 25),1
+admin.quickadd.HighQuantity,High Quantity,1
+admin.quickadd.HighQuantityMustBeOne,High quantity must be an integer greater than 1,1
+admin.quickadd.HighQuantityRequired,High Quantity is Required,1
+admin.quickadd.HighQuantitySameOrHigher,Must be the same or higher than low quantity,1
+admin.quickadd.InvalidEmail,Invalid Email Address Format,1
+admin.quickadd.LowQuantity,Low Quantity,1
+admin.quickadd.LowQuantityAtLeastZero,Low quantity must be an integer and must be at least zero,1
+admin.quickadd.NameRequired,Name is Required,1
+admin.quickadd.QuantityDiscountName,Quantity Discount Name,1
+admin.quickadd.QuantityDiscountQuickAdd,Quantity Discount Quick Add,1
+admin.quickadd.ValidAmount,"Please enter a valid amount, do not include $ or %",1
+admin.quickstart.disable,Don't show me this again,1
+admin.quickstart.header,Getting Started,1
+admin.realtimeshippingmethoddescription,"The real time rates below are created dynamically at checkout time as your customers proceed through checkout. Use the setting titled <a href=""appconfigs.aspx?filter.search=rtshipping.shippingmethodstoprevent"">""RTShipping.ShippingMethodsToPrevent""</a> if you need to remove an option you see here from the choices your customers have.",1
+admin.recurring.NoRecurringShipmentsDueToday,NO RECURRING ORDERS ARE DUE TODAY!,1
+admin.recurring.ProcessChargesAll,PROCESS CHARGES,1
+admin.recurring.ProcessingNextOccurrence,Processing Next Occurrence of Original Recurring Order Number: {0} ,1
+admin.recurringimport.GetAutoBillStatusFile,Get {0} {1} AutoBill Status File,1
+admin.recurringimport.GetTodaysStatusFile,Get Today's Status File,1
+admin.recurringimport.LastImport,Last Import was from {0},1
+admin.recurringimport.Next,Next ,1
+admin.recurringimport.NoRecurringOrders,"There are no Gateway Recurring Billing orders in your system so there is nothing to do here.  See <a href=""http://www.aspdotnetstorefront.com/linkmanager.aspx?topic=10000manual&type=gatewayrecurring"">the manual</a> for more details.",1
+admin.recurringimport.NothingToProcess,Nothing To Process You are already up to date!,1
+admin.recurringimport.NothingToProcessForget,Nothing To Process did you forget to paste the AutoBill Transaction Report file into  the text box to the left?,1
+admin.recurringimport.NotSupported,"Your site is not configured to use Gateway Recurring Billing so there is nothing to do here.  See <a href=""http://www.aspdotnetstorefront.com/linkmanager.aspx?topic=10000manual&type=gatewayrecurring"">the manual</a> for more details.",1
+admin.recurringimport.PasteGatewayAutobill,(or) Paste Gateway AutoBill Status E-Mail Contents Below:,1
+admin.recurringimport.ProcessingResultsWillGoHere,{Processing Results Will Go Here},1
+admin.recurringimport.ProcessRecords,Process Records,1
+admin.recurringimport.RawTextContents,This should be the raw text contents of both Successful.csv and Failed.csv.,1
+admin.recurringimport.Todays,Today's ,1
+admin.recurringorder.OrderCancelSuccess, Recurring order has been cancelled successfully.,1
+admin.recurringorder.OrderCouldNotBeFound, Order {0} could not be found.,1
+admin.recurringorder.OrderShipmentDateNotEditable,Order shipment date details are not editable for Gateway Internal Recurring Billing.,1
+admin.refund.forcelabel, NOTE: This will mark the order as Refunded in Storefront. It WILL NOT submit any Refund calls to any Gateways.,1
+admin.refund.FullyRefundOrder,Fully Refund Order:,1
+admin.refund.InvalidOrderNumber,Invalid Order Number,1
+admin.refund.OrderWasRefunded,Order Was Refunded,1
+admin.refund.ProcessRefund,Process Refund,1
+admin.refund.Reason,Reason:,1
+admin.reports.abandonedcartdescription,"Items that were added to the cart but never purchased within the specified date range.  Where possible, the e-mail address of the customer who added to the cart is shown.",1
+admin.reports.abandonedcartlabel,Abandoned Cart,1
+admin.reports.affiliate,For Affiliate:,1
+admin.reports.affiliatesdescription,Orders for the selected affiliate within the specified date range.,1
+admin.reports.affiliateslabel,Affiliates,1
+admin.reports.anoncustomers,Anonymous Customers:,1
+admin.reports.averageorder,Average Order Value:,1
+admin.reports.builtin,Built-in Reports:,1
+admin.reports.categories,Categories,1
+admin.reports.chooseentity,Choose an entity:,1
+admin.reports.choosereport,Report:,1
+admin.reports.currentrecurringdescription,"Recurring orders that are still current (have not been cancelled), regardless of recurring frequency / next recurrence date.",1
+admin.reports.currentrecurringlabel,Current Recurring Orders,1
+admin.reports.custom,Custom Reports:,1
+admin.reports.customerlevel,Customer Levels:,1
+admin.reports.customerlevelproductsdescription,List products mapped to the selected customer level,1
+admin.reports.customerlevelproductslabel,Products by Customer Level,1
+admin.reports.customersdescription,"Anonymous customers, registered customers, or both.  NOTE: This can return an extremely long list of results on large sites!",1
+admin.reports.customerslabel,Customers,1
+admin.reports.customerswhoboughtdescription,Customers who purchased the specified product within the specified date range.,1
+admin.reports.customerswhoboughtlabel,Customers Who Bought X,1
+admin.reports.datesabove,Use Dates above,1
+admin.reports.emptyentitiesdescription,All entities that do not have any products mapped to them.,1
+admin.reports.emptyentitieslabel,Empty Entities,1
+admin.reports.emptyskudescription,"This returns a list of all products that have no SKU.  The report considers the parent product, variant, and VendorFullSKU values.  Size/color SKU modifiers are not included.",1
+admin.reports.emptyskulabel,Products with no SKUs,1
+admin.reports.enddate,End Date:,1
+admin.reports.entityerror,Please select an entity!,1
+admin.reports.entitytype,Entity Type:,1
+admin.reports.forstore,For Store:,1
+admin.reports.getreport,GET REPORT,1
+admin.reports.inventorylevel,Inventory Level Less Than:,1
+admin.reports.inventorylevelsdescription,Inventory level of each product + variant + size + color combination below the entered quantity.,1
+admin.reports.inventorylevelslabel,Inventory Levels,1
+admin.reports.lastmonth,Last Month,1
+admin.reports.lastweek,Last Week,1
+admin.reports.lastyear,Last Year,1
+admin.reports.manufacturers,Manufacturers,1
+admin.reports.numorders,Number of Orders:,1
+admin.reports.ordersbydaterange,Orders By Date Range,1
+admin.reports.ordersbydaterangedescription,Lists orders by store and date range,1
+admin.reports.ordersbyentitydescription,Orders within the specified date range for the selected entity.  NOTE: Stores with extremely high entity counts may experience slow performance running this report.,1
+admin.reports.ordersbyentitylabel,Orders by Entity,1
+admin.reports.ordersbyitem,Orders By Product,1
+admin.reports.ordersbyitemdescription,"Lists items sold by date range.  The same item may be listed multiple times if it was sold at different discounted rates (customer level pricing, promotions, etc)",1
+admin.reports.ordershipping,Order Shipping:,1
+admin.reports.orderstatsdescription,Summary of order data for the selected date range,1
+admin.reports.orderstatslabel,Order Statistics,1
+admin.reports.ordersubtotals,Order Subtotals:,1
+admin.reports.ordertax,Order Tax:,1
+admin.reports.ordertotals,Order Totals:,1
+admin.reports.productID,Product ID:,1
+admin.reports.promotionsusagelabel,Promotion Usage,1
+admin.reports.promotionusagedescription,Active promotions and the total discounts each has given within the specified date range.,1
+admin.reports.referralsdescription,Referral information for orders placed within the specified date range.,1
+admin.reports.referralslabel,Referrals,1
+admin.reports.registered,Registered,1
+admin.reports.registeredcustomers,Registered Customers:,1
+admin.reports.saveexcel,Save Excel Export,1
+admin.reports.sections,Departments,1
+admin.reports.selectdates,Select Dates,1
+admin.reports.selectrange,OR Select Range,1
+admin.reports.sename,SEName Report,1
+admin.reports.senamedescription,This report will list any entities that do not have SENames set up properly to allow the EnableSeNameOnlyRoutes GlobalConfig setting to work (i.e. is empty or duplicated).,1
+admin.reports.specs,Specifications:,1
+admin.reports.startdate,Start Date:,1
+admin.reports.stores,Stores,1
+admin.reports.thismonth,This Month,1
+admin.reports.thisweek,This Week,1
+admin.reports.thisyear,This Year,1
+admin.reports.today,Today,1
+admin.reports.top10description,Top 10 products (by gross sales) within the specified date range.,1
+admin.reports.top10label,Bestsellers,1
+admin.reports.unmappedproductsdescription,All products that are not mapped to at least one entity.,1
+admin.reports.unmappedproductslabel,Unmapped Products,1
+admin.reports.yesterday,Yesterday,1
+admin.runsql.InsufficientPermission,You do not have the required permissions to run sql!,1
+admin.runsql.NoInput,NO SQL INPUT,1
+admin.runsql.Ok,COMMAND EXECUTED OK,1
+admin.runsql.TextBoxHeader,Enter SQL Command Text Below:,1
+admin.sectiontitle.about,About,1
+admin.sectiontitle.currencies,Manage Currencies,1
+admin.setup.selectRadioButton,Select the Create New or Reuse Catalog radio button.,1
+admin.shipping.calculationsbyzonedescription,"These final two forms of calculation introduce the concept of distance by adding 'zones' to the <a href=""shippingmethods.aspx"">methods</a> that you will be establishing. <a href=""shippingzones.aspx"">Go here to setup your zones</a>.",1
+admin.shipping.calculationsbyzoneheader,Custom Shipping Calculations By Zone,1
+admin.shipping.customcalculationsheader,Custom Shipping Calculations,1
+admin.shipping.customshippingdescription,"These calculations allow you to control the way the store calculates the cost of each order AND lets the shopper choose the 'method' (where method is most often about speed of shipping). If you choose one of these options then once you save your choice on this page then you must go <a href=""shippingmethods.aspx"">here to create your own shipping methods</a>.",1
+admin.shipping.description,"In AspDotNetStorefront, the same basic premise is followed to calculate shipping for all orders. On this page you will choose your form of 'calculation'.",1
+admin.shipping.fixedpercentageoftotaldescription,(You'll set a higher percentage as the shipping gets faster),1
+admin.shipping.fixedpricedescription,(One price per method regardless of what is being shipped),1
+admin.shipping.freedescription,This calculation does not offer the <strong>shopper</strong> any choice about the method of shipping (where method is most often 'speed'). Choose this if that suits your needs:,1
+admin.shipping.freeshipping,"<a href=""appconfigs.aspx?filter.search=freeshipping"">Configure free shipping</a>",1
+admin.shipping.freeshippingheader,Free Shipping,1
+admin.shipping.header,Shipping Calculation Management,1
+admin.shipping.individualshippingdescription,"(This is the simplest, but the most work. You will need to edit every variant separately, assigning a shipping cost for each method)",1
+admin.shipping.realtimedescription,"This calculation charges the shopper using real time costs from one or more carriers of your choice. If you choose this option, AspDotNetStorefront will build the 'methods' for you as your shoppers require them. Don't expect to see any real-time methods until people begin to use the checkout. After that you can go <a href=""shippingmethodsrealtime.aspx"">here to see your shipping methods</a>. Learn more about setting up real-time shipping <a target=""_blank"" href=""http://www.aspdotnetstorefront.com/linkmanager.aspx?topic=10000manual&type=rtshipping"">here</a>.",1
+admin.shipping.realtimeheader,Real-time Rates,1
+admin.shipping.realtimeoptions,"Regardless of the shipping calculation method in use, sometimes you want to offer free shipping on certain orders. AspDotNetStorefront helps by layering the following options over whichever calculation method you choose:",1
+admin.shipping.rtlocalpickup,"<a href=""rtshippinglocalpickup.aspx"">Configure in-store pickup</a>",1
+admin.shipping.shippingbytotaldescription,"(The more expensive it is, and the faster it travels, the higher you're likely to set the cost)",1
+admin.shipping.shippingbyweightdescription,"(The heavier the order, and the faster it travels, the higher you're likely to set the cost)",1
+admin.shipping.storewarning,"This store has turned on the option to filter shipping over different domains, so settings on this page are for the selected store only.",1
+admin.shipping.totalandzonedescription,"(You'll setup zones. The more expensive the order is, and the further the customer's shipping zone, and the faster the order ships, the more you'll charge)",1
+admin.shipping.totalbypercentdescription,(Setup your shipping rates as a percentage of the customer's order total.),1
+admin.shipping.weightandzonedescription,"(You'll setup zones. The heavier the order is, and the further the customer's shipping zone, and the faster the order ships, the more you'll charge)",1
+admin.shippingicons.helpertext,To add your own shipping icons upload images to the /images/shipping folder. We recommend dimensions of 50 x 50 pixels.,1
+admin.shippingmethod.imagelabel,Icon Image,1
+admin.shippingmethoddescription,Setup shipping methods to present to your customers during the shipping step of checkout.,1
+admin.SkinManagement.SkinAppliedTitle,Applied to {0},1
+admin.SkinSelector.ApplySkinConfirmMessage,This will apply this skin for all of the customers on the selected store overwriting any custom skin setting they may have had.,1
+admin.SkinSelector.NoImage,"Sorry, there is no image preview available for this skin.",1
+Admin.SkinSelector.Previewunavailable,Preview unavailable.  Please verify your site URL setup under Configuration -> Store Maintenance,1
+admin.SkinSelector.PreviewWarning,"You are previewing the <span class=""preview-skin-name"">{0}</span> skin.  Click the button to the right to end the preview.",1
+admin.SkinSelector.SkinSaved,Your skin has been applied,1
+admin.SkinSelector.StoreLabel,Select a Store:,1
+admin.splash.aspx.2,Time To Change Your Encrypt Key!,1
+admin.splash.aspx.20,LIVE,1
+admin.splash.aspx.21,TEST,1
+admin.splash.aspx.security.AdminDir,"The URL to your Admin site does not match the 'AdminDir' Setting, which can lead to disclosure of your Admin URL. Please update the 'AdminDir' Setting, using the 'Configuration -> Settings' menu.",1
+admin.splash.aspx.security.AssetManager,"The obsolete folder 'assetmanager' exists in your site's Admin folder, and can present a security risk. Please delete this folder and its contents.",1
+admin.splash.aspx.security.CustomErrors,"The 'customErrors' element in web.config is set to 'off'. Please set it to 'on' before going Live. <a href='http://www.aspdotnetstorefront.com/linkmanager.aspx?topic=10000manual&type=golive' target=""_blank"">Read more</a>",1
+admin.splash.aspx.security.Debug,The 'compilation' element in web.config is set to 'debug=true'. Please set it to 'debug=false' to improve site performance.,1
+admin.splash.aspx.security.DefaultAdmin,The default user 'admin@aspdotnetstorefront.com' is a registered user on this website. <a href='customers.aspx?filter.0.0=admin%40aspdotnetstorefront.com'>Click Here</a> to edit this user.,1
+admin.splash.aspx.security.DotFeedNotEnabled,"DotFeed is installed but not enabled, <a href=""https://manage.dotfeed.com"" target=""_blank"">click here</a> to configure DotFeed",1
+admin.splash.aspx.security.Encryption,The web.config file is not encrypted. This does not follow our <a href='http://www.aspdotnetstorefront.com/linkmanager.aspx?topic=10000manual&type=securitybestpractices' target='_blank'>security best practices</a>. Please use the <a href='wizard.aspx'>Site Setup Wizard</a> to encrypt the web.config file before going Live.,1
+admin.splash.aspx.security.MailServer,"The 'MailMe_Server' Setting is not properly configured. Click <a href=""mailingtest.aspx"">here</a> to configure mail settings.",1
+admin.splash.aspx.security.MetaTagsNotSet,"Your site is using the default Search Engine Meta Title & Description tags, <a href=""wizard.aspx#trSEO"">click here</a> to update.",1
+admin.splash.aspx.security.PathElement,"The URL to your Admin site contains '/admin/'. This does not follow our <a href='http://www.aspdotnetstorefront.com/linkmanager.aspx?topic=10000manual&type=securitybestpractices' target='_blank'>security best practices</a>. Please immediately rename the Admin folder, and restart the website.",1
+admin.splash.aspx.security.RootWritable,The root directory of your website allows write-access. Please remove write-access before going Live. <a href='http://www.aspdotnetstorefront.com/linkmanager.aspx?topic=10000manual&type=golive' target='_blank'>Read more</a>,1
+admin.splash.aspx.security.SSL,Your Admin site is not currently using SSL.  This can allow data being sent to and from the admin site to be read in transit.  <a href='http://www.aspdotnetstorefront.com/linkmanager.aspx?topic=10000manual&type=ssl' target='_blank'>Click Here</a> to learn how to enable SSL.,1
+admin.splash.aspx.security.WebConfigWritable,"The file permission on web.config allows for write-access. This does not follow our <a href='http://www.aspdotnetstorefront.com/linkmanager.aspx?topic=10000manual&type=securitybestpractices' target=""_blank"">security best practices</a>. Please set the web.config file as read-only before going Live.",1
+admin.splash.aspx.sysinfo.CustomerLocaleSetting,Customer Locale Setting:,1
+admin.splash.aspx.sysinfo.PrimaryStoreCurrency,Primary Store Currency:,1
+admin.splash.aspx.sysinfo.PrimaryStoreLocaleSetting,Primary Store Locale Setting:,1
+admin.splash.aspx.sysinfo.SQLLocaleSetting,SQL Locale Setting:,1
+admin.splash.aspx.sysinfo.VersionCodeDB,Version (Code/DB):,1
+admin.StateName,State/Province,1
+admin.states.Published,Published,1
+admin.storecontrol.AddToBuySafe,Add to buySafe,1
+admin.storecontrol.DevelopmentDirectoryPath,Development Directory,1
+admin.storecontrol.DevelopmentPort,Development Port,1
+admin.storecontrol.DevelopmentURL,Development Domain,1
+admin.storecontrol.DevelopmentURL.Placeholder,localhost,1
+admin.storecontrol.DirectoryPath.Help,If you run your site in a subfolder a.k.a virtual directory you can specify that here. For example: /store,1
+admin.storecontrol.DirectoryPath.Placeholder,/store (usually left blank),1
+admin.storecontrol.Domain.Help,The domain name only. For example: yourstore.com,1
+admin.storecontrol.Domains,Domains,1
+admin.storecontrol.environment.development,Development,1
+admin.storecontrol.environment.directorypath,Directory Path,1
+admin.storecontrol.environment.domain,Domain,1
+admin.storecontrol.environment.port,Port,1
+admin.storecontrol.environment.production,Production,1
+admin.storecontrol.environment.staging,Staging,1
+admin.storecontrol.environmentheader,Environment,1
+admin.storecontrol.generalheader,General,1
+admin.storecontrol.Port.Help,"IMPORTANT: This is a Development environment, HTTP-protocol ONLY feature and is not wholly incorporated across the front-end of the site. If you run your development site under a non-default Port you can specify that here.",1
+admin.storecontrol.port.developmenterror,The Development port must me a numeric value greater than zero.,1
+admin.storecontrol.port.productionerror,The Production port must me a numeric value greater than zero.,1
+admin.storecontrol.port.stagingerror,The Staging port must me a numeric value greater than zero.,1
+admin.storecontrol.ProductionDirectoryPath,Production Directory,1
+admin.storecontrol.ProductionPort,Production Port,1
+admin.storecontrol.ProductionURL,Production Domain,1
+admin.storecontrol.ProductionURL.Placeholder,yourstore.com,1
+admin.storecontrol.StagingDirectoryPath,Staging Directory,1
+admin.storecontrol.StagingPort,Staging Port,1
+admin.storecontrol.StagingURL,Staging Domain,1
+admin.storecontrol.StagingURL.Placeholder,aspdotnetstorefront.yourstore.com,1
+admin.storecontrol.StoreName.Placeholder,My Store,1
+admin.stores.DevOnlyHostURL,Your development url should only be the host url and not include http:// or any virtual directory information.,1
+admin.stores.EnterName,You must enter a store name.,1
+admin.stores.ManageSkins,Manage Skins,1
+admin.stores.ProductionOnlyHostURL,Your production url should only be the host url and not include http:// or any virtual directory information.,1
+admin.stores.StagingOnlyHostURL,Your staging url should only be the host url and not include http:// or any virtual directory information.,1
+admin.storeselector.default,All Stores,1
+admin.stringreport.BackText,Back To String Resource Manager,1
+admin.stringreport.EnUs,en-US Value,1
+admin.stringreport.LocaleOneFirst,"The following strings are defined in en-US locale, but not in",1
+admin.stringreport.LocaleOneSecond,locale.,1
+admin.stringreport.LocaleTwoFirst,The following strings in the,1
+admin.stringreport.LocaleTwoSecond,locale have been modified from their default values.,1
+admin.stringreport.Missing,Missing,1
+admin.stringreport.MissingStrings,Missing Strings:,1
+admin.stringreport.Modified,Modified,1
+admin.stringreport.ModifiedStrings,Modified Strings:,1
+admin.stringreport.NoneMissing,No strings missing,1
+admin.stringreport.NoneModified,No strings have been modified,1
+admin.stringreport.ResourceName,Resource Name,1
+admin.stringreport.ResourceReport,String Resource Report,1
+admin.stringreport.StringsUpdated,Strings Updated,1
+admin.stringresources.AddNewString,Create Prompt,1
+admin.stringresources.ClearLocale,Clear Locale,1
+admin.stringresources.File,File:,1
+admin.stringresources.ImportFile1,Import {0} Prompts File (Step 1),1
+admin.stringresources.LeaveModified,Leave my modified prompts,1
+admin.stringresources.Locale,Locale:,1
+admin.stringresources.NoFileFound,Could not load prompts.  No prompts files found for the specified locale,1
+admin.stringresources.ReloadFromExcelOnPC,Reload from Excel File on Your PC,1
+admin.stringresources.ReloadFromExcelOnServer,Reload from Excel File on Server,1
+admin.stringresources.ReloadFromServer,Reload from Server Excel file:,1
+admin.stringresources.ReloadMaster,Reload {0} Master Prompts File,1
+admin.stringresources.ReplaceExisting,Replace Existing,1
+admin.stringresources.SelectFile,Select the prompts Excel file that you want to upload. This file should be on your own local computer. The file should typically be named: strings.{0}.xls,1
+admin.stringresources.ShowMissing,Show Missing Prompts,1
+admin.stringresources.StringResources,Manage Prompts,1
+admin.stringresources.UploadFile,Upload File:,1
+admin.stringresources.VerifyFile,Verify File,1
+admin.subcategorydisplayorderlabel,Sub-Category Display Order,1
+admin.subsectiondisplayorderlabel,Sub-Department Display Order,1
+admin.systemlog.aspx.1,Log ID,1
+admin.systemlog.aspx.11,System Log,1
+admin.systemlog.aspx.12,Export,1
+admin.systemlog.aspx.13,Clear System Log,1
+admin.systemlog.aspx.14,"return confirm('Are you sure you wish to clear the system log?  This will erase ALL entries and cannot be undone.  Click OK to proceed, or Cancel to cancel.');",1
+admin.systemlog.aspx.2,Log Message,1
+admin.systemlog.aspx.4,Type,1
+admin.systemlog.aspx.5,Severity,1
+admin.systemlog.aspx.6,Entry Date,1
+admin.systemlog.aspx.7,Start Date,1
+admin.systemlog.aspx.8,End Date,1
+admin.systemlog.InnerException,Inner Exception:,1
+admin.systemlog.Message,Message:,1
+admin.systemlog.PageURL,Page URL:,1
+admin.systemlog.Source,Source:,1
+admin.systemlog.StackTrace,Stack Trace:,1
+admin.tabs.Attributes,Attributes,1
+admin.tabs.Description,Description,1
+admin.tabs.ExtensionData,Custom Fields,1
+admin.tabs.Images,Images,1
+admin.tabs.Main,Main,1
+admin.tabs.Mappings,Mappings,1
+admin.tabs.Options,Options,1
+admin.tabs.ProductFeeds,HTML-Free Description,1
+admin.tabs.Products,Products,1
+admin.tabs.Recurring,Recurring,1
+admin.tabs.SearchEngine,SEO,1
+admin.tabs.StoreMapping,Store Mapping,1
+admin.tabs.Summary,Summary,1
+admin.taxclass.added,Tax Class added,1
+admin.taxclass.adderror,Error Adding Tax Class.,1
+admin.taxclass.displayorder,Display Order:,1
+admin.taxclass.displayorderheader,Display Order,1
+admin.taxclass.ID,ID,1
+admin.taxclass.name,Name,1
+admin.taxclass.requirederror,Please input all required fields.,1
+admin.taxclass.taxclass,*Tax Class:,1
+admin.taxclass.taxclassheader,Tax Classes,1
+admin.taxclass.taxcode,Tax Code:,1
+admin.taxclass.taxcodeheader,Tax Code,1
+admin.TaxClassName,Tax Class,1
+admin.taxes.CreateTaxClass,Create Tax Class,1
+admin.taxzips.tooltip.imgTax,ex: 5.65,1
+admin.taxzips.tooltip.imgZip,ex: 85259,1
+admin.title.about,About AspDotNetStorefront,1
+admin.title.addneworder,Create New Order,1
+admin.title.adhoccharge,Adhoc Charge,1
+admin.title.adhocchargecomplete,Adhoc Charge Complete,1
+admin.title.adjustcharge,Adjust Charge,1
+admin.title.affiliate,Edit Affiliates,1
+admin.title.affiliates,Manage Affiliates,1
+admin.title.amazontransaction,Fully Refund Order,1
+admin.title.appconfig,Settings,1
+admin.title.appconfigs,Settings,1
+admin.title.auditlog,Audit Log,1
+admin.title.autofill,AutoFill,1
+admin.title.avalaraconnectiontest,Avalara Connection Tester,1
+admin.title.BadWord,Manage BadWords,1
+admin.title.bmlsettings,Set up PayPal Credit,1
+admin.title.bulkeditprices,Prices & Inventory,1
+admin.title.bulkeditweights,Weights & Dimensions,1
+admin.title.bulkshipping,Manage Carrier Tracking,1
+admin.title.buysafeauth,BuySAFE Authentication,1
+admin.title.buysafereg,BuySafe Registration,1
+admin.title.buysafereg2,BuySafe Registration,1
+admin.title.captureorder,Capture Order,1
+admin.title.changeencryptkey,Change EncryptKey,1
+admin.title.cloneproduct,Clone Product,1
+admin.title.countries,Manage Country Codes,1
+admin.title.country,Country,1
+admin.title.createorder,Create Order,1
+admin.title.creditcards,Credit Card Types,1
+admin.title.cst_account,Customer Account,1
+admin.title.cst_account_process,Customer Account Processing,1
+admin.title.cst_emails,Customer E-Mail Management,1
+admin.title.cst_export,Customer Export,1
+admin.title.cst_history,Customer History,1
+admin.title.cst_recurring ,Customer Recurring,1
+admin.title.cst_selectaddress,Customer Select Address,1
+admin.title.cst_selectaddress_process,Select Address Processing,1
+admin.title.cst_signup,Customer Sign-Up,1
+admin.title.cst_signup_process,Customer Sign-Up Processing,1
+admin.title.currencies,Manage Currencies,1
+admin.title.customer,Edit Contact,1
+admin.title.customeraddress,Customer Address,1
+admin.title.customeratings,Customer Ratings Management,1
+admin.title.CustomerDetail,Customer Detail,1
+admin.title.customerlevel,Customer Level,1
+admin.title.customerlevelcustomers,Customer Level Customers,1
+admin.title.customerlevels,Customer Level Management,1
+admin.title.customers,Manage Contacts,1
+admin.title.customer_history,Customer History,1
+admin.title.default,Home,1
+admin.title.deleteimage,Delete Image,1
+admin.title.displayorder,Display Order Management,1
+admin.title.DownloadLicenseFile,Download License File,1
+admin.title.editaddressrecurring,Edit Address Recurring,1
+admin.title.editAffiliates,Edit Affiliates,1
+admin.title.editbulkextendedprices,Edit Bulk Extended Prices,1
+admin.title.editcreditcard,Edit Credit Card,1
+admin.title.editcustomerlevel,Edit Customer Level,1
+admin.title.editentity,Edit Entity,1
+admin.title.editextendedprices,Edit Extended Prices,1
+admin.title.editfeed,Edit Feed,1
+admin.title.editgallery,Edit Gallery,1
+admin.title.editgiftcard,Edit Gift Card,1
+admin.title.editkit2,Edit Kit Options,1
+admin.title.editlocalesetting,Edit Locale Setting,1
+admin.title.editnews,Edit News,1
+admin.title.editorderoption,Edit Cart Upsell,1
+admin.title.EditorTest,Editor Test,1
+admin.title.editpollanswer,Edit Poll Answer,1
+admin.title.editpolls,Edit Polls,1
+admin.title.editproducttype,Edit Product Type,1
+admin.title.editquantitydiscount,Edit Quantity Discount,1
+admin.title.editquantitydiscounttable,Edit Quantity Discount Table,1
+admin.title.editsalesprompt,Edit Sales Prompt,1
+admin.title.editshippingmethod,Add/Edit Shipping Method,1
+admin.title.editskinpreview,Edit Skin Preview,1
+admin.title.editstringresource,Create Prompt,1
+admin.title.edittopic,Edit Topic,1
+admin.title.encrypttest,Encrypt Test,1
+admin.title.entities,Entities,1
+admin.title.entity,Edit Entity,1
+admin.title.entityBody,Entity Body,1
+admin.title.entityBulkDisplayOrder,Menu Display Order,1
+admin.title.entityBulkDownloadFiles,Entity Bulk Download Files,1
+admin.title.entityBulkInventory,Entity Bulk Inventory,1
+admin.title.entityBulkPrices,Prices & Inventory,1
+admin.title.entityBulkSE,Entity Bulk SE,1
+admin.title.entityBulkShipping,Entity Bulk Shipping,1
+admin.title.entityBulkWeight,Weights & Dimensions,1
+admin.title.entityEdit,Entity Edit,1
+admin.title.entityEditProducts,Add/Edit Product,1
+admin.title.entityEditProductVariant,Add/Edit Product Variant,1
+admin.title.entityMoveVariant,Entity Move Variant,1
+admin.title.entityProductBulkDisplayOrder,Entity Product Bulk Display Order,1
+admin.title.entityProductMap,Entity Products,1
+admin.title.entityProductRatings,Entity Product Ratings,1
+admin.title.entityProductVariants,Entity Product Variants,1
+admin.title.entityProductVariantsOverview,Entity Product Variants Overview,1
+admin.title.eventhandler,Configure Event Handler,1
+admin.title.exportProductPricing,Export Product Pricing,1
+admin.title.failedtransactions,Failed Transactions,1
+admin.title.fedexmeterrequest,Fedex Meter Request,1
+admin.title.feeds,Feeds,1
+admin.title.fraudorders,Fraud Orders,1
+admin.title.galleries,Galleries,1
+admin.title.gallery,Gallery,1
+admin.title.galleryimages,Gallery Images,1
+admin.title.giftcard,Edit Gift Card,1
+admin.title.giftcards,Manage Gift Cards,1
+admin.title.giftcardusage,Gift Card Usage,1
+admin.title.giftcardview,View Gift Card,1
+admin.title.globalconfig,Edit Global Config Parameter,1
+admin.title.globalconfigs,Global Config Parameters,1
+admin.title.images,Images,1
+admin.title.importfinalize,Import Finalize,1
+admin.title.importProductPricing,Import Product Pricing,1
+admin.title.importProductsFromExcel,Import Products From Excel,1
+admin.title.importProductsFromXML,Import Products From XML,1
+admin.title.importstringresourcefile1,Import String Resource File,1
+admin.title.importstringresourcefile2,Import String Resource File Verify,1
+admin.title.InvalidRequest,Invalid Request,1
+admin.title.InventoryControl,Inventory Settings,1
+admin.title.JpegImage,Jpeg Image,1
+admin.title.kit,Edit Kit Options,1
+admin.title.kitgroupimageupload,Kit Group Image Upload,1
+admin.title.kititeminventoryvariantlist,Kit Item Inventory Variant List,1
+admin.title.kititemsmappedtovariant,Kit Items Mapped To Variant,1
+admin.title.KitVariantItemSelector,Kit Item Variant Selector,1
+admin.title.layouts,Layouts,1
+admin.title.LicenseRegistration,License Registration,1
+admin.title.localesetting,Manage Locales,1
+admin.title.mailingmgr,Mailing Manager,1
+admin.title.mailingtest,Setup E-Mail,1
+admin.title.managepoll,Manage Poll,1
+admin.title.manageratings,Manage Ratings,1
+admin.title.mappedobject,Mapped Object,1
+admin.title.marketing,Marketing,1
+admin.title.monthlymaintenance,Monthly Maintenance,1
+admin.title.movevariant,Move Variant,1
+admin.title.MultiImageManager,Multi-Image Manager,1
+admin.title.newentities,Manage Entities,1
+admin.title.newproducts,Manage Products,1
+admin.title.news,Manage News,1
+admin.title.newseditor,News Article,1
+admin.title.NewsletterMailingListManager,Newsletter Mailing List Manager,1
+admin.title.order,Manage Order,1
+admin.title.orderframe,Order Frame,1
+admin.title.orderOption,Cart Upsell,1
+admin.title.orderoptions,Cart Upsell,1
+admin.title.orderReports,Order Reports,1
+admin.title.orders,View/Manage Orders,1
+admin.title.OrderShipment1,Order Shipment,1
+admin.title.OrderShipment2,Order Shipment,1
+admin.title.orderXML,Order XML,1
+admin.title.PackageValidation,Package Validation,1
+admin.title.paypalreauthorder,PayPal Reauthorization,1
+admin.title.paypalsettings,Paypal Credit,1
+admin.title.phonesearch,Phone Search,1
+admin.title.phonesitemap,Phone Sitemap,1
+admin.title.phonesitemap2,Phone Sitemap,1
+admin.title.pollanswers,Poll Answers,1
+admin.title.polls,Polls,1
+admin.title.popuprt,Pop-Up Report,1
+admin.title.popuptx,Pop-Up Transaction,1
+admin.title.prices,Prices,1
+admin.title.printreceipts,Print Receipts,1
+admin.title.product,Add/Edit Product,1
+admin.title.ProductGroups,Product Groups,1
+admin.title.productimagemgr,Product Image Manager,1
+admin.title.productratings,Product Ratings,1
+admin.title.products,Manage Products,1
+admin.title.producttype,Product Type,1
+admin.title.producttypes,Product Types,1
+admin.title.promotion,Promotion,1
+admin.title.promotions,Manage Promotions,1
+admin.title.quantitydiscount,Quantity Discount,1
+admin.title.quantitydiscounts,Quantity Discounts,1
+admin.title.rating,Rating,1
+admin.title.Ratings,Manage Ratings,1
+admin.title.recurringfundcancel,Recurring Refund Cancel,1
+admin.title.recurringgatewaydetails,Recurring Gateway Details,1
+admin.title.recurringimport,Recurring Import,1
+admin.title.recurringorder,Manage Recurring Order,1
+admin.title.recurringorders,Recurring Orders,1
+admin.title.refundorder,Refund Order,1
+admin.title.reports,Reports,1
+admin.title.resetsqllog,Reset SQL Log,1
+admin.title.restrictedfeature,Restricted Feature,1
+admin.title.rpt_custom,Custom Report,1
+admin.title.rpt_customers,Customer Report,1
+admin.title.rpt_emails,E-Mails Report,1
+admin.title.rpt_orders,Orders Report,1
+admin.title.rpt_stats,Statistics Report,1
+admin.title.rtshippingcountries,Real Time Shipping Countries,1
+admin.title.rtshippinglocalpickup,Real Time Shipping Local Pickup,1
+admin.title.rtshippingmgr,Real Time Shipping Manager,1
+admin.title.runsql,Run SQL,1
+admin.title.saleprices,Sale Prices,1
+admin.title.salesprompts,Sales Prompts,1
+admin.title.search,Search,1
+admin.title.securitylog,Security Log,1
+admin.title.setlast4,Set Last 4,1
+admin.title.setssl,Set SSL,1
+admin.title.setupFTS,Set up Full-Text Search,1
+admin.title.setupFTS_NoiseWords,Set up Full-Text Search Noise Words,1
+admin.title.shipping,Shipping,1
+admin.title.shippingbytotal,Shipping By Order Total,1
+admin.title.shippingbytotalandpercent,Shipping By Order Total and Percent,1
+admin.title.shippingbytotalandzone,Shipping By Order Total and Zone,1
+admin.title.shippingbyweight,Shipping By Order Weight ,1
+admin.title.shippingbyweightandzone,Shipping By Order Weight and Zone,1
+admin.title.shippingexport,Shipping Export,1
+admin.title.shippingfixedprices,Fixed Rate Shipping,1
+admin.title.shippingimport,Shipping Import,1
+admin.title.ShippingImportExport,Shipping Import/Export,1
+admin.title.shippingmethod,Shipping Method,1
+admin.title.shippingmethodcountries,Shipping Method Countries,1
+admin.title.shippingmethods,Shipping Methods,1
+admin.title.shippingmethodsrealtime,Real Time Shipping Methods,1
+admin.title.shippingmethodstates,Shipping Method States,1
+admin.title.shippingmethodzones,Shipping Method Zones,1
+admin.title.shippingpercentageoftotal,Fixed Percentage Shipping,1
+admin.title.shippingstatus,Shipping Status,1
+admin.title.shippingupdate,Shipping Update,1
+admin.title.shippingupload,Shipping Upload,1
+admin.title.shippingzone,Edit Shipping Zone,1
+admin.title.shippingzones,Shipping Zones,1
+admin.title.showcustomerlevel,Show Customer Level,1
+admin.title.signin,Sign-In,1
+admin.title.signout,Sign-Out,1
+admin.title.sitemap,Sitemap,1
+admin.title.sitemap2,Sitemap,1
+admin.title.skinpreview,Skin Preview,1
+admin.title.skinselector,Manage Skins,1
+admin.title.state,Edit State,1
+admin.title.states,States,1
+admin.title.StoreMaintenance,Store Maintenance,1
+admin.title.storemappings,Store Mappings,1
+admin.title.stores,Manage Stores,1
+admin.title.storewide,Store Wide Maintenance,1
+admin.title.stringresource,Prompt,1
+admin.title.stringresourcerpt,Prompts Report,1
+admin.title.stringresources,Manage Prompts,1
+admin.title.systemlog,Log Entry,1
+admin.title.systemlogs,System Log,1
+admin.title.taxclass,Product Tax Classes,1
+admin.title.tools,Tools,1
+admin.title.topic,Topic,1
+admin.title.topics,Your own web pages (topics),1
+admin.title.uploadImages,Upload Images,1
+admin.title.users,Users,1
+admin.title.variant,Add/Edit Variant,1
+admin.title.variants,Variants,1
+admin.title.variantsizecolorinventory,Manage Advanced Inventory Levels,1
+admin.title.viewshipment,View Shipment,1
+admin.title.voidorder,Void Order,1
+admin.title.wizard,Site Setup Wizard,1
+admin.title.z,Z,1
+admin.title.zipcode,Zip Code,1
+admin.title.zipcodes,Tax by Zipcode,1
+admin.topic.addedstatus,Topic added.,1
+admin.topic.addnew,Create Topic,1
+admin.topic.copytostore,Duplicate for Store:,1
+admin.topic.deletebutton,Delete Topic,1
+admin.topic.deleted,Topic deleted.,1
+admin.topic.description,Description:,1
+admin.topic.disclaimer,RequiresDisclaimer:,1
+admin.topic.displayorder,Display Order:,1
+admin.topic.editing,Editing Topic,1
+admin.topic.isfrequent,Frequently Used:,1
+admin.topic.list,Topic List,1
+admin.topic.map,Map,1
+admin.topic.mapstores,Map to Store:,1
+admin.topic.name,Topic Name:,1
+admin.topic.password,Password:,1
+admin.topic.published,Published,1
+admin.topic.publishedlabel,Published:,1
+admin.topic.sedescription,Search Engine Description:,1
+admin.topic.sekeywords,Search Engine Keywords:,1
+admin.topic.setitle,Search Engine Page Title:,1
+admin.topic.sitemap,Publish In Site Map:,1
+admin.topic.title,Title,1
+admin.topic.updatedstatus,Topic updated.,1
+admin.topicgrid.deleted,has been deleted.,1
+admin.topicgrid.undeleted,has been restored.,1
+admin.toplevelcategory,Top Level Categories,1
+admin.toplevelmanufacturer,Top Level Manufacturers,1
+admin.toplevelsection,Top Level Departments,1
+admin.variant.PriceIsRequired,Price is Required,1
+admin.variant.VariantNotUpdated,Variant(s) Not Updated,1
+admin.variantinventory.nottracking,"Please set up attributes for this <a href=""variant.aspx?productid={0}&variantid={1}"">variant</a> in order to manage inventory for it.",1
+admin.wizard.AltPayment,Configure Wallets,1
+admin.wizard.appconfigwarning,"Inventory Management needs careful thought.  Please read our help pages <a target=""_blank"" href=""http://www.aspdotnetstorefront.com/linkmanager.aspx?topic=10000manual&type=inventory"">here</a> before setting your preferences.",1
+admin.wizard.BadSSL,No SSL certificate was found on your site. Please check with your hosting company! You must be able to invoke your store site using https:// before turning SSL on in this admin site!,1
+admin.wizard.ChangeStaticMachineKey,Change Static Machine Key:,1
+admin.wizard.ChooseCountry,Choose Your Country,1
+admin.wizard.FraudSolutions,Configure Fraud Solutions,1
+admin.wizard.GeneralSettings,General Settings,1
+admin.wizard.HeaderTip,This wizard is here to help you configure your store when first you set it up.,1
+admin.wizard.InsufficientPermission,You do not have the required permissions to use the wizard!,1
+admin.wizard.PaymentMethods,Credit Cards & Other Payment Methods,1
+admin.wizard.PaymentSolutions,Payment Processing Solutions,1
+admin.wizard.SetStaticMachineKey,Set Static Machine Key:,1
+admin.wizard.success,Site Setup Wizard completed successfully.,1
+admin.wizard.ToggleAdvanced,Toggle Advanced,1
+admin.wizard.tooltip.imgEncryptKey,NO: web.config is editable  YES: Encrypt your web.config and protect sensitive application information,1
+admin.wizard.tooltip.imgStaticMachineKey,"Sets a random, static machine key in the web.config file.  This will allow the site to function properly on server farms, and can also resolve issues with users being logged out and/or losing their shoppingcart after an application reset.",1
+admin.zipcode.ComboExists,Zip Code/Country Combination Already Exists,1
+admin.zipcode.TaxRateRequired,Tax Rate is Required,1
+admin.zipcode.Updated,Zip Code Updated,1
+admin.zipcode.ZipCodeRequired,Zip Code is Required,1
+admin.zipcodes.instructions,"Enter only ZipCodes for which you want to charge sales tax. For those ZipCodes, enter the tax rate for your ZipCode (city, county, state, etc.)",1
+checkoutcard_process.aspx.6,Invalid Credit Card Expiration Date,1
+checkoutcard_process.aspx.7,Invalid CVV Code,1
+common.cs.89,Create Product,1
+common.cs.90,Create,1
+configuration.menu.Advanced,Advanced,1
+configuration.menu.Configuration,Configuration,1
+configuration.menu.Maintenance,Maintenance,1
+configuration.menu.StoreSetup,Set Up your Store,1
+gatewaytransaction.cs.1,Gateway: ,1
+gatewaytransaction.cs.2,Order Number: ,1
+gatewaytransaction.cs.3,Customer ID: ,1
+gatewaytransaction.cs.4,.,1
+Order.RecurringOrderSubscriptionFailed,Recurring subscription creation failed for order: {0},1
+Order.RecurringOrderSubscriptionNeedsManualCreation,Recurring subscription needs to be manually created.,1
+setupFTS.aspx.1,Setup Full-Text Search,1
+setupFTS.aspx.10,Available Catalog/s:,1
+setupFTS.aspx.11,Install Full-Text Search,1
+setupFTS.aspx.12,Do you want to proceed in creating the new catalog ,1
+setupFTS.aspx.13, in location ,1
+setupFTS.aspx.14, in the default SQL Server installation location?,1
+setupFTS.aspx.15,Please define catalog name.,1
+setupFTS.aspx.16,Please define catalog name(required) and path(optional).,1
+setupFTS.aspx.17,Please select a catalog.,1
+setupFTS.aspx.18,Do you want to proceed in reusing the catalog ,1
+setupFTS.aspx.19,Please define only one catalog.,1
+setupFTS.aspx.2,Welcome to the Full-Text Search Setup,1
+setupFTS.aspx.21,Uninstall,1
+setupFTS.aspx.22,Optimize,1
+setupFTS.aspx.23,Do you want to proceed in uninstalling Full-Text Search?,1
+setupFTS.aspx.24,Do you want to proceed in optimizing Full-Text Search?,1
+setupFTS.aspx.28,View/Maintain Noise Words,1
+setupFTS.aspx.29,Create Noise Word,1
+setupFTS.aspx.30,Do you want to proceed in adding the noise word,1
+setupFTS.aspx.31,The specified Noise Word already exists.,1
+setupFTS.aspx.32,Do you want to proceed in deleting the noiseword,1
+setupFTS.aspx.5,Please Select Language: ,1
+setupFTS.aspx.6,Create New Catalog:,1
+setupFTS.aspx.7,Reuse Catalog:,1
+setupFTS.aspx.8,New Catalog Name:,1
+setupFTS.aspx.9,New Catalog Path:,1
+setupFTS.CurrentCollationSettingDoesNotSupport,Current Collation Setting SQL_Latin1_General_CP1_CI_AS does not support ,1
+setupFTS.FtsIsDisabled,Full-Text Indexing is disabled in the current database. Installing Full-Text Search will enable this SQL feature.,1
+setupFTS.FullTextSearchIsInstalled,Full-Text Search is installed.,1
+setupFTS.InvalidCharacterOnNewCatalogName,Invalid character on New Catalog Name,1
+setupFTS.WarningMSFullTextIsNotInstalled,Warning! Microsoft Full-Text Engine for SQL Server (MSFTESQL) is not installed on this machine. Full-Text Search cannot be supported.,1

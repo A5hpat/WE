@@ -1,0 +1,1132 @@
+3dsecure.offsitebutton.label,Proceed to 3dSecure,1
+account.addtomicropaybalance,Add to your MicroPay balance,1
+account.aspx.1,There was an error saving your account profile. Please try again.,1
+account.aspx.10,Your {0} Balance is: {1},1
+account.aspx.100,Save,1
+account.aspx.101,Cancel,1
+account.aspx.102,Remove,1
+account.aspx.103,Edit,1
+account.aspx.104,Add Payment Type,1
+account.aspx.106,Make My Primary Address,1
+account.aspx.11,MicroPay,1
+account.aspx.12,Your account information is used to login to the site. Please save your password in a safe place.,1
+account.aspx.19,(at least 7 characters with at least one letter and one number),1
+account.aspx.2,Your account has been updated.,1
+account.aspx.20,Please enter a password so you can login to this site at a later time,1
+account.aspx.27,"(May we contact you with product updates/information, etc.?)",1
+account.aspx.28,Update Account,1
+account.aspx.29,Your primary billing and shipping addresses are shown below:,1
+account.aspx.3,"Your account has been updated, but your email address was not changed...there is already another registered user with that email address.",1
+account.aspx.30,My Primary Billing Address,1
+account.aspx.32,My Primary Shipping Address,1
+account.aspx.35,You have active recurring (auto-ship) orders:,1
+account.aspx.36,Order Number,1
+account.aspx.37,(Click For Receipt),1
+account.aspx.38,Order Date,1
+account.aspx.39,Payment Status,1
+account.aspx.4,View Your Order/Billing History,1
+account.aspx.40,Shipping Status,1
+account.aspx.41,Order Total,1
+account.aspx.42,Customer Service Notes,1
+account.aspx.43,Payment Method:,1
+account.aspx.44,PayPal,1
+account.aspx.45,Credit Card,1
+account.aspx.48,Shipped,1
+account.aspx.49,via,1
+account.aspx.5,You have a current site subscription. Your subscription expires on: {0},1
+account.aspx.50,on,1
+account.aspx.51,Tracking Number:,1
+account.aspx.52,Not Yet Shipped,1
+account.aspx.54,REQUEST FOR QUOTE,1
+account.aspx.57,Re-Order,1
+account.aspx.6,You must enter at least one of First Name or Last Name.,1
+account.aspx.61,Back To Account,1
+account.aspx.68,The new passwords do not match!,1
+account.aspx.69,"The new password you created is not a strong password. Please make sure that your password is at least 8 characters long and includes at least one upper case character, one lower case character, one number, and one ""symbol"" character (e.g. ?,&,#,$,%,etc).",1
+account.aspx.7,Please enter at least 7 characters for your password.,1
+account.aspx.70,"You have recurring orders that require your credit card info to be kept on file. If you uncheck this box, we will be unable to continue processing your recurring orders without contacting you for payment information.",1
+account.aspx.74,Your password cannot be all spaces.,1
+account.aspx.8,"Your passwords do not match, Please make sure your password is re-entered properly.",1
+account.aspx.9,NOTE: You are a member of the <b>{0}</b> group.,1
+account.aspx.91,Registration ID did not pass validation,1
+account.aspx.92,You must have a billing address configured before you can add a credit card to your account.,1
+account.aspx.93,Credit Card Number,1
+account.aspx.96,Card Security Code,1
+account.aspx.97,Billing Address,1
+account.aspx.99,Make primary card,1
+account.captcha.label,Enter security code below,1
+account.captcha.required,Security code is required,1
+account.changepassword.example,password,1
+account.changepassword.label,Change Your Password,1
+account.changepassword.length,Your password must be 50 characters or less,1
+account.changepassword.normalRegexFailure,The new password you created does not meet the minimum requirements. Please make sure that your password is at least 7 characters long and includes at least one letter and at least one number.,1
+account.changepassword.strongRegexFailure,"The new password you created is not a strong password. Please make sure that your password is at least 8 characters long and includes at least one upper case character, one lower case character, one number, and one ""symbol"" character (e.g. ?,&,#,$,%,etc).",1
+account.confirmchangepassword.example,password,1
+account.confirmchangepassword.label,Confirm Your Password,1
+account.confirmchangepassword.length,Your password must be 50 characters or less,1
+account.confirmchangepassword.mismatch,The password and the confirmation password do not match.,1
+account.editAddresses,Edit Addresses,1
+account.emailaddress.example,name@domain.com,1
+account.emailaddress.format,Please enter a valid email address,1
+account.emailaddress.invalid,Please enter a valid email address,1
+account.emailaddress.label,Your Email,1
+account.emailaddress.length,Your email address must be 100 characters or less,1
+account.emailaddress.required,Please enter your email address,1
+account.emailconfirmation.example,name@domain.com,1
+account.emailconfirmation.invalid,Your confirmation email does not match,1
+account.emailconfirmation.label,Confirm Your Email,1
+account.emailconfirmation.required,Please confirm your email address,1
+account.expires,Expires,1
+account.firstname.example,John,1
+account.firstname.label,Your First Name,1
+account.firstname.length,Your first name must be 100 characters or less,1
+account.firstname.required,Please enter first name,1
+account.lastname.example,Smith,1
+account.lastname.label,Your Last Name,1
+account.lastname.length,Your last name must be 100 characters or less,1
+account.lastname.required,Please enter last name,1
+account.oktoemail.label,OK To Email,1
+account.over13.label,I am over 13 years old,1
+account.password.label,Your Password,1
+account.password.length,Your password must be 50 characters or less,1
+account.phone.example,541-867-5309,1
+account.phone.label,Phone,1
+account.phone.length,Your phone number must be 25 characters or less,1
+account.phone.required,Phone Number is Required,1
+account.phone.whats-this.content,We will only use your phone number to contact you with questions about your order,1
+account.recurringorders.view,View,1
+account.rememberpassword.whats-this.content,Checking this will keep you logged in (by saving a cookie to your computer) - even if you close your browser.,1
+account.storecc.label,Save My Credit Card Info,1
+account.strongPassword,"At least 8 characters long and include at least one upper case character, one lower case character, one number, and one ""symbol"" character (e.g. ?,&,#,$,%,etc).",1
+account.vatid.label,Qualify for zero-rate purchases? Enter your VAT ID here,1
+account.vatid.length,Your VAT ID must be 100 characters or less,1
+account.wallet.remove.prompt,Are you sure?,1
+address.addbilling,Add New Billing Address,1
+address.address1.example,123 Main St,1
+address.address1.label,Address Line 1,1
+address.address1.length,Your address lines must each be 100 characters or less,1
+address.address1.required,Please enter your street address,1
+address.address2.example,Fourth floor,1
+address.address2.label,Address Line 2,1
+address.address2.length,Your address lines must each be 100 characters or less,1
+address.addshipping,Add New Shipping Address,1
+address.city.example,New York,1
+address.city.label,City,1
+address.city.length,Your city must be 100 characters or less,1
+address.city.required,Please enter your city,1
+address.company.example,AAA Sales,1
+address.company.label,Company,1
+address.company.length,Your company must be 100 characters or less,1
+address.country.label,Country,1
+address.country.length,Your country must be 100 characters or less,1
+address.country.required,Please enter your country,1
+address.cs.1,"Please select one of the State/Province options. If Outside U.S., select 'Other (Non US)'",1
+address.cs.10,*State/Province:,1
+address.cs.12,*Zip:,1
+address.cs.13,Please enter your first name,1
+address.cs.14,Please enter your last name,1
+address.cs.15,Please enter your phone number,1
+address.cs.16,Please enter your street address,1
+address.cs.17,Please enter your city,1
+address.cs.18,Please enter your zipcode,1
+address.cs.2,*First Name:,1
+address.cs.20,Please select the expiration month.,1
+address.cs.21,Please select the expiration year.,1
+address.cs.23,*Name On Card:,1
+address.cs.24,Please enter the name on the credit card,1
+address.cs.25,*Credit Card Number:,1
+address.cs.26,Please enter credit card number with no spaces,1
+address.cs.27,Please enter a valid credit card number,1
+address.cs.29,Please enter the credit card verification code with no spaces. This number can be found printed on the back side of your card,1
+address.cs.3,*Last Name:,1
+address.cs.30,Please enter a valid credit card validation code,1
+address.cs.31,*Card Type:,1
+address.cs.32,CARD TYPE,1
+address.cs.33,*Expiration Date:,1
+address.cs.34,MONTH,1
+address.cs.35,YEAR,1
+address.cs.4,*Phone:,1
+address.cs.49,Nick Name:,1
+address.cs.5,Company:,1
+address.cs.53,Country:,1
+address.cs.54,Credit Card,1
+address.cs.55,Unknown,1
+address.cs.56,Residential,1
+address.cs.57,Commercial,1
+address.cs.58,Address Type:,1
+address.cs.59,Card Start Date:,1
+address.cs.6,*Address1:,1
+address.cs.61,Card Issue Number:,1
+address.cs.63,"(if shown, Switch/Solo only)",1
+address.cs.64,"(if shown, enter in MMYY format)",1
+address.cs.65,Add Address,1
+address.cs.66,Save Edited Address,1
+address.cs.67,Delete This Address,1
+address.cs.68,Cancel,1
+address.cs.7,Address2:,1
+address.cs.8,Suite:,1
+address.cs.9,*City or APO/AFO:,1
+address.deleteconfirm, Are you sure you want to delete this address?,1
+address.editaddress,Edit Address,1
+address.editbilling,Edit Billing Address,1
+address.editshipping,Edit Shipping Address,1
+address.firstname.example,John,1
+address.firstname.label,First Name,1
+address.firstname.length,Your first name must be 100 characters or less,1
+address.firstname.required,Please enter your first name,1
+address.lastname.example,Smith,1
+address.lastname.label,Last Name,1
+address.lastname.length,Your last name must be 100 characters or less,1
+address.lastname.required,Please enter your last name,1
+address.makeprimarybilling,Make Primary Billing,1
+address.makeprimaryshipping,Make Primary Shipping,1
+address.nickname.example,Mom's house,1
+address.nickname.label,Nick Name,1
+address.nickname.length,Your nick name for this address must be 100 characters or less,1
+address.phone.example,541-867-5309,1
+address.phone.format,Please enter a valid phone number,1
+address.phone.label,Phone,1
+address.phone.length,Your phone number must be 25 characters or less,1
+address.phone.required,Please enter your phone number,1
+address.postalcode.label,Postal Code,1
+address.region.label,Region/County/Province,1
+address.state.label,State,1
+address.state.length,Your state must be 100 characters or less,1
+address.state.required,Please enter your state,1
+address.suite.example,Suite 42,1
+address.suite.label,Suite,1
+address.suite.length,Your suite must be 50 characters or less,1
+address.type.label,Address Type,1
+address.validation.errormsg,Address is not valid:,1
+address.zip.example,90210,1
+address.zip.invalid,Please make sure you have entered a valid postal code,1
+address.zip.label,Zip,1
+address.zip.length,Your postal code must be 10 characters or less,1
+address.zip.required,Please enter your postal code,1
+addtocart.entervalidquantity,Please enter a valid quantity,1
+addtocart.error,Your item was not added to the cart because of an error,1
+addtocart.productunavailable,The specified product is not available,1
+addtocart.requireslogin,You must login to perform this action.,1
+addtocart.sessiontimeout,Your session has timed out. Please login again.,1
+addtocart.success,Item successfully added to cart.,1
+addtocart.successful,This item was successfully added to your cart,1
+addtowish.error,Your item was not added to the wishlist because of an error,1
+adhoccharge.aspx.1,No Order Number or Customer ID Specified!,1
+adhoccharge.aspx.10,*Name On Card:,1
+adhoccharge.aspx.11,Your gateway requires credit card information to perform an ad-hoc charge or refund!,1
+adhoccharge.aspx.12,Your gateway does NOT require credit card information to perform ad-hoc refunds!<br/>Card Number is required for ad-hoc charges!,1
+adhoccharge.aspx.13,This customer has chosen to NOT store their credit card information!,1
+adhoccharge.aspx.14,Credit card information was not stored with this order (as specified by your site settings)!,1
+adhoccharge.aspx.15,CV2:,1
+adhoccharge.aspx.16,*Type of Transaction:,1
+adhoccharge.aspx.17,Charge ,1
+adhoccharge.aspx.18,Refund (Credit),1
+adhoccharge.aspx.19,*Amount:,1
+adhoccharge.aspx.2,New Order Was Successfully Created: Order #,1
+adhoccharge.aspx.20,*Description of Transaction:,1
+adhoccharge.aspx.21,Create New Order,1
+adhoccharge.aspx.22,{0} is required for all this transaction. You may have to contact the customer to obtain this information,1
+adhoccharge.aspx.24,*Card Number:,1
+adhoccharge.aspx.25,*Expiration Date:,1
+adhoccharge.aspx.26,Please enter the amount of the transaction.,1
+adhoccharge.aspx.27,Customer Phone:,1
+adhoccharge.aspx.28,Card Number must be numeric,1
+adhoccharge.aspx.29,Card Number must be 16 digits,1
+adhoccharge.aspx.3,"Error Creating New Order, Reason:",1
+adhoccharge.aspx.4,Please enter a description for this charge/refund,1
+adhoccharge.aspx.5,"<b>AD/HOC CHARGE/REFUND, Related To Order: {0} </b><br/><br/>",1
+adhoccharge.aspx.6,"This form will create a NEW order to either charge, or refund, the customer associated with this order, with the specified amount, and description",1
+adhoccharge.aspx.7,Billing Address NOT found for customer! Cannot create ad-hoc order!,1
+adhoccharge.aspx.8,Credit Card Number or Last 4 NOT found for customer! Cannot create ad-hoc order!,1
+adhoccharge.aspx.9,Transaction ID:,1
+admin.order.PromotionCode,Promotion Code,1
+admin.orderframe.DownloadExpiredOn,Expired On,1
+admin.orderframe.DownloadExpiresOn,Expires On,1
+admin.orderframe.DownloadReleasedOn,Released On,1
+admin.orderframe.DownloadReleaseItem,Release Download,1
+admin.orderframe.QueryReleaseDownload,Are you sure you want to release this download?,1
+AppConfig.AffiliateProgramName,Affiliate Program,1
+AppConfig.BestSellersIntro,These are the top sellers on our site!,1
+AppConfig.BestSellersTitle,Top Sellers,1
+AppConfig.CartButtonPrompt,Add to Cart,1
+AppConfig.CartPrompt,Shopping Cart,1
+AppConfig.CategoryPromptPlural,Categories,1
+AppConfig.CategoryPromptSingular,Category,1
+AppConfig.ColorOptionPrompt,Color,1
+AppConfig.CustomerEntersPricePrompt,Enter Donation Amount:,1
+AppConfig.DistributorPromptPlural,Distributors,1
+AppConfig.ManufacturerPromptPlural,Manufacturers,1
+AppConfig.SectionPromptPlural,Departments,1
+AppConfig.SectionPromptSingular,Department,1
+AppConfig.SizeOptionPrompt,Size,1
+AppConfig.WishButtonPrompt,Add to Wishlist,1
+AspDotNetStorefrontGateways.AuthorizeNet.Cim.ErrorMessage,An error occurred processing your request,1
+AspDotNetStorefrontGateways.AuthorizeNet.Cim.PaymentProfileAlreadyExists,This card has already been saved to your wallet. Please edit the existing card.,1
+Avalara.AddressValidate.AtLeastOneAddress,Please add at least one address,1
+Avalara.AddressValidate.Exception,<br />Avalara Address Validation failed: Exception {0},1
+Avalara.AddressValidate.FixAddressBeforeCheckout,<br />Please enter a valid address before continuing checkout or contact us for assistance.,1
+Avalara.AddressValidate.ValidationFailed,<br />Avalara Address Validation Error: {0},1
+bestsellers.aspx.3,There are no products to show...,1
+bestsellers.aspx.4,Rank,1
+bestsellers.aspx.5,Name,1
+bestsellers.aspx.6,SKU,1
+braintree.connectionerror,Connection to Braintree service failed.,1
+braintree.creditcardunavailable,Our credit card processor is currently excperiencing difficulties.  Please try another payment method or contact us for assistance.,1
+braintree.header,Enter your payment details,1
+braintree.liabilityshiftfailed,"3dSecure verification failed, this order cannot be accepted.",1
+cardinal.cs.1,Cardinal Lookup Call Failed,1
+cardinal.cs.2,Error Invoking Cardinal Authentication - Session May Have Expired,1
+cardinal.cs.3,Insufficient Input Data,1
+cardinal.cs.4,Cardinal Authenticate Call Failed,1
+cardinal.cs.5,Error Invoking Cardinal Authentication - Please Retry Credit Card Entry,1
+cardinal_process.aspx.2,Bank verification was incomplete or canceled. Please retry credit card entry,1
+cardinal_process.aspx.3,We were unable to verify your credit card. Please retry your credit card or choose a different payment type.,1
+cart.updateitem.prompt,Update Item,1
+checkout.AllowShipToDifferentThanBillTo,This store can only ship to the billing address,1
+checkout.checkoutstageerror,Please complete the required areas below before you place your order,1
+checkout.continueoffsite,Continue to Payment,1
+checkout.continueshoppingtext,"or <a href=""{0}"">continue shopping</a>",1
+checkout.createaccount,Create Account,1
+checkout.creditcard.header,Enter your credit card details,1
+checkout.email.description,(For new and returning customers),1
+checkout.email.label,Email,1
+checkout.emptycart,Your shoppingcart is currently empty,1
+checkout.enterpassword, Please enter a password,1
+checkout.freeshippingnorateselection,This order has free shipping.,1
+checkout.getestimate,Get Shipping Options,1
+checkout.giftcard.apply,Apply,1
+checkout.giftcard.doesnotexist,Gift card not found.,1
+checkout.giftcard.example,Enter gift card,1
+checkout.giftcard.label,Gift Card:,1
+checkout.giftcard.required,Please enter a code,1
+checkout.giftcard.setaddress,Address your gift cards,1
+checkout.header.account,Account,1
+checkout.header.billingandshipping,Billing And Shipping To,1
+checkout.header.billingto,Billing To,1
+checkout.header.giftcard,Gift Card Setup,1
+checkout.header.ordernotes,Order Notes,1
+checkout.header.orderoptions,Order Options,1
+checkout.header.ordersummary,Order Summary,1
+checkout.header.payingwith,Paying With,1
+checkout.header.shipping,Shipping,1
+checkout.header.shippingto,Shipping To,1
+checkout.header.shippingvia,Shipping Via,1
+checkout.header.shoppingcart,Shopping Cart,1
+checkout.hideoptions,Hide Options,1
+checkout.indexpagetitle,Secure Checkout,1
+checkout.last4,ending in,1
+checkout.lessoptions,Less Options,1
+checkout.loginoptional,We have an account for you if you would like to login.,1
+checkout.loginrequired,We have an account for you. Please login.,1
+checkout.moreoptions,More Options,1
+checkout.noshippingmethods,No shipping methods were found for your shipping address.,1
+checkout.noshippingrequired,No shipping information required for this purchase,1
+checkout.notyou,not you?,1
+checkout.OffsiteCheckoutError,Please choose a payment method,1
+checkout.offsites.billing.reverted,Your billing address has been reverted back to the required address for your payment selection.,1
+checkout.offsites.shipping.reverted,Your shipping address has been reverted back to the required address for your payment selection.,1
+checkout.over13required,You Must Be Over 13 To Purchase or have Parental Consent,1
+checkout.password.label,Password,1
+checkout.passwordoptional.description,Enter a password if you would like to create an account,1
+checkout.passwordrequired,Password is required to login,1
+checkout.passwordrequired.description,Enter a password to create a new account,1
+checkout.paymentmethodnotallowed,Invalid payment method!  Please choose another.,1
+checkout.paypaltokenexpired,"The PaypalExpress checkout token has expired, please re-login to your PayPal account or checkout using a different method of payment.",1
+Checkout.PlacingOrder,Placing Order...,1
+checkout.promo.example,Enter code,1
+checkout.promo.required,Please enter a code,1
+checkout.purchaseordernumber.example,ABC-123,1
+checkout.purchaseordernumber.label,Purchase Order #,1
+checkout.saveemail,Save,1
+checkout.saveorderoptions,Save,1
+checkout.saveupsells,Add To Cart,1
+checkout.shippingestimatornomethods,No shipping methods were returned. Try specifying more specific or different address data.,1
+checkout.showshippingestimate,Get estimated shipping rates,1
+checkout.signin,Login,1
+checkout.storecc.label,Save My Credit Card Info,1
+checkout.updatecart,Update Cart,1
+Checkout.Updating,Updating...,1
+checkout.wallet.calltoaction, Apply payment type,1
+checkout.wallet.disabled,Wallets are not enabled.,1
+checkout.wallet.expires, Expires,1
+checkout.wallet.instruction, Or select a payment type from your wallet.,1
+checkout.wallet.required, You need to select a payment type.,1
+checkout.wallet.save,Save to your wallet?,1
+checkoutaddress.chooseabillingaddress,Choose a billing address,1
+checkoutaddress.chooseabillingandshippingaddress,Choose your shipping and billing address,1
+checkoutaddress.chooseashippingaddress,Choose a shipping address,1
+checkoutaddress.invalidzip,Invalid format of zip code:,1
+checkoutaddress.invalidzip.international,Invalid format of postal code:,1
+checkoutcard.aspx.1,Order - Credit Card Information:,1
+checkoutcard.aspx.14,I agree to terms and conditions below,1
+checkoutcard.aspx.6,Please Enter Your Credit Card Information Below:,1
+checkoutcard_process.aspx.3,Card number does not match accepted card types or is entered incorrectly,1
+checkoutcard_process.aspx.6,Invalid expiration date,1
+checkoutcard_process.aspx.7,Invalid security code,1
+checkoutpayment.aspx.1,Payment Information,1
+checkoutpayment.aspx.15,"Please indicate your acceptance of the Terms and Conditions before proceeding. If you need assistance, please contact us.",1
+checkoutpayment.aspx.2,Checkout is not allowed without a primary billing and shipping address. You may need to update your address book with updated billing and shipping address information.,1
+checkoutpayment.aspx.20,Please select a valid payment method to continue checkout,1
+checkoutpayment.aspx.26,Your MicroPay balance is insufficient for purchasing this order. <br />(<b>Your MicroPay Balance is {0}</b>),1
+checkoutreview.aspx.25,Multiple Ship Addresses,1
+checkoutreview.aspx.7,Place Order,1
+checkoutshipping.AddressControl.City,City:,1
+checkoutshipping.AddressControl.Country,Country:,1
+checkoutshipping.AddressControl.PostalCode,Postal Code:,1
+checkoutshipping.AddressControl.State,State:,1
+checkoutshipping.aspx.1,Shipping Options,1
+checkoutshipping.aspx.17,Please select a shipping method,1
+checkoutshipping.aspx.18,All Free Shipping Items,1
+checkoutshipping.aspx.2,Note: Orders Over {0} Would Qualify For Free {1} Shipping!,1
+checkoutshipping.aspx.24,Your order qualifies for free shipping.,1
+checkoutshipping.aspx.5,All Download Items,1
+checkoutshipping.aspx.6,Promotion Has Free Shipping,1
+checkoutshipping.aspx.7,All Orders Have Free {0} Shipping,1
+checkoutshipping.aspx.8,{0} Customers Get Free Shipping,1
+colorsizecombooutofstock.validate,"{1}, {3} is currently out of stock. Please select another {0}/{2} combination.",1
+common.browse,Browse,1
+common.change,Change,1
+common.continue,Continue,1
+common.cs.1,{0} Receipt,1
+common.cs.10, (RECURRING AUTO-SHIP),1
+common.cs.2,{0} Receipt (TEST MODE),1
+common.cs.23,Price,1
+common.cs.24,Add,1
+common.cs.25,(read more...),1
+common.cs.28,Yes,1
+common.cs.29,No,1
+common.cs.3, (REQUEST FOR QUOTE),1
+common.cs.34,Quantity,1
+common.cs.35,Discount,1
+common.cs.4,{0} New Order Notification,1
+common.cs.5,{0} New Order Notification (TEST MODE),1
+common.cs.6, (RECURRING AUTO-SHIP),1
+common.cs.61,Submit,1
+common.cs.62,more...,1
+common.cs.67,Call to order - xxx-xxx-xxxx,1
+common.cs.7,Receipt,1
+common.cs.70,Customization Text,1
+common.cs.71,Please select a {0}.,1
+common.cs.73,Please enter your {0}.,1
+common.cs.77,Add,1
+common.cs.8,Download Instructions,1
+common.cs.80,Please enter a number for the quantity,1
+common.cs.82,Search:,1
+common.cs.83,Sizes & Colors In Stock,1
+common.cs.85,The minimum allowed quantity for this product is {0},1
+common.cs.88,No Shipping Required,1
+common.cs.9,{0} Order Shipped,1
+common.delete,Delete,1
+common.edit,Edit,1
+common.remove,Remove,1
+common.save,Save,1
+Common.VariantLabel,Options:,1
+ContactUs.Captcha.Label,Security Code,1
+ContactUs.Captcha.Required,Captcha is required.,1
+ContactUs.EmailAddress.Example,Your email address,1
+ContactUs.EmailAddress.Label,Email Address,1
+ContactUs.EmailAddress.Required,Your email address is required.,1
+ContactUs.Message.Example,What can we help you with?,1
+ContactUs.Message.Label,Message,1
+ContactUs.Message.Required,Message is required.,1
+ContactUs.Name.Example,Your first and last name,1
+ContactUs.Name.Label,Your Name,1
+ContactUs.Name.Required,Your first and last name are required.,1
+ContactUs.Page.Header,Use the form below to send us a message,1
+ContactUs.Page.Title,Contact Us,1
+ContactUs.PhoneNumber.Example,Your phone number,1
+ContactUs.PhoneNumber.Label,Phone Number,1
+ContactUs.PhoneNumber.Required,Your phone number is required.,1
+ContactUs.Subject.Example,Email subject,1
+ContactUs.Subject.Label,Subject,1
+ContactUs.Subject.Required,Email subject is required.,1
+createaccount.aspx.20,Please enter a password so you can login to this site at a later time,1
+createaccount.aspx.75,Create Account,1
+createaccount.aspx.78,I am over 13 years old,1
+createaccount.aspx.79,Thank you for registering,1
+createaccount.aspx.80,Passwords do not match.,1
+createaccount.aspx.86,You have successfully created a new account,1
+createaccount.aspx.91,*Confirm email address:,1
+createaccount_process.aspx.1,That EMail Address is Already Used By Another Customer,1
+createaccount_process.aspx.3,P.O. Box ship-to addresses are not supported. Please enter a full street residential or commercial address. Thanks,1
+creditCardDetails.cardCvc.example,e.g. 123,1
+creditCardDetails.cardCvc.label,Credit Card Verification Code,1
+creditCardDetails.cardCvc.length,Your credit card verification code must be 10 characters or less,1
+creditCardDetails.cardCvc.required,Please enter the credit card verification code with no spaces,1
+creditCardDetails.cardExpirationDate.example,e.g. 01/27,1
+creditCardDetails.cardExpirationDate.inThePast,Your credit card expiration date is in the past. Please enter an unexpired card.,1
+creditCardDetails.cardExpirationDate.invalid,Please enter your card expiration date as mm / yy,1
+creditCardDetails.cardExpirationDate.label,Card Expiration Date,1
+creditCardDetails.cardExpirationDate.length,Your card expiration date must be 10 characters or less,1
+creditCardDetails.cardExpirationDate.required,Card expiration date is missing or invalid,1
+creditCardDetails.cardExpirationMonth.example,e.g. 07,1
+creditCardDetails.cardExpirationMonth.label,Card Expiration Month,1
+creditCardDetails.cardExpirationYear.example,e.g. 2020,1
+creditCardDetails.cardExpirationYear.label,Card Expiration Year,1
+creditCardDetails.cardIssueNumber.example,e.g. 1234,1
+creditCardDetails.cardIssueNumber.label,Card Issue Number,1
+creditCardDetails.cardIssueNumber.length,Your card issue number must be 25 characters or less,1
+creditCardDetails.cardIssueNumber.required,Please enter a card issue number,1
+creditCardDetails.cardName.example,e.g. Jane Doe,1
+creditCardDetails.cardName.label,Name on Card,1
+creditCardDetails.cardName.length,Your card name must be 100 characters or less,1
+creditCardDetails.cardName.required,Please enter the name on the credit card,1
+creditCardDetails.cardNumber.example,e.g. 1234 5678 9012 3456,1
+creditCardDetails.cardNumber.format,Please enter a valid credit card number,1
+creditCardDetails.cardNumber.label,Credit Card Number,1
+creditCardDetails.cardNumber.length,Your card number must be 300 characters or less,1
+creditCardDetails.cardNumber.required,Please enter a credit card number,1
+creditCardDetails.cardStartDate.example,e.g. 05/29,1
+creditCardDetails.cardStartDate.invalid,Please enter your card start date as mm / yy,1
+creditCardDetails.cardStartDate.label,Card Start Date,1
+creditCardDetails.cardStartDate.length,Your card start date must be 10 characters or less,1
+creditCardDetails.cardStartDate.required,Card start date is missing or invalid,1
+creditCardDetails.cardType.example,e.g. Visa,1
+creditCardDetails.cardType.invalid,Invalid card type,1
+creditCardDetails.cardType.label,Card Type,1
+creditCardDetails.cardType.length,Your card type must be 25 characters or less,1
+creditCardDetails.cardType.required,Please select the type of credit card you are using,1
+creditCardDetails.postalCode.example,e.g. 90210,1
+creditCardDetails.postalCode.label,Postal Code,1
+cst_account_process.aspx.1,Password Change,1
+cst_account_process.aspx.2,"The Customer's Password Has NOT Been Changed! You do not have your mail server properly set up, so the password was not changed because there would be no way to communicate it to the customer.",1
+cst_account_process.aspx.3,"The Customer's Password Has Been Changed, and they have been emailed their new password, which they must now change after their next login!",1
+customerentersprice.validate,Please enter a {0} greater than zero,1
+default.aspx.1,Welcome to {0},1
+default.aspx.3,News and Announcements!,1
+download.aspx.1,Your Downloads,1
+download.aspx.10,Expired On,1
+download.aspx.11,You have no available downloads.,1
+download.aspx.12,You have no pending downloads.,1
+download.aspx.13,You have no expired downloads.,1
+download.aspx.14,Download,1
+download.aspx.15,There was a problem with your download file.  Please contact customer service.,1
+download.aspx.16,Does not expire,1
+download.aspx.17,Warning: This order has download items delayed due to exceeding your MaxMind Threshold for downloads.,1
+download.aspx.2,Available,1
+download.aspx.3,Pending,1
+download.aspx.4,Expired,1
+download.aspx.5,Id,1
+download.aspx.6,Name,1
+download.aspx.7,Category,1
+download.aspx.8,Available Until,1
+download.aspx.9,Purchased On,1
+driver.aspx.1,Validation is required to view this topic.,1
+driver.aspx.2,Please enter the topic password:,1
+driver.aspx.5,Submit,1
+driver.aspx.6,Password is incorrect,1
+EditAddress,Edit Address,1
+editaddress.aspx.9,Save Edited Address,1
+emailproduct.backtoproduct,"<i class=""fa fa-angle-left""></i> back to product page",1
+emailproduct.from.address,This message has been sent to you from {0},1
+emailproduct.from.format,Please enter a valid email for yourself,1
+emailproduct.from.header,Message from sender:,1
+emailproduct.from.name,Enter your email address:,1
+emailproduct.from.privacy,Note: Your email address is used <i>only</i> to let the recipient know who sent the email and in case of transmission error. Neither your address nor the recipient's address will be used for any other purpose.,1
+emailproduct.from.prompt,Your email address,1
+emailproduct.from.required,Please enter your email address so the recipient knows who this is from,1
+emailproduct.header,Email To A Friend,1
+emailproduct.message.name,Add your own personal message:,1
+emailproduct.message.prompt,This is my personal message,1
+emailproduct.registrationrequired,You must be a registered user to view this product!,1
+emailproduct.send,Send,1
+emailproduct.success,Your email has been sent.,1
+emailproduct.to.format,Please enter a valid email address for the recipient,1
+emailproduct.to.name,Email this product information to:,1
+emailproduct.to.prompt,Recipient email address,1
+emailproduct.to.required,Please enter the email address of who you want this sent to,1
+emailproduct.xmlpackage.clicktheurl,To view the product page click the following URL.,1
+emailproduct.xmlpackage.invitation,They invited you to view the {0} Product.,1
+gateway.amazonpayments.authorizationidnotfound,Amazon authorization id could not be found. Order was not created.,1
+gateway.amazonpayments.captureidnotfound,Amazon capture id could not be found. Order was not captured.,1
+gateway.amazonpayments.errorauthorizingorder,Error authorizing order. Order was not created.,1
+gateway.amazonpayments.errorcapturingorder,Error capturing order. Order was not created.,1
+gateway.amazonpayments.errorclosingorder,Error closing order. Order was not created.,1
+gateway.amazonpayments.errorcompletingorderdetails,Error completing order details. Order was not created.,1
+gateway.amazonpayments.errorconfirmingorder,Error confirming order. Order was not created.,1
+gateway.amazonpayments.errorprocessingpayment,Error processing payment. Order was not created.,1
+gateway.amazonpayments.errorrefundingorder,Error refunding order. Order was not refunded.,1
+gateway.amazonpayments.name,Pay With Amazon,1
+gateway.amazonpayments.orderreferenceidnotfound,Amazon order reference id could not be found. Order was not created.,1
+gateway.amazonpayments.ordertrackingdetailnotfound,Amazon order tracking detail not found. Order was not refunded.,1
+gateway.amazonpayments.paymentmethoddeclined,Amazon has declined the selected payment method. Order was not created.,1
+gateway.amazonpayments.refundrequestdeclined,Amazon has declined the refund request. Order was not refunded.,1
+gateway.ConfigurationIssue,There is a problem with your gateway configuration! Check gateway settings or contact Support for assistance.,1
+gateway.FailedTransactionThresholdExceeded,Order Declined. Please contact Customer Service.,1
+giftcard.cs.1,{0} sent you a {1} Gift Certificate!,1
+giftcard.email.error.1,"Your gift card was created, but there was an error sending the gift card email.  Verify that your email settings are correct.",1
+giftcard.email.error.2,Email gift card cannot be created.  Please ensure your email settings are properly configured.,1
+giftcard.Header,Gift card details,1
+giftcard.recipientemail.example,name@domain.com,1
+giftcard.recipientemail.label,Recipient's Email Address,1
+giftcard.recipientemail.required,Please enter the recipient email address.,1
+giftcard.recipientmessage.example,Spend it all in one place!,1
+giftcard.recipientmessage.label,Message for Recipient,1
+giftcard.recipientname.example,John Smith,1
+giftcard.recipientname.label,Recipient's Name,1
+giftcard.recipientname.required,Please enter the recipient name.,1
+giftcard.Submit,Submit,1
+Global.CancelButtonText,Cancel,1
+Global.CaptchaFailed,"The letters you entered did not match, please try again.",1
+Global.CloneButtonText,Clone,1
+Global.Products,Products,1
+Global.StoreName,Store Name,1
+gw.moneris.3DSfailed,Authentication failed. Please try again or choose a different payment method.,1
+gw.moneris.cardfailed,Card not accepted. Please try again or choose a different payment method.,1
+gw.moneris.commsfailure,System error. Failed to communicate to payment gateway.,1
+gw.moneris.exception,System error. Communications to payment gateway aborted unexpectedly.,1
+gw.moneris.parsefailure,System error. Unexpected response from payment gateway.,1
+Header.AccountContact,Your Account and Contact Information,1
+Header.AccountInformation,Account Information,1
+Header.AddressBook,Your Address Book,1
+Header.BestSellersHeader,Best Sellers,1
+Header.CreateAccount,Create Your Account,1
+Header.FeaturedItemsHeader,Featured Items,1
+Header.GiftCard,Gift Card,1
+Header.HomeNews,News,1
+Header.OrderHistory,Order History,1
+Header.ProductRatings,Customer Reviews,1
+Header.PromotionCode,Special Offer Codes,1
+Header.RelatedItemsHeader,Related Products,1
+Header.SearchCategories,Category Matches,1
+Header.SearchDistributors,Distributor Matches,1
+Header.SearchManufacturers,Brand Matches,1
+Header.SearchProducts,Product Matches,1
+Header.SearchSections,Department Matches,1
+Header.ShoppingCart,Shopping Cart,1
+Header.Upsell,Recommended Products,1
+Header.UpsellHeader,Combine Your Purchase With,1
+invalidrequest.aspx.1,Event ID: ,1
+invalidrequest.aspx.2,"As a system administrator, you can view the contents of this error in your admin site by going to Configuration --> View System Log",1
+kitproduct.aspx.11,Add,1
+kitproduct.aspx.12,Subtract,1
+kitproduct.aspx.13,Base Price: ,1
+kitproduct.aspx.14,Customized Price: ,1
+kitproduct.aspx.15,Level Price:,1
+kitproduct.aspx.16,Reg Base Price: ,1
+kitproduct.aspx.18,This kit contains one or more unorderable group(s). Please call to Order.,1
+kitproduct.aspx.19,upload,1
+kitproduct.aspx.20,Summary,1
+KitProduct.ChooseFile,Choose a file to upload,1
+kitproduct.detailsnotsetup,Details for this kit have not been setup,1
+KitProduct.Upload,Upload,1
+KitProduct.UploadImageHeader,Upload an image,1
+KitProduct.UploadImageRequired,Please choose an image to upload,1
+label.optionalPrefix,,1
+label.optionalSuffix,(optional),1
+label.requiredPrefix,,1
+label.requiredSuffix,(required),1
+lat_signin_process.aspx.1,Invalid Login,1
+lat_signin_process.aspx.2,Your account has been locked by the administrator,1
+lat_signin_process.aspx.3,Your account has been locked due to too many failed login attempts.  Please contact the site administrator.,1
+lat_signin_process.aspx.4,"Your password has expired, please change it now.",1
+lostpassword.aspx.2,Your Password Has Been Sent. Please check your email.,1
+lostpassword.aspx.3,"Your password has been changed, but we were unable to send you an email!",1
+lostpassword.aspx.4,There is no registered user with that email address!,1
+lostpassword.aspx.6,Password,1
+mailingtest.aspx.1,Receipt Email Successful,1
+mailingtest.aspx.10,Shipped Email Successful,1
+mailingtest.aspx.11,Shipped Emails are disabled.,1
+mailingtest.aspx.2,New Order Notification Email Successful,1
+mailingtest.aspx.3,Receipt Email Failed:,1
+mailingtest.aspx.5,Store Admin New Order Notifications are disabled.,1
+mailingtest.aspx.6,Password is blank. This must be filled in because your mail server requires authentication.,1
+mailingtest.aspx.7,Username is blank. This must be filled in because your mail server requires authentication.,1
+mailingtest.aspx.8,Receipt Emails are disabled.,1
+mailingtest.aspx.9,Authentication failed. Check your username and password to make sure that the correct username and password are entered in.,1
+menu.Categories,Categories,1
+menu.Contact,Contact Us,1
+menu.Distributors,Distributors,1
+menu.Manufacturers,Manufacturers,1
+menu.OrderHistory,Order Status/History,1
+menu.Sections,Departments,1
+menu.Shipping,Shipping Info,1
+menu.YourAccount,Your Account,1
+minicart.addingtocart,Adding to cart,1
+minicart.checkout,Checkout,1
+minicart.close,Close,1
+minicart.deletewaitmessage,Deleting...,1
+minicart.discount,Discounts,1
+minicart.header,Shopping Cart,1
+minicart.itemlabel,Item,1
+minicart.itemslabel,Items,1
+minicart.loading,Loading...,1
+minicart.QuantityHeader,Qty,1
+minicart.quantity.invalid,Invalid quantity,1
+minicart.savetotal,Update Totals,1
+minicart.skulabel,SKU,1
+minicart.subtotal,Subtotal,1
+minicart.switchtowish,View wishlist,1
+minicart.total,Total,1
+minicart.update,Update,1
+minicart.updateerror,"Sorry, there was an error updating your cart.",1
+minicart.viewCart,View Cart,1
+miniwish.addingtocart,Adding to wishlist,1
+miniwish.close,Close,1
+miniwish.discount,Discounts,1
+miniwish.header,Your Wishlist,1
+miniwish.moveall,Move all to Cart,1
+miniwish.moveallmessage,Moving all items to cart.,1
+miniwish.movesingle,Move to Cart,1
+miniwish.movesinglemessage,Moving item to cart.,1
+miniwish.QuantityHeader,Qty,1
+miniwish.subtotal,Subtotal,1
+miniwish.switchtocart,View cart,1
+miniwish.total,Total,1
+miniwish.update,Update,1
+miniwish.updateerror,"Sorry, there was an error updating your wishlist.",1
+miniwish.viewCart,View Wishlist,1
+news.aspx.1,News Bulletins,1
+notification.betareceipt.xml.config.1,Ship to:,1
+notification.betareceipt.xml.config.10,Serial Number:,1
+notification.betareceipt.xml.config.11,Bill To:,1
+notification.betareceipt.xml.config.12,Ship To:,1
+notification.betareceipt.xml.config.13,Order Date:,1
+notification.betareceipt.xml.config.14,Locale/Currency:,1
+notification.betareceipt.xml.config.15,Coupon Code:,1
+notification.betareceipt.xml.config.16,Coupon Details:,1
+notification.betareceipt.xml.config.17,Customer Level:,1
+notification.betareceipt.xml.config.18,Level Details:,1
+notification.betareceipt.xml.config.19,Payment Method:,1
+notification.betareceipt.xml.config.2,Order Options,1
+notification.betareceipt.xml.config.20,No Payment Required,1
+notification.betareceipt.xml.config.21,Name On Card:,1
+notification.betareceipt.xml.config.22,Card Type:,1
+notification.betareceipt.xml.config.23,Card Number:,1
+notification.betareceipt.xml.config.24,PO Number:,1
+notification.betareceipt.xml.config.25,Affiliate ID:,1
+notification.betareceipt.xml.config.26,Vat Registration ID:,1
+notification.betareceipt.xml.config.27,SKU:,1
+notification.betareceipt.xml.config.28,Free Shipping,1
+notification.betareceipt.xml.config.29,Order Number,1
+notification.betareceipt.xml.config.3,Product,1
+notification.betareceipt.xml.config.30,Customer ID,1
+notification.betareceipt.xml.config.31,Order Date,1
+notification.betareceipt.xml.config.32,SubTotal:,1
+notification.betareceipt.xml.config.34,Net SubTotal:,1
+notification.betareceipt.xml.config.35,SubTotal:,1
+notification.betareceipt.xml.config.36,Shipping:,1
+notification.betareceipt.xml.config.37,VAT:,1
+notification.betareceipt.xml.config.38,Tax:,1
+notification.betareceipt.xml.config.39,Total:,1
+notification.betareceipt.xml.config.4,Quantity,1
+notification.betareceipt.xml.config.40,Payments:,1
+notification.betareceipt.xml.config.41,Gift Card,1
+notification.betareceipt.xml.config.42,VAT,1
+notification.betareceipt.xml.config.43,Ext. VAT,1
+notification.betareceipt.xml.config.44,Free Shipping,1
+notification.betareceipt.xml.config.45,Quantity Discounts Allowed,1
+notification.betareceipt.xml.config.46,No Tax,1
+notification.betareceipt.xml.config.47,Coupons Allowed,1
+notification.betareceipt.xml.config.48,Apply to Extended Prices,1
+notification.betareceipt.xml.config.49,Coupon,1
+notification.betareceipt.xml.config.5,Price,1
+notification.betareceipt.xml.config.50,Coupon Amount,1
+notification.betareceipt.xml.config.51,Level,1
+notification.betareceipt.xml.config.52,Customer Service Notes:,1
+notification.betareceipt.xml.config.6,Discount,1
+notification.betareceipt.xml.config.7,Ext. Price,1
+notification.betareceipt.xml.config.8,ChosenColor:,1
+notification.betareceipt.xml.config.9,ChosenSize:,1
+notification.betareceipt.xml.config.promolabel,Promo Code(s):,1
+notification.downloaddelayed.1,{0 } - Download Delayed: Exceeded MaxMind Fraud Score Threshold.,1
+notification.downloaddelayed.2,"Download ""{0}"" for OrderNumber {1} and CustomerID {2} was not released to the customer due to exceeding your MaxMind score threshold for download items.  It is in the pending state and can be manually released to the customer via the Orders page in the AspDotNetStorefront Admin.  ",1
+notification.downloaddelayed.3,{0 } - Download Delayed: Download Location is Empty.,1
+notification.downloaddelayed.4,"Download ""{0}"" for OrderNumber {1} and CustomerID {2} was not released to the customer due to there not being a download location specified.  It is in the pending state and can be manually released to the customer via the Orders page in the AspDotNetStorefront Admin once you have assigned a Download Location.  ",1
+notification.downloadreleased.1,{0} Download,1
+notification.downloadreleased.2,Download,1
+notification.downloadreleased.3,Thank you for your purchase of ,1
+notification.downloadreleased.4,"To download your item, go to ",1
+notification.downloadreleased.5,Your Downloads on,1
+notification.shipped.1,We just wanted to update you and let you know that your order,1
+notification.shipped.2,has shipped via,1
+notification.shipped.3,Here is your Tracking Number (if available):,1
+notification.shipped.4,Thanks for shopping at,1
+notification.shipped.5,Customer Service,1
+notification.shipped.6,Please note: Replies to this email will not be answered. If you require assistance please visit our website for contact information.,1
+notification.shipped.7,Shipping Notification,1
+order.cs.1,FREE SHIPPING,1
+order.cs.16,N/A,1
+order.cs.18,Request For Quote,1
+order.cs.2,FREE SHIPPING,1
+order.cs.29,None,1
+order.cs.3,Will Quote,1
+order.cs.34,Card Number:,1
+order.cs.35,Card Expiration:,1
+order.cs.4,None,1
+order.cs.42,Order Notes:,1
+order.cs.5,DiscountPercent,1
+order.cs.50,You Have Selected The Following Order Options:,1
+order.cs.51,Cost,1
+order.cs.55,Shipping,1
+order.cs.6,DiscountAmount,1
+order.cs.68,Shipping Method:,1
+order.cs.7,HasFreeShipping,1
+order.cs.71,*** PLEASE RETAIN FOR FUTURE REFERENCE ***,1
+order.cs.9,HasNoTax,1
+Order.OrderWasVoided,Order Has Been Voided,1
+orderconfirmation.aspx.1,Order - Confirmation:,1
+orderconfirmation.aspx.10,Thank you for your order. Someone will contact you shortly.,1
+orderconfirmation.aspx.11,Thank you for your custom quote request. Someone will contact you shortly.,1
+orderconfirmation.aspx.12,*** PLEASE RETAIN FOR FUTURE REFERENCE ***,1
+orderconfirmation.aspx.13,Your Order Number is:,1
+orderconfirmation.aspx.14,Your Customer ID is:,1
+orderconfirmation.aspx.15,An email confirmation will be sent to:,1
+orderconfirmation.aspx.16,"For a printable receipt,",1
+orderconfirmation.aspx.17,click here,1
+orderconfirmation.aspx.19,No order could be found in the database...Please contact us for more information.,1
+orderconfirmation.aspx.2,ORDER RECEIVED,1
+orderconfirmation.aspx.23,C.O.D. ORDER RECEIVED,1
+orderconfirmation.aspx.24,"To access your downloads, <a href=""{0}"">click here</a>",1
+orderconfirmation.aspx.25,"You have download items pending release.  You will be notified immediately when your downloads become available.  You can check the status of your downloads any time by <a href=""{0}""> clicking here.</a>",1
+orderconfirmation.aspx.26,You have items that are immediately available for download.,1
+orderconfirmation.aspx.3,Thank you for your order.,1
+orderconfirmation.aspx.4,MICROPAY ORDER RECEIVED,1
+orderconfirmation.aspx.5,PURCHASE ORDER RECEIVED,1
+orderconfirmation.aspx.6,PAYPAL ORDER RECEIVED,1
+orderconfirmation.aspx.7,REQUEST FOR QUOTE RECEIVED,1
+orderconfirmation.aspx.8,PENDING ORDER RECEIVED (CHECK or MONEY ORDER),1
+orderconfirmation.aspx.9,Your MicroPay balance is: ,1
+orderconfirmation.Invalid,Invalid Customer ID or Invalid Order Number,1
+OutofStock.DisplayInStockOnEntityPage,In stock,1
+OutofStock.DisplayInStockOnProductPage,In stock,1
+OutofStock.DisplayOutOfStockOnEntityPage,Out of stock,1
+OutofStock.DisplayOutOfStockOnProductPage,Out of stock,1
+OutofStock.DisplaySellableOutOfStockOnKitPage,Out of stock but buy it anyway,1
+outofstock.validate,Sorry this item is out of stock,1
+PageNotFound.SuggestionTitleMessage,Are you looking for:,1
+paypal.express.avsconfirmedaddress.error,PayPal Confirmed Address Required,1
+paypalpaymentsadvanced.configerror,PayPal Payments Advanced is not configured properly.,1
+pm.checkbymail.display,Check By Mail,1
+pm.cod.display,C.O.D.,1
+pm.creditcard.display,Credit Card,1
+pm.micropay.display,Micropay,1
+pm.paypalcredit.display,PayPal Credit,1
+pm.paypalexpress.display,PayPal,1
+pm.paypalpaymentsadvanced.display,Credit Card,1
+pm.purchaseorder.display,Purchase Order,1
+pm.requestquote.display,Request Quote,1
+popup.aspx.1,Close this window,1
+preview.end,End Preview,1
+product.CallToAction.IsRecurring,Recurring Item,1
+Product.DescriptionTab,Description,1
+product.kitgrouprequired,The {0} option is required.,1
+product.missingkitgroup,The selection is missing Required Selections.,1
+Product.RatingTab,Ratings,1
+Product.RelatedTab,Related Products,1
+product.textoptionmaxlengtherror,{0} must be less than or equal to {1} characters.,1
+Promotion.Reason.Category.InvalidRuleDefined,Invalid product category promotion. ,1
+Promotion.Reason.Category.NoMatch,Offer code is not valid for this order.,1
+Promotion.Reason.Country.NoMatch,Promotion is not valid within the country specified in your shipping address.,1
+Promotion.Reason.Country.NotLoggedIn,"Promotion valid only when shipping to certain countries. Please login to see if you qualify. ",1
+Promotion.Reason.CustomerLevel.NoMatch,This promotion does not apply to your customer level.,1
+Promotion.Reason.CustomerLevel.NotLoggedIn,"This promotion applies only to specific customer levels. If you have an account with us, please login first.",1
+Promotion.Reason.CustomerLevelDoesNotAllow,"Sorry, your customer level does not allow promotions.",1
+Promotion.Reason.DoesNotExist,Promotion code not found.,1
+Promotion.Reason.EmailAddress.NoMatch,"Your email address does not qualify for this promotion.  You may need to login to see if you qualify. ",1
+Promotion.Reason.ExpirationDate,This promotion has expired.,1
+Promotion.Reason.ExpirationNumberOfUses,Discount not applied: Max usage for this promotion has been exceeded. ,1
+Promotion.Reason.ExpirationNumberOfUsesPerCustomer,Discount not applied: You have reached the maximum number of uses permitted for this promotion. ,1
+Promotion.Reason.InactivePromotion,This promotion is not currently active.,1
+Promotion.Reason.Manufacturer.InvalidRuleDefined,Invalid manufacturer promotion.,1
+Promotion.Reason.Manufacturer.NoMatch,Offer code is not valid for this order.,1
+Promotion.Reason.MinimumCartAmount.InsufficientAmount,Add just {CartAmountDelta} to your order to qualify for this promotional discount.,1
+Promotion.Reason.MinimumOrderAmount.InsufficientAmount,This loyalty discount becomes effective after you spend an additional {OrderAmountDelta} with us before {PromotionEndDate},1
+Promotion.Reason.MinimumOrderAmount.NotLoggedIn,"Please login to see if you qualify for this order-based loyalty discount.",1
+Promotion.Reason.MinimumOrders.InsufficientQuantityPlural,Place {OrderQuantityDelta} more orders with us before {PromotionEndDate} to qualify for this promotional discount.,1
+Promotion.Reason.MinimumOrders.InsufficientQuantitySingular,Place {OrderQuantityDelta} more order with us before {PromotionEndDate} to qualify for this promotional discount.,1
+Promotion.Reason.MinimumOrders.NotLoggedIn,"Please login to see if you qualify for this quantity-based loyalty discount.",1
+Promotion.Reason.MinimumProductAmountOrdered.InsufficientAmount,{ProductNames}: Spend only {OrderAmountDelta} more before {PromotionEndDate} to qualify for this promotional discount.,1
+Promotion.Reason.MinimumProductAmountOrdered.NotLoggedIn,"Please login so we can determine your eligibility for this loyalty promotion.",1
+Promotion.Reason.MinimumProductsOrdered.InsufficientQuantity,{ProductNames}: Order at least {OrderQuantityDelta} more before {PromotionEndDate} to qualify for this promotional discount.,1
+Promotion.Reason.MinimumProductsOrdered.NotLoggedIn,"Please login so we can determine your eligibility for this loyalty promotion.",1
+Promotion.Reason.MultiStore.NoMatch,Promotion code not found on this store.,1
+Promotion.Reason.ProductId.InsufficientQuantity,Item {ProductName}: Order at least {QuantityDelta} more to qualify for this promotional discount.,1
+Promotion.Reason.ProductId.NoMatch,This promotion does not apply to any items in your cart.,1
+Promotion.Reason.Section.InvalidRuleDefined,Invalid product section promotion.,1
+Promotion.Reason.Section.NoMatch,Offer code is not valid for this order.,1
+Promotion.Reason.StartDate,This promotion is not valid yet.,1
+Promotion.Reason.State.NoMatch,Promotion is not valid within the state specified in your shipping address.,1
+Promotion.Reason.State.NotLoggedIn,"Promotion valid only when shipping to certain states. Please login to see if you qualify. ",1
+Promotion.Reason.ZipCode.NoMatch,Promotion is not valid within the postal code specified in your shipping address.,1
+Promotion.Reason.ZipCode.NotLoggedIn,"Promotion valid only when shipping to certain postal codes. Please login to see if you qualify. ",1
+Promotions.Shipping.DiscountIncluded, (including promo discounts),1
+rateit.aspx.1,Please select your rating before submitting.,1
+rateit.aspx.10,4-Good,1
+rateit.aspx.11,5-Great!,1
+rateit.aspx.14,Submit,1
+rateit.aspx.15,Cancel,1
+rateit.aspx.2,Please limit your comment to 5000 characters.,1
+rateit.aspx.3,You are rating:,1
+rateit.aspx.4,"Please clean up your language. You may submit your comment as is, but it may be deleted if it doesn't comply with site rules.",1
+rateit.aspx.6,Select Rating,1
+rateit.aspx.7,1-Terrible!,1
+rateit.aspx.8,2-Bad,1
+rateit.aspx.9,3-OK,1
+ratings.comment.label,Comment,1
+ratings.cs.1,Helpful to Less Helpful,1
+ratings.cs.10,Previous,1
+ratings.cs.11,Next,1
+ratings.cs.14,Anonymous User,1
+ratings.cs.15,on,1
+ratings.cs.16,said:,1
+ratings.cs.17,people found ,1
+ratings.cs.18,this,1
+ratings.cs.19,your,1
+ratings.cs.2,Less Helpful to Helpful,1
+ratings.cs.20,comment helpful,1
+ratings.cs.21,did not,1
+ratings.cs.23,# of Ratings:,1
+ratings.cs.24,Your Rating:,1
+ratings.cs.25,Click Here,1
+ratings.cs.26,to change your rating,1
+ratings.cs.27,to rate this product,1
+ratings.cs.28,Click Here,1
+ratings.cs.29,(Only registered customers can rate),1
+ratings.cs.3,New to Old,1
+ratings.cs.37,Showing comments {0}-{1} of {2},1
+ratings.cs.38,to see all comments,1
+ratings.cs.4,Old to New,1
+ratings.cs.42,Was this comment helpful? ,1
+ratings.cs.43,yes,1
+ratings.cs.44,no,1
+ratings.productnotfound,Could not find the product to rate,1
+recentadditions.aspx.1,New Products,1
+recentadditions.aspx.2,Name,1
+recentadditions.aspx.3,Sales,1
+recentadditions.aspx.4,SKU,1
+recentadditions.aspx.5,There are no new products in the last {0} days...,1
+recurringorder.canceled.body,Your recurring order has been canceled. The original order number was: {0},1
+recurringorder.canceled.subject,{0} - Recurring Order Canceled,1
+recurringorder.createdon,Created On: ,1
+recurringorder.declined.body,Your recurring order payment was declined. The original order number was: {0}. The SubscriptionID is: {1}. Please update your billing information on the account page to correct. Thanks,1
+recurringorder.declined.subject,{0} - Recurring Order Declined,1
+recurringorder.index,RecurringIndex: ,1
+recurringorder.originalnumber,Original Recurring Order Number: ,1
+recurringorder.ppecfailed.body,Creation of a PayPal recurring subscription for order number {0} failed.  The initial order was completed.,1
+recurringorder.ppecfailed.subject,{0} - PayPal recurring subscription creation failed.,1
+recurringorder.stopfuturebilling,Stop Future Billing,1
+recurringorder.subscriptionid,Subscription ID:,1
+recurringorder.updateinfo,Update Billing Info,1
+recurringorder.invalidshipdate,"Next ship date must be in the future.",1
+removefromcart.customernotfound,Customer record was not found. Could not remove item.,1
+removefromcart.productnotfound,Product was not found. Could not remove item.,1
+removefromcart.requiredbyanother,You can not remove this item because it is required by another item in your {0}.,1
+removefromcart.requiredproductremoved,{0} has also been removed as it was required by {1}.,1
+removefromcart.upsellproductsupdated,Some Upsell product prices were updated because of removing this item.,1
+reorder.aspx.3,Order Not Found,1
+reorder.aspx.4,Orders that contain recurring auto-ship items can not be re-ordered. The next recurring shipment will be processed by the store administrator when the next recurring order date arrives.,1
+reorder.aspx.5,Order contains kits,1
+requestcatalog.aspx.2,CATALOG REQUEST:,1
+requestcatalog.aspx.3,Catalog Request From WebSite,1
+requestcatalog.aspx.7,"To receive our FREE catalog, please enter your information below",1
+requestcatalog.aspx.25,Request Catalog,1
+ResponsiveSkin.AboutLabel,About Us,1
+ResponsiveSkin.AccountLabel,My Account,1
+ResponsiveSkin.AccountMenuLabel,Account,1
+ResponsiveSkin.CategoryMenuLabel,Browse Categories,1
+ResponsiveSkin.ContactLabel,Contact Us,1
+ResponsiveSkin.CustomerServiceLabel,Customer Service,1
+ResponsiveSkin.HomeLabel,Home,1
+ResponsiveSkin.ManufacturerMenuLabel,Browse Brands,1
+ResponsiveSkin.MenuLabel,Menu,1
+ResponsiveSkin.OrderHistoryLabel,My Orders,1
+ResponsiveSkin.PrivacyPolicyLabel,Privacy Policy,1
+ResponsiveSkin.SecurityLabel,Security,1
+ResponsiveSkin.WishlistLabel,My Wishlist,1
+RTShipping.CheckBox.AllowLocalPickup,Allow In-Store Pickup,1
+RTShipping.LocalPickup.Breadcrumb,RTShipping In-Store Pickup,1
+RTShipping.LocalPickup.HandlingFeeLabel,In-Store Pickup Handling Fee,1
+RTShipping.LocalPickup.Restriction.States,Choose State(s),1
+RTShipping.LocalPickup.Restriction.Zips,Choose Zip Code(s),1
+RTShipping.LocalPickup.Restriction.Zones,Choose Zone(s),1
+RTShipping.LocalPickup.RestrictionsMessage,In-Store Pickup Restrictions,1
+RTShipping.LocalPickup.RestrictionType.State,By State,1
+RTShipping.LocalPickup.RestrictionType.Unrestricted,Unrestricted,1
+RTShipping.LocalPickup.RestrictionType.Zip,By Zip,1
+RTShipping.LocalPickup.RestrictionType.Zone,By Zone,1
+RTShipping.LocalPickup.RestrictionTypeLabel,Choose a Restriction Type,1
+RTShipping.LocalPickup.TitleMessage,In-Store Pickup for RTShipping,1
+RTShipping.LocalPickupMethodName,In-Store Pickup,1
+search.aspx.1,Search,1
+search.aspx.2,Please enter at least {0} characters in the Search field.,1
+search.aspx.4,Please enter something to search for!,1
+search.aspx.6,Name,1
+search.aspx.7,SKU,1
+search.aspx.8,Manufacturer,1
+search.aspx.9,Your search did not result in any matches,1
+search.go,Go,1
+search.prompt,Search...,1
+searchadv.aspx.1,Search,1
+searchadv.aspx.12,Min Price:,1
+searchadv.aspx.13,"Please enter a valid currency amount, e.g. 10.00 without the leading $ sign!",1
+searchadv.aspx.14,Max Price:,1
+searchadv.aspx.18,Manufacturer,1
+searchadv.aspx.2,Use the settings below to indicate what you are searching for:,1
+searchadv.aspx.22,Distributor,1
+searchadv.aspx.23,Search,1
+searchadv.aspx.3,Search For:,1
+searchadv.aspx.4,Search Descriptions:,1
+searchadv.aspx.5,Yes,1
+searchadv.aspx.6,No,1
+searchadv.aspx.7,Product Type:,1
+searchadv.aspx.8,--ANY--,1
+searchadv.aspx.9,All,1
+secureath.aspx.3,Submit,1
+secureauth.aspx.2,Click the button below to see the bank's secure form.,1
+secureprocess.aspx.1,Session Expired. Please retry credit card entry,1
+secureprocess.aspx.5,Unknown Result. Message={0}. Please retry your credit card.,1
+sessiontimer.expiredbuttontext,OK,1
+sessiontimer.expiringbuttontext,OK,1
+setvatsetting.aspx.3,Show Prices VAT Inclusive,1
+setvatsetting.aspx.4,Show Prices VAT Exclusive,1
+setvatsetting.aspx.6,inc vat,1
+setvatsetting.aspx.7,Excluding VAT,1
+shippingestimator.country.required,Please choose your country,1
+shippingestimator.state.defaultoption,Choose State/Province,1
+shoppingcart.aspx.12,Shipping:,1
+shoppingcart.aspx.13,Calculated During Checkout,1
+shoppingcart.aspx.14,Tax:,1
+shoppingcart.aspx.15,Calculated During Checkout,1
+shoppingcart.aspx.16,FREE,1
+shoppingcart.aspx.17,VAT:,1
+shoppingcart.aspx.19,Your cart has Auto-Ship items with conflicting shipment schedules. Only one Auto-Ship schedule is allowed per order.,1
+shoppingcart.aspx.4,"The minimum allowed order amount is {0} Please add additional items to your cart, or increase item quantities.",1
+shoppingcart.aspx.5,RTShipRequest:,1
+shoppingcart.aspx.6,RTShipResponse:,1
+shoppingcart.cs.1,Product,1
+shoppingcart.cs.10,CANCEL,1
+shoppingcart.cs.100,Product(s):,1
+shoppingcart.cs.1000,Click here to view image,1
+shoppingcart.cs.106,(no spaces),1
+shoppingcart.cs.107,Delete,1
+shoppingcart.cs.11,Change This Kit,1
+shoppingcart.cs.116,Per Item,1
+shoppingcart.cs.119,We allow a maximum of {0} items per order.  Please remove some products from your cart before beginning checkout.,1
+shoppingcart.cs.12,Change This Item,1
+shoppingcart.cs.13,% Qty Discount,1
+shoppingcart.cs.14,Are you sure you want to stop future billing & shipment for this item?,1
+shoppingcart.cs.2,SKU,1
+shoppingcart.cs.20,Please make sure you have ordered at least {0} items - any {1} items from our site - before checking out.,1
+shoppingcart.cs.200,Discounts:,1
+shoppingcart.cs.201,Order Discounts:,1
+shoppingcart.cs.24,Your MicroPay Balance is: {0},1
+shoppingcart.cs.25,Customization Text:,1
+shoppingcart.cs.3,Quantity,1
+shoppingcart.cs.4,Price,1
+shoppingcart.cs.45,State/Province:,1
+shoppingcart.cs.6,"Original Recurring Order Number: {0}, RecurringIndex={1}<br>Created On {2}",1
+shoppingcart.cs.61,Total:,1
+shoppingcart.cs.69,That promotion has expired,1
+shoppingcart.cs.7,Next Ship Date,1
+shoppingcart.cs.79,You have entered an invalid gift card,1
+shoppingcart.cs.8,Change Ship Day For This Order:,1
+shoppingcart.cs.87,Ship Item To:,1
+shoppingcart.cs.89,Qty,1
+shoppingcart.cs.9,Submit,1
+shoppingcart.cs.90,Subtotal:,1
+shoppingcart.cs.96,Sub Total (without discount):,1
+shoppingcart.cs.97,Sub Total:,1
+ShoppingCart.InventoryTrimmedReason.InventoryLevels,Some of your item quantities were reduced as they exceeded stock on hand.,1
+ShoppingCart.InventoryTrimmedReason.MinimumQuantities,Some item quantities were increased to the minimum allowed level.,1
+ShoppingCart.InventoryTrimmedReason.NoLongerAvailable,Some of your items were removed as they were no longer available.,1
+ShoppingCart.InventoryTrimmedReason.RestrictedQuantities,Some of your item quantities were reduced because they were not allowed. Please check the product page for allowed quantities.,1
+shoppingcart.outofstock,Currently Out of Stock,1
+shoppingcart.product,Product,1
+shoppingcart.quantity,Quantity,1
+shoppingcart.quantity.invalid,Invalid quantity,1
+shoppingcart.recurring.label,Auto-Ships:,1
+shoppingcart.subtotal,SubTotal,1
+shoppingcart.viewall,View all items,1
+shoppingcart.viewless,View less,1
+showcategory.aspx.15,Page: ,1
+showcategory.aspx.22,"Use this page to add <b>multiple</b> items to your cart all at one time.<br><br>For each style, you can enter a quantity by color/size that you want to add to your {0} and then click on the <b>{1}</b> button at the bottom of the page.",1
+showcategory.aspx.23,SKU:,1
+showmanufacturer.aspx.22,"Use this page to add <b>multiple</b> items to your cart all at one time.<br><br>For each style, you can enter a quantity by color/size that you want to add to your {0} and then click on the <b>{1}</b> button at the bottom of the page.",1
+showmanufacturer.aspx.23,SKU:,1
+showproduct.aspx.1,You must be a registered user to view this product!,1
+showproduct.aspx.19,Click here to view larger image,1
+showproduct.aspx.2,Click Here,1
+showproduct.aspx.20,Email this product to a friend,1
+showproduct.aspx.21,SKU:,1
+showproduct.aspx.24,Weight:,1
+showproduct.aspx.25,In Stock:,1
+showproduct.aspx.26,Price:,1
+showproduct.aspx.27,Regular Price:,1
+showproduct.aspx.3,to sign in.,1
+showproduct.aspx.4,Click here to view larger image,1
+showproduct.aspx.43,View Larger Image,1
+showproduct.aspx.8,This product qualifies for quantity discount pricing.,1
+showproduct.aspx.9,what's this?,1
+showsection.aspx.22,"Use this page to add <b>multiple</b> items to your cart all at one time.<br><br>For each style, you can enter a quantity by color/size that you want to add to your {0} and then click on the <b>{1}</b> button at the bottom of the page.",1
+showsection.aspx.23,SKU:,1
+signin.aspx.1,Login,1
+signin.aspx.15,Forgot your password?,1
+signin.aspx.16,"Enter your email address and we'll send you a one-time, temporary password.",1
+signin.aspx.18,Request A New Password,1
+signin.aspx.19,Login,1
+signin.aspx.2,"Sign-in complete, please wait...",1
+signin.aspx.24,Password Changed,1
+signin.aspx.25,There is no registered user with that email address!,1
+signin.aspx.26,"The new password you created is not a strong password. Please make sure that your password is at least 8 characters long and includes at least one upper case character, one lower case character, one number, and one ""symbol"" character (e.g. ?,&,#,$,%,etc).",1
+signin.aspx.27,"In order to create a wishlist, you will need to register now and create an account on the site.",1
+signin.aspx.29,Incorrect Old Password,1
+signin.aspx.30,The new password cannot be the same as the old password.,1
+signin.aspx.31,The new password has been previously used.  Please select a password that has not been used in {0} previous uses.,1
+signin.aspx.6,Login,1
+signin.aspx.7,Don't have an account?  Click here to create an account.,1
+signin.captcha.label,Enter security code below,1
+signin.captcha.length,Captcha codes must be exactly six characters,1
+signin.confirmpassword.example,password*,1
+signin.confirmpassword.label,Confirm New Password,1
+signin.emailaddress.example,name@domain.com,1
+signin.emailaddress.format,Please enter a valid email address,1
+signin.emailaddress.label,My email address is,1
+signin.emailaddress.length,Your email address must be 100 characters or less,1
+signin.emailaddress.required,Please enter your email address,1
+signin.newpassword.example,password,1
+signin.newpassword.label,New Password,1
+signin.newpassword.mismatch,The new password and the confirmation password do not match.,1
+signin.newpassword.normalRegexFailure,The new password you created does not meet the minimum requirements. Please make sure that your password is at least 7 characters long and includes at least one letter and at least one number.,1
+signin.newpassword.strongRegexFailure,"The new password you created is not a strong password. Please make sure that your password is at least 8 characters long and includes at least one upper case character, one lower case character, one number, and one ""symbol"" character (e.g. ?,&,#,$,%,etc).",1
+signin.newpassword.unknownError,There was a problem signing in. Please try again or contact customer service.,1
+signin.oldpassword.label,Old Password,1
+signin.password.example,password,1
+signin.password.label,My password is,1
+signin.password.length,You password must be 100 characters or less,1
+signin.password.required,Please enter your password.,1
+signin.passwordconfirmation.required,Please confirm your password.,1
+signin.rememberpassword.label,Stay signed in on this computer,1
+simpleaddtocart.detailslink,Details,1
+sitedisclaimer.accept,I Agree,1
+sitedisclaimer.decline,I Do Not Agree,1
+sitedisclaimer.metatitle,Site Disclaimer,1
+sitemap.aspx.1,Site Map,1
+sitemap.aspx.2,Topics,1
+skinbase.cs.1,"Welcome, ",1
+skinbase.cs.4,Login,1
+skinbase.cs.5,Logout,1
+skinbase.cs.7,My Account,1
+skintoken.vbv,Store protected with Verified By Visa/MasterCard Secure Initiatives,1
+sms.cs.1,NEW ORDER,1
+state.countrywithoutstates,Other (Non U.S.),1
+stockislimited.validate,Your quantity exceeds our inventory on hand. Please reduce your quantity.,1
+StoreControl.AddStore,Create Store,1
+StoreControl.Default,Default,1
+StoreControl.Description,Description,1
+StoreControl.DevelopmentURI,Development,1
+StoreControl.ProductionURI,Production,1
+StoreControl.Published,Published,1
+StoreControl.StagingURI,Staging,1
+StoreControl.UpdateLicense,Update License,1
+StoreSelector.Header,Store,1
+toc.aspx.5,Customer Service,1
+twocheckout.Error,Billing was canceled or not approved. Please retry your order.,1
+twocheckout.Info,"After you go to the 2Checkout site (by clicking on the button below), you must click the ""Complete Your Order"" button. You will do this after you have made your 2Checkout payment. That button will bring you back here to complete your order!",1
+twocheckout.Redirecting,Redirecting to 2Checkout...,1
+userlinks.checkout,Checkout,1
+userlinks.welcometext,{0},1
+uspsValidateStandardized,Your shipping address has been formatted and validated according to US Postal Service standards. Please verify that it is correct.,1
+validate.selectedaddress,Please select a valid address,1
+vat.setregistration.error,Unable to set the VAT Registration Id.  Contact the site administrator for details.,1
+whats-this.label,"<i class=""fa fa-question-circle""></i>",1

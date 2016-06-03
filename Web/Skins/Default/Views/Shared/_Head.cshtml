@@ -1,0 +1,53 @@
+﻿<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+@* Search appconfigs/settings for 'meta' to set the global page title and other meta tags *@
+@Html.Action(ActionNames.Detail, ControllerNames.MetaTag, new { metaTitle = @ViewBag.MetaTitle, metaDescription = @ViewBag.MetaDescription, metaKeywords = @ViewBag.MetaKeywords })
+
+<meta charset="utf-8">
+<meta name="description" content="Wedding Enhancements">
+<meta name="author" content="Mike Cali">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+@* Bundle and minify jQuery. *@
+@AspDotNetStorefront.Optimization.AdnsfBundler.RenderScriptBundle(
+    bundlePath: "~/scripts/jquery",
+    filePaths: new []
+    {
+        "~/scripts/jquery.js",
+        "~/scripts/jquery.adnsfalias.js",
+        "~/scripts/guidednavigation.js",
+        Url.AppRelativeSkinUrl("scripts/jquery-ui.js")
+    }
+)
+
+@* Bundle and minify CSS. *@
+@*@AspDotNetStorefront.Optimization.AdnsfBundler.RenderStyleBundle(
+	bundlePath: Url.SkinUrl("css/bundled"),
+	filePaths: new []
+	{
+		Url.AppRelativeSkinUrl("css/bootstrap.css"),
+		Url.AppRelativeSkinUrl("css/font-awesome.css"),
+		Url.AppRelativeSkinUrl("css/base.css"),
+		Url.AppRelativeSkinUrl("css/style.css"),
+	}
+)*@
+
+@AspDotNetStorefront.Optimization.AdnsfBundler.RenderStyleBundle(
+    bundlePath: Url.SkinUrl("css/bundled"),
+    filePaths: new[]
+    {
+        Url.AppRelativeSkinUrl("css/bootstrap.css"),
+        Url.AppRelativeSkinUrl("css/font-awesome.css"),
+        Url.AppRelativeSkinUrl("css/base.css"),
+        Url.AppRelativeSkinUrl("css/style.css"),
+        Url.AppRelativeSkinUrl("Css/icomoon/style.css"),
+        Url.AppRelativeSkinUrl("css/guidednavigation.css"),
+        Url.AppRelativeSkinUrl("css/jquery-ui.css"),
+        Url.AppRelativeSkinUrl("css/jquery-ui.structure.css"),
+        Url.AppRelativeSkinUrl("css/main.css"),
+        Url.AppRelativeSkinUrl("css/blue.css")
+
+    }
+)
+

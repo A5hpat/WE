@@ -1,0 +1,14 @@
+﻿@model TopicViewModel
+
+@{
+	//override default meta tags
+	ViewBag.MetaTitle = Model.MetaTitle;
+	ViewBag.MetaDescription = Model.MetaDescription;
+	ViewBag.MetaKeywords = Model.MetaKeywords;
+}
+
+<div class="page-wrap topic-page">
+	<!--Topic '@Model.Name' from @Model.ReadFromLocation -->
+	@Html.Raw(@Model.PageContent)
+	<!--End of topic '@Model.Name' from @Model.ReadFromLocation -->
+</div>

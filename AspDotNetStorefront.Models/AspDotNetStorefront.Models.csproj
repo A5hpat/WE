@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6D4B79BD-A41F-4691-940A-6A0D8A8ECB74}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AspDotNetStorefront.Models</RootNamespace>
+    <AssemblyName>AspDotNetStorefront.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\AssemblyReferences\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AssemblyReferences\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountCreateViewModels.cs" />
+    <Compile Include="AccountViewModels.cs" />
+    <Compile Include="AddressViewModels.cs" />
+    <Compile Include="AmazonPaymentsViewModel.cs" />
+    <Compile Include="BrainTreeViewModel.cs" />
+    <Compile Include="BreadcrumbViewModels.cs" />
+    <Compile Include="CheckoutAccountViewModels.cs" />
+    <Compile Include="CheckoutViewModels.cs" />
+    <Compile Include="ContactUsViewModels.cs" />
+    <Compile Include="Converter\AddressViewModelConverter.cs" />
+    <Compile Include="CreditCardViewModels.cs" />
+    <Compile Include="DebugRealTimeShippingViewModel.cs" />
+    <Compile Include="DownloadsModels.cs" />
+    <Compile Include="EntityViewModel.cs" />
+    <Compile Include="ErrorViewModels.cs" />
+    <Compile Include="GiftCardViewModels.cs" />
+    <Compile Include="HomeViewModel.cs" />
+    <Compile Include="ImageViewModels.cs" />
+    <Compile Include="KitAddToCartViewModels.cs" />
+    <Compile Include="KitUploadViewModels.cs" />
+    <Compile Include="MetaTagViewModel.cs" />
+    <Compile Include="MicroPayViewModel.cs" />
+    <Compile Include="MinicartViewModels.cs" />
+    <Compile Include="NewsViewModels.cs" />
+    <Compile Include="NoticeViewModels.cs" />
+    <Compile Include="OrderConfirmationViewModels.cs" />
+    <Compile Include="OrderNotesViewModel.cs" />
+    <Compile Include="OrderOptionViewModels.cs" />
+    <Compile Include="OrderSummaryViewModel.cs" />
+    <Compile Include="PaymentMethodModels.cs" />
+    <Compile Include="PreviewViewModels.cs" />
+    <Compile Include="ProductEmailViewModel.cs" />
+    <Compile Include="ProductViewModel.cs" />
+    <Compile Include="PromotionsViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseOrderViewModel.cs" />
+    <Compile Include="RatingViewModels.cs" />
+    <Compile Include="RecurringOrderViewModels.cs" />
+    <Compile Include="RegisterViewModel.cs" />
+    <Compile Include="SearchViewModel.cs" />
+    <Compile Include="SelectShippingMethodViewModel.cs" />
+    <Compile Include="SessionTimeoutViewModels.cs" />
+    <Compile Include="ShippingEstimateViewModel.cs" />
+    <Compile Include="ShoppingCartViewModels.cs" />
+    <Compile Include="SimplePageViewModel.cs" />
+    <Compile Include="SiteDisclaimerViewModel.cs" />
+    <Compile Include="ThreeDSecureViewModels.cs" />
+    <Compile Include="UpsellProductViewModels.cs" />
+    <Compile Include="TopicViewModels.cs" />
+    <Compile Include="TwoCheckoutModel.cs" />
+    <Compile Include="MinicartResourcesViewModel.cs" />
+    <Compile Include="UserLinksViewModels.cs" />
+    <Compile Include="WalletViewModel.cs" />
+    <Compile Include="XmlPackageViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ASPDNSFCore\AspDotNetStorefrontCore.csproj">
+      <Project>{06ed156e-ca02-4a2b-80c4-eeed5a84e9f9}</Project>
+      <Name>AspDotNetStorefrontCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AspDotNetStorefront.Checkout\AspDotNetStorefront.Checkout.csproj">
+      <Project>{6ab7d083-610d-4c3d-8779-06cbf0c9af9e}</Project>
+      <Name>AspDotNetStorefront.Checkout</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AspDotNetStorefront.Validation\AspDotNetStorefront.Validation.csproj">
+      <Project>{f47ff746-d6a3-4725-afd2-2d23de1bd2cb}</Project>
+      <Name>AspDotNetStorefront.Validation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

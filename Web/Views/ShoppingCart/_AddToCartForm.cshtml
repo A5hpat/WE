@@ -1,0 +1,155 @@
+﻿@model AddToCartViewModel
+
+@if(Model.IsCallToOrder)
+{
+	@Html.Partial("_CallToOrder")
+}
+else if(Model.ShowBuyButton)
+{
+	using(Html.BeginForm(
+		actionName: ActionNames.AddToCart,
+		controllerName: ControllerNames.ShoppingCart,
+		method: FormMethod.Post,
+		htmlAttributes: new
+		{
+			@class = "form add-to-cart-form js-add-to-cart-form",
+			id = string.Format("add-to-cart-{0}", Model.VariantId),
+		}))
+	{
+		@Html.HiddenFor(m => m.ProductId, new { id = string.Format("product-id-{0}", Model.VariantId) })
+		@Html.HiddenFor(m => m.VariantId, new { id = string.Format("variant-id-{0}", Model.VariantId) })
+		@Html.HiddenFor(m => m.CartRecordId, new { id = string.Format("cart-record-id-{0}", Model.VariantId) })
+		@Html.HiddenFor(m => m.UpsellProducts, new { id = string.Format("upsell-prodcut-ids-{0}", Model.VariantId) })
+		@Html.HiddenFor(m => m.ReturnUrl, new { id = string.Format("return-url-{0}", Model.VariantId) })
+		@Html.HiddenFor(m => m.IsWishlist, new { id = string.Format("is-wishlist-{0}", Model.VariantId), @class="js-is-wishlist" })
+
+		<div class="js-add-to-cart-errors">
+			@* Javascript will display errors here *@
+		</div>
+
+		if(Model.ShowTextOption)
+		{
+			<div class="form-group text-option-group">
+				<label for="TextOption">
+					@Model.TextOptionPrompt
+				</label>
+				@if(Model.TextOptionMaxLength < 50)
+				{
+					@Html.TextBoxFor(m => m.TextOption, new { @class = "form-control text-option", maxlength = Model.TextOptionMaxLength })
+				}
+				else
+				{
+					@Html.TextAreaFor(m => m.TextOption, new { @class = "form-control text-option", maxlength = Model.TextOptionMaxLength })
+				}
+			</div>
+		}
+		<div class="form-group add-to-cart-group">
+			@if(Model.CustomerEntersPrice)
+			{
+				<span class="customer-enters-price-wrap">
+					<label class="customer-enters-price-label" for="CustomerEnteredPrice">
+						@Model.CustomerEntersPricePrompt
+					</label>
+					@Html.EditorFor(m => m.CustomerEnteredPrice, new { htmlAttributes = new { @class = "form-control text-xs form-control-inline customer-entered-price" } })
+				</span>
+			}
+
+			@if(Model.ShowQuantity)
+			{
+				<span class="add-to-cart-quantity">
+					@Html.LabelFor(m => m.Quantity)
+					@if(Model.RestrictedQuantities.Any())
+					{
+						@Html.DropDownListFor(m => m.Quantity, Model.RestrictedQuantities, new { @class = "form-control quantity-select js-validate-quantity", id = string.Format("quantity-{0}", Model.VariantId) });
+					}
+					else
+					{
+						@Html.EditorFor(
+						expression: m => m.Quantity,
+						additionalViewData: new
+						{
+							htmlAttributes = new
+							{
+								@class = "form-control quantity-field js-validate-quantity",
+								id = string.Format("quantity-{0}", Model.VariantId),
+								min = 0
+							}
+						})
+					}
+				</span>
+			}
+			
+			@if(Model.SizeOptions.Any() || Model.ColorOptions.Any())
+			{
+				<span class="add-to-cart-selectors">
+					@if(Model.SizeOptions.Any())
+					{
+						@Html.DropDownListFor(m => m.Size, Model.SizeOptions, new { @class = "form-control size-select", id = string.Format("size-{0}", Model.VariantId), autocomplete = "off" });
+					}
+
+					@if(Model.ColorOptions.Any())
+					{
+						@Html.DropDownListFor(m => m.Color, Model.ColorOptions, new { @class = "form-control color-select", id = string.Format("color-{0}", Model.VariantId), autocomplete = "off" });
+					}
+				</span>
+			}
+
+			@if(Model.CartRecordId > 0)
+			{
+				if(Model.CartType == CartTypeEnum.ShoppingCart)
+				{
+					<button type="submit" class="btn btn-primary add-to-cart js-add-to-cart-button">
+                        Update Item
+					</button>
+				}
+				else if(Model.ShowWishlistButton)
+				{
+					<button type="submit" class="btn btn-default add-to-wishlist js-wishlist-button">
+                        Update Item
+					</button>
+				}
+			}
+			else
+			{
+				<button type="submit" class="btn btn-primary add-to-cart js-add-to-cart-button">
+                    Add to Cart
+				</button>
+				if(Model.ShowWishlistButton)
+				{
+					<button type="submit" class="btn btn-default add-to-wishlist js-wishlist-button">
+                        Add to Cart
+					</button>
+				}
+			}
+		</div>
+
+		if(Model.ShowBuySafeKicker)
+		{
+			<div class="form-text buysafe-kicker" id="productBuySafeKicker">
+				<span id="buySAFE_Kicker" name="buySAFE_Kicker" type="@Model.BuySafeKickerType"></span>
+			</div>
+		}
+
+		if(Model.ColorSelectorChangesImage)
+		{
+			<script type="text/javascript">
+				adnsf$('#color-@(Model.VariantId)').change(function () {
+					if(window['setcolorpic_@(Model.ProductId)']){
+						setcolorpic_@(Model.ProductId)(adnsf$(this).val());
+					}
+				});
+
+				if(adnsf$('#color-@(Model.VariantId)').length && adnsf$('#color-@(Model.VariantId)').val() != '') {
+					if(window['setcolorpic_@(Model.ProductId)']) {
+						setcolorpic_@(Model.ProductId)(adnsf$('#color-@(Model.VariantId)').val());
+					}
+				}
+			</script>
+		}
+		
+		if(Model.PayPalAd != null && Model.PayPalAd.Show)
+		{
+			@Html.Raw(Model.PayPalAd.ImageScript)
+        }
+	}
+}

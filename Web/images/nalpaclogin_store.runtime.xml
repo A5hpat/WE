@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <System xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <IsAdminSite>false</IsAdminSite>
+    <IsAdminSiteInt>0</IsAdminSiteInt>
+    <CustomerID>59709</CustomerID>
+    <DefaultVATSetting>1</DefaultVATSetting>
+    <CustomerVATSetting>2</CustomerVATSetting>
+    <UseVATSetting>2</UseVATSetting>
+    <CustomerLevelID>1</CustomerLevelID>
+    <CustomerLevelName>Wholesale</CustomerLevelName>
+    <CustomerFirstName>Mike</CustomerFirstName>
+    <CustomerLastName>Cali</CustomerLastName>
+    <CustomerFullName>Mike Cali</CustomerFullName>
+    <CustomerRoles>Free,Admin,SuperAdmin,Registered,Wholesale,Wholesale</CustomerRoles>
+    <IsAdminUser>true</IsAdminUser>
+    <IsSuperUser>true</IsSuperUser>
+    <VAT.Enabled>false</VAT.Enabled>
+    <VAT.AllowCustomerToChooseSetting>true</VAT.AllowCustomerToChooseSetting>
+    <LocaleSetting>en-US</LocaleSetting>
+    <CurrencySetting>USD</CurrencySetting>
+    <CurrencyDisplayLocaleFormat />
+    <WebConfigLocaleSetting>en-US</WebConfigLocaleSetting>
+    <SqlServerLocaleSetting>en-US</SqlServerLocaleSetting>
+    <PrimaryCurrency>USD</PrimaryCurrency>
+    <PrimaryCurrencyDisplayLocaleFormat />
+    <Date>2016-04-28T17:14:33.968902-04:00</Date>
+    <Time>2016-04-28T17:14:33.968902-04:00</Time>
+    <SkinID>1</SkinID>
+    <AffiliateID>0</AffiliateID>
+    <IPAddress>::1</IPAddress>
+    <QueryStringRAW />
+    <PageName />
+    <FullPageName>/nalpac4/</FullPageName>
+    <XmlPackageName>nalpaclogin</XmlPackageName>
+    <StoreUrl>http://localhost/nalpac4/</StoreUrl>
+    <CurrentDateTime>2016-04-28T17:14:33.968902-04:00</CurrentDateTime>
+    <CustomerIsRegistered>true</CustomerIsRegistered>
+    <StoreID>1</StoreID>
+    <FilterProduct>false</FilterProduct>
+    <FilterEntity>false</FilterEntity>
+    <FilterTopic>false</FilterTopic>
+    <FilterNews>false</FilterNews>
+    <RequestedPage />
+    <RequestedQuerystring />
+    <AdnsfVersion>10.0.0.0</AdnsfVersion>
+    <AdnsfVersionMajor>10</AdnsfVersionMajor>
+    <AdnsfVersionMinor>0</AdnsfVersionMinor>
+    <AdnsfVersionRevision>0</AdnsfVersionRevision>
+    <AdnsfVersionBuild>0</AdnsfVersionBuild>
+  </System>
+  <QueryString />
+  <Form />
+  <Session />
+  <Cookies>
+    <_ga>GA1.1.1290572295.1461275926</_ga>
+    <__RequestVerificationToken_L25hbHBhYzQ1>6GGBMpJvkONYIjV-4TZ5-WceUQ-Thvf6qruM2b5G-J35Lqof5KC92-wJKcrTQy1i90ezQUJm-kmszdLKjyd5gdtIIofKkoWyUh9UtvLRNC81</__RequestVerificationToken_L25hbHBhYzQ1>
+    <adnsf.notices>[]</adnsf.notices>
+  </Cookies>
+  <ServerVariables>
+    <HTTP_HOST>localhost</HTTP_HOST>
+    <HTTP_USER_AGENT>Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2719.0 Safari/537.36</HTTP_USER_AGENT>
+    <AUTH_TYPE>ApplicationCookie</AUTH_TYPE>
+    <AUTH_USER>377f98fd-2949-47b6-83e1-0152604c66d0</AUTH_USER>
+    <AUTH_PASSWORD></AUTH_PASSWORD>
+    <HTTPS>off</HTTPS>
+    <LOCAL_ADDR>::1</LOCAL_ADDR>
+    <PATH_INFO>/nalpac4/</PATH_INFO>
+    <PATH_TRANSLATED>E:\web\tfs-snapshot\DEV\AspDotNetStorefront\Nalpac.com\10.0\Web\</PATH_TRANSLATED>
+    <SCRIPT_NAME>/nalpac4/</SCRIPT_NAME>
+    <SERVER_NAME>localhost</SERVER_NAME>
+    <SERVER_PORT_SECURE>0</SERVER_PORT_SECURE>
+    <HTTP_CLUSTER_HTTPS></HTTP_CLUSTER_HTTPS>
+  </ServerVariables>
+  <Runtime>
+    <CustomerIsRegistered>true</CustomerIsRegistered>
+    <PageName />
+    <FullPageName>/nalpac4/</FullPageName>
+    <CustomerLevelName>Wholesale</CustomerLevelName>
+    <WebConfigLocaleSetting>en-US</WebConfigLocaleSetting>
+    <StoreID>1</StoreID>
+    <CustomerFirstName>Mike</CustomerFirstName>
+    <StoreUrl>http://localhost/nalpac4/</StoreUrl>
+    <Date>4/28/2016</Date>
+    <QueryStringRAW />
+    <CustomerLastName>Cali</CustomerLastName>
+    <XmlPackageName>nalpaclogin</XmlPackageName>
+    <PrimaryCurrencyDisplayLocaleFormat />
+    <UseVATSetting>2</UseVATSetting>
+    <CustomerLevelID>1</CustomerLevelID>
+    <SkinId>1</SkinId>
+    <FilterEntity>False</FilterEntity>
+    <CurrencySetting>USD</CurrencySetting>
+    <FilterProduct>False</FilterProduct>
+    <IPAddress>::1</IPAddress>
+    <IsAdminSiteInt>0</IsAdminSiteInt>
+    <FilterTopic>False</FilterTopic>
+    <IsSuperUser>True</IsSuperUser>
+    <Time>5:14 PM</Time>
+    <DefaultVATSetting>1</DefaultVATSetting>
+    <CustomerFullName>Mike Cali</CustomerFullName>
+    <FilterNews>False</FilterNews>
+    <PrimaryCurrency>USD</PrimaryCurrency>
+    <VAT.AllowCustomerToChooseSetting>True</VAT.AllowCustomerToChooseSetting>
+    <CurrencyDisplayLocaleFormat />
+    <SqlServerLocaleSetting>en-US</SqlServerLocaleSetting>
+    <CustomerRoles>Free,Admin,SuperAdmin,Registered,Wholesale,Wholesale</CustomerRoles>
+    <IsAdminSite>False</IsAdminSite>
+    <AffiliateID>0</AffiliateID>
+    <LocaleSetting>en-US</LocaleSetting>
+    <PageID />
+    <CustomerVATSetting>2</CustomerVATSetting>
+    <IsAdminUser>True</IsAdminUser>
+    <VAT.Enabled>False</VAT.Enabled>
+    <PageType>home</PageType>
+  </Runtime>
+  <customers>
+    <custs>
+      <FirstName>Mike</FirstName>
+      <LastName>Cali</LastName>
+      <customerid>59709</customerid>
+    </custs>
+  </customers>
+</root>

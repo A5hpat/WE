@@ -1,0 +1,21 @@
+﻿@model GoogleTrustedStoresViewModel
+
+<div id="gts-order" style="display:none;" translate="no">
+
+	<span id="gts-o-id">@Model.OrderNumber</span>
+	<span id="gts-o-domain">@Model.Domain</span>
+	<span id="gts-o-email">@Model.Email</span>
+	<span id="gts-o-country">@Model.CountryCode</span>
+	<span id="gts-o-currency">@Model.Currency</span>
+	<span id="gts-o-total">@Model.Total</span>
+	<span id="gts-o-discounts">@Model.Discounts</span>
+	<span id="gts-o-shipping-total">@Model.ShippingTotal</span>
+	<span id="gts-o-tax-total">@Model.TaxTotal</span>
+	<span id="gts-o-est-ship-date">@Model.ShipDate</span>
+	<span id="gts-o-est-delivery-date">@Model.DeliverDate</span>
+	<span id="gts-o-has-preorder">N</span>
+	<span id="gts-o-has-digital">@Model.HasDigital</span>
+
+	@Html.EditorForMany(m => m.CartItems, "GoogleTrustedStoresCartItem")
+
+</div>

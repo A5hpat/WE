@@ -1,0 +1,104 @@
+﻿@model CheckoutAccountViewModel
+
+<div class="row">
+	@Html.Partial(ViewNames.AccountEmailPartial, Model)
+
+	<div class="col-md-6">
+		@using(Html.BeginForm(
+			actionName: ActionNames.SignIn,
+			controllerName: ControllerNames.CheckoutAccount,
+			method: FormMethod.Post,
+			htmlAttributes: new { @class = "form checkout-login-form js-checkout-login-form" }))
+		{
+			@Html.AntiForgeryToken()
+
+			@Html.HiddenFor(
+				expression: model => model.Email,
+				htmlAttributes: new
+				{
+					name = "Email",
+					@class = "js-login-email"
+				})
+
+			<div class="form-group">
+				@if(Model.PasswordRequired)
+				{
+					<label class="form-label form-label-required" for="Password">
+						<span class="form-label-prefix form-label-prefix-required">
+                            @*label.requiredPrefix*@
+						</span> 
+                        Password
+						<span class="form-label-suffix form-label-suffix-required">(required)</span>
+					</label>
+				}
+				else
+				{
+					<label class="form-label form-label-optional" for="Password">
+						<span class="form-label-prefix form-label-prefix-optional">
+                            @*label.optionalPrefix*@
+						</span>
+                        Password
+						<span class="form-label-suffix form-label-suffix-optional">(optional)</span>
+					</label>
+				}
+
+				<div class="@Html.AttributeBool(!Model.ShowCaptcha, "input-group")">
+					@Html.EditorFor(
+						expression: m => m.Password,
+						additionalViewData: new
+						{
+							htmlAttributes = new
+							{
+								@class = "form-control js-toggles-captcha",
+								autocomplete = "current-password"
+							}
+						})
+
+					@if(!Model.ShowCaptcha)
+					{
+						<span class="input-group-btn">
+							<button type="submit" class="btn btn-default login-button">
+                                Login
+							</button>
+						</span>
+					}
+				</div>
+
+				@Html.ValidationMessageFor(m => m.Password)
+				
+				<div class="form-description">
+					@if(Model.PasswordRequired)
+					{
+						@String.Format("We have an account for you. Please login.")
+					}
+					else
+					{
+						@String.Format("We have an account for you if you would like to login.")
+					}
+				</div>
+
+				@if(Model.PasswordResetAvailable)
+				{
+					<a href="@Url.Action(ActionNames.SignIn, ControllerNames.Account, new { returnUrl = Url.Action(ActionNames.Index, ControllerNames.Checkout) })#password-recovery">
+                        Forgot your password?
+					</a>
+				}
+			</div>
+
+			if(Model.ShowCaptcha)
+			{
+				<div class="captcha-wrap js-captcha-wrap">
+					@Html.CaptchaEntryFor(
+						expression: m => m.Captcha,
+						scope: string.Concat(ControllerNames.Account, ActionNames.SignIn))
+
+					<div class="text-right">
+						<button type="submit" class="btn btn-default login-button">
+                            Login
+						</button>
+					</div>
+				</div>
+			}
+		}
+	</div>
+</div>

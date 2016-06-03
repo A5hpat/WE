@@ -1,0 +1,598 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Tokens</title>
+</head>
+<body>
+	<h1>Tokens</h1>
+
+	<div>
+		<h4 id="ADDTOCARTFORM">
+			ADDTOCARTFORM
+			<small>Creates an add-to-cart form for a product</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!AddToCartForm ProductId="1" VariantId="1"!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!AddToCartForm ProductId="1" VariantId="1"!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="APPCONFIG">
+			APPCONFIG
+			<small>Get the value of an appconfig</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!AppConfig Name=&quot;storename&quot;!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!AppConfig name="storename"!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="CATEGORYLINK">
+			CATEGORYLINK
+			<small>Get a URL to a category</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!CategoryLink CategoryId=&quot;1&quot; SEName=&quot;category-one&quot;!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!CategoryLink CategoryId="1" SEName="category-one"!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="COPYRIGHTYEARS">
+			COPYRIGHTYEARS
+			<small>Get the copyright year or year range</small>
+		</h4>
+
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!CopyrightYears!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!CopyrightYears!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="COUNTRYSELECTLIST">
+			COUNTRYSELECTLIST
+			<small>Used to output the country drop down</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!CountrySelectList!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!CountrySelectList!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="CURRENCYSELECTLIST">
+			CURRENCYSELECTLIST
+			<small>Used to output the currency drop down</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!CurrencySelectList!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!CurrencySelectList!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="CUSTOMERID">
+			CUSTOMERID
+			<small>The current user's CustomerId</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!CustomerId!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!CustomerId!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="CUSTOMERLOCALE">
+			CUSTOMERLOCALE
+			<small>Gets the current user's locale</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!CustomerLocale!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!CustomerLocale!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="ENTITYLINK">
+			ENTITYLINK
+			<small>Get a URL to an entity(Category, Department, Manufacturer, etc.)</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!EntityLink EntityId=&quot;1&quot; SeName=&quot;category-one&quot; EntityName=&quot;category&quot;!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!EntityLink EntityId="1" SeName="category-one" EntityName="category"!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="FORMATCURRENCY">
+			FORMATCURRENCY
+			<small>Format a decimal in the current user's currency</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!FormatCurrency Value=&quot;10.00&quot;!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!FormatCurrency Value="10.00"!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="IMAGEURL">
+			IMAGEURL
+			<small>Gets a URL for a product or entity image</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!ImageUrl Id=&quot;1&quot; Type=&quot;product&quot; Size=&quot;icon&quot;!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!ImageUrl Id="1" Type="product" Size="icon"!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="INVOCATION">
+			INVOCATION
+			<small>Shows the URL including the sub-folder application name (if you have one) and the query string</small>
+		</h4>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<code>&#40;!Invocation!&#41;</code>
+		</div>
+		<div class="panel-body">
+			(!Invocation!)
+		</div>
+	</div>
+
+	<div>
+		<h4 id="LOCALESETTING">
+			LOCALESETTING
+			<small>Gets the current user's locale</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!LocaleSetting!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!LocaleSetting!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="LOOKUPIMAGE">
+			LOOKUPIMAGE
+			<small>Renders an image of a product or entity</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!LookupImage Id=&quot;1&quot; Type=&quot;product&quot; Size=&quot;icon&quot;!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!LookupImage Id="1" Type="product" Size="icon"!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="MANUFACTURERLINK">
+			MANUFACTURERLINK
+			<small>Get a URL to a manufacturer</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!ManufacturerLink ManufacturerId=&quot;1&quot; SEName=&quot;manufacturer-one&quot;!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!ManufacturerLink ManufacturerId="1" SEName="manufacturer-one"!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="MICROPAYBALANCE">
+			MICROPAYBALANCE
+			<small>The current user's MicroPay balance</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!MicropayBalance!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!MicropayBalance!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="MICROPAYBALANCECURRENCY">
+			MICROPAYBALANCECURRENCY
+			<small>The current user's MicroPay balance converted to the user's currency</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!MicropayBalanceCurrency!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!MicropayBalanceCurrency!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="MICROPAY_BALANCE_RAW">
+			MICROPAYBALANCERAW
+			<small>The current user's MicroPay balance without a label</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!MicropayBalanceRaw!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!MicropayBalanceRaw!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="NUMCARTITEMS">
+			NUMCARTITEMS
+			<small>The number of items in the current user's shopping cart</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!NumCartItems!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!NumCartItems!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="NUMWISHITEMS">
+			NUMWISHITEMS
+			<small>The number of items in the current user's wishlist</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!NumWishItems!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!NumWishItems!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="OBJECTLINK">
+			OBJECTLINK
+			<small>Get a URL to an entity(Category, Department, Manufacturer, etc.)</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!ObjectLink ObjectId=&quot;1&quot; SeName=&quot;category-one&quot; ObjectName=&quot;category&quot;!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!ObjectLink ObjectId="1" SeName="category-one" ObjectName="category"!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="PAGEINFO">
+			PAGEINFO
+			<small>HTML commented page diagnostic info used on the default template</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!PageInfo!&#41;</code>
+			</div>
+			<div class="panel-body">
+
+				View source to see code
+				(!PageInfo!)
+
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="PRODUCTLINK">
+			PRODUCTLINK
+			<small>A URL to a product page</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!ProductLink ProductId=&quot;1&quot; SEName=&quot;product-one&quot;!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!ProductLink ProductId="1" SEName="product-one"!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="PRODUCTPROPERNAME">
+			PRODUCTPROPERNAME
+			<small>Get a product and variant concatenated name (Product Name-Variant Name)</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!ProductProperName ProductId=&quot;1&quot; VariantId=&quot;1&quot;!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!ProductProperName ProductId="1" VariantId="1"!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="SECTIONLINK">
+			SECTIONLINK
+			<small>Get a URL to a department/section</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!SectionLink SectionId=&quot;1&quot; SEName=&quot;department-one&quot;!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!SectionLink SectionId="1" SEName="department-one"!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="SIGNINOUTLINK">
+			SIGNINOUTLINK
+			<small>The URL to login or logout depending on the whether the current user is logged in or not</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!SignInOutLink!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!SignInOutLink!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="SIGNINOUTTEXT">
+			SIGNINOUTTEXT
+			<small>"Login" or "Logout" depending on the whether the current user is logged in or not</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!SignInOutText!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!SignInOutText!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="SKINID">
+			SKINID
+			<small>Get the current SkinId</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!SkinId!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!SkinId!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="SKINNAME">
+			SKINNAME
+			<small>Get the current SkinName</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!SkinName!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!SkinName!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="SKINPATH">
+			SKINPATH
+			<small>Get the current SkinPath</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!SkinPath!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!SkinPath!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="STORELOCALE">
+			STORELOCALE
+			<small>Gets the default locale for the store</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!StoreLocale!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!StoreLocale!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="STRINGRESOURCE">
+			STRINGRESOURCE
+			<small>Get a string resource</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!StringResource Name=&quot;ResponsiveSkin.AccountLabel&quot;!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!StringResource Name="ResponsiveSkin.AccountLabel"!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="TOPIC">
+			TOPIC
+			<small>Get the contents of a topics</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!Topic name=&quot;HelpBox&quot;!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!Topic name="HelpBox"!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="TOPICLINK">
+			TOPICLINK
+			<small>Get a URL for a topic</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!TopicLink Name=&quot;about&quot;!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!TopicLink Name="about"!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="URL">
+			URL
+			<small>Get a URL to a given action and controller with optional route values</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!Url ActionName=&quot;Index&quot; ControllerName=&quot;Checkout&quot; Query1=&quot;test&quot; Query2=&quot;test&quot;!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!Url ActionName="Index" ControllerName="Checkout" Query1="test" Query2="test"!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="USERMENUNAME">
+			USERMENUNAME
+			<small>Says the user's name if you're logged in otherwise it says "my account"</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!UserMenuName!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!UserMenuName!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="USERNAME">
+			USERNAME
+			<small>Says "Welcome, {User Name}" if you're logged in</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!UserName!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!UserName!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="VATSELECTLIST">
+			VATSELECTLIST
+			<small>Used to output the inclusive/exclusive vat drop down</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!VatSelectList!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!VatSelectList!)
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h4 id="XMLPACKAGE">
+			XMLPACKAGE
+			<small>Display the output of an XmlPackage</small>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<code>&#40;!XmlPackage Name=&quot;RelatedProducts&quot; ProductId=&quot;1&quot;!&#41;</code>
+			</div>
+			<div class="panel-body">
+				(!XmlPackage Name="RelatedProducts" ProductId="1"!)
+			</div>
+		</div>
+	</div>
+</body>
+</html>

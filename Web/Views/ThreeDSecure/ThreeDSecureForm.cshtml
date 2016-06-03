@@ -1,0 +1,23 @@
+﻿@model ThreeDSecureViewModel
+@{
+	Layout = null;
+}
+
+<div>
+	<form name="frmLaunchACS"
+		  method="post"
+		  action="@Model.ACSUrl">
+
+		<noscript>
+			<div>Click the button below to see the bank's secure form.</div>
+			<input type="submit" value="Submit" />
+		</noscript>
+
+		@Html.HiddenFor(m => m.PaReq)
+		@Html.HiddenFor(m => m.TermUrl)
+		@Html.HiddenFor(m => m.MD)
+	</form>
+</div>
+<script>
+	document.frmLaunchACS.submit();
+</script>

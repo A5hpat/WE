@@ -1,0 +1,57 @@
+﻿@model WalletIndexViewModel
+
+<div class="page-wrap">
+	@using(Html.BeginForm())
+	{
+		foreach(var paymentType in Model.PaymentTypes)
+		{
+			<div class="wallet-card">
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="media">
+							<div class="media-left">
+								<img class="media-object" src='@paymentType.CardImage' />
+							</div>
+							<div class="media-body">
+								<div class="wallet-card-number">
+									@paymentType.CardNumber
+								</div>
+								<div class="wallet-exp-date">
+                                    Expires @paymentType.ExpirationMonth / @paymentType.ExpirationYear
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 text-right-sm wallet-card-actions">
+						<a class="btn btn-default edit-wallet-button" role="button"
+						   href="@Url.Action(ActionNames.Edit, ControllerNames.Wallet, new
+									{
+										id = paymentType.PaymentProfileId
+									})">
+                            Edit
+						</a>
+						<a class="btn btn-default remove-wallet-button" role="button"
+						   href="@Url.Action(ActionNames.Delete, ControllerNames.Wallet, new
+									{
+										id = paymentType.PaymentProfileId
+									})"
+						   onclick="return confirm('Are you sure?');">
+                            Remove
+						</a>
+					</div>
+				</div>
+			</div>
+		}
+
+		<div class="page-action-bar wallet-actions">
+			<a class="btn btn-primary add-wallet-button"
+			   href="@Url.Action(ActionNames.Edit, ControllerNames.Wallet)">
+                Add Payment Type
+			</a>
+			<a class="btn btn-default cancel-wallet-button"
+			   href="@Url.Action(ActionNames.Index, ControllerNames.Account)">
+				Cancel
+			</a>
+		</div>
+	}
+</div>

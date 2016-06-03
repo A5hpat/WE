@@ -1,0 +1,15 @@
+﻿@model NotFoundViewModel
+
+@{
+	ViewBag.MetaTitle = Model.Title;
+}
+
+<div id="pnlTopic">
+	@Html.Raw(@Model.Content)
+</div>
+
+<h3>Are you looking for:</h3>
+
+<div class="not-found-suggestions-wrap">
+	@Html.EditorForMany(model => model.Suggestions, "NotFoundSuggestion")
+</div>

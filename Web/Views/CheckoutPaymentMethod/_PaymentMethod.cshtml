@@ -1,0 +1,126 @@
+﻿@model PaymentMethodRenderModel
+@helper DisplayOnSitePaymentButton(string name, string displayName, string url)
+{
+	<a class="btn btn-default choose-payment-method-button js-payment-method-option"
+	   href="@url">
+		@switch(name)
+		{
+			case AppLogic.ro_PMPayPalEmbeddedCheckout:
+			case AppLogic.ro_PMCreditCard:
+				<i class="fa fa-credit-card"></i>
+				break;
+
+			case AppLogic.ro_PMRequestQuote:
+				<i class="fa fa-question-circle"></i>
+				break;
+
+			case AppLogic.ro_PMPurchaseOrder:
+				<i class="fa fa-list-alt"></i>
+				break;
+
+			case AppLogic.ro_PMCOD:
+				<i class="fa fa-money"></i>
+				break;
+
+			case AppLogic.ro_PMCheckByMail:
+				<i class="fa fa-envelope-o"></i>
+				break;
+
+			case AppLogic.ro_PMMicropay:
+				<i class="fa fa-user"></i>
+				break;
+		}
+
+		<span id="@name">
+			@displayName
+		</span>
+	</a>
+}
+
+<div id="payment-details" class="payment-details">
+	@if(Model.PaymentMethodComplete)
+	{
+		<div class="row">
+			<div class="col-xs-6">
+				<div class="selected-payment-method">
+					<strong>
+						@Model.SelectedPaymentMethodDisplayName
+					</strong>
+				</div>
+				<div class="payment-method-detail">
+					@switch(Model.SelectedPaymentMethod)
+					{
+						case AppLogic.ro_PMCreditCard:
+							@Html.Action(ActionNames.CreditCardDetail, ControllerNames.CheckoutCreditCard)
+							break;
+
+						case AppLogic.ro_PMPurchaseOrder:
+							@Html.Action(ActionNames.PurchaseOrderDetail, ControllerNames.CheckoutPurchaseOrder)
+							break;
+
+						case AppLogic.ro_PMMicropay:
+							@Html.Action(ActionNames.MicroPayDetail, ControllerNames.CheckoutMicroPay)
+							break;
+
+						case AppLogic.ro_PMAmazonPayments:
+							@Html.Action(ActionNames.AmazonPaymentsDetail, ControllerNames.CheckoutAmazonPayments)
+							break;
+					}
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="checkout-actions payment-method-actions">
+					@if(Model.EditUrl != null)
+					{
+						<a href="@Model.EditUrl" class="btn btn-default edit-payment-method-checkout-button">
+							Edit
+						</a>
+					}
+					<button class="btn btn-default change-payment-method-checkout-button" id="payment-method-show">
+						Change
+					</button>
+				</div>
+			</div>
+		</div>
+	}
+</div>
+
+<div id="payment-method-options" class="payment-method-options @Html.AttributeBool(Model.PaymentMethodComplete, "off", "on")">
+	<div id="onsite-payment-method-options">
+		@if(Model.OnSitePaymentOptions.Any())
+		{
+			<div class="on-site-payment-methods">
+				@foreach(var paymentMethod in Model.OnSitePaymentOptions)
+				{
+					@DisplayOnSitePaymentButton(paymentMethod.Info.Name, paymentMethod.Info.DisplayName, paymentMethod.EditUrl)
+				}
+			</div>
+		}
+	</div>
+
+	@if(Model.PaymentMethodComplete)
+	{
+		<div class="checkout-actions payment-method-actions">
+			<button class="btn btn-default hide-payment-methods-checkout-button" id="payment-method-hide">
+				Hide Options
+			</button>
+		</div>
+	}
+</div>
+
+<script type="text/javascript">
+	(function($) {
+		var paymentMethodOptions = $('#payment-method-options');
+		var paymentDetails = $('#payment-details');
+
+		$('#payment-method-show').click(function() {
+			paymentMethodOptions.show();
+			paymentDetails.hide();
+		});
+
+		$('#payment-method-hide').click(function() {
+			paymentMethodOptions.hide();
+			paymentDetails.show();
+		});
+	})(adnsf$);
+</script>

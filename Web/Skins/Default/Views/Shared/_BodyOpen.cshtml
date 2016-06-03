@@ -1,0 +1,10 @@
+﻿<!-- Respond.js IE8 support of media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+@Html.Token("PageInfo")
+
+@Html.Action(ActionNames.PreviewBar, ControllerNames.Preview)
+
+@*This xmlpackage can be used to add dynamic data to javascripts such as tracking scripts that should run just after the opening body tag*@
+@Html.XmlPackage("script.bodyopen", new { OrderAlreadyConfirmed = ViewBag.OrderAlreadyConfirmed })

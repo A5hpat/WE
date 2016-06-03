@@ -1,0 +1,15 @@
+﻿@model AddressDetailViewModel
+
+<div class="page-wrap request-catalog-page">
+
+	<h1>To receive our FREE catalog, please enter your information below</h1>
+
+	@using(Html.BeginForm())
+	{
+		@Html.Partial(ViewNames.EditAddressPartial, Model)
+
+		<input type="submit"
+			   class="btn btn-primary update-button"
+			   value="Request Catalog" />
+	}
+</div>

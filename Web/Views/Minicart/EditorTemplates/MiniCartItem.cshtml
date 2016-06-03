@@ -1,0 +1,133 @@
+﻿@model MinicartItemViewModel
+@Html.HiddenFor(m => m.Id)
+<div class="minicart-item media">
+	@if(Model.ShowImage)
+	{
+		<div class="minicart-item-image-wrap media-left">
+			<img class="media-object minicart-item-image" src="@Model.ProductImageUrl" alt="@Model.ProductImageAlternateText" />
+		</div>
+	}
+	<div class="media-body">
+		<div class="minicart-details">
+			<div class="minicart-item-actions">
+				@if(Model.ShowEditLink)
+				{
+					<a href="@Model.EditUrl"
+					   title="Edit"
+					   class="minicart-edit-link">
+						<i class="fa fa-pencil"></i>
+					</a>
+				}
+				<a href="@Url.Action(ActionNames.DeleteMinicartItem, ControllerNames.Minicart, new { id = Model.Id, cartType = CartTypeEnum.ShoppingCart })"
+				   title="Delete"
+				   class="js-minicart-delete-link minicart-delete-link text-danger">
+					<i class="fa fa-times-circle-o"></i>
+				</a>
+			</div>
+			<h5 class="minicart-item-title media-heading">
+				@if(Model.LinkToProduct)
+				{
+					<a class="minicart-product-name" href="@Model.ProductUrl">
+						@Model.ProductName.JoinTo("-", Model.VariantName)
+					</a>
+				}
+				else
+				{
+					<span class="minicart-product-name">@Model.ProductName.JoinTo("-", Model.VariantName)</span>
+				}
+			</h5>
+			@if(!string.IsNullOrEmpty(Model.ChosenSize) || !string.IsNullOrEmpty(Model.ChosenColor))
+			{
+				<div class="minicart-size-and-color minicart-detail">
+					@Model.ChosenSize.JoinTo(", ", @Model.ChosenColor)
+				</div>
+			}
+			@if(!string.IsNullOrEmpty(Model.TextOption))
+			{
+				<div class="mini-cart-size-and-color minicart-detail">
+					<span class="text-option-label">
+						@Model.TextOptionLabel:
+					</span>
+					<span class="text-option">
+						@Model.TextOption
+					</span>
+				</div>
+			}
+			@if(Model.IsAKit)
+			{
+				<ul class="minicart-selected-kit-items">
+					@foreach(var kitDetail in Model.KitDetails)
+					{
+						<li>
+							<span class="text-option-label">
+								@kitDetail.Name
+							</span>
+							@if(!string.IsNullOrEmpty(kitDetail.TextOption))
+							{
+								<span class="text-option">
+									: @Html.MultilineText(kitDetail.TextOption)
+								</span>
+							}
+						</li>
+					}
+				</ul>
+			}
+			@if(Model.ShowSku)
+			{
+				<div class="minicart-detail minicart-sku-wrap">
+					<span class="minicart-sku">SKU:</span> 
+					<span class="minicart-sku">@Model.ProductSku</span>
+				</div>
+			}
+			<div class="row">
+				<div class="col-sm-7">
+					<span class="minicart-item-quantity">
+						<span class="minicart-quantity-label">Qty:</span>
+						@if(Model.AllowQuantityUpdate)
+						{
+							if(Model.RestrictedQuantities.Any())
+							{
+								@Html.DropDownListFor(m => m.Quantity, Model.RestrictedQuantities, new { @class = "form-control form-control-inline text-4 input-sm", id = string.Format("minicart-quantity-{0}", Model.VariantId) });
+							}
+							else
+							{
+								@Html.EditorFor(
+									expression: m => m.Quantity,
+									additionalViewData: new
+									{
+										htmlAttributes = new
+										{
+											@class = "form-control form-control-inline text-4 input-sm",
+											@type = "number",
+											min = 0,
+										}
+									})
+							}
+
+							@Html.ValidationMessageFor(m => m.Quantity)
+						}
+						else
+						{
+							@Model.Quantity
+						}
+					</span>
+				</div>
+				<div class="col-sm-5 text-right-sm">
+					<div class="minicart-subtotal">
+						<span class="minicart-subtotal-label">Subtotal:</span> @Model.SubTotalDisplay
+					</div>
+				</div>
+			</div>
+		</div>
+
+		@Html.HiddenFor(m => m.ProductId)
+		@Html.HiddenFor(m => m.VariantId)
+		@Html.HiddenFor(m => m.ChosenColorSkuModifier)
+		@Html.HiddenFor(m => m.ChosenSizeSkuModifier)
+		@Html.HiddenFor(m => m.TextOption)
+		@if(!AppLogic.AppConfigBool("minicart.quantityupdate.enabled"))
+		{
+			@Html.HiddenFor(m => m.Quantity)
+		}
+	</div>
+</div>

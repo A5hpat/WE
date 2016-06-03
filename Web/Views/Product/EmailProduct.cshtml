@@ -1,0 +1,39 @@
+﻿@model ProductEmailViewModel
+
+<div class="email-product">
+	<h1>
+        Email To A Friend
+	</h1>
+
+	<div>
+		<a href="@Url.BuildProductLink(Model.ProductId)">
+            <i class="fa fa-angle-left"></i> back to product page
+		</a>
+	</div>
+
+	@using(Html.BeginForm())
+	{
+		@Html.HiddenFor(m => m.ProductId);
+
+		<div class="row">
+			<div class="col-md-4">
+				<img class="email-product-image" src="@Model.ProductImage" />
+			</div>
+			<div class="col-md-8">
+				<div class="form-group">
+					@Html.EditorEntryFor(m => m.To)
+				</div>
+				<div class="form-group">
+					@Html.EditorEntryFor(m => m.Message)
+				</div>
+				<div class="form-group">
+					@Html.EditorEntryFor(m => m.From)
+				</div>
+				<div class="form-text">
+                    Note: Your email address is used <i>only</i> to let the recipient know who sent the email and in case of transmission error. Neither your address nor the recipient's address will be used for any other purpose.
+				</div>
+				<button type="submit" class="btn btn-primary email-product-button">Send</button>
+			</div>
+		</div>
+	}
+</div>

@@ -1,0 +1,134 @@
+﻿@model AddToCartViewModel
+
+@if(Model.IsCallToOrder)
+{
+	@Html.Partial("_CallToOrder")
+}
+else if(Model.ShowBuyButton)
+{
+	<div class="form-group add-to-cart-group">
+		@if(Model.CustomerEntersPrice)
+		{
+			<span class="customer-enters-price-wrap">
+				<label class="customer-enters-price-label" for="CustomerEnteredPrice">
+					@Model.CustomerEntersPricePrompt
+				</label>
+				@Html.EditorFor(m => m.CustomerEnteredPrice, new { htmlAttributes = new { @class = "form-control price-field" } })
+			</span>
+		}
+
+		@if(Model.ShowQuantity)
+		{ 
+			if(Model.SizeOptions.Any() || Model.ColorOptions.Any())
+			{
+				<table class="table table-striped quantity-table">
+					@if(Model.SizeOptions.Any())
+					{
+						<thead>
+							<tr>
+								@if(Model.ColorOptions.Any())
+								{
+									<th></th>
+								}
+								@foreach(var size in Model.SizeOptions.Skip(1))
+								{
+									<th>@size.Text</th>
+								}
+							</tr>
+						</thead>
+					}
+					<tbody>
+						@if(Model.ColorOptions.Any())
+						{
+							var colorIndex = 0;
+							foreach(var color in Model.ColorOptions.Skip(1))
+							{
+								<tr>
+									<th>@color.Text</th>
+									@if(Model.SizeOptions.Any())
+									{
+										var sizeIndex = 0;
+										foreach(var size in Model.SizeOptions.Skip(1))
+										{
+											<td>
+												<input type="number"
+													value="0"
+													class="form-control quantity-table-quantity quantity-field"
+													name="@string.Format("{0}_{1}_{2}.Quantity",
+															ViewData.TemplateInfo.HtmlFieldPrefix,
+															colorIndex,
+															sizeIndex)"
+													min="0" />
+											</td>
+											sizeIndex++;
+										}
+									}
+									else
+									{
+										<td>
+											<input type="number"
+												value="0"
+												class="form-control quantity-table-quantity quantity-field"
+												name="@string.Format("{0}_{1}_{2}.Quantity",
+														ViewData.TemplateInfo.HtmlFieldPrefix,
+														colorIndex,
+														string.Empty)"
+												min="0" />
+										</td>
+									}
+								</tr>
+								colorIndex++;
+							}
+						}
+						else
+						{
+							<tr>
+								@{
+									var sizeIndex = 0;
+								}
+								@foreach(var size in Model.SizeOptions.Skip(1))
+								{
+									<td>
+										<input type="number"
+											value="0"
+											class="form-control quantity-table-quantity quantity-field"
+											name="@string.Format("{0}_{1}_{2}.Quantity",
+													ViewData.TemplateInfo.HtmlFieldPrefix,
+													string.Empty,
+													sizeIndex)"
+											min="0" />
+									</td>
+									sizeIndex++;
+								}
+							</tr>
+						}
+					</tbody>
+				</table>
+			}
+			else
+			{
+				<span class="add-to-cart-quantity">
+					@Html.LabelFor(m => m.Quantity)
+					@if(Model.RestrictedQuantities.Any())
+					{
+						@Html.DropDownListFor(m => m.Quantity, Model.RestrictedQuantities, new { @class = "form-control quantity-select js-validate-quantity", id = string.Format("quantity-{0}", Model.VariantId) });
+					}
+					else
+					{
+						@Html.EditorFor(
+							expression: m => m.Quantity,
+							additionalViewData: new
+							{
+								htmlAttributes = new
+								{
+									@class = "form-control quantity-field js-validate-quantity",
+									id = string.Format("quantity-{0}", Model.VariantId),
+									min = 0
+								}
+							})
+					}
+				</span>
+			}
+		}
+	</div>
+}

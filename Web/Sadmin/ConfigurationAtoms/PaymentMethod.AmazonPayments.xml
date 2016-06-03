@@ -1,0 +1,48 @@
+﻿<ConfigurationAtom>
+	<HtmlHeader>
+		<![CDATA[
+		<table width="780" cellpadding="4" cellspacing="0" class="modalTable">
+			<tbody>
+				<tr>
+					<td width="225">
+						<img src="images/paywithamazon.png" border="0"/>
+					</td>
+					<td class="globalAdmin" align="right">
+						<a href="http://www.aspdotnetstorefront.com/linkmanager.aspx?topic=paywithamazon&type=signup" target="_blank">Sign up for Login and Pay with Amazon</a><br />
+						<a href="http://www.aspdotnetstorefront.com/linkmanager.aspx?topic=paywithamazon&type=info" target="_blank">Learn more about Login and Pay with Amazon</a><br />
+						<a href="http://www.aspdotnetstorefront.com/linkmanager.aspx?topic=10manual&type=paywithamazon" target="_blank">Configuration Help</a><br />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		]]>
+	</HtmlHeader>
+	<Title><![CDATA[Configure Login and Pay with Amazon]]></Title>
+	<AppConfig Required="true" Advanced="false" FriendlyName="Merchant Id">
+		<Name>AmazonPayments.MerchantId</Name>
+	</AppConfig>
+	<AppConfig Required="true" Advanced="false" FriendlyName="Client Id">
+		<Name>AmazonPayments.ClientId</Name>
+	</AppConfig>
+	<AppConfig Required="true" Advanced="false" FriendlyName="Access Key">
+		<Name>AmazonPayments.AccessKey</Name>
+	</AppConfig>
+	<AppConfig Required="true" Advanced="false" FriendlyName="Secret Access Key">
+		<Name>AmazonPayments.SecretAccessKey</Name>
+	</AppConfig>
+	<AppConfig Required="true" Advanced="false" FriendlyName="Seller Note">
+		<Name>AmazonPayments.SellerNote</Name>
+	</AppConfig>
+	<AppConfig Required="true" Advanced="false" FriendlyName="Live Service Url">
+		<Name>AmazonPayments.LiveServiceUrl</Name>
+	</AppConfig>
+	<AppConfig Required="true" Advanced="false" FriendlyName="Sandbox Service Url">
+		<Name>AmazonPayments.SandboxServiceUrl</Name>
+	</AppConfig>
+	<AppConfig Required="true" Advanced="false" FriendlyName="Live Script Url">
+		<Name>AmazonPayments.LiveScriptUrl</Name>
+	</AppConfig>
+	<AppConfig Required="true" Advanced="false" FriendlyName="Sandbox Script Url">
+		<Name>AmazonPayments.SandboxScriptUrl</Name>
+	</AppConfig>
+</ConfigurationAtom>

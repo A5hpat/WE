@@ -1,0 +1,6 @@
+﻿@model MinicartViewModel
+
+<a id="js-show-wish" disabled="@Html.AttributeBool(Model.ItemCount == 0, "disabled")" href="#" data-toggle="modal" data-target="#miniwish-modal" class="user-link">
+	<i class="fa fa-star"></i>
+    View Wishlist (<span class="minicart-count js-miniwish-count">@Model.ItemCount</span>)
+</a>

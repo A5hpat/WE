@@ -1,0 +1,42 @@
+﻿@model TwoCheckoutViewModel
+@{
+	Layout = null;
+}
+
+<div>
+	<div>
+		<span>
+            Redirecting to 2Checkout...
+		</span>
+	</div>
+
+	<form name="frmTwoCheckout"
+		  method="post"
+		  action="@Model.LiveServerUrl">
+
+		@Html.Hidden("x_login", Model.Login)
+		@Html.Hidden("x_amount", Model.Total)
+		@Html.Hidden("x_invoice_num", Model.InvoiceNumber)
+		@Html.Hidden("x_receipt_link_url", Model.ReturnUrl)
+		@Html.Hidden("x_return_url", Model.ReturnUrl)
+		@Html.Hidden("x_return", Model.ReturnUrl)
+		@Html.Hidden("x_First_Name", Model.BillingAddress.FirstName)
+		@Html.Hidden("x_Last_Name", Model.BillingAddress.LastName)
+		@Html.Hidden("x_Address", Model.BillingAddress.Address1)
+		@Html.Hidden("x_City", Model.BillingAddress.City)
+		@Html.Hidden("x_State", Model.BillingAddress.State)
+		@Html.Hidden("x_Zip", Model.BillingAddress.Zip)
+		@Html.Hidden("x_Country", Model.BillingAddress.Country)
+		@Html.Hidden("x_EMail", Model.Email)
+		@Html.Hidden("x_Phone", Model.BillingAddress.Phone)
+		@Html.Hidden("city", Model.BillingAddress.City)
+
+		@if(!@Model.UseLiveTransactions)
+		{
+			<input type="hidden" name="demo" value="Y" />
+		}
+	</form>
+</div>
+<script>
+	document.frmTwoCheckout.submit();
+</script>

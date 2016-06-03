@@ -1,0 +1,11 @@
+﻿@model ThreeDSecureFrameViewModel
+
+<div>
+    <div class="three-d-secure-page-header">
+        <b>Verified By Visa<br />MasterCard Secure<br />Validation Step</b><br /><br />You will now be shown a form from your credit card issuing bank. This form is entirely private between you and your bank and the form is secure. The information you enter here is <b>not</b> shared with us. This is to provide additional buyer protection on your credit card. Do not close this window or click the Back button.</b><br /><br />Payment authentication is in progress. Please wait until the authentication screen has loaded, then enter your information and click Submit.<br /><br />If you want to cancel your checkout, please <a href="shoppingcart.aspx">click here</a>.
+    </div>
+
+    <div class="three-d-secure-button-wrap">
+        <a class="btn btn-primary three-dsecure-submit" href="@Model.FrameUrl">Proceed to 3dSecure</a>
+    </div>
+</div>

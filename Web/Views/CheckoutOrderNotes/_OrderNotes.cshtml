@@ -1,0 +1,14 @@
+﻿@model OrderNotesViewModel
+
+@using(Html.BeginForm(ActionNames.OrderNotes, ControllerNames.CheckoutOrderNotes))
+{
+	<div class="order-notes">
+		<div class="form-group">
+			@Html.TextAreaFor(m => m.OrderNotes, new { @class = "form-control order-notes-box" })
+		</div>
+	</div>
+
+	<div class="checkout-action-row order-notes-actions">
+		<button type="submit" class="btn btn-default add-notes-checkout-button" >Submit</button>
+	</div>
+}

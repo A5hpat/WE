@@ -1,0 +1,17 @@
+﻿@model DebugRealTimeShippingViewModel
+
+@if(!string.IsNullOrEmpty(Model.RequestInfo))
+{
+	<h3>
+		RTShipRequest:
+	</h3>
+	<textarea class="form-control text-area-tall">@Model.RequestInfo</textarea>
+}
+
+@if(!string.IsNullOrEmpty(Model.ResponseInfo))
+{
+	<h3>
+        RTShipResponse:
+	</h3>
+	<textarea class="form-control text-area-tall">@Model.ResponseInfo</textarea>
+}

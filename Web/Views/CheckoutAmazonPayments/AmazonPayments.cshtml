@@ -1,0 +1,105 @@
+﻿@model AmazonPaymentsViewModel
+
+<script type="text/javascript">
+	window.onAmazonLoginReady = function () {
+		amazon.Login.setClientId('@Model.ClientId');
+	};
+</script>
+
+<script type="text/javascript" src="@Model.ScriptUrl"></script>
+
+<h2>Amazon Payments</h2>
+<div class="page-row">
+	@if(Model.CheckoutStep == AmazonPaymentsCheckoutStep.Login)
+	{
+		<div id="AmazonPayButton"></div>
+
+		<script type="text/javascript">
+			OffAmazonPayments.Button("AmazonPayButton", "@Model.MerchantId", {
+				authorization: function () {
+					amazon.Login.authorize({
+						scope: "profile payments:widget payments:shipping_address"
+					},
+					"@Url.Action(ActionNames.AmazonPaymentsCallback, ControllerNames.CheckoutAmazonPayments)");
+				},
+				onError: function (error) {
+					alert(error.getErrorCode() + ": " + error.getErrorMessage());
+				}
+			});
+		</script>
+	}
+	else if(Model.CheckoutStep == AmazonPaymentsCheckoutStep.SelectAddress)
+	{
+		<div class="row">
+			<div class="col-md-6">
+				<div id="amazonAddressWidget"></div>
+			</div>
+			<div class="col-md-6">
+				<div id="walletWidgetDiv"></div>
+			</div>
+		</div>
+
+		using(Html.BeginForm(ActionNames.AmazonPaymentsComplete, ControllerNames.CheckoutAmazonPayments))
+		{
+			@Html.HiddenFor(m => m.AmazonOrderReferenceId);
+			<div>
+				<br />
+				<button id="submit" class="btn btn-primary amazon-payments-submit" disabled>Continue</button>
+				<a id="js-amazon-logout" class="btn btn-default amazon-payments-cancel">Cancel</a>
+			</div>
+		}
+
+		<script type="text/javascript">
+			var addressSelected = false;
+			var walletSelected = false;
+
+			var isAmazonFormsValid = function () {
+				return addressSelected && walletSelected;
+			}
+
+			new OffAmazonPayments.Widgets.AddressBook({
+				amazonOrderReferenceId: @Html.JavascriptString(Model.AmazonOrderReferenceId),
+				sellerId: @Html.JavascriptString(Model.MerchantId),
+				displayMode: 'Edit',
+				design: {
+					designMode: 'responsive'
+				},
+				onOrderReferenceCreate: function (amazonOrderReference) {
+					adnsf$("#AmazonOrderReferenceId").val(amazonOrderReference.getAmazonOrderReferenceId());
+				},
+				onAddressSelect: function () {
+					addressSelected = true;
+					if(isAmazonFormsValid)
+						adnsf$("#submit")
+							.prop('disabled', false);
+				},
+				onError: function (error) {
+					document.location = '@Url.Action(ActionNames.AmazonPayments, ControllerNames.CheckoutAmazonPayments, new { clearSession = true })';
+				}
+			}).bind("amazonAddressWidget");
+
+			new OffAmazonPayments.Widgets.Wallet({
+				amazonOrderReferenceId: @Html.JavascriptString(Model.AmazonOrderReferenceId),
+				sellerId: @Html.JavascriptString(Model.MerchantId),
+				onPaymentSelect: function (orderReference) {
+					walletSelected = true;
+					if(isAmazonFormsValid)
+						adnsf$("#submit")
+							.prop('disabled', false);
+				},
+				design: {
+					designMode: 'responsive'
+				},
+				onError: function (error) {
+					document.location = '@Url.Action(ActionNames.AmazonPayments, ControllerNames.CheckoutAmazonPayments, new { clearSession = true })';
+				}
+			}).bind("walletWidgetDiv");
+
+			adnsf$("#js-amazon-logout")
+				.click(function () {
+					amazon.Login.logout();
+					document.location = '@Url.Action(ActionNames.AmazonPayments, ControllerNames.CheckoutAmazonPayments, new { clearSession = true })';
+				})
+		</script>
+	}
+</div>

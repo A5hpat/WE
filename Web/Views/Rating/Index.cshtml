@@ -1,0 +1,99 @@
+﻿@model RatingViewModel
+
+@{
+	Layout = ViewEngines.Engines.FindViewPath(ViewContext.Controller.ControllerContext, "_PopupLayout");
+}
+
+<div class="container-fluid">
+	<div class="page-wrap ratings-page-wrap">
+		<div class="list-item-inner">
+			@using(Html.BeginForm(ActionNames.RateProduct,
+									ControllerNames.Rating))
+			{
+				@Html.HiddenFor(m => m.ProductId)
+				@Html.HiddenFor(m => m.Editing)
+
+				if(Model.SubmittedSuccessfully)
+				{
+					<script>
+						window.opener.location.reload();
+						window.close();
+					</script>
+				}
+				
+				<div class="group-header rating-header">
+                    You are rating:
+					@Model.ProductName
+				</div>
+
+				if(Model.HasBadWords)
+				{
+					<div class="page-row bad-words-label">
+                        Please clean up your language. You may submit your comment as is, but it may be deleted if it doesn't comply with site rules.
+					</div>
+				}
+
+				<div class="product-rating-stars text-center">
+					<i id="ratingstar1" class="fa fa-star-o js-rating-star"></i>
+					<i id="ratingstar2" class="fa fa-star-o js-rating-star"></i>
+					<i id="ratingstar3" class="fa fa-star-o js-rating-star"></i>
+					<i id="ratingstar4" class="fa fa-star-o js-rating-star"></i>
+					<i id="ratingstar5" class="fa fa-star-o js-rating-star"></i>
+				</div>
+
+				@Html.DropDownListEntryFor(expression: m => m.Rating, 
+											values:	Model.RatingOptions, 
+											id: "ratings-dropdown")
+
+				<div class="form-group">
+					<label class="form-label form-label-required" for="Comment">
+                        Comment
+						<span class="form-label-suffix form-label-suffix-optional">(optional)</span>
+					</label>
+
+					@Html.TextAreaFor(m => m.Comment, new { @class = "form-control" })
+					@Html.ValidationMessageFor(expression: m => m.Comment)
+				</div>
+
+				<div class="page-action-bar rating-actions">
+					<input type="submit" class="btn btn-primary submit-rating-button" value="Submit" />
+					<input type="button" class="btn btn-default cancel-rating-button" onclick="window.close();" value="Cancel" />
+				</div>
+			}
+		</div>
+	</div>
+</div>
+<script>
+	//If they clicked a star, toggle the right one(s) and change the dropdown to match
+	adnsf$(".js-rating-star").click(function (event) {
+		var starId = event.target.id.substr(event.target.id.length - 1);
+
+		adnsf$("#ratings-dropdown").val(starId);
+		ToggleStars(starId);
+	});
+
+	//If they changed the dropdown, toggle the right star(s) to match
+	adnsf$("#ratings-dropdown").change(function () {
+		ToggleStars(adnsf$(this).val());
+	});
+
+	//Set the initial rating if we're editing
+	adnsf$(document).ready(function() {
+		var starId = @Model.Rating;
+		adnsf$("#ratings-dropdown").val(starId);
+		ToggleStars(starId);
+	});
+
+	function ToggleStars(starId) {
+		for (i = 1; i < 6; i++) {
+			if (i <= starId) {
+				adnsf$("#ratingstar" + i).removeClass("fa-star-o");
+				adnsf$("#ratingstar" + i).addClass("fa-star");
+			}
+			else {
+				adnsf$("#ratingstar" + i).removeClass("fa-star");
+				adnsf$("#ratingstar" + i).addClass("fa-star-o");
+			}
+		}
+	}
+</script>

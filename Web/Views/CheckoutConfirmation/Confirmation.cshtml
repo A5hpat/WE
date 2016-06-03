@@ -1,0 +1,43 @@
+﻿@model OrderConfirmationViewModel
+
+@Html.Raw(Model.Body)
+
+@if(Model.ShowGoogleTrackingCode)
+{
+	@Html.Raw(Model.GoogleTrackingCode);
+}
+
+@if(Model.ShowGeneralTrackingCode)
+{
+	@Html.Raw(Model.GeneralTrackingCode);
+}
+
+@if(Model.ShowGoogleTrustedStores)
+{
+	@Html.Action(
+		ActionNames.GoogleTrustedStores,
+		ControllerNames.CheckoutConfirmation,
+		new { orderNumber = Model.OrderNumber } )
+}
+
+@if(Model.AddBuySafeScript)
+{
+	@Html.Action(
+		ActionNames.BuySafeGuarantee, 
+		ControllerNames.CheckoutConfirmation, 
+		new { orderNumber = Model.OrderNumber })
+}
+
+@if(Model.AddPayPalIntegratedCheckoutScript)
+{
+	<script>
+		(function (d, s, id) {
+			var js, ref = d.getElementsByTagName(s)[0];
+			if (!d.getElementById(id)) {
+				js = d.createElement(s); js.id = id; js.async = true;
+				js.src = '//www.paypalobjects.com/js/external/paypal.js';
+				ref.parentNode.insertBefore(js, ref);
+			}
+		}(document, 'script', 'paypal-js'));
+	</script>
+}

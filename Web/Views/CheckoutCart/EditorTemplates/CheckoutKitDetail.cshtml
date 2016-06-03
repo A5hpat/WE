@@ -1,0 +1,23 @@
+﻿@model KitCartItemViewModel
+
+<div class="cart-small cart-kit cart-detail">
+	<div class="cart-kit-textoption">
+		<span class="kit-item-name">- @Model.Name</span>
+
+		@if(!string.IsNullOrEmpty(Model.TextOption))
+		{
+			if(Model.IsImage)
+			{
+				<span>
+					: <a class="cart-kit-imagelink" href="@Model.TextOption" target="_blank">Click here to view image</a>
+				</span>
+			}
+			else
+			{
+				<span class="kit-text-option-value">
+					: @Html.MultilineText(Model.TextOption)
+				</span>
+			}
+		}
+	</div>
+</div>

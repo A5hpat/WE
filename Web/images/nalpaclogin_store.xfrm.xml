@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<div class="cnt-account">
+  <ul class="user-links">
+    <li class="hidden-xs hidden-sm">
+      <a href="/nalpac4/account.aspx" class="user-link">
+        <i class="fa fa-user"></i>Cali</a>
+    </li>
+    <li>
+      <a href="/nalpac4/signout.aspx" class="user-link log-out-link">
+        <i class="fa fa-sign-out"></i>
+                  Logout
+                </a>
+    </li>
+  </ul>
+</div>

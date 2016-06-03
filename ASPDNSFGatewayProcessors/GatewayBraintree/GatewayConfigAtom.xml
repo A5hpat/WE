@@ -1,0 +1,38 @@
+﻿<ConfigurationAtom>
+	<HtmlHeader>
+		<![CDATA[
+      <table width="780" cellpadding="4" cellspacing="0" class="modalTable">
+      <tbody>
+      <tr>
+
+      <td width="225">
+        <img src="images/braintree.png" border="0"/>
+      </td>
+        <td class="globalAdmin" align="right">
+        <a href="http://www.aspdotnetstorefront.com/linkmanager.aspx?topic=braintree&type=signup" target="_blank">Sign up for Braintree</a><br />
+        <a href="http://www.aspdotnetstorefront.com/linkmanager.aspx?topic=braintree&type=info" target="_blank">Learn more about Braintree</a><br />
+        <a href="http://www.aspdotnetstorefront.com/linkmanager.aspx?topic=10000manual&type=braintree" target="_blank">Configuration Help</a><br />
+      </td>
+
+      </tr>
+      </tbody>
+      </table>
+    ]]>
+	</HtmlHeader>
+	<Title><![CDATA[Configure Braintree]]></Title>
+	<AppConfig Required="true" Advanced="false" FriendlyName="Merchant ID">
+		<Name>BrainTree.MerchantID</Name>
+	</AppConfig>
+	<AppConfig Required="false" Advanced="false" FriendlyName="Public Key">
+		<Name>BrainTree.PublicKey</Name>
+	</AppConfig>
+	<AppConfig Required="false" Advanced="false" FriendlyName="Private Key">
+		<Name>BrainTree.PrivateKey</Name>
+	</AppConfig>
+	<AppConfig Required="false" Advanced="true" FriendlyName="Script URL">
+		<Name>BrainTree.ScriptUrl</Name>
+	</AppConfig>
+	<AppConfig Required="false" Advanced="false" FriendlyName="3dSecure Enabled">
+		<Name>BrainTree.3dSecureEnabled</Name>
+	</AppConfig>
+</ConfigurationAtom>

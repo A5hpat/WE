@@ -1,0 +1,20 @@
+﻿@model EmailGiftCardsViewModel
+
+<div class="gift-card-page">
+	@using(Html.BeginForm(
+		actionName: ActionNames.GiftCardSetup,
+		controllerName: ControllerNames.CheckoutGiftCardSetup,
+		method: FormMethod.Post,
+		htmlAttributes: new { @class = "form credit-card-form" }))
+	{
+		<h1>Gift card details</h1>
+
+		<div class="cart-email-gift-cards">
+			@Html.EditorForMany(m => m.EmailGiftCardsInCart, "EmailGiftCardItem")
+		</div>
+		<div>
+			<input type="submit" class="btn btn-primary gift-card-submit" value="Submit" />
+			<a href="@Url.Action(ActionNames.Index, ControllerNames.Checkout)" class="btn btn-default gift-card-cancel">Cancel</a>
+		</div>
+	}
+</div>

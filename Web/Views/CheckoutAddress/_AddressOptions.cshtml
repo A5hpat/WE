@@ -1,0 +1,57 @@
+﻿@model SelectAddressViewModel
+
+@using(Html.BeginForm(ActionNames.SelectAddress, ControllerNames.CheckoutAddress))
+{
+	@Html.HiddenFor(model => model.AddressType)
+
+	if(Model.AddressOptions.Any())
+	{
+		<div class="address-options">
+			@foreach(var address in Model.AddressOptions)
+			{
+				if(!string.IsNullOrEmpty(address.OffsiteSource))
+				{
+					continue;
+				}
+
+				<div class="radio">
+					<label>
+						@Html.RadioButton(
+						name: "SelectedAddressId",
+						value: address.Id,
+						isChecked: address.Id == Model.SelectedAddressId,
+						htmlAttributes: new { @class = "js-address-option" })
+
+						<span class="address-info">
+							<span class="address-line">@address.Address1</span>
+							@if(!string.IsNullOrEmpty(address.Address2))
+							{
+								<span class="address-line">@address.Address2</span>
+							}
+							@if(!string.IsNullOrEmpty(address.Suite))
+							{
+								<span class="address-line">@address.Suite</span>
+							}
+							<span class="address-city">@address.City,</span> 
+							<span class="address-state">@address.State</span>
+						</span>
+					</label> -
+					<span class="address-options">
+						<a class="address-edit-button" href="@Url.Action(ActionNames.Detail, ControllerNames.Address, new { addressId = address.Id, addressType = Model.AddressType, returnUrl = Url.Action(ActionNames.Index, ControllerNames.Checkout, new { addressType = Model.AddressType }) })">
+							Edit
+						</a>
+					</span>
+				</div>
+			}
+			
+		</div>
+	}
+}
+
+<script>
+	(function ($) {
+		$(".js-address-option").click(function () {
+			$(this).closest('form').submit();
+		});
+	})(adnsf$);
+</script>

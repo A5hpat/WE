@@ -1,0 +1,14 @@
+﻿@model EntityViewModel
+
+@{
+    //override default meta tags
+    ViewBag.MetaTitle = Model.MetaTitle;
+    ViewBag.MetaDescription = Model.MetaDescription;
+    ViewBag.MetaKeywords = Model.MetaKeywords;
+    ViewBag.PageTitle = Model.PageTitle;
+    Layout = "~/Skins/Default/Views/Shared/_Layout.cshtml";
+
+}
+
+@Html.Raw(Model.PayPalAd)
+@Html.Raw(Model.PageContent)

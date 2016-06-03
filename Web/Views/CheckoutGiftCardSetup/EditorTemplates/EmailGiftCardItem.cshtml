@@ -1,0 +1,19 @@
+﻿@model EmailGiftCardViewModel
+
+<div class="gift-card-row">
+	@Html.HiddenFor(m => m.GiftCardId)
+
+	<h3>
+		@Model.ProductName
+		- @Model.Amount
+	</h3>
+
+	@Html.EditorEntryFor(
+			expression: m => m.RecipientName)
+
+	@Html.EditorEntryFor(
+			expression: m => m.RecipientEmail)
+
+	@Html.EditorEntryFor(
+			expression: m => m.RecipientMessage)
+</div>

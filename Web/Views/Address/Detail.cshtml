@@ -1,0 +1,29 @@
+﻿@model AddressDetailViewModel
+
+<div class="page-wrap create-account-page">
+
+	<h1>@Model.Header</h1>
+
+	@using(Html.BeginForm())
+	{
+		@Html.Partial(ViewNames.EditAddressPartial, Model)
+
+		if(Model.Address.Id.HasValue)
+		{
+			<input type="submit"
+				   class="btn btn-primary update-button"
+				   value="Save Edited Address" />
+
+				<a href="@Url.Action(ActionNames.Delete, new { addressId = Model.Address.Id.Value, returnUrl = Model.ReturnUrl })"
+				   class="btn btn-default delete-button"
+				   onclick="return confirm('@Html.JavascriptString("Are you sure you want to delete this address?")');">Delete This Address</a>
+		}
+		else
+		{
+			<input type="submit"
+				   class="btn btn-primary update-button"
+				   value="Add Address" />
+				<a href="@Model.ReturnUrl" class="btn btn-default cancel-button">Cancel</a>
+		}
+	}
+</div>

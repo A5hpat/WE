@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    @Html.Partial("_Head")
+    <link rel="shortcut icon" href="~/Skins/Default/Css/img/ico/32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon-precomposed" href="~/Skins/Default/Css/img/ico/60.png" type="image/png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/Skins/Default/Css/img/ico/72.png" type="image/png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="~/Skins/Default/Css/img/ico/120.png" type="image/png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="~/Skins/Default/Css/img/ico/152.png" type="image/png" />
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body id="home">
+    @Html.Partial("_BodyOpen")
+    <div class="container-fluid">
+        <div class="menu-wrapper">
+            <a href="#" class="close-menu visible-xs"><i class="icon-close"></i></a>
+            <h3 class="visible-xs">Navigation</h3>
+            <ul class="nav-list text-center effect">
+                <li class="active"><a href="@Url.Action("Index", "RecentAdditions")">Shop</a></li>
+                <li><a href="@Url.BuildTopicLink("about")">About</a></li>
+                <li><a href="@Url.Action("Index", "ContactUs")">Contact</a></li>
+                <li><a href="@Url.Action("Create", "Account")">Register</a></li>
+                <li>@Html.XmlPackage("nalpaclogin")</li>
+            </ul>
+            <div class="visible-xs mt-info">
+                <h3>Latest news</h3>
+                <ul>
+                    <li><a href="blog-article.html">New collection</a></li>
+                    <li><a href="blog-article.html">Home Sweet Home: Turn...</a></li>
+                    <li><a href="blog-article.html">The Prisoner of Benda</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="wrap">
+        <nav class="navbar navbar-default">
+            <div class="row container-fluid">
+                <div class="navbar-header">
+                    <a href="@Url.Action("Index","Home")" class="nav-brand">Wedding <span>ENHANCEMENTS</span></a>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 animate-dropdown top-cart-row">
+                    <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
+                    <div class="dropdown dropdown-cart">
+                        <a href="#" class="lnk-cart" data-toggle="modal" data-target="#minicart-modal">
+                            <div class="items-cart-inner">
+                                <div class="total-price-basket">
+                                    <span class="lbl">cart - </span>
+                                    <span class="total-price">
+                                        <span class="value">
+                                            <span class="minicart-total js-minicart-total">
+                                                @Html.XmlPackage("cartsubtotal")
+                                            </span>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="basket">
+                                    <i class="glyphicon glyphicon-shopping-cart"></i>
+                                </div>
+                                <div class="basket-item-count">
+                                    <span class="count js-minicart-count">
+                                        @Html.XmlPackage("cartnumberofitems")
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- /.dropdown-menu-->
+                    </div>
+                    <!-- /.dropdown-cart -->
+                    <!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= -->
+                </div><!-- /.top-cart-row -->
+                <ul class="nav navbar-nav">
+                    <li><a class="nav-icon pull-right visible-xs menu-link" href="#"><i class="icon-menu2"></i></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            @Html.StringResource("responsiveskin.categorymenulabel")
+                            <span class="caret"></span>
+                        </a>
+                        @Html.XmlPackage("entitymenu", new { entitytype = "category" })
+                    </li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.Partial(ViewNames.SearchPartial)</li>
+                </ul>
+            </div>
+        </nav>
+        @Html.Action(
+                    actionName: "Detail",
+                    controllerName: "Breadcrumb",
+                    routeValues: new
+                    {
+                        PageTitle = ViewBag.PageTitle,
+                        PathInfo = ViewBag.PathInfo
+                    })
+        <div class="container-fluid">
+            @RenderBody()
+
+        </div>
+
+        <footer>
+            <div class="container-fluid">
+                <div class="pull-left copyright">
+                    <p>Wedding <b>ENHANCEMENTS</b> &copy; 2016.</p>
+                    <ul class="nav-list effect">
+                        <li><a href="t-returns.aspx">Delivery & Returns</a></li>
+                        <li><a href="t-termsandconditions.aspx">Terms & Conditions</a></li>
+                        <li><a href="t-privacy">Privacy</a></li>
+                        <li><a href="t-faq.asxp">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="pull-right copyright">
+                    <ul class="social-links">
+                        <li><a href="https://www.facebook.com/weddingenhancements/"><i class="icon-facebook"></i></a></li>
+                        <li><a href="https://plus.google.com/111598729565775470613/about?gmbpt=true&hl=en&_ga=1.12185204.1747566753.1449019310"><i class="icon-googleplus"></i></a></li>
+                        <li><a href="http://www.weddingenhancements.com/#"><i class="icon-wordpress"></i></a></li>
+                        <li><a href="http://dribbble.com/#"><i class="icon-dribbble"></i></a></li>
+                        <li><a href="http://www.pinterest.com/#"><i class="icon-pinterest"></i></a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+    @Html.XmlPackage("minicartmodal")
+    <!-- Minicart modal -->
+@*    @Html.Action(ActionNames.Index, ControllerNames.Minicart, new { cartType = CartTypeEnum.ShoppingCart })*@
+
+    <!-- Minicart and miniwish resources (javascript and overlay html) -->
+    @Html.Action(ActionNames.MinicartResources, ControllerNames.Minicart)
+
+
+
+    @Html.Partial("_BodyClose")
+
+</body>
+</html>

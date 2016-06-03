@@ -1,0 +1,53 @@
+﻿@Html.Token("BuySafeSeal")
+@Html.Token("BongoExtend")
+@Html.XmlPackage("skin.trustedstores")
+@Html.Action(ViewNames.AddTimerPartial, ControllerNames.SessionTimeout)
+
+<script type="text/javascript">
+	window.postalCodeRegexConfiguration = {
+		postalCodeRegexMapUrl: @Html.JavascriptString(Url.Action(ActionNames.PostalCodeRegexMap, ControllerNames.Country)),
+	};
+</script>
+
+@* Bundle and minify JavaScript. *@
+@AspDotNetStorefront.Optimization.AdnsfBundler.RenderScriptBundle(
+    bundlePath: "~/scripts/bundled",
+    filePaths: new[]
+    {
+        Url.AppRelativeSkinUrl("scripts/bootstrap.js"),
+        "~/scripts/addtocart.js",
+        "~/scripts/jquery.validate.js",
+        "~/scripts/validationoptions.js",
+        "~/scripts/jquery.validate.unobtrusive.js",
+        "~/scripts/jquery.validate.bootstrap.js",
+        "~/scripts/validate.postalCodeRegexLookup.js",
+        "~/scripts/validate.creditCardFormat.js",
+        "~/scripts/validate.creditCardFutureExpirationDate.js",
+        "~/scripts/validate.requireChecked.js",
+        "~/scripts/whatsthis.js",
+        "~/scripts/modalEvent.js",
+        "~/Skins/Default/Scripts/placeholders.min.js",
+        "~/Skins/Default/Scripts/custom.js",
+        "~/Skins/Default/Scripts/ga.js",
+    }
+)
+
+<script type="text/javascript">
+	adnsf$.initializeAddToCartForms(
+	{
+		ajaxAddToCartUrl: @Html.JavascriptString(Url.Action(ActionNames.AjaxAddToCart, ControllerNames.Minicart)),
+		ajaxAddKitToCartUrl: @Html.JavascriptString(Url.Action(ActionNames.AjaxAddKitToCart, ControllerNames.Minicart)),
+		addToCartMessage: @Html.JavascriptString(AppLogic.GetString("minicart.addingtocart")),
+		addToWishMessage: @Html.JavascriptString(AppLogic.GetString("miniwish.addingtocart")),
+		invalidQuatityMessage: @Html.JavascriptString(AppLogic.GetString("addtocart.entervalidquantity")),
+		addToCartFailureMessage: @Html.JavascriptString(AppLogic.GetString("addtocart.error")),
+		addToWishFailureMessage: @Html.JavascriptString(AppLogic.GetString("addtowish.error")),
+		checkoutUrl: @Html.JavascriptString(Url.Action(ActionNames.Index, ControllerNames.Checkout)),
+		loginUrl: @Html.JavascriptString(Url.Action(ActionNames.SignIn, ControllerNames.Account))
+	});
+
+	adnsf$.validator.unobtrusive.adapters.addSingleVal('min', 'val');
+</script>
+
+@*This xmlpackage can be used to add dynamic data to javascripts such as tracking scripts that should run before the closing body tag*@
+@Html.XmlPackage("script.bodyclose", new { OrderAlreadyConfirmed = ViewBag.OrderAlreadyConfirmed })

@@ -1,0 +1,15 @@
+﻿@model EntityViewModel
+
+@{
+	//override default meta tags
+	ViewBag.MetaTitle = Model.MetaTitle;
+	ViewBag.MetaDescription = Model.MetaDescription;
+	ViewBag.MetaKeywords = Model.MetaKeywords;
+	ViewBag.PageTitle = Model.PageTitle;
+}
+
+@Html.Raw(Model.PayPalAd)
+<!--Xmlpackage '@Model.XmlPackageName' -->
+@Html.Raw(Model.PageContent)
+<!--End of xmlpackage '@Model.XmlPackageName' -->
+

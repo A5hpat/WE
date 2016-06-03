@@ -1,0 +1,72 @@
+﻿@model AddTimerViewModel
+@{ Layout = null; }
+
+@if(Model.Enabled)
+{
+		<div class="modal session-modal js-session-warning-modal" data-backdrop="static">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+                        <div class="session-warning-top-line">
+                            We want to keep you safe!
+                        </div>
+                        <div class="session-warning-middle-line">
+                            Due to inactivity, your session will soon expire.
+                        </div>
+                        <div class="session-warning-bottom-line">
+                            Just click OK to continue.
+                        </div>
+					</div>
+					<div class="modal-footer">
+						<a id="resetSessionTimer" class="btn btn-primary session-button" data-role="button">OK</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal session-modal js-session-expired-modal" data-backdrop="static">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-body">
+						@Html.Topic("SessionExpired")
+					</div>
+					<div class="modal-footer">
+						<a id="sessionExpired" class="btn btn-primary session-button" data-role="button">OK</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	<script src="~/scripts/sessionTimer.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		adnsf$(document).ready(function() {
+			// now prep the session javascript
+			var warningModalSelector = '.js-session-warning-modal';
+			var expiredModalSelector = '.js-session-expired-modal';
+
+			var sessionTimer = SessionTimer({
+				sessionTimeoutInMilliseconds: @Model.SessionTimeout.TotalMilliseconds,
+				refreshUrl: @Html.JavascriptString(@Model.RefreshUrl),
+				warningCallback: function() {
+					$(warningModalSelector).modal('show');
+				},
+				expiredCallback: function() {
+					$(expiredModalSelector).modal('show');
+				},
+				refreshedCallback: function() {
+					$(warningModalSelector).modal('hide');
+				}
+			});
+
+			adnsf$("#resetSessionTimer").click(function(event) {
+				sessionTimer.refresh(true);
+			});
+
+			adnsf$("#sessionExpired").click(function(event) {
+				location.reload();
+			});
+
+			sessionTimer.start();
+		});
+	</script>
+}

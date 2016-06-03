@@ -1,0 +1,44 @@
+﻿@model ProductViewModel
+
+@{
+	//override default meta tags
+	ViewBag.MetaTitle = Model.MetaTitle;
+	ViewBag.MetaDescription = Model.MetaDescription;
+	ViewBag.MetaKeywords = Model.MetaKeywords;
+	ViewBag.PageTitle = Model.PageTitle;
+}
+
+@if(Model.LoginRequired)
+{
+	<p class="registration-required">
+		You must be a registered user to view this product!
+
+	<a href="@Url.Action(
+			actionName: ActionNames.SignIn,
+			controllerName: ControllerNames.Account,
+			routeValues: new RouteValueDictionary{
+				{ RouteDataKeys.ReturnUrl, @Request.Url.PathAndQuery } })">
+
+        Click Here
+	</a>
+    to sign in.
+</p>
+}
+else
+{
+	<div itemscope="" itemtype="@Model.SchemaProductUrl">
+		<!--Xmlpackage '@Model.XmlPackageName' -->
+		@Html.Raw(Model.PageContent)
+		<!--End of Xmlpackage '@Model.XmlPackageName' -->
+		@Html.Action(
+		actionName: ActionNames.KitAddToCartForm,
+		controllerName: ControllerNames.ShoppingCart,
+		routeValues: new
+		{
+			productId = Model.Id,
+			cartRecordId = Model.CartRecordId
+		})
+		@Html.XmlPackage("upsellproducts", new { Productid = Model.Id })
+		@Html.XmlPackage("relatedproducts", new { Productid = Model.Id })
+	</div>
+}

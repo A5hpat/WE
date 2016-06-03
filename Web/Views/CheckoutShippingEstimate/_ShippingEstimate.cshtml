@@ -1,0 +1,127 @@
+﻿@model ShippingEstimateViewModel
+
+<div class="shipping-estimator-wrap">
+	<p class="estimate-shipping-link-wrap js-estimate-shipping-link-wrap">
+		<a class="estimate-shipping-link js-estimate-shipping-link" href="#">
+            Get estimated shipping rates
+		</a>
+	</p>
+	<div class="shipping-estimator js-shipping-estimator off">
+		@using(Html.BeginForm(actionName: ActionNames.ShippingEstimate,
+			controllerName: ControllerNames.CheckoutShippingEstimate,
+			method: FormMethod.Post,
+			htmlAttributes: new { @class = "form" }))
+		{
+			if(Model.ShowNoRates)
+			{
+				<div class="field-validation-error">
+                    No shipping methods were returned. Try specifying more specific or different address data.
+				</div>
+			}
+
+			<div class="row">
+				<div class="col-sm-6">
+					@Html.DropDownListEntryFor(
+						expression: m => m.Country,
+						values: Model.Countries,
+						@class: "estimator-country",
+						editorClass: "js-country",
+						editorHtmlAttributes: new Dictionary<string, object>
+						{
+							{ "autocomplete", "off"}
+						})
+				</div>
+				<div class="col-sm-6">
+					@Html.EditorEntryFor(model => model.PostalCode)
+				</div>
+			</div>
+			<div class="row js-city-state-area">
+				<div class="col-sm-6">
+					@Html.EditorEntryFor(model => model.City)
+				</div>
+				<div class="col-sm-6">
+					@Html.DropDownListEntryFor(
+							expression: m => m.State,
+							values: Model.States,
+							@default: "Choose State/Province",
+							@class: "estimator-state",
+							editorClass: "js-state")
+				</div>
+			</div>
+
+			<div class="checkout-action-row estimator-actions">
+				<a href="#" tabindex="-1" class="btn btn-default cancel-estimate-checkout-button js-shipping-estimator-hide">
+					Cancel
+				</a>
+				<button type="submit" class="btn btn-default get-estimate-checkout-button get-estimate-button">
+                    Get Shipping Options
+				</button>
+			</div>
+		}
+	</div>
+</div>
+
+@if(!Model.ShippingCalculationRequiresCityAndState)
+{
+	<script type="text/javascript">
+		(function ($) {
+			var setCityStateVisibility = function() {
+				if($('.js-country').val() === 'United States') {
+					$('.js-city-state-area').addClass('off');
+				}
+				else {
+					$('.js-city-state-area').removeClass('off');
+				}
+			}
+
+			// On page load setup the display of the city and state
+			setCityStateVisibility();
+
+			// Setup the onchange event
+			$('.js-country').change(setCityStateVisibility);
+		})(adnsf$);
+	</script>
+}
+
+<script src="~/Scripts/countryandstate.js"></script>
+<script type="text/javascript">
+	(function ($) {
+		$(document).ready(function () {
+			SelectDataBinder
+				.BindCountryAndStates('.js-country', '.js-state', @Html.JavascriptString(Url.Action(ActionNames.States, ControllerNames.Country)), @Html.JavascriptString("Choose State/Province"));
+
+			var estimateWrap = $('.js-shipping-estimator');
+			var showEstimatorKey = "showEstimatorForm";
+
+			$('.js-estimate-shipping-link').click(function (event) {
+				estimateWrap.slideToggle('fast', function () {
+					if(window.sessionStorage) {
+						if($(this).is(':visible')) {
+							sessionStorage.setItem(showEstimatorKey, true);
+						}
+						else {
+							sessionStorage.setItem(showEstimatorKey, false);
+						}
+					}
+				});
+
+				event.preventDefault();
+			});
+
+			$('.js-shipping-estimator-hide').click(function (event) {
+				estimateWrap.slideUp('fast');
+				if(window.sessionStorage) {
+					sessionStorage.setItem(showEstimatorKey, false);
+				}
+				event.preventDefault();
+			});
+
+			if(window.sessionStorage) {
+				var showEstimatorForm = sessionStorage.getItem(showEstimatorKey);
+				if(showEstimatorForm === 'true') {
+					estimateWrap.show();
+				}
+			}
+		});
+	})(adnsf$);
+</script>

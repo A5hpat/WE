@@ -1,0 +1,14 @@
+﻿@model PreviewBarViewModel
+
+<link rel="stylesheet" href="@Url.Content(Model.PreviewBarCssPath)" />
+<div class="preview-block">
+	<div class="preview-block-right">
+		<a class="preview-button" href="@Url.Action(ActionNames.EndPreview, ControllerNames.Preview)">
+            End Preview
+		</a>
+	</div>
+	<div class="preview-block-left">
+		@Html.Raw(Model.PreviewText)
+	</div>
+	<div style="clear: both;"></div>
+</div>

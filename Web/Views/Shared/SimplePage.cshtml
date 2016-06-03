@@ -1,0 +1,8 @@
+﻿@model SimplePageViewModel
+@{
+	ViewBag.MetaTitle = Model.MetaTitle;
+	ViewBag.MetaDescription = Model.MetaDescription;
+	ViewBag.MetaKeywords = Model.MetaKeywords;
+}
+
+@Html.Raw(Model.PageContent)

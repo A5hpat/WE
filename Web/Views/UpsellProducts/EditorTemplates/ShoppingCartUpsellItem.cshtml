@@ -1,0 +1,29 @@
+﻿@model UpsellProductViewModel
+
+<div class="cart-upsell-item media">
+	<div class="media-left">
+		@Html.HiddenFor(model => model.ProductId)
+		@Html.CheckBoxFor(
+			expression: model => model.Selected,
+			htmlAttributes: new { @class = "cart-upsell-selector" })
+	</div>
+	<div class="media-body">
+		<div class="media">
+			<div class="media-left">
+				<a href="#">
+					<img class="media-object cart-upsell-image" src="@Model.ImageUrl" alt="@Model.AltText" />
+				</a>
+			</div>
+			<div class="cart-upsell-item-info media-body">
+				<div class="cart-upsell-link-wrap">
+					<a href="@Model.ProductLink" class="cart-upsell-link">
+						@Model.Name
+					</a>
+				</div>
+				<div class="cart-upsell-price">
+					@Model.DisplayPrice
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

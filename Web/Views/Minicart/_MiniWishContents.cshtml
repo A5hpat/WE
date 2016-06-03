@@ -1,0 +1,29 @@
+﻿@model MinicartViewModel
+
+@if(Model.CartItems.Count() == 0)
+{
+	<div class="empty-mini-cart-text">
+        Your wish list is currently empty. <br />
+	</div>
+}
+else
+{
+	using(Html.BeginForm(
+		actionName: ActionNames.UpdateMinicart,
+		controllerName: ControllerNames.Minicart,
+		routeValues: new
+		{
+			cartType = CartTypeEnum.WishCart
+		},
+        method: FormMethod.Post,
+		htmlAttributes: new
+		{
+			id = "miniwish-form",
+			@class = "minicart-form"
+		}))
+	{
+		<div class="minicart-items">
+			@Html.EditorForMany(model => model.CartItems, "MiniWishItem")
+		</div>
+	}
+}

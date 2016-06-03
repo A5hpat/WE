@@ -1,0 +1,41 @@
+﻿@model AddressViewModel
+
+@if(!string.IsNullOrEmpty(Model.NickName))
+{
+	<div>
+		<strong>@Model.NickName</strong>
+	</div>
+}
+@if(string.IsNullOrEmpty(Model.NickName))
+{
+	<div>
+		<strong>@Model.FirstName @Model.LastName</strong>
+	</div>
+}
+else
+{
+	<span>@Model.FirstName @Model.LastName</span>
+}
+<div>
+	<span>@Model.Address1</span>
+	@if(!string.IsNullOrEmpty(@Model.Address2))
+	{
+		<span>@Model.Address2</span>
+	}
+	<span>@Model.City, @Model.State @Model.Zip</span>
+	<span>@Model.Country</span>
+	<span>@Model.Phone</span>
+</div>
+@if(Model.OffsiteSource == AppLogic.ro_PMAmazonPayments)
+{
+	<div>
+		<a href="@Url.Action(ActionNames.AmazonPaymentsCallback, ControllerNames.CheckoutAmazonPayments)">
+			<img src="~/images/amazonpayments.jpg" />
+		</a>
+	</div>
+}
+
+@if(Model.OffsiteSource == AppLogic.ro_PMPayPalExpress)
+{
+	<img src="~/images/paypal.jpg" />
+}

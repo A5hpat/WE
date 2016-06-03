@@ -1,0 +1,341 @@
+﻿@model CheckoutIndexViewModel
+
+@helper GetStatusCssClass(CheckoutStageDisplayState state)
+{
+    switch(state)
+    {
+        case CheckoutStageDisplayState.Passing:
+        case CheckoutStageDisplayState.Disabled:
+            @:block-success
+            break;
+        case CheckoutStageDisplayState.Failing:
+            @:block-danger
+            break;
+        default:
+            @:block-normal
+            break;
+    }
+}
+
+@helper GetStatusIcon(CheckoutStageDisplayState state)
+{
+    switch(state)
+    {
+        case CheckoutStageDisplayState.Passing:
+        case CheckoutStageDisplayState.Disabled:
+            @:fa fa-check
+            break;
+        case CheckoutStageDisplayState.Failing:
+            @:fa fa-exclamation
+            break;
+        case CheckoutStageDisplayState.Unknown:
+            @:fa fa-pencil
+            break;
+    }
+}
+
+<h1>
+    @Model.PageTitle 
+    @*@if(!string.IsNullOrEmpty(Model.ContinueShoppingUrl))
+    {
+        <span class="continue-shopping-text">
+            @string.Format(
+                "or <a href=\"{ 0}\">continue shopping</a>", 
+                Model.ContinueShoppingUrl)
+        </span>
+    }*@
+</h1>
+
+<div class="checkout-page">
+    <div class="row">
+        <div class="col-md-8 js-checkout-update-container">
+            @if(Model.PayPalBanner != null)
+            {
+                @Html.Raw(Model.PayPalBanner)
+            }
+            <div class="checkout-details">
+                @if(!string.IsNullOrEmpty(Model.OffsiteCheckoutError))
+                {
+                    <div class="offsite-error field-validation-error">
+                        @Model.OffsiteCheckoutError
+                    </div>
+                }
+                @Html.Action(ActionNames.AlternativePaymentMethods, ControllerNames.CheckoutPaymentMethod)
+
+                <div class="checkout-block checkout-account @GetStatusCssClass(Model.AccountStageState)">
+                    <h3 class="checkout-header">
+                        <i class="checkout-status @GetStatusIcon(Model.AccountStageState)"></i>
+                        Account
+                    </h3>
+                    <div class="checkout-content">
+                        @Html.Action(ActionNames.Account, ControllerNames.CheckoutAccount)
+                    </div>
+                </div>
+                
+                <div class="row addresses-row">
+                    @if(Model.DisplayShippingSection)
+                    {
+                        <div class="col-sm-6 col-md-12 col-lg-6 shipping-address-column">
+                            @if(Model.ShippingInfoIsRequired)
+                            {
+                                <div class="checkout-block shipping-address @GetStatusCssClass(Model.ShippingAddressStageState)">
+                                    <h3 class="checkout-header">
+                                        <i class="checkout-status @GetStatusIcon(Model.ShippingAddressStageState)"></i>
+                                        Shipping To
+                                    </h3>
+                                    <div class="checkout-content">
+                                        @Html.Action(
+                                            actionName: ActionNames.SelectAddress,
+                                            controllerName: ControllerNames.CheckoutAddress,
+                                            routeValues: new { addressType = AddressTypes.Shipping })
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="checkout-block shipping-method @GetStatusCssClass(Model.ShippingMethodStageState)">
+                                    <h3 class="checkout-header">
+                                        <i class="checkout-status @GetStatusIcon(Model.ShippingMethodStageState)"></i>
+                                        Shipping
+                                    </h3>
+                                    <div class="checkout-content">
+                                        <p>
+                                            No shipping information required for this purchase
+                                        </p>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+
+                    @if(Model.DisplayBillingSection)
+                    {
+                        <div class="@Html.AttributeBool(Model.DisplayShippingSection && Model.AllowShipToDifferentThanBillTo, "col-sm-6 col-md-12 col-lg-6", "col-sm-12") billing-address-column">
+                            <div class="checkout-block billing-address @GetStatusCssClass(Model.BillingAddressStageState)">
+                                <h3 class="checkout-header">
+                                    <i class="checkout-status @GetStatusIcon(Model.BillingAddressStageState)"></i>
+                                    @if(!Model.AllowShipToDifferentThanBillTo)
+                                    {
+                                        @String.Format("Billing And Shipping To")
+                                    }
+                                    else
+                                    {
+                                        @String.Format("Billing To")
+                                    }
+                                </h3>
+                                <div class="checkout-content">
+                                    @Html.Action(
+                                        actionName: ActionNames.SelectAddress,
+                                        controllerName: ControllerNames.CheckoutAddress,
+                                        routeValues: new { addressType = AddressTypes.Billing })
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                @if(Model.DisplayShippingSection && Model.ShippingInfoIsRequired)
+                {
+                    <div class="checkout-block shipping-method @GetStatusCssClass(Model.ShippingMethodStageState)">
+                        <h3 class="checkout-header">
+                            <i class="checkout-status @GetStatusIcon(Model.ShippingMethodStageState)"></i>
+                            @string.Format("Shipping Via")
+                        </h3>
+                        <div class="checkout-content">
+                            @Html.Action(ActionNames.ShippingMethod, ControllerNames.CheckoutShippingMethod)
+                        </div>
+                    </div>
+                }
+
+                @if(!Model.CheckoutIsOffsiteOnly)
+                {
+                    <div class="checkout-block payment-method @GetStatusCssClass(Model.PaymentMethodStageState)">
+                        <h3 class="checkout-header">
+                            <i class="checkout-status @GetStatusIcon(Model.PaymentMethodStageState)"></i>
+                            @string.Format("Paying With")
+                        </h3>
+                        <div class="checkout-content">
+                            @if(!Model.GiftCardCoversTotal)
+                            {
+                            @Html.Action(ActionNames.PaymentMethod, ControllerNames.CheckoutPaymentMethod, new { paymentMethodComplete = Model.PaymentMethodStageState == CheckoutStageDisplayState.Passing })
+                            }
+                            @if(Model.ShowGiftCards)
+                            {
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <label class="form-label" for="Code">
+                                            @string.Format("Gift Card")
+                                        </label>
+                                        @Html.Action(ActionNames.AddGiftCard, ControllerNames.CheckoutGiftCardEntry)
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+
+                @if(Model.DisplayGiftCardSetup)
+                {
+                    <div class="checkout-block gift-card-setup @GetStatusCssClass(Model.GiftCardSetupStageState)">
+                        <h3 class="checkout-header">
+                            <i class="checkout-status @GetStatusIcon(Model.GiftCardSetupStageState)"></i>
+                            @string.Format("Gift Card Setup")
+                        </h3>
+                        <div class="checkout-content">
+                            <div class="checkout-actions gift-card-actions">
+                                <a class="btn btn-default address-gift-cards-button" href="@Url.Action(ActionNames.GiftCardSetup, ControllerNames.CheckoutGiftCardSetup)">
+                                    @string.Format("Address your gift cards")
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                <div class="order-details cart-details">
+                    <h3 class="checkout-header">
+                        @string.Format("Shopping Cart")
+                    </h3>
+                    <div class="checkout-content">
+                        @Html.Action(ActionNames.CheckoutCart, ControllerNames.CheckoutCart)
+                    </div>
+                </div>
+
+                @Html.Action(ActionNames.ShoppingCartUpsells, ControllerNames.UpsellProducts)
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="order-details checkout-details-bar">
+                <div class="optional-checkout-items js-checkout-update-container">
+                    @if(Model.ShowOrderOptions)
+                    {
+                        <div class="order-block checkout-order-options block-normal">
+                            <h3 class="order-header">
+                                @string.Format("Order Options")
+                            </h3>
+                            <div class="checkout-content">
+                                @Html.Action(ActionNames.OrderOption, ControllerNames.CheckoutOrderOption)
+                            </div>
+                        </div>
+                    }
+                    
+                    @if(Model.ShowPromotions)
+                    {
+                        @Html.Action(ActionNames.AddPromoCode, ControllerNames.CheckoutPromotions)
+                    }
+
+                    @if(Model.ShowGiftCards && Model.CheckoutIsOffsiteOnly)
+                    {
+                        <h3 class="order-header">
+                            @string.Format("Gift Card")
+                        </h3>
+                        <div class="checkout-content">
+                            @Html.Action(ActionNames.AddGiftCard, ControllerNames.CheckoutGiftCardEntry)
+                        </div>
+                    }
+
+                    @if(Model.ShowOrderNotes)
+                    {
+                        <div class="checkout-block checkout-order-notes block-normal">
+                            <h3 class="order-header">@string.Format("Order Notes")</h3>
+                            <div class="checkout-content">
+                                @Html.Action(ActionNames.OrderNotes, ControllerNames.CheckoutOrderNotes)
+                            </div>
+                        </div>
+                    }
+                    
+                </div>
+
+                <div class="order-block">
+                    <h3 class="order-header">@string.Format("Order Summary")</h3>
+                    <div class="checkout-content">
+                        @Html.Action(ActionNames.OrderSummary, ControllerNames.CheckoutOrderSummary)
+                    </div>
+                </div>
+
+                @if(Model.DisplayTwoCheckoutText)
+                {
+                    <div class="order-block two-checkout-info">
+                        After you go to the 2Checkout site (by clicking on the button below), you must click the "Complete Your Order" button. You will do this after you have made your 2Checkout payment. That button will bring you back here to complete your order!
+                    </div>
+                }
+
+                <div class="order-block">
+                    @using(Html.BeginForm(
+                        actionName: ActionNames.PlaceOrder,
+                        controllerName: ControllerNames.Checkout,
+                        routeValues: null,
+                        method: FormMethod.Post,
+                        htmlAttributes: new { @class = "form js-disable-buttons-on-submit" }))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        if(Model.ShowOver13Required)
+                        {
+                            @Html.EditorEntryFor(model => model.Over13Selected)
+                        }
+
+                        if(Model.ShowOkToEmail)
+                        {
+                            @Html.EditorEntryFor(model => model.OkToEmailSelected)
+                        }
+
+                        if(Model.ShowTermsAndConditions)
+                        {
+                            <div class="form-group terms-and-conditions">
+                                @Html.EditorEntryFor(model => model.TermsAndConditionsAccepted)
+                                <div class="form-text">
+                                    @Html.Topic("checkouttermsandconditions")
+                                </div>
+                            </div>
+                        }
+
+                        <button type="submit" class="btn btn-lg btn-block btn-success place-order-button" disabled="@Html.AttributeBool(Model.CheckoutButtonDisabled, "disabled")">
+                            @if(Model.DisplayContinueOffsite)
+                            {
+                                @String.Format("Continue to Payment")
+                            }
+                            else
+                            {
+                                @String.Format("Place Order")
+                            }
+                        </button>
+                    }
+                            
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="loading-overlay-wrap js-loading-overlay-wrap off">
+    <div class="loading-overlay"></div>
+    <div class="loading-message-wrap">
+        <div class="loading-message">
+            Updating...
+        </div>
+        <div class="loading-animation loading-style-dark"></div>
+    </div>
+</div>
+<script type="text/javascript" src="~/Scripts/checkout.js" ></script>
+<script type="text/javascript">
+    adnsf$('.js-disable-buttons-on-submit').on('adnsfFormValidated', function (event) {
+        showLoading(@Html.JavascriptString("Placing Order..."));
+        adnsf$(this).find('button[type="submit"]').prop('disabled', true);
+    });
+
+    function showLoading(loadingMessage) {
+        loadingMessage = loadingMessage || @Html.JavascriptString("Updating...");
+        adnsf$('.js-loading-overlay-wrap .loading-message').text(loadingMessage);
+        adnsf$('.js-loading-overlay-wrap').removeClass('off');
+    }
+
+    adnsf$('.js-checkout-update-container').on('adnsfFormValidated', function (event) {
+        showLoading();
+    });
+</script>
+
+@if(Model.ShowRealTimeShippingInfo)
+{
+    @Html.Action(ActionNames.DebugRealTimeShipping, ControllerNames.CheckoutDebugRealTimeShipping)
+}

@@ -1,0 +1,35 @@
+﻿@model WalletEditViewModel
+
+@using(Html.BeginForm())
+{
+	@Html.HiddenFor(m => m.PaymentProfileId)
+
+	<div class="page-wrap wallet-item-page">
+		@Html.EditorEntryFor(m => m.CardNumber)
+
+		@Html.DropDownListEntryFor(
+			expression: m => m.ExpirationMonth,
+			values: Model.DateExpirationMonthOptions)
+
+		@Html.DropDownListEntryFor(
+			expression: m => m.ExpirationYear,
+			values: Model.DateExpirationYearOptions)
+
+		@Html.EditorEntryFor(m => m.CardSecurityCode)
+
+		@Html.DropDownListEntryFor(
+			expression: m => m.BillingAddressId,
+			values: Model.BillingAddressOptions)
+
+		@Html.EditorEntryFor(m => m.MakePrimary)
+
+		<div class="page-action-bar wallet-item-action">
+			<button type="submit" class="btn btn-primary wallet-button">
+                Save
+			</button>
+			<a href="@Url.Action(ActionNames.Index)" class="btn btn-default cancel-wallet-button">
+                Cancel
+			</a>
+		</div>
+	</div>
+}

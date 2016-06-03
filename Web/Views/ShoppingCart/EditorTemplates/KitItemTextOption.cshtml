@@ -1,0 +1,57 @@
+﻿@model KitItemViewModel
+
+<div class="js-kit-control">
+	@Html.HiddenFor(
+		expression: model => model.Id,
+		htmlAttributes: new
+		{
+			@class = "js-kit-identifier"
+		})
+	<div class="form-group kit-form-group">
+		<div class="kit-text-box-wrap">
+			<span class="js-kit-name-display" data-kit-item-id="@Model.Id">
+				@Model.NameDisplay
+			</span>
+
+			@Html.TextBoxFor(
+				expression: model => model.TextOption,
+				htmlAttributes: new
+				{
+					@class = "form-control kit-text-option js-kit-text-option"
+				})
+
+			@if(!string.IsNullOrEmpty(Model.ImageUrl)
+				|| !string.IsNullOrWhiteSpace(Model.Description)
+				|| !string.IsNullOrEmpty(Model.OutOfStockMessage))
+			{
+				<div class="kit-item-info clearfix">
+					@if(!string.IsNullOrEmpty(Model.ImageUrl))
+					{
+						<div class="kit-item-image-wrap">
+							<img src="@Model.ImageUrl"
+								 class="kit-item-image img-responsive" />
+						</div>
+					}
+					@if(!string.IsNullOrWhiteSpace(Model.Description)
+												|| !string.IsNullOrEmpty(Model.OutOfStockMessage))
+					{
+						<div class="kit-item-description">
+							@if(!string.IsNullOrWhiteSpace(Model.Description))
+							{
+								<div class="kit-item-description">
+									@Html.Raw(Model.Description)
+								</div>
+							}
+							@if(!string.IsNullOrEmpty(Model.OutOfStockMessage))
+							{
+								<div class="stock-hint out-stock-hint kit-item-out-of-stock">
+									@Html.Raw(Model.OutOfStockMessage)
+								</div>
+							}
+						</div>
+					}
+				</div>
+			}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,11 @@
+﻿@model MicroPayViewModel
+<span>
+	@if(Model.BalanceIsSufficient)
+	{
+		@String.Format("Your MicroPay Balance is: {0}", Model.Balance);
+	}
+	else
+	{
+		@String.Format("Your MicroPay balance is insufficient for purchasing this order. <br />(<b>Your MicroPay Balance is {0}</b>)", Model.Balance);
+	}
+</span>

@@ -1,0 +1,72 @@
+﻿@model MinicartViewModel
+
+<div class="minicart-wrap">
+	<div id="minicart-modal" class="modal  minicart-modal" data-keyboard="true" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					@if(Model.MiniwishEnabled)
+					{
+						<a href="#" class="switch-mini-link js-switch-to-miniwish @Html.AttributeBool(Model.OtherMiniCount == 0, "off")">
+							<i class="fa fa-angle-left"></i>
+                            View wishlist
+						</a>
+					}
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<i class="fa fa-times-circle-o"></i>
+					</button>
+					<h4 class="minicart-title modal-title">
+                        Shopping Cart:
+						<span class="minicart-title-count js-cart-title-count">@Model.ItemCount</span>
+						<span class="minicart-items-label js-cart-count-label">
+							@if(Model.ItemCount == 1)
+							{
+								@String.Format("Item")
+							}
+							else
+							{
+								@String.Format("Items")
+							}
+						</span>
+					</h4>
+				</div>
+				<div class="modal-body">
+					<div class="minicart-content-wrap">
+						<div class="minicart-message-area js-minicart-message-area">
+							@* Ajax messages will appear here *@
+						</div>
+						<div class="minicart-contents js-minicart-contents">
+							@Html.Partial(ViewNames.MiniCartContentsPartial, Model)
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer minicart-footer">
+					<div class="row">
+						<div class="col-sm-6 text-left-sm">
+							<div class="minicart-discount @Html.AttributeBool(string.IsNullOrEmpty(Model.Discount), "off")">
+                                Discounts:
+								<span class="minicart-discount js-minicart-discount">@Model.Discount</span>
+							</div>
+							<div class="minicart-total-area">
+								<div class="minicart-total-wrap">
+                                    Total:
+									<span class="minicart-total js-minicart-total">@Model.Total</span>
+								</div>
+								@if(Model.AllowQuantityUpdate)
+								{
+									<div class="minicart-save-Link">
+										<a href="#" id="minicart-save-button" class="update-total-link">Update Totals</a>
+									</div>
+								}
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<button type="button" id="minicart-close-button" class="btn btn-default close-minicart-button">Close</button>
+							<button type="button" id="minicart-checkout-button" class="btn btn-primary minicart-checkout-button">Checkout</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

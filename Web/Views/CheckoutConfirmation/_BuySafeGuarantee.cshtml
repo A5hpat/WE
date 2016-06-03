@@ -1,0 +1,11 @@
+﻿@model BuySafeGuaranteeViewModel
+
+<script src="@Model.JSLocation"></script>
+<span id="BuySafeGuaranteeSpan"></span>
+<script type="text/javascript">
+    buySAFE.Hash = "@Model.Hash";
+    buySAFE.Guarantee.order = "@Model.OrderNumber";
+    buySAFE.Guarantee.total = "@Model.Total";
+    buySAFE.Guarantee.email = "@Model.Email";
+    WriteBuySafeGuarantee("JavaScript");
+</script>

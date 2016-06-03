@@ -1,0 +1,65 @@
+﻿@model KitAddToCartViewModel
+
+@{
+	var selectedItems = Model.KitGroups
+		.SelectMany(group => group.Items)
+		.Where(item => item.IsSelected);
+}
+
+@if(selectedItems.Any())
+{
+	<ul class="selected-kit-items">
+		@foreach(var item in selectedItems)
+		{
+			<li>
+				@item.Name
+			</li>
+		}
+	</ul>
+}
+
+@if(!Model.HidePriceUntilCart)
+{
+	<div class="kit-prices">
+		@if(Model.ShowRegularBasePrice)
+		{
+			<div class="kit-price kit-regular-base-price">
+				<label>
+                    Reg Base Price: 
+				</label>
+				@Model.RegularBasePrice
+			</div>
+		}
+		@if(Model.ShowBasePrice)
+		{
+			<div class="kit-price kit-base-price">
+				@if(Model.ShowSchemaOrgPrice)
+				{
+					<span itemprop="offers" itemscope="" itemtype="@Model.SchemaOfferUrl">
+						<meta itemprop="price" content="@Model.SchemaBasePrice" />
+						<meta itemprop="priceCurrency" content="@Model.IsoThreeLetterCurrency" />
+					</span>
+				}
+				<label>
+                    Base Price: 
+				</label>
+				@Model.BasePrice
+			</div>
+		}
+		<div class="kit-price kit-customized-price">
+			<label>
+                Base Price: 
+			</label>
+			@Model.CustomizedPrice
+		</div>
+		@if(Model.ShowCustomerLevelPrice)
+		{
+			<div class="kit-price kit-customer-level-price">
+				<label>
+                    Level Price:
+				</label>
+				@Model.CustomerLevelPrice
+			</div>
+		}
+	</div>
+}

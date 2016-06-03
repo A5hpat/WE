@@ -1,0 +1,40 @@
+﻿@model UserLinksViewModel
+
+<ul class="user-links">
+	@if(Model.UserIsRegistered)
+	{
+		<li class="hidden-xs hidden-sm">
+			<a href="@Url.Action(ActionNames.Index, ControllerNames.Account)" class="user-link">
+				<i class="fa fa-user"></i>
+				@String.Format("{0}", string.IsNullOrEmpty(Model.UserFirstName) ? Model.Email : Model.UserFirstName)
+			</a>
+		</li>
+	}
+	<li>
+		@Html.Action(ActionNames.LoginLinks, ControllerNames.UserLinks)
+	</li>
+	@if(Model.MinicartEnabled && !Model.CheckoutInProgress)
+	{
+		<li>
+			@Html.Action(ActionNames.MinicartLink, ControllerNames.Minicart, new { cartType = CartTypeEnum.ShoppingCart })
+		</li>
+	}
+	@if(Model.MiniwishlistEnabled)
+	{
+		<li class="hidden-xs">
+			@Html.Action(ActionNames.MinicartLink, ControllerNames.Minicart, new { cartType = CartTypeEnum.WishCart })
+		</li>
+	}
+	@if(!Model.CheckoutInProgress)
+	{
+		<li>
+			<a id="js-header-checkout-link" 
+				href="@Html.AttributeBool(Model.CartHasItems, Url.Action(ActionNames.Index, ControllerNames.Checkout))" 
+				class="user-link checkout-link" 
+				disabled="@Html.AttributeBool(!Model.CartHasItems, "disabled")">
+				<i class="fa @Html.AttributeBool(Model.MinicartEnabled, "fa-check-square-o", "fa-shopping-cart")"></i>
+                Checkout
+			</a>
+		</li>
+	}
+</ul>

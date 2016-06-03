@@ -1,0 +1,161 @@
+﻿@model BraintreeViewModel
+
+<h2>Enter your payment details</h2>
+
+@using(Html.BeginForm(
+				actionName: ActionNames.BraintreeCreditCard,
+				controllerName: ControllerNames.Braintree,
+				method: FormMethod.Post,
+				htmlAttributes: new { @class = "form credit-card-form", @id = "braintree-card-form" }))
+{
+	<input type="hidden" id="braintreeToken" name="braintreeToken" value="@Model.Token" />
+		<input type="hidden" id="braintreePaymentMethod" name="braintreePaymentMethod" />
+		<input type="hidden" id="braintreeCardType" name="braintreeCardType" />
+		<input type="hidden" id="braintreeNonce" name="braintreeNonce" />
+
+		<div class="form-text">
+            Please Enter Your Credit Card Information Below:
+		</div>
+
+		<div class="row">
+			<div class="col-sm-5 col-md-4 col-lg-3">
+				<div class="card-number form-group-small form-group has-feedback">
+					<label class="form-label form-label-required" for="card-number">
+						<span class="form-label-prefix form-label-prefix-required">
+							label.requiredPrefix
+						</span>
+						<span class="form-label-wrap">Credit Card Number</span>
+						<span class="form-label-suffix form-label-suffix-required">(required)</span>
+					</label>
+					<div class="entry-feedback-wrapper">
+						<div class="form-control card-number text-box single-line" id="card-number"></div>
+						<span class="fa form-control-feedback"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-7 col-md-8 col-lg-9">
+				<div class="card-cvv form-group-xsmall form-group has-feedback">
+					<label class="form-label form-label-required" for="cvv">
+						<span class="form-label-prefix form-label-prefix-required">
+							label.requiredPrefix
+						</span>
+						<span class="form-label-wrap">Credit Card Verification Code</span>
+						<span class="form-label-suffix form-label-suffix-required">(required)</span>
+					</label>
+					<div class="entry-feedback-wrapper">
+						<div class="form-control card-cvv text-box single-line" id="cvv"></div>
+						<span class="fa form-control-feedback"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm-5 col-md-4 col-lg-3">
+				<div class="card-expiration-month form-group-xsmall form-group has-feedback">
+					<label class="form-label form-label-required" for="expiration-month">
+						<span class="form-label-prefix form-label-prefix-required">
+							label.requiredPrefix
+						</span>
+						<span class="form-label-wrap">Card Expiration Month</span>
+						<span class="form-label-suffix form-label-suffix-required">(required)</span>
+					</label>
+					<div class="entry-feedback-wrapper">
+						<div class="form-control card-expiration text-box single-line" id="expiration-month"></div>
+						<span class="fa form-control-feedback"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-5 col-md-4 col-lg-3">
+				<div class="card-expiration-year form-group-xsmall form-group has-feedback">
+					<label class="form-label form-label-required" for="expiration-year">
+						<span class="form-label-prefix form-label-prefix-required">
+							label.requiredPrefix
+						</span>
+						<span class="form-label-wrap">Card Expiration Year</span>
+						<span class="form-label-suffix form-label-suffix-required">(required)</span>
+					</label>
+					<div class="entry-feedback-wrapper">
+						<div class="form-control card-expiration text-box single-line" id="expiration-year"></div>
+						<span class="fa form-control-feedback"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="card-postal-code form-group-xsmall form-group has-feedback">
+			<label class="form-label form-label-required" for="postal-code">
+				<span class="form-label-prefix form-label-prefix-required">
+					label.requiredPrefix
+				</span>
+				<span class="form-label-wrap">Postal Code</span>
+				<span class="form-label-suffix form-label-suffix-required">(required)</span>
+			</label>
+			<div class="entry-feedback-wrapper">
+				<div class="form-control card-postal-code text-box single-line" id="postal-code"></div>
+				<span class="fa form-control-feedback"></span>
+			</div>
+		</div>
+
+		<div>
+			<button type="submit" class="btn btn-primary js-braintree-submit">Submit</button>
+			<a href="@Url.Action(ActionNames.Index, ControllerNames.Checkout)" class="btn btn-default braintree-cancel">Cancel</a>
+		</div>
+}
+
+<script src="@Model.ScriptUrl"></script>
+<script>
+	braintree.setup(@Html.JavascriptString(Model.Token), "custom", {
+		id: "braintree-card-form",
+		hostedFields: {
+			styles: {
+				"input": {
+					"font-family": "'Helvetica Neue', Helvetica, Arial, sans-serif",
+					"font-size": "14px",
+					"line-height": "1.42857143",
+					"color": "#333"
+				}
+			},
+			number: {
+				selector: "#card-number",
+				placeholder: @Html.JavascriptString("e.g. 1234 5678 9012 3456"),
+
+            },
+			expirationMonth: {
+				selector: "#expiration-month",
+				placeholder: @Html.JavascriptString("e.g. 07"),
+
+            },
+			expirationYear: {
+				selector: "#expiration-year",
+				placeholder: @Html.JavascriptString("e.g. 2020"),
+
+            },
+			cvv: {
+				selector: "#cvv",
+				placeholder: @Html.JavascriptString("e.g. 123"),
+
+            },
+			postalCode: {
+				selector: "#postal-code",
+				placeholder: @Html.JavascriptString("e.g. 90210"),
+
+            },
+			onFieldEvent: function (event) {
+                            if(event.type == "blur" && event.target.fieldKey == "number" && event.isValid)
+
+                {
+                            //Stash the card type
+                            adnsf$("#braintreeCardType").val(event.card.niceType);
+                        }
+                    }
+                },
+		onPaymentMethodReceived: function (obj) {
+                    adnsf$("#braintreePaymentMethod").val(obj.type);
+                    adnsf$("#braintreeNonce").val(obj.nonce);
+                    adnsf$(".credit-card-form").submit();
+                }
+	});
+</script>

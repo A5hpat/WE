@@ -1,0 +1,146 @@
+﻿@model ShoppingCartItemViewModel
+@Html.HiddenFor(m => m.Id)
+<div class="cart-item media">
+	@if(Model.ShowCartImages)
+	{
+		<div class="cart-item-image-wrap media-left">
+			<img class="media-object cart-item-image" src="@Model.ProductImageUrl" alt="@Model.ProductImageAlternateText" />
+		</div>
+	}
+	<div class="media-body">
+		<div class="row">
+			<div class="col-sm-6">
+				<h5 class="cart-item-title media-heading">
+					@if(Model.LinkToProduct)
+					{
+						<a class="cart-product-name" href="@Model.ProductUrl">
+							@Model.ProductName.JoinTo("-", Model.VariantName)
+						</a>
+						}
+						else
+						{
+						<span class="cart-product-name">
+							@Model.ProductName.JoinTo("-", Model.VariantName)
+						</span>
+					}
+				</h5>
+				@if(!string.IsNullOrEmpty(Model.ChosenSize) || !string.IsNullOrEmpty(Model.ChosenColor))
+				{
+					<div class="cart-size-and-color cart-detail">
+						@Model.ChosenSize.JoinTo(", ", @Model.ChosenColor)
+					</div>
+				}
+				@if(!string.IsNullOrEmpty(Model.TextOption))
+				{
+					<div class="cart-text-option-wrap cart-detail">
+						<span class="text-option-label">
+							@Model.TextOptionLabel:
+						</span>
+						<span class="text-option">
+							@Model.TextOption
+						</span>
+					</div>
+				}
+				@if(Model.IsAKit)
+				{
+					<div class="cart-kit">
+						@Html.EditorForMany(m => m.KitDetails, "CheckoutKitDetail")
+					</div>
+				}
+				@if(Model.ShowSku)
+				{
+					<div class="cart-detail cart-sku-wrap">
+						<span class="cart-sku">SKU:</span>
+						<span class="cart-sku">@Model.ProductSku</span>
+					</div>
+				}
+				@if(Model.ShowEditLink)
+				{
+					<a class="cart-edit-link" href="@Model.EditUrl">
+						<i class="fa fa-pencil"></i>
+						Edit
+					</a>
+				}
+				@if(Model.ShowRecurringDropDown)
+				{
+					<div class="cart-recurring-variants-wrap">
+						<span class="cart-recurring-variant-label">
+                            Auto-Ships:
+						</span>
+						@Html.DropDownListFor(m => m.RecurringVariantId, Model.RecurringIntervalOptions, new
+						{
+							@class = "form-control form-control-inline"
+						})
+					</div>
+				}
+				@if(!string.IsNullOrEmpty(Model.LineItemPromotionText))
+				{
+					<div class="cart-line-item-promo-text cart-detail">
+						@Model.LineItemPromotionText
+					</div>
+				}
+			</div>
+			<div class="col-sm-6 text-right-sm">
+				<div class="cart-item-quantity">
+					@Html.LabelFor(m => m.Quantity)
+					@if(Model.RestrictedQuantities.Any())
+					{
+						@Html.DropDownListFor(
+							m => m.Quantity,
+							Model.RestrictedQuantities,
+							new {
+								@class = "form-control form-control-inline text-4 input-sm",
+								id = string.Format("quantity-{0}", Model.VariantId)
+							});
+					}
+					else
+					{
+						@Html.EditorFor(
+							expression: m => m.Quantity,
+							additionalViewData: new
+							{
+								htmlAttributes = new
+								{
+									@class = "form-control form-control-inline text-4 input-sm",
+									@type = "number",
+									min = 0,
+								}
+							})
+					}
+
+					@Html.ValidationMessageFor(m => m.Quantity)
+
+					<a href="@Url.Action(ActionNames.DeleteItem, ControllerNames.ShoppingCart, new { id = Model.Id, returnurl = Url.Action(ActionNames.Index, ControllerNames.Checkout) }) " 
+					   class="cart-delete-link">
+						Delete
+					</a>
+				</div>
+
+				<div class="cart-subtotal-wrap">
+					<span class="cart-subtotal-label">
+                        SubTotal
+					</span>
+					<span class="cart-subtotal">
+						@Model.SubTotalDisplay
+					</span>
+				</div>
+				@if(!string.IsNullOrEmpty(Model.VatDisplay))
+				{
+					<div class="cart-vat-wrap">
+						<span class="cart-vat-label">
+                            VAT:
+						</span>
+						<span class="cart-vat">
+							@Model.VatDisplay
+						</span>
+					</div>
+				}
+
+				@Html.HiddenFor(m => m.ProductId)
+				@Html.HiddenFor(m => m.VariantId)
+				@Html.HiddenFor(m => m.ChosenColorSkuModifier)
+				@Html.HiddenFor(m => m.ChosenSizeSkuModifier)
+			</div>
+		</div>
+	</div>
+</div>

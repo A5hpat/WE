@@ -1,0 +1,39 @@
+﻿@model BreadcrumbViewModel
+
+@if(!string.IsNullOrEmpty(Model.PageTitle))
+{
+	<div class="breadcrumb">
+		@if(@Model.PathInfos != null)
+		{
+			foreach(var pathInfo in @Model.PathInfos)
+			{
+				if(String.IsNullOrEmpty(pathInfo.Url))
+				{
+					if(String.IsNullOrEmpty(pathInfo.Display))
+					{
+						continue;
+					}
+
+					@Html.Raw(pathInfo.Display)
+				}
+				else
+				{
+					<a class="breadcrumb-link" href="@pathInfo.Url">
+						@if(String.IsNullOrEmpty(pathInfo.Display))
+						{
+							@pathInfo.Url
+						}
+						else
+						{
+							@Html.Raw(pathInfo.Display)
+						}
+					</a>
+				}
+
+				@Html.Raw(Model.BreadcrumbSeparator)
+			}
+		}
+
+		@Html.Raw(Model.PageTitle)
+	</div>
+}

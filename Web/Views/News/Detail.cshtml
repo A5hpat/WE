@@ -1,0 +1,18 @@
+﻿@model NewsDetailRenderModel
+
+<div class="page-wrap news-page">
+	<div class="page-row">
+		<h1 class="headline-header">
+			<span class="news-headline">
+				@Model.Headline
+			</span>
+			<span class="article-date">
+				(@Model.Date)
+			</span>
+		</h1>
+
+		<div class="news-body">
+			@Html.Raw(@Model.Copy)
+		</div>
+	</div>
+</div>

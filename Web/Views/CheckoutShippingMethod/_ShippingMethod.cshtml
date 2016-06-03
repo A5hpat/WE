@@ -1,0 +1,165 @@
+﻿@model SelectShippingMethodViewModel
+
+@{
+	var visibleShippingMethods = Model.RenderModel.NumberOfMethodsToShow > 0
+		? Model.RenderModel.ShippingMethods.Take(Model.RenderModel.NumberOfMethodsToShow)
+		: Model.RenderModel.ShippingMethods;
+}
+
+@if(Model.RenderModel.SelectedShippingMethod != null)
+{
+	<div class="selected-shipping-option js-selected-shipping-option">
+		<div class="row">
+			<div class="col-xs-8">
+				@if(!string.IsNullOrEmpty(Model.RenderModel.SelectedShippingMethod.ImageFileName) && Model.RenderModel.ShowShippingIcons)
+				{
+					<img class="shipping-method-icon" src="~/images/shipping/@Model.RenderModel.SelectedShippingMethod.ImageFileName" />
+				}
+				@Model.RenderModel.SelectedShippingMethod.Name @Model.RenderModel.SelectedShippingMethod.RateDisplay
+			</div>
+			<div class="col-xs-4">
+				<div class="checkout-actions shipping-method-actions">
+					<button type="button" id="shipping-methods-change" class="btn btn-default change-shipping-method-checkout-button">
+						Change
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+}
+
+@if(!Model.RenderModel.ShippingMethods.Any())
+{
+	if(Model.RenderModel.CartIsAllFreeShipping)
+	{
+		<p class="no-shipping-methods-available">
+            This order has free shipping.
+		</p>
+	}
+	else
+	{
+		<p class="no-shipping-methods-available">
+            No shipping methods were found for your shipping address.
+		</p>
+	}
+}
+
+<div class="shipping-options js-shipping-options @Html.AttributeBool(Model.RenderModel.SelectedShippingMethod == null, "on", "off")">
+	@if(!Model.RenderModel.CartIsAllFreeShipping)
+	{
+		@Html.Action(ActionNames.ShippingEstimate, ControllerNames.CheckoutShippingEstimate, new { methodsWereReturned = Model.RenderModel.ShippingMethods.Any() })
+	}
+
+	@if(Model.RenderModel.ShippingMethods.Any())
+	{
+		using(Html.BeginForm(
+			actionName: ActionNames.ShippingMethod,
+			controllerName: ControllerNames.CheckoutShippingMethod,
+			method: FormMethod.Post))
+		{
+			
+
+			foreach(var shippingMethod in visibleShippingMethods)
+			{
+				<div class="shipping-method radio">
+					<label>
+						@Html.RadioButton(
+							name: "SelectedShippingMethodId",
+							value: shippingMethod.Id,
+							isChecked: shippingMethod.Id == Model.SelectedShippingMethodId,
+							htmlAttributes: new { @id = string.Format("{0}-{1}", "SelectedShippingMethodId", shippingMethod.Id), @class = "js-shipping-option" })
+
+						@if(!string.IsNullOrEmpty(shippingMethod.ImageFileName) && Model.RenderModel.ShowShippingIcons)
+						{
+							<img class="shipping-method-icon" src="~/images/shipping/@shippingMethod.ImageFileName" />
+						}
+
+						@shippingMethod.Name @shippingMethod.RateDisplay
+					</label>
+				</div>
+			}
+			if(Model.RenderModel.ShippingMethods.Count() > visibleShippingMethods.Count())
+			{
+				<div class="js-hidden-shipping-methods hidden-shipping-methods">
+					@foreach(var shippingMethod in Model.RenderModel.ShippingMethods.Skip(visibleShippingMethods.Count()))
+					{
+						<div class="shipping-method radio">
+							<label>
+								@Html.RadioButton(
+									name: "SelectedShippingMethodId",
+									value: shippingMethod.Id,
+									isChecked: shippingMethod.Id == Model.SelectedShippingMethodId,
+									htmlAttributes: new { @class = "js-shipping-option" })
+
+								@if(!string.IsNullOrEmpty(shippingMethod.ImageFileName) && Model.RenderModel.ShowShippingIcons)
+								{
+									<img class="shipping-method-icon" src="~/images/shipping/@shippingMethod.ImageFileName" />
+								}
+
+								@shippingMethod.Name @shippingMethod.RateDisplay
+							</label>
+						</div>
+					}
+				</div>
+			}
+		}
+	}
+</div>
+
+@if(Model.RenderModel.ShippingMethods.Count() > visibleShippingMethods.Count() && Model.RenderModel.SelectedShippingMethod == null)
+{
+	<a href="#" id="shipping-methods-more" class="shipping-show-hide">
+        More Options
+	</a>
+}
+<div class="checkout-actions shipping-method-actions">
+	@if(Model.RenderModel.SelectedShippingMethod != null && Model.RenderModel.ShippingMethods.Count() > 1)
+	{
+		<button type="button" id="shipping-methods-cancel" class="btn btn-default off">
+			Hide Options
+		</button>
+	}
+</div>
+
+@if(Model.RenderModel.ShippingMethods.Any())
+{
+	<script type="text/javascript">
+		(function ($) {
+			$('input[name="SelectedShippingMethodId"]:radio').on('change', function (event) {
+				$(this).closest('form').submit();
+			});
+
+			$('#shipping-methods-more').click(function (event) {
+				var hiddenShippingMethodsBox = $('.js-hidden-shipping-methods');
+				if(hiddenShippingMethodsBox.is(":visible")) {
+					hiddenShippingMethodsBox.slideUp(250);
+					$(this).text(@Html.JavascriptString("More Options"));
+
+                }
+                        else {
+                            hiddenShippingMethodsBox.slideDown(250);
+					$(this).text(@Html.JavascriptString("Less Options"));
+                        }
+
+                event.preventDefault();
+                    });
+
+			$('#shipping-methods-change').click(function () {
+				$('.js-selected-shipping-option').hide();
+				$('.js-shipping-options').slideDown(250);
+				$('.js-hidden-shipping-methods').slideDown(250);
+				$('#shipping-methods-cancel').show();
+				$(this).hide();
+			});
+
+			$('#shipping-methods-cancel').click(function () {
+				$('.js-shipping-options').slideUp(250, function () {
+					$('.js-selected-shipping-option').show();
+					$('#shipping-methods-change').show();
+				});
+				$(this).hide();
+			});
+
+		})(adnsf$);
+	</script>
+}

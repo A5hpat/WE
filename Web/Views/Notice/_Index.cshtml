@@ -1,0 +1,18 @@
+﻿@model NoticeViewModel
+
+@if(Model.Notices.Any())
+{
+	<div class="notice-wrap">
+		@foreach(var notice in Model.Notices)
+		{
+			if(string.IsNullOrEmpty(notice.Message))
+			{
+				continue;
+			}
+			
+			<div class="notice notice-@notice.Type.ToString().ToLower()">
+				@Html.Raw(notice.Message)
+			</div>
+		}
+	</div>
+}

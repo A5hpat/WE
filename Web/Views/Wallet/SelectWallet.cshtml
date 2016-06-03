@@ -1,0 +1,39 @@
+﻿@model WalletSelectViewModel
+
+<div class="wallet-selector">
+	@using(Html.BeginForm(
+					actionName: ActionNames.SelectWallet,
+					controllerName: ControllerNames.Wallet,
+					method: FormMethod.Post,
+					htmlAttributes: new { @class = "form credit-card-form" }))
+	{
+		<div class="form-text">
+            Or select a payment type from your wallet.
+		</div>
+
+		if(Model.WalletPaymentTypes.Any())
+		{
+			<div class="wallet-payment-types form-group">
+				@foreach(var walletPaymentType in Model.WalletPaymentTypes)
+				{
+					<div class="wallet-payment radio">
+						<label>
+							<input type="radio"
+									name="SelectedPaymentProfileId"
+									value="@walletPaymentType.PaymentProfileId"
+									@Html.AttributeBool(walletPaymentType.PaymentProfileId == Model.SelectedPaymentProfileId, "selected")>
+							<img class="wallet-payment-card-image" src="@walletPaymentType.CardImage">
+							<span class="wallet-payment-card-number">@walletPaymentType.CardNumber</span>
+							<span class="wallet-payment-card-expiration-date">Expires: @walletPaymentType.ExpirationMonth/@walletPaymentType.ExpirationYear</span>
+						</label>
+					</div>
+				}
+			</div>
+		}
+		@Html.ValidationMessageFor(m => m.SelectedPaymentProfileId);
+
+		<div class="page-action-bar">
+			<button type="submit" class="btn btn-primary">Apply payment type</button>
+		</div>
+	}
+</div>

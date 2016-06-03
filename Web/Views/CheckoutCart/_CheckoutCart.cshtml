@@ -1,0 +1,89 @@
+﻿@model ShoppingCartViewModel
+
+@{
+	var cartItemsCount = Model.CartItems.Count();
+}
+
+@if(cartItemsCount > 0)
+{
+	using(Html.BeginForm(
+		actionName: ActionNames.CheckoutCart,
+		controllerName: ControllerNames.CheckoutCart, 
+		method: FormMethod.Post, 
+		htmlAttributes: new { @class = "cart-form" }))
+	{
+		<div class="cart-items">
+			@if(Model.UseMaximumCartItemBehavor)
+			{
+				var visibleItems = Model.CartItems.Take(Model.MaximumCartItemsToDisplay);
+				var hiddenItems = Model.CartItems.Skip(Model.MaximumCartItemsToDisplay);
+
+				<div class="visible-cart-items">
+					@Html.EditorForMany(
+						expression: o => visibleItems, 
+						templateName: "CheckoutCartItem", 
+						fieldName:"CartItems")
+				</div>
+				<div id="hidden-cart-items">
+					@Html.EditorForMany(
+						expression: o => hiddenItems,
+						templateName: "CheckoutCartItem",
+						fieldName: "CartItems",
+						index: Model.MaximumCartItemsToDisplay)
+				</div>
+			}
+			else
+			{
+				@Html.EditorForMany(model => model.CartItems, "CheckoutCartItem")
+			}
+		</div>
+		<div class="checkout-action-row cart-actions">
+			@if(Model.UseMaximumCartItemBehavor)
+			{
+				<button type="button" id="view-all-cart-items" class="btn btn-default view-all-cart-button on">
+                    View all items
+				</button>
+				<button type="button" id="hide-cart-items" class="btn btn-default view-less-cart-button off">
+                    View less
+				</button>
+			}
+			<input type="submit" class="btn btn-default update-cart-button" value="Update Cart" />
+		</div>
+	}
+
+	if(Model.UseMaximumCartItemBehavor)
+	{
+		<script>
+			(function ($) {
+				function showCartItems() {
+					$('#hidden-cart-items').show();
+					$('#view-all-cart-items').hide();
+					$('#hide-cart-items').show();
+				}
+				function hideCartItems() {
+					$('#hidden-cart-items').hide();
+					$('#hide-cart-items').hide();
+					$('#view-all-cart-items').show();
+				}
+
+				$('#view-all-cart-items').click(function () {
+					sessionStorage.setItem('showAllCartItems', true);
+					showCartItems();
+				});
+				$('#hide-cart-items').click(function () {
+					sessionStorage.setItem('showAllCartItems', false);
+					hideCartItems();
+				});
+
+				var showAllCartItems = sessionStorage.getItem('showAllCartItems');
+				if(showAllCartItems === 'true') {
+					showCartItems();
+				}
+				else {
+					hideCartItems();
+				}
+
+			})(adnsf$);
+		</script>
+	}
+}

@@ -1,0 +1,25 @@
+﻿@model NewsListRenderModel
+
+<div class="group-header home-news-header">
+	<a href="@Url.Action(ActionNames.Index, ControllerNames.News)">
+        News
+	</a>
+</div>
+<p class="home-news-prompt">
+    News and Announcements!
+</p>
+<ul class="home-news-articles">
+	@foreach(var article in Model.Articles)
+	{
+		<li class="home-news-article">
+			<span class="home-news-article">
+				<a href="@Url.Action(ActionNames.Detail, ControllerNames.News, new { @id = article.Id })">
+					@article.Headline
+				</a>
+			</span>
+			<span class="home-news-date">
+				(@article.Date)
+			</span>
+		</li>
+	}
+</ul>

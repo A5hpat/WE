@@ -1,0 +1,47 @@
+﻿@model OrderSummaryViewModel
+
+<div class="order-summary-subtotal">
+	<div class="left"><label>Subtotal:</label></div>
+	<div class="right">@Html.DisplayFor(model => model.SubTotal)</div>
+	<div class="clear"></div>
+</div>
+@if(Model.HasDiscount)
+{
+	<div class="order-summary-discount">
+		<div class="left">@Html.LabelFor(model => model.DiscountTotal)</div>
+		<div class="right">@Html.DisplayFor(model => model.DiscountTotal)</div>
+		<div class="clear"></div>
+	</div>
+}
+<div class="order-summary-shipping">
+	<div class="left">
+		@Html.LabelFor(model => model.ShippingTotal)
+		@if(Model.ShowVatLabels)
+		{
+			<label>@Html.DisplayFor(model => model.ShippingVatCaption)</label>
+		}
+	</div>
+	<div class="right">@Html.DisplayFor(model => model.ShippingTotal)</div>
+	<div class="clear"></div>
+</div>
+@if(Model.ShowTax)
+{
+	<div class="order-summary-tax">
+		<div class="left">@Html.LabelFor(model => model.TaxTotal)</div>
+		<div class="right">@Html.DisplayFor(model => model.TaxTotal)</div>
+		<div class="clear"></div>
+	</div>
+}
+@if(Model.HasGiftCardDiscountTotal)
+{
+	<div class="order-summary-gift-card-discount">
+		<div class="left">@Html.LabelFor(model => model.GiftCardDiscountTotal)</div>
+		<div class="right">@Html.DisplayFor(model => model.GiftCardDiscountTotal)</div>
+		<div class="clear"></div>
+	</div>
+}
+<div class="order-summary-total">
+	<div class="left">@Html.LabelFor(model => model.Total)</div>
+	<div class="right">@Html.DisplayFor(model => model.Total)</div>
+	<div class="clear"></div>
+</div>

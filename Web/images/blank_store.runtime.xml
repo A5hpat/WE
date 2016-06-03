@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <System xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <IsAdminSite>false</IsAdminSite>
+    <IsAdminSiteInt>0</IsAdminSiteInt>
+    <CustomerID>0</CustomerID>
+    <DefaultVATSetting>1</DefaultVATSetting>
+    <CustomerVATSetting>1</CustomerVATSetting>
+    <UseVATSetting>1</UseVATSetting>
+    <CustomerLevelID>0</CustomerLevelID>
+    <CustomerLevelName />
+    <CustomerFirstName />
+    <CustomerLastName />
+    <CustomerFullName />
+    <CustomerRoles />
+    <IsAdminUser>false</IsAdminUser>
+    <IsSuperUser>false</IsSuperUser>
+    <VAT.Enabled>false</VAT.Enabled>
+    <VAT.AllowCustomerToChooseSetting>true</VAT.AllowCustomerToChooseSetting>
+    <LocaleSetting>en-US</LocaleSetting>
+    <CurrencySetting>USD</CurrencySetting>
+    <CurrencyDisplayLocaleFormat>en-US</CurrencyDisplayLocaleFormat>
+    <WebConfigLocaleSetting>en-US</WebConfigLocaleSetting>
+    <SqlServerLocaleSetting>en-US</SqlServerLocaleSetting>
+    <PrimaryCurrency>USD</PrimaryCurrency>
+    <PrimaryCurrencyDisplayLocaleFormat>en-US</PrimaryCurrencyDisplayLocaleFormat>
+    <Date>2016-05-01T12:09:45.3893436-04:00</Date>
+    <Time>2016-05-01T12:09:45.3893436-04:00</Time>
+    <SkinID>1</SkinID>
+    <AffiliateID>0</AffiliateID>
+    <IPAddress>::1</IPAddress>
+    <QueryStringRAW />
+    <PageName />
+    <FullPageName>/we/blank/</FullPageName>
+    <XmlPackageName>blank</XmlPackageName>
+    <StoreUrl>http://localhost/we/</StoreUrl>
+    <CurrentDateTime>2016-05-01T12:09:45.3893436-04:00</CurrentDateTime>
+    <CustomerIsRegistered>false</CustomerIsRegistered>
+    <StoreID>1</StoreID>
+    <FilterProduct>false</FilterProduct>
+    <FilterEntity>false</FilterEntity>
+    <FilterTopic>true</FilterTopic>
+    <FilterNews>false</FilterNews>
+    <RequestedPage />
+    <RequestedQuerystring />
+    <AdnsfVersion>10.0.0.0</AdnsfVersion>
+    <AdnsfVersionMajor>10</AdnsfVersionMajor>
+    <AdnsfVersionMinor>0</AdnsfVersionMinor>
+    <AdnsfVersionRevision>0</AdnsfVersionRevision>
+    <AdnsfVersionBuild>0</AdnsfVersionBuild>
+  </System>
+  <QueryString />
+  <Form />
+  <Session />
+  <Cookies>
+    <_gat>1</_gat>
+    <_ga>GA1.1.1641807761.1462118557</_ga>
+    <buySAFEUID>BSUID::4deb1caf-a4bd-4718-b384-292b04cd24a4_27</buySAFEUID>
+  </Cookies>
+  <ServerVariables>
+    <HTTP_HOST>localhost</HTTP_HOST>
+    <HTTP_USER_AGENT>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2721.0 Safari/537.36</HTTP_USER_AGENT>
+    <AUTH_TYPE></AUTH_TYPE>
+    <AUTH_USER></AUTH_USER>
+    <AUTH_PASSWORD></AUTH_PASSWORD>
+    <HTTPS>off</HTTPS>
+    <LOCAL_ADDR>::1</LOCAL_ADDR>
+    <PATH_INFO>/we/blank/</PATH_INFO>
+    <PATH_TRANSLATED>D:\web\tfs\we\10.0\Web\blank\</PATH_TRANSLATED>
+    <SCRIPT_NAME>/we/blank/</SCRIPT_NAME>
+    <SERVER_NAME>localhost</SERVER_NAME>
+    <SERVER_PORT_SECURE>0</SERVER_PORT_SECURE>
+    <HTTP_CLUSTER_HTTPS></HTTP_CLUSTER_HTTPS>
+  </ServerVariables>
+  <Runtime>
+    <IsAdminSiteInt>0</IsAdminSiteInt>
+    <CustomerIsRegistered>false</CustomerIsRegistered>
+    <PageName />
+    <FullPageName>/we/blank/</FullPageName>
+    <CustomerLevelName />
+    <WebConfigLocaleSetting>en-US</WebConfigLocaleSetting>
+    <StoreID>1</StoreID>
+    <CustomerFirstName />
+    <StoreUrl>http://localhost/we/</StoreUrl>
+    <Date>5/1/2016</Date>
+    <QueryStringRAW />
+    <CustomerLastName />
+    <XmlPackageName>blank</XmlPackageName>
+    <blu>blue1234</blu>
+    <VAT.AllowCustomerToChooseSetting>True</VAT.AllowCustomerToChooseSetting>
+    <UseVATSetting>1</UseVATSetting>
+    <CustomerLevelID>0</CustomerLevelID>
+    <SkinId>1</SkinId>
+    <FilterEntity>False</FilterEntity>
+    <CurrencySetting>USD</CurrencySetting>
+    <FilterProduct>False</FilterProduct>
+    <IPAddress>::1</IPAddress>
+    <PrimaryCurrencyDisplayLocaleFormat>en-US</PrimaryCurrencyDisplayLocaleFormat>
+    <FilterTopic>True</FilterTopic>
+    <IsSuperUser>False</IsSuperUser>
+    <Time>12:09 PM</Time>
+    <DefaultVATSetting>1</DefaultVATSetting>
+    <CustomerFullName />
+    <FilterNews>False</FilterNews>
+    <PrimaryCurrency>USD</PrimaryCurrency>
+    <SqlServerLocaleSetting>en-US</SqlServerLocaleSetting>
+    <CurrencyDisplayLocaleFormat>en-US</CurrencyDisplayLocaleFormat>
+    <CustomerRoles />
+    <IsAdminSite>False</IsAdminSite>
+    <AffiliateID>0</AffiliateID>
+    <LocaleSetting>en-US</LocaleSetting>
+    <PageID />
+    <CustomerVATSetting>1</CustomerVATSetting>
+    <IsAdminUser>False</IsAdminUser>
+    <VAT.Enabled>False</VAT.Enabled>
+    <PageType>home</PageType>
+  </Runtime>
+  <customers />
+</root>

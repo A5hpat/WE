@@ -1,0 +1,106 @@
+﻿@model AccountCreateIndexViewModel
+
+<div class="page-wrap account-create-page">
+	<h1 class="account-page-header">
+        Create Your Account
+	</h1>
+
+	<div class="page-row account-header">
+		Account
+	</div>
+
+	@using(Html.BeginForm())
+	{
+		@Html.AntiForgeryToken()
+
+		<div class="form account-form">
+			<div class="group-header form-header account-header">
+                Your Account and Contact Information
+			</div>
+			<div class="form-text account-text">
+                Your account information is used to login to the site. Please save your password in a safe place.
+			</div>
+			<div class="account-form-wrap">
+				<div class="form account-form">
+					<div class="row">
+						<div class="col-sm-6 col-md-5 col-lg-4">
+							@Html.EditorEntryFor(
+								expression: m => m.Account.FirstName,
+								@class: "first-name",
+								displayWidth: EntrySize.Medium)
+						</div>
+						<div class="col-sm-6 col-md-5 col-lg-4">
+							@Html.EditorEntryFor(
+								expression: m => m.Account.LastName,
+								@class: "last-name",
+								displayWidth: EntrySize.Medium)
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-6 col-md-5 col-lg-4">
+							@Html.EditorEntryFor(
+								expression: m => m.Account.Email,
+								@class: "email",
+								displayWidth: EntrySize.Medium)
+						</div>
+						@if(Model.RequireEmailConfirmation)
+						{
+							<div class="col-sm-6 col-md-5 col-lg-4">
+								@Html.EditorEntryFor(
+									expression: m => m.Account.EmailConfirmation,
+									@class: "confirm-email",
+									displayWidth: EntrySize.Medium)
+							</div>
+						}
+					</div>
+
+					<div class="row">
+						<div class="col-sm-6 col-md-5 col-lg-4">
+							@Html.EditorEntryFor(
+								expression: m => m.Account.Password,
+								@class: "password-one",
+								displayWidth: EntrySize.Medium)
+						</div>
+						<div class="col-sm-6 col-md-5 col-lg-4">
+							@Html.EditorEntryFor(
+								expression: m => m.Account.PasswordConfirmation,
+								@class: "password-two",
+								displayWidth: EntrySize.Medium)
+						</div>
+					</div>
+
+					@Html.EditorEntryFor(
+						expression: m => m.Account.Phone,
+						@class: "phone",
+						displayWidth: EntrySize.Small)
+
+					@if(Model.DisplayOver13Selector)
+					{ 
+						@Html.EditorEntryFor(
+							expression: (m => m.Account.IsOver13),
+							@class: "over-thirteen")
+					}
+
+					@Html.EditorEntryFor(
+						expression: (m => m.Account.IsOkToEmail),
+						@class: "okay-to-email")
+
+					@if(Model.DisplayCaptcha)
+					{
+						<div class="row">
+							<div class="col-sm-6 col-md-5 col-lg-4">
+								@Html.CaptchaEntryFor(
+									expression: m => m.Account.CaptchaCode,
+									scope: string.Concat(ControllerNames.Account, ActionNames.Create))
+							</div>
+						</div>
+					}
+				</div>
+			</div>
+			<div class="page-action-bar create-account-actions">
+				<input type="submit" class="btn btn-primary create-account-button" value="Create Account" />
+			</div>
+		</div>
+	}
+</div>

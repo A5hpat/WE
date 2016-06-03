@@ -1,0 +1,15 @@
+﻿@model PopUpImageViewModel
+@{
+	Layout = ViewEngines.Engines.FindViewPath(ViewContext.Controller.ControllerContext, "_PopupLayout");
+}
+
+<div class="page-wrap image-pop-up">
+	<a href="#" class="js-close-window">
+		<img src="@Model.ImageUrl" alt="Close this window" />
+	</a>
+</div>
+<script type="text/javascript">
+	adnsf$('.js-close-window').click(function () {
+		window.close();
+	});
+</script>

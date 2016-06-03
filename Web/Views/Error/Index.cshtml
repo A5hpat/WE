@@ -1,0 +1,28 @@
+﻿@model InvalidRequestViewModel
+
+@{
+	ViewBag.MetaTitle = "Error";
+}
+
+<div>
+	@Html.Topic("InvalidRequest")
+</div>
+
+@if(Model.ErrorCode != null)
+{
+	<div>
+		<p>
+            Event ID: 
+			@Model.ErrorCode
+		</p>
+	</div>
+}
+
+@if(Model.UserIsAdmin)
+{
+	<div>
+		<p>
+            As a system administrator, you can view the contents of this error in your admin site by going to Configuration --> View System Log
+		</p>
+	</div>
+}

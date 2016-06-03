@@ -1,0 +1,274 @@
+﻿@model AccountIndexViewModel
+
+<div class="page-wrap account-page">
+	<h1 class="account-page-header">
+        Account Information
+	</h1>
+
+	<div id="account-header-links">
+		<div class="page-row page-links">
+			<div>
+				<a href="#OrderHistory">View Your Order/Billing History</a>
+			</div>
+			@if(Model.ShowMicropayLink)
+			{
+				<div class="micropay-link-wrap">
+					<a href="@Model.MicropayLink">
+                        Add to your MicroPay balance
+					</a>
+				</div>
+			}
+		</div>
+	</div>
+
+	<div class="page-row account-header">
+		Create Account
+	</div>
+
+	@if(!string.IsNullOrEmpty(Model.CustomerLevel))
+	{
+		<div class="notice-wrap">
+			<div class="notice notice-success">
+				@string.Format("NOTE: You are a member of the {0} group.", Model.CustomerLevel)
+			</div>
+		</div>
+	}
+		
+	@if(Model.HasMicropayBalance)
+	{
+		<div class="notice-wrap">
+			<div class="notice notice-success">
+				@string.Format("Your {0} Balance is: {1}", "MicroPay", Localization.CurrencyStringForDisplayWithExchangeRate(Model.MicropayBalance, Model.CurrencySetting))
+			</div>
+		</div>
+	}
+		
+
+	@using(Html.BeginForm())
+	{
+		@Html.AntiForgeryToken()
+
+		<div class="form account-form">
+			<div class="group-header form-header account-header">
+                Your Account and Contact Information
+			</div>
+			<div class="form-text account-text">
+                Your account information is used to login to the site. Please save your password in a safe place.
+			</div>
+			<div class="account-form-wrap">
+				<div class="form account-form">
+					<div class="row">
+						<div class="col-sm-6 col-md-5 col-lg-4">
+							@Html.EditorEntryFor(
+								expression: m => m.Account.FirstName,
+								@class: "first-name",
+								displayWidth: EntrySize.Medium)
+						</div>
+						<div class="col-sm-6 col-md-5 col-lg-4">
+							@Html.EditorEntryFor(
+								expression: m => m.Account.LastName,
+								@class: "last-name",
+								displayWidth: EntrySize.Medium)
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-6 col-md-5 col-lg-4">
+							@Html.EditorEntryFor(
+								expression: m => m.Account.Email,
+								@class: "email",
+								displayWidth: EntrySize.Medium)
+						</div>
+						@if(Model.RequireEmailConfirmation)
+						{
+							<div class="col-sm-6 col-md-5 col-lg-4">
+								@Html.EditorEntryFor(
+									expression: m => m.Account.EmailConfirmation,
+									@class: "confirm-email",
+									displayWidth: EntrySize.Medium)
+							</div>
+						}
+					</div>
+
+					<div class="row">
+						<div class="col-sm-6 col-md-5 col-lg-4">
+							@Html.EditorEntryFor(
+								expression: m => m.Account.Password,
+								@class: "password-one",
+								displayWidth: EntrySize.Medium)
+						</div>
+						<div class="col-sm-6 col-md-5 col-lg-4">
+							@Html.EditorEntryFor(
+								expression: m => m.Account.PasswordConfirmation,
+								@class: "password-two",
+								displayWidth: EntrySize.Medium)
+						</div>
+					</div>
+
+					@Html.EditorEntryFor(
+						expression: m => m.Account.Phone,
+						@class: "phone",
+						displayWidth: EntrySize.Small)
+
+					@if(Model.DisplayOver13Selector)
+					{ 
+						@Html.EditorEntryFor(
+							expression: (m => m.Account.IsOver13),
+							@class: "over-thirteen")
+					}
+
+					@Html.EditorEntryFor(
+						expression: (m => m.Account.IsOkToEmail),
+						@class: "okay-to-email")
+
+					@if(Model.ShowSaveCreditCardNumber)
+					{
+						@Html.EditorEntryFor(
+							expression: (m => m.Account.SaveCreditCardNumber),
+							descriptionOverride: Model.SaveCreditCardNumberNote)
+					}
+
+					@if(Model.ShowVatRegistrationId)
+					{
+						@Html.EditorEntryFor(
+							expression: m => m.Account.VatRegistrationId,
+							@class: "vat-id",
+							displayWidth: EntrySize.Small)
+					}
+				</div>
+			</div>
+			<div class="page-action-bar account-actions">
+				<input type="submit" class="btn btn-primary update-account-button" value="Update Account" />
+			</div>
+		</div>
+	}
+
+	<div id="PageContent_pnlAddress">
+		<div class="group-header account-header address-header">
+            Your Address Book
+		</div>
+		<div class="page-block form-text address-text">
+			<span>Your primary billing and shipping addresses are shown below:</span>
+		</div>
+		<div class="row address-row">
+			<div class="col-sm-6 address-wrap">
+				<div id="billing-wrap">
+					<div class="address-header">
+                        Your primary billing and shipping addresses are shown below:
+					</div>
+					<div class="address-view">
+						<div>@Model.PrimaryBillingAddress.FirstName @Model.PrimaryBillingAddress.LastName</div>
+						<div>@Model.PrimaryBillingAddress.Address1</div>
+						@if(!string.IsNullOrWhiteSpace(Model.PrimaryBillingAddress.Address2))
+						{
+							<div>@Model.PrimaryBillingAddress.Address2</div>
+						}
+						<div>@Model.PrimaryBillingAddress.City, @Model.PrimaryBillingAddress.State @Model.PrimaryBillingAddress.Zip</div>
+						<div>@Model.PrimaryBillingAddress.Country</div>
+						<div>@Model.PrimaryBillingAddress.Phone</div>
+					</div>
+				</div>
+				<div class="address-edit">
+					<a href="@Url.Action(ActionNames.Index, ControllerNames.Address)"
+						class="btn btn-default edit-addresses-account-button">
+                        Edit Addresses
+					</a>
+				</div>
+			</div>
+			<div class="col-sm-6 address-wrap">
+				<div id="shipping-wrap">
+					<div class="address-header">
+                        My Primary Shipping Address
+					</div>
+					<div class="address-view">
+						<div>@Model.PrimaryShippingAddress.FirstName @Model.PrimaryShippingAddress.LastName</div>
+						<div>@Model.PrimaryShippingAddress.Address1</div>
+						@if(!string.IsNullOrWhiteSpace(Model.PrimaryShippingAddress.Address2))
+						{
+							<div>@Model.PrimaryShippingAddress.Address2</div>
+						}
+						<div>@Model.PrimaryShippingAddress.City, @Model.PrimaryShippingAddress.State @Model.PrimaryShippingAddress.Zip</div>
+						<div>@Model.PrimaryShippingAddress.Country</div>
+						<div>@Model.PrimaryShippingAddress.Phone</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	@if(Model.ShowWallets)
+	{
+		<div class="wallet-wrap">
+			<div class="row">
+				<div class="col-sm-12">
+					<a href="@Url.Action(ActionNames.Index, ControllerNames.Wallet)"
+						class="btn btn-default add-payment-account-button">
+                        Add Payment Type
+					</a>
+				</div>
+			</div>
+			<div class="row"></div>
+		</div>
+	}
+
+	<div id="order-history-wrap">
+		<div id="OrderHistory" class="group-header account-header order-history-header">
+            Order History
+		</div>
+		<div class="page-row order-history">
+			<div class="table-responsive">
+				<table class="table table-striped order-history-table">
+					<tbody>
+						<tr class="table-header">
+							<th>
+								<span>Order Number</span>
+								<span>(Click For Receipt)</span>
+							</th>
+							<th>
+								<span>Order Date</span>
+							</th>
+							<th>
+								<span>Payment Status</span>
+							</th>
+							<th>
+								<span>Shipping Status</span>
+							</th>
+							<th>
+								<span>Order Total</span>
+							</th>
+							<th>
+								<span>Customer Service Notes</span>
+							</th>
+						</tr>
+						@foreach(var order in Model.Orders)
+						{
+							<tr class="table-row">
+								<td>
+									<a target="_blank" href="@Url.Action(ActionNames.Index, ControllerNames.Receipt, new { orderNumber = order.OrderNumber })">@order.OrderNumber</a>
+									@if (order.CanReorder)
+								{
+										<a href="@Url.Action(ActionNames.ReOrder, new { orderId = order.OrderNumber })">Re-Order</a>
+								}
+								</td>
+								<td>@order.OrderDate</td>
+								<td>@order.PaymentStatus (<span class="text-@order.TransactionStateNotificationType">@order.TransactionState</span>)</td>
+								<td>@Html.Raw(order.ShippingStatus)</td>
+								<td>@order.OrderTotal</td>
+								<td>@order.CustomerServiceNotes</td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+	</div>
+
+	@if(Model.ShowRecurringOrders)
+	{
+		<div class="group-header account-header recurring-header">
+            You have active recurring (auto-ship) orders:
+			<a href="@Url.Action(ActionNames.Index, ControllerNames.RecurringOrder)" class="btn btn-default view-recurring-account-button">View</a>
+		</div>
+	}
+</div>

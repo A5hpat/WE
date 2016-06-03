@@ -1,0 +1,161 @@
+.bodywrapper
+{
+    margin: 10px;
+}
+        
+fieldset
+{
+    border: solid 1px #c3c3c3;
+    margin-bottom: 10px;
+}
+        
+legend, legend span
+{
+    color: #29598D;
+    font-weight: bold;
+    font-size: 10pt;
+}
+        
+.error
+{
+    color: #E80000;
+}
+.tdLabel
+{
+    text-align:right;
+}
+.tdButtonRow
+{
+	text-align:right;
+}
+.checkTarget
+{
+    margin: 0 5px 5px 5px;
+    padding: 5px;    
+    border: solid 1px #c3c3c3;
+}
+.checkHeader
+{
+    margin:2px 5px;
+    padding:5px;
+}
+span.icon
+{
+    display:inline-block;
+}
+span.icon .ui-button-text
+{
+    padding:0px !important;
+}
+label
+{
+    text-align:right;
+    white-space:nowrap;
+}
+.textfield
+{
+    width:165px;
+}
+
+.pnlRulesDiscounts .emptyCell
+{
+    width:35px;
+}
+
+.checkHeader .icon
+{
+    margin-right:5px;
+}
+
+.multiLineLabel
+{
+    vertical-align:top;
+    padding-top:5px;
+    text-align:right;
+}
+.generalInfoImg
+, .checkToggler
+, .checkLabel
+, .checkHeader input
+, span.icon
+{
+    vertical-align:middle;
+    margin-top:0px;
+    margin-bottom:0px;
+    font-size:12px;
+    display:inline-block;
+}
+
+.tdValue td
+, .tdValue input
+, .tdValue label
+, .tdValue span
+{
+    vertical-align:middle;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+h3.checkHeader
+{
+    font-weight:normal;
+}
+
+.promoFieldTable td
+{
+    padding-top:4px;
+    padding-bottom:4px;
+}
+
+.promoGridTable
+{
+    border:1px solid #000 !important;
+}
+
+.promotion-panels .panel-title a
+{
+	text-decoration: none;
+}
+
+.promotion-panels .panel-title .checkLabel:hover
+{
+	text-decoration: underline;
+}
+
+.promotionTable {
+	width: 100%;
+}
+
+.promotionTable td {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.promotionTable td:first-child {
+	padding-left: 0;
+}
+
+.promotionTable td:last-child {
+	padding-right: 0;
+}
+
+.promoFieldTable td hr {
+	margin-top: 3px !important;
+	margin-bottom: 3px !important;
+}
+
+.promotion-panel-adjustments {
+	margin-bottom: 3px !important;
+}
+
+.promotion-top-expand-button {
+	padding-bottom: 3px;
+}
+
+.promotion-bottom-expand-button {
+	padding-bottom: 20px;
+}
+
+.promotion-align-top {
+    vertical-align: top;
+}

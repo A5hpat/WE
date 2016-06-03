@@ -1,0 +1,78 @@
+﻿@model RecurringOrderIndexViewModel
+
+<div class="group-header account-header recurring-header">
+    You have active recurring (auto-ship) orders:
+</div>
+
+<div class="recurring-wrap">
+	@foreach(var item in @Model.RecurringOrders)
+	{
+		<div class="recurring-wrap">
+			<div class="recurring-header">
+                Original Recurring Order Number:  @item.RecurringOrderId
+			</div>
+
+			@if(!string.IsNullOrEmpty(item.RecurringSubscriptionId))
+			{
+				<div class="recurring-id">Subscription ID: @item.RecurringSubscriptionId</div>
+            }
+
+			<div class="recurring-index">RecurringIndex:  @item.RecurringIndex</div>
+
+			<div class="recurring-created-on">Created On:  @Localization.ToThreadCultureShortDateString(item.CreatedOn)</div>
+
+			<div class="recurring-buttons">
+				@if(item.AllowUpdate)
+				{
+					<a href="@Url.Action(ActionNames.Edit, new { recurringOrderId = item.RecurringOrderId })"
+						class="btn btn-primary update-recurring-button">
+						Update Billing Info
+					</a>
+				}
+				<a href="@Url.Action(ActionNames.Delete, new { recurringOrderId = item.RecurringOrderId })"
+					onclick="return confirm('Are you sure you want to stop future billing & shipment for this item?');"
+					class="btn btn-default stop-recurring-button">
+                    Stop Future Billing
+				</a>
+			</div>
+
+			<table class="table order-table">
+				<tbody>
+					<tr class="table-header">
+						<th>Product</th>
+						<th>SKU</th>
+						<th>Color</th>
+						<th>Size</th>
+						<th>Quantity</th>
+						<th>Price</th>
+						<th>Next Ship Date</th>
+					</tr>
+
+					@foreach(var cartItem in item.CartItems)
+					{
+						<tr class="table-row">
+							<td>
+								@if(Model.LinkToProduct && !cartItem.IsSystem)
+								{
+									<a href="@cartItem.ProductLink">
+										@cartItem.ProductName
+									</a>
+								}
+							</td>
+							<td>@cartItem.Sku</td>
+							<td>@cartItem.ChosenColor</td>
+							<td>@cartItem.ChosenSize</td>
+							<td>@cartItem.Quantity</td>
+							<td>@cartItem.Price</td>
+							<td>
+								@Localization.ToThreadCultureShortDateString(cartItem.NextRecurringShipDate)
+							</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+		</div>
+	}
+
+	<a href="@Url.Action(ActionNames.Index, ControllerNames.Account)" class="btn btn-default back-recurring-button">Back To Account</a>
+</div>

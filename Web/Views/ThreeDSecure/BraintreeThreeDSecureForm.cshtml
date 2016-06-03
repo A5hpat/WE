@@ -1,0 +1,33 @@
+﻿@model BraintreeThreeDSecureViewModel
+
+<script src="@Model.ScriptUrl"></script>
+<script>
+	var client = new braintree.api.Client({
+		clientToken: "@Model.Token"
+	});
+
+	client.verify3DS({
+		amount: "@Model.Total",
+		creditCard: "@Model.Nonce"
+	},
+	function (error, response) {
+		var redirectUrl;
+
+		if (error != null) {
+			//Something went really wrong
+			redirectUrl = '@Url.Action(ActionNames.Index, ControllerNames.Checkout)?errorMessage=' + error.message;
+		}
+		else {
+			//This doesn't necessarily mean success, just that we didn't get an error
+			if (response.verificationDetails.liabilityShifted) {
+				//Actual success
+				redirectUrl = '@Url.Action(ActionNames.BraintreeThreeDSecurePass, ControllerNames.ThreeDSecure)?nonce=' + response.nonce;
+			}
+			else {
+				//The 3dSecure call worked, but liability was unable to shift for some reason.  Refuse the order.
+				redirectUrl = '@Url.Action(ActionNames.BraintreeThreeDSecureFail, ControllerNames.ThreeDSecure)';
+			}
+		}
+		window.location = redirectUrl;
+	});
+</script>

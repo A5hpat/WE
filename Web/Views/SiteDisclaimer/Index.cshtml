@@ -1,0 +1,26 @@
+﻿@model SiteDisclaimerViewModel
+@{
+	Layout = ViewEngines.Engines.FindViewPath(ViewContext.Controller.ControllerContext, "_PopupLayout");
+}
+
+@{
+	//override default meta tags
+	ViewBag.MetaTitle = "Site Disclaimer";
+}
+<div class="container-fluid">
+	<div class="page-wrap no-template-content site-disclaimer-page">
+		@Html.Raw(@Model.DisclaimerText)
+
+		<div class="site-disclaimer-buttons">
+			@using(Html.BeginForm(ActionNames.Decline, ControllerNames.SiteDisclaimer))
+			{
+				<button type="submit" class="site-disclaimer-declinebtn btn btn-default">I Do Not Agree</button>
+			}
+			@using(Html.BeginForm(ActionNames.Accept, ControllerNames.SiteDisclaimer))
+			{
+				@Html.HiddenFor(m => m.ReturnUrl)
+				<button type="submit" class="site-disclaimer-agree btn btn-primary">I Agree</button>
+			}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,33 @@
+﻿@model OrderOptionItemViewModel
+
+<div class="cart-order-option media">
+	<div class="media-left">
+		@Html.HiddenFor(m => m.OrderOptionGuid)
+		@Html.EditorFor(m => m.Checked)
+	</div>
+	@if(Model.HasImage)
+	{
+		<div class="media-left">
+			<img class="media-object cart-upsell-image" src="@Model.ImageUrl" />
+		</div>
+	}
+	<div class="media-body">
+		<div class="cart-order-option-name">
+			@Model.Name
+			<span title="@Model.Description" data-toggle="tooltip" data-placement="top" class="fa fa-question-circle" />
+		</div>
+
+	</div>
+	<div class="media-right">
+		<div class="order-option-cost">
+			@Model.Cost
+		</div>
+	</div>
+</div>
+<script>
+	(function ($) {
+		$(document).ready(function () {
+			$('[data-toggle="tooltip"]').tooltip()
+		});
+	})(adnsf$)
+</script>

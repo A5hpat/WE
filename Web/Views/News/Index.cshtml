@@ -1,0 +1,37 @@
+﻿@model NewsIndexRenderModel
+
+<div class="page-wrap news-page">
+	<h1 class="news-page-header">
+        News Bulletins
+	</h1>
+
+	@if(!string.IsNullOrEmpty(@Model.Teaser))
+	{
+		<p class="news-page-teaser">
+			@Html.Raw(Model.Teaser)
+		</p>
+	}
+
+	<div class="news-page-articles">
+		@foreach(var article in Model.Articles)
+		{
+				<h4 class="headline-header">
+					<a href="@Url.Action(ActionNames.Detail, ControllerNames.News, new { @id = article.Id })">
+						<span class="news-headline">
+							@article.Headline
+						</span>
+						<span class="article-date">
+							(@article.Date)
+						</span>
+					</a>
+				</h4>
+
+				if(Model.ShowArticleBody)
+				{
+					<div class="news-body">
+						@Html.Raw(@article.Copy)
+					</div>
+				}
+		}
+	</div>
+</div>

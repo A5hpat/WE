@@ -1,0 +1,6 @@
+﻿@model MinicartViewModel
+
+<a id="js-show-cart" disabled="@Html.AttributeBool(Model.ItemCount == 0, "disabled")" href="#" data-toggle="modal" data-target="#minicart-modal" class="user-link">
+	<i class="fa fa-shopping-cart"></i>
+    View Cart (<span class="minicart-count js-minicart-count">@Model.ItemCount</span>)
+</a>

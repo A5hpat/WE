@@ -1,0 +1,32 @@
+﻿@model MinicartResourcesViewModel
+
+@if(Model.MinicartEnabled || Model.MiniwishlistEnabled)
+{
+	<div class="minicart-loading-overlay js-minicart-loading-overlay off">
+		<div class="minicart-overlay"></div>
+		<div class="minicart-loading">
+			<div class="minicart-loading-message js-minicart-loading-message">Loading...</div>
+			<div class="loading-animation loading-style-dark"></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="~/scripts/minicart.js" ></script>
+	<script type="text/javascript">
+		adnsf$.minicart.initialize(
+		{
+			minicart_DeleteWaitMessage: @Html.JavascriptString("Deleting..."),
+
+            miniwish_MoveSingleMessage: @Html.JavascriptString("Moving item to cart."),
+            miniwish_MoveAllMessage: @Html.JavascriptString("Moving all items to cart."),
+            minicart_UpdateFailureMessage: @Html.JavascriptString("Sorry, there was an error updating your cart."),
+            miniwish_UpdateFailureMessage: @Html.JavascriptString("Sorry, there was an error updating your wishlist."),
+            minicart_CountLabel: @Html.JavascriptString("Items"),
+            minicart_CountLabelSingular: @Html.JavascriptString("Item"),
+            checkoutUrl: @Html.JavascriptString(Url.Action(ActionNames.Index, ControllerNames.Checkout)),
+            loginUrl: @Html.JavascriptString(Url.Action(ActionNames.SignIn, ControllerNames.Account))
+
+        });
+		adnsf$.minicart.cartEnabled = @Html.JavascriptBool(Model.MinicartEnabled);
+		adnsf$.minicart.wishEnabled = @Html.JavascriptBool(Model.MiniwishlistEnabled );
+		adnsf$.minicart.onCheckoutPage = @Html.JavascriptBool(Model.CheckoutInProgress);
+	</script>
+}

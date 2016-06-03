@@ -1,0 +1,51 @@
+﻿@model PromotionsViewModel
+
+<div class="order-block">
+	<h3 class="order-header">
+        Special Offer Codes
+	</h3>
+	<div class="checkout-content">
+		@using(Html.BeginForm(ActionNames.AddPromoCode, ControllerNames.CheckoutPromotions, FormMethod.Post, new { @class = "form promo-entry-form" }))
+		{
+			<div class="form-group">
+				<div class="input-group">
+					@Html.EditorFor(model => model.EnteredCode,
+                    new
+                    {
+                        htmlAttributes = new
+                        {
+                            @class = "form-control",
+                            placeholder = "Enter code"
+                        }
+                    })
+					<span class="input-group-btn">
+						<button class="btn btn-default add-promo-checkout-button" type="submit">Add</button>
+					</span>
+				</div>
+				@Html.ValidationMessageFor(model => model.EnteredCode)
+			</div>
+		}
+		@if(Model.Promotions.Any())
+		{
+			<div class="entered-promos">
+				@foreach(var promo in Model.Promotions)
+				{
+					<div class="entered-promo">
+						<label class="promo-code">
+							@promo.Code: 
+						</label>
+						<span class="promo-description">
+							@Html.Raw(promo.Description)
+						</span>
+						<a href="@Url.Action(
+								ActionNames.RemovePromo, 
+								ControllerNames.CheckoutPromotions,
+								new { code = promo.Code })">
+							Remove
+						</a>
+					</div>
+				}
+			</div>
+		}
+	</div>
+</div>

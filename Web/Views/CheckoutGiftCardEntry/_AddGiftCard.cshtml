@@ -1,0 +1,50 @@
+﻿@model GiftCardViewModel
+
+
+		@using(Html.BeginForm(
+			actionName: ActionNames.AddGiftCard, 
+			controllerName: ControllerNames.CheckoutGiftCardEntry, 
+			method: FormMethod.Post, 
+			htmlAttributes: new { @class = "form gift-card-entry-form" }))
+		{
+			<div class="form-group">
+				<div class="input-group">
+					@if(string.IsNullOrEmpty(Model.Code))
+					{
+						@Html.EditorFor(model => model.Code,
+                            new
+                            {
+                                htmlAttributes = new
+                                {
+                                    @class = "form-control",
+                                    placeholder = "Enter gift card"
+                                }
+                            })
+						<span class="input-group-btn">
+							<button class="btn btn-default add-gift-card-button" type="submit">Apply</button>
+						</span>
+					}
+					else
+					{
+						@Html.EditorFor(model => model.Code,
+                            new
+                            {
+                                htmlAttributes = new
+                                {
+                                    @class = "form-control",
+                                    placeholder = "Enter gift card",
+
+                                    disabled = "disabled"
+                                }
+                            })
+						<span class="input-group-btn">
+							<a href="@Url.Action(ActionNames.RemoveGiftCard, ControllerNames.CheckoutGiftCardEntry)" class="btn btn-default remove-gift-card-checkout-button">
+								Remove
+							</a>
+						</span>
+					}
+				</div>
+				@Html.ValidationMessageFor(model => model.Code)
+			</div>
+		}
+	

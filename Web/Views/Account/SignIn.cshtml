@@ -1,0 +1,75 @@
+﻿@model AccountSignInViewModel
+
+<div class="page-wrap signin-page">
+
+	<h1>Login</h1>
+
+	<div class="row">
+		<div class="col-sm-6">
+			@using(Html.BeginForm(
+				actionName: ActionNames.SignIn,
+				controllerName: null,
+				routeValues: new { returnUrl = @Model.ReturnUrl },
+				method: FormMethod.Post,
+				htmlAttributes: new { @class = "form login-form" }))
+			{
+				<div class="form-text signin-text">
+					<a href="@Url.Action(ActionNames.Create)">Don't have an account?  Click here to create an account.</a>
+				</div>
+				<div class="group-header form-header signin-text">
+					Sign in
+				</div>
+				@Html.EditorEntryFor(
+						expression: m => m.Email)
+
+				@Html.EditorEntryFor(
+						expression: m => m.Password)
+
+				if(Model.DisplayCaptcha)
+				{
+					@Html.CaptchaEntryFor(
+						expression: m => m.CaptchaCode,
+						scope: string.Concat(ControllerNames.Account, ActionNames.SignIn))
+				}
+
+				@Html.EditorEntryFor(
+					expression: m => m.PersistLogin)
+
+				<div class="page-action-bar sign-in-actions">
+					<input type="submit" class="btn btn-primary login-button" value="Login" />
+				</div>
+			}
+		</div>
+	</div>
+	
+	@if(Model.PasswordResetAvailable)
+	{
+		using(Html.BeginForm(
+			actionName: ActionNames.ResetPassword,
+			controllerName: null,
+			routeValues: new { returnUrl = @Model.ReturnUrl },
+			method: FormMethod.Post,
+			htmlAttributes: new { @class = "form password-recovery-form", id = "password-recovery" }))
+		{
+			@Html.AntiForgeryToken()
+			<div class="group-header form-header forgot-password-header">
+                Forgot your password?
+			</div>
+
+			<div class="form-text forgot-password-instructions">
+                Enter your email address and we'll send you a one-time, temporary password.
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					@Html.EditorEntryFor(
+						expression: m => m.Email,
+						@class: "forgot-password-email")
+
+					<div class="page-action-bar forgot-password-actions">
+						<input type="submit" class="btn btn-default request-password-button" value="Request A New Password" />
+					</div>
+				</div>
+			</div>
+		}
+	}
+</div>

@@ -1,0 +1,81 @@
+﻿@model SelectAddressViewModel
+
+<div class="js-address-area">
+	@if(Model.SelectedAddress != null)
+	{
+		<div class="js-selected-address">
+			<div class="row">
+				<div class="col-xs-7">
+					@Html.Partial(ViewNames.AddressDetailPartial, Model.SelectedAddress)
+				</div>
+				<div class="col-xs-5">
+					<div class="checkout-actions address-actions">
+						@if(!Model.AddressSelectionLocked)
+						{
+							<button class="btn btn-default js-address-change">
+								Change
+							</button>
+						}
+					</div>
+				</div>
+			</div>
+		</div>
+	}
+
+	@if(!Model.AddressOptions.Any())
+	{
+		<div class="address-actions">
+			<a class="btn btn-default add-address-button"
+				href="@Url.Action(
+					actionName: ActionNames.Detail,
+					controllerName: ControllerNames.Address,
+					routeValues: new RouteValueDictionary{
+						{ RouteDataKeys.MakePrimary, true },
+						{ RouteDataKeys.AddressType, Model.AddressType },
+						{ RouteDataKeys.ReturnUrl, Url.Action(ActionNames.Index, ControllerNames.Checkout) } })">
+
+                Add Address
+			</a>
+		</div>
+	}
+	else
+	{
+		<div class="js-address-options @Html.AttributeBool(Model.SelectedAddress == null, "on", "off")">
+			@Html.Partial(ViewNames.AddressOptionsPartial, Model)
+			<div class="checkout-actions address-actions">
+				<a class="btn btn-default add-address-button"
+				   href="@Url.Action(
+							actionName: ActionNames.Detail,
+							controllerName: ControllerNames.Address,
+							routeValues: new RouteValueDictionary{
+								{ RouteDataKeys.MakePrimary, true },
+								{ RouteDataKeys.AddressType, Model.AddressType },
+								{ RouteDataKeys.ReturnUrl, Url.Action(ActionNames.Index, ControllerNames.Checkout) } })">
+
+                    Add Address
+				</a>
+				@if(Model.SelectedAddress != null)
+				{
+					<button class="btn btn-default js-address-options-hide">
+                        Hide Options
+					</button>
+				}
+			</div>
+		</div>
+	}
+</div>
+<script>
+	(function ($) {
+		$('.js-address-change').click(function () {
+			$(this).closest('.js-selected-address').hide();
+			$(this).closest('.js-address-area').find('.js-address-options').slideDown(250);
+		});
+
+		$('.js-address-options-hide').click(function () {
+			$(this).closest('.js-address-options').slideUp(250, function () {
+				$(this).closest('.js-address-area').find('.js-selected-address').show();
+			});
+		});
+
+	})(adnsf$);
+</script>

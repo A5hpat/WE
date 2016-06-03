@@ -1,0 +1,21 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Blank</title>
+</head>
+<body>
+    <div> 
+        @Html.Partial("_BodyOpen")
+    </div>
+    <div>
+        @Html.XmlPackage("blank", new { blu = "blue1234"})
+    </div>
+</body>
+</html>

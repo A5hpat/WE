@@ -1,0 +1,14 @@
+﻿@model XmlPackageViewModel
+
+@{
+	//override default meta tags
+	ViewBag.MetaTitle = Model.MetaTitle;
+	ViewBag.MetaDescription = Model.MetaDescription;
+	ViewBag.MetaKeywords = Model.MetaKeywords;
+}
+
+<div class="page-wrap xmlpackage-page">
+	<!--Xmlpackage '@Model.Name' -->
+	@Html.Raw(Model.PageContent)
+	<!--End of xmlpackage '@Model.Name' -->
+</div>

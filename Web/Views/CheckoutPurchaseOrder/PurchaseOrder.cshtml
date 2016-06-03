@@ -1,0 +1,21 @@
+﻿@model PurchaseOrderViewModel
+
+<div class="row">
+	<div class="col-sm-6 col-lg-4">
+		@using(Html.BeginForm(
+			actionName: ActionNames.PurchaseOrder,
+			controllerName: ControllerNames.CheckoutPurchaseOrder,
+			method: FormMethod.Post,
+			htmlAttributes: new { @class = "form purchase-order-form" }))
+		{
+			
+			@Html.EditorEntryFor(
+				expression: m => m.PONumber)
+
+			<div>
+				<button type="submit" class="btn btn-primary purchase-order-submit">Submit</button>
+				<a href="@Url.Action(ActionNames.Index, ControllerNames.Checkout)" class="btn btn-default purchase-order-cancel">Cancel</a>
+			</div>
+		}
+	</div>
+</div>

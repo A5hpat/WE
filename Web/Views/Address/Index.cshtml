@@ -1,0 +1,97 @@
+﻿@model AddressIndexViewModel
+
+<div class="page-wrap address-page">
+	<h1>Your Address Book</h1>
+
+	@{ 
+		// Display addresses in rows of 2
+		var addressRows = Model.Addresses
+			.Select((address, index) => new { address, index })
+			.GroupBy(o => o.index / 2);
+	}
+
+	@foreach(var row in addressRows)
+	{
+		<div class="row address-row">
+			@foreach(var address in row.Select(o => o.address))
+			{
+				<div class="col-sm-6 address-column">
+					<div class="address-wrap">
+						<div>
+							<strong>@address.FirstName @address.LastName</strong>
+							<div>@address.Company</div>
+							<div>@address.Address1</div>
+							<div>@address.Address2</div>
+							<div>@address.Suite</div>
+							<div>@address.City, @address.State @address.Zip</div>
+							<div>@address.Country</div>
+							<div>@address.Phone</div>
+						</div>
+						<div class="address-actions">
+							<a href="@Url.Action(ActionNames.Detail, new { addressId = address.Id })"
+								class="btn btn-primary edit-address-button">
+								Edit
+							</a>
+				
+							<a href="@Url.Action(ActionNames.Delete, new { addressId = address.Id })"
+								class="btn btn-default delete-address-button"
+								onclick="return confirm('@Html.JavascriptString("Are you sure you want to delete this address?")');">
+								Delete
+							</a>
+
+							@if(Model.AllowDifferentShipTo)
+							{
+								if(!address.IsPrimaryBillingAddress)
+								{
+									<a href="@Url.Action(ActionNames.MakePrimaryAddress, new
+										{
+											addressId = address.Id,
+											addressType = AddressTypes.Billing
+										})" class="btn btn-default make-primary-address-button">
+                                        Make Primary Billing
+									</a>
+								}
+
+								if(!address.IsPrimaryShippingAddress)
+								{
+									<a href="@Url.Action(ActionNames.MakePrimaryAddress, new
+										{
+											addressId = address.Id,
+											addressType = AddressTypes.Shipping
+										})" class="btn btn-default make-primary-address-button">
+                                        Make Primary Shipping
+									</a>
+								}
+							}
+							else
+							{
+								if(!address.IsPrimaryBillingAddress)
+								{
+									<a href="@Url.Action(ActionNames.MakePrimaryAddress, new
+										{
+											addressId = address.Id,
+											addressType = AddressTypes.Account
+										})" class="btn btn-default make-primary-address-button">
+                                        Make My Primary Address
+									</a>
+								}
+							}
+						</div>
+					</div>
+				</div>
+			}
+		</div>
+	}
+	<div class="address-actions page-action-bar">
+		<a href="@Model.ReturnUrl" class="btn btn-default back-address-button">Back To Account</a>
+		<a href="@Url.Action(
+				actionName: ActionNames.Detail,
+				routeValues: new RouteValueDictionary {
+					{ RouteDataKeys.AddressType, Model.AddressType },
+					{ RouteDataKeys.MakePrimary, "true" }
+				})" 
+			class="btn btn-primary add-address-button">
+            Add Address
+		</a>
+	</div>
+</div>

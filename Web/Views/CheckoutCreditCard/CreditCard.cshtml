@@ -1,0 +1,176 @@
+﻿@model CheckoutCreditCardViewModel
+
+<div class="page-wrap credit-card-page">
+	<h2>Enter your credit card details</h2>
+	@using(Html.BeginForm(
+		actionName: ActionNames.CreditCard,
+		controllerName: ControllerNames.CheckoutCreditCard,
+		method: FormMethod.Post,
+		htmlAttributes: new { @class = "form credit-card-form" }))
+	{
+		<div class="row">
+			<div class="col-sm-6">
+		
+				@Html.EditorEntryFor(
+					expression: m => m.Name,
+					@class: "card-name",
+					editorClass: "card-name",
+					displayWidth: EntrySize.Medium)
+
+				@Html.EditorEntryFor(
+					expression: m => m.Number,
+					@class: "card-number",
+					editorClass: "card-number",
+					displayWidth: EntrySize.Medium)
+
+				@Html.DropDownListEntryFor(
+                        expression: m => m.CardType,
+                        values: Model.CardTypes,
+                        @default: "CARD TYPE",
+
+                    @class: "card-type",
+                    editorClass: "card-type",
+                    displayWidth: EntrySize.Medium)
+
+				@Html.EditorEntryFor(
+					expression: m => m.ExpirationDate,
+					@class: "card-expiration",
+					editorClass: "card-expiration",
+					displayWidth: EntrySize.ExtraSmall)
+
+				@if(Model.ShowIssueNumber)
+				{
+					@Html.EditorEntryFor(
+						expression: m => m.IssueNumber,
+						@class: "card-issue-number",
+						editorClass: "card-issue-number",
+						displayWidth: EntrySize.ExtraSmall)
+				}
+
+				@if(Model.ShowStartDate)
+				{
+					@Html.EditorEntryFor(
+						expression: m => m.StartDate,
+						@class: "card-start-date",
+						editorClass: "card-start-date",
+						displayWidth: EntrySize.ExtraSmall)
+				}
+
+				@Html.EditorEntryFor(
+					expression: m => m.Cvv,
+					@class: "card-cvv",
+					editorClass: "card-cvv",
+					displayWidth: EntrySize.ExtraSmall)
+
+				@if(Model.ShowSaveCreditCardNumber)
+				{
+					@Html.EditorEntryFor(
+							expression: (m => m.SaveCreditCardNumber))
+				}
+
+				@if(Model.WalletsAreEnabled)
+				{
+					<div class="form-group">
+
+						@Html.CheckBoxFor(m => m.SaveToWallet, new
+						{
+							@class = "card-save-to-wallet"
+						})
+
+						@Html.LabelFor(m => m.SaveToWallet)
+
+						<span>
+							@Html.ValidationMessageFor(m => m.SaveToWallet)
+						</span>
+					</div>
+				}
+			</div>
+			<div class="col-sm-6 hidden-xs">
+				<div id="card-entry-wrapper"></div>
+			</div>
+		</div>
+		<div class="page-action-bar credit-card-actions">
+			<button type="submit" class="btn btn-primary credit-card-submit">Submit</button>
+			<a href="@Url.Action(ActionNames.Index, ControllerNames.Checkout)" class="btn btn-default credit-card-cancel">Cancel</a>
+		</div>
+	}
+
+
+	@if(Model.DisplayWalletCards)
+	{
+		<div class="page-row">
+			@Html.Action(ActionNames.SelectWallet, ControllerNames.Wallet)
+		</div>
+	}
+
+	<script src="~/Scripts/card.js"></script>
+	<script>
+		(function($) {
+			var validateCreditCardNumber = @Html.JavascriptBool(Model.ValidateCreditCardNumber);
+			if(!validateCreditCardNumber) {
+				return;
+			}
+
+			// Enable credit card number validation
+			$('input.card-number').attr('data-val-creditcard', @Html.JavascriptString("Please enter a valid credit card number"));
+
+
+            var card = new Card({
+                form: 'form.credit-card-form',
+                container: '#card-entry-wrapper',
+
+                formSelectors: {
+                            numberInput: 'input.card-number',
+					expiryInput: 'input.card-expiration',
+					startInput: 'input.card-start-date',
+					cvcInput: 'input.card-cvv',
+					nameInput: 'input.card-name',
+					cardTypeInput: 'select.card-type',
+				},
+
+				width: 290, // in pixels
+
+				messages: {
+                            validDate: 'valid\ndate',
+					monthYear: 'mm/yyyy',
+				},
+
+				placeholders: {
+                            name: @Html.JavascriptString(Model.Name),
+					number: @Html.JavascriptString(Model.Number),
+					expiry: @Html.JavascriptString(Model.ExpirationDate),
+					cvc: @Html.JavascriptString(Model.Cvv),
+				},
+			});
+
+			// Update the card type drop down automatically
+			var originalSetCardTypeHandler = Card.prototype.handlers.setCardType;
+
+                    var initialCardType = @Html.JavascriptString(Model.CardType);
+			if(initialCardType)
+				originalSetCardTypeHandler.call(card, null, { data: initialCardType.toLowerCase() });
+
+			Card.prototype.handlers.setCardType = function($el, e) {
+                    // Whenever the card type changes, this handler is invoked.
+                    // We will call the original handler method to execute the original behavior and get the card type
+                    var cardType = originalSetCardTypeHandler.call(card, $el, e);
+
+                    // Once we have a card type, we find the first value in the card type dropdown that matches.
+                    // If there is no match, we just use the value they had selected before or first value in the dropdown.
+                    var target = $(this.$cardTypeInput);
+
+                    var cardTypeOptionValue = target
+                        .find('option')
+                        .filter(function() {
+                        return this.value.toLowerCase() === cardType.toLowerCase();
+                    })
+					.val()
+                    || initialCardType
+                    || target.find('option:first').val();
+
+                    // Set the dropdown to the found value
+                    target.val(cardTypeOptionValue);
+                };
+            })(adnsf$);
+	</script>
+</div>

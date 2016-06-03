@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<div class="minicart-wrap" data-role="content">
+  <div id="minicart-modal" class="modal  minicart-modal" data-keyboard="true" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <i class="fa fa-times-circle-o"></i>
+          </button>
+          <h4 class="minicart-title modal-title">
+                      Shopping Cart: 
+                      <span class="minicart-title-count js-cart-title-count">0</span><span class="minicart-items-label js-cart-count-label">
+                        Items
+                      </span></h4>
+        </div>
+        <div class="modal-body">
+          <div class="minicart-content-wrap">
+            <div class="minicart-message-area js-minicart-message-area"></div>
+            <div class="minicart-contents js-minicart-contents">
+              <form action="#" class="minicart-form" id="minicart-form" method="post">
+                <div class="minicart-items"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer minicart-footer">
+          <div class="row">
+            <div class="col-sm-6 text-left-sm">
+              <div class="minicart-discount off">
+                          Discounts:
+                          <span class="minicart-discount js-minicart-discount"></span></div>
+              <div class="minicart-total-area">
+                <div class="minicart-total-wrap">
+                            Total:
+                            <span class="minicart-total js-minicart-total">NaN</span></div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <button type="button" id="minicart-close-button" class="btn btn-default close-minicart-button">Close</button>
+              <button type="button" class="btn btn-primary" href="(!Url ActionName='Index' ControllerName='Checkout' !)">
+                          Checkout
+                        </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+﻿@model KitUploadViewModel
+
+@{
+	Layout = ViewEngines.Engines.FindViewPath(ViewContext.Controller.ControllerContext, "_PopupLayout");
+}
+
+<div class="container-fluid">
+	<div class="kit-upload-page">
+		<h3>Upload an image</h3>
+		@using(Html.BeginForm(
+			actionName: ActionNames.Detail,
+			controllerName: ControllerNames.KitUpload,
+			method: FormMethod.Post,
+			htmlAttributes: new
+			{
+				@class = "form",
+				enctype = "multipart/form-data"
+			}))
+		{
+			@Html.HiddenFor(model => model.ItemId)
+			@Html.HiddenFor(model => model.TemporaryFileStub)
+			<div class="form-group">
+				@Html.TextBoxFor(m => m.FileUpload, new { type = "file" })
+				@Html.ValidationMessageFor(m => m.FileUpload)
+			</div>
+			<button type="button" class="btn btn-default cancel-upload-kit-image-button js-close">
+				Cancel
+			</button>
+			<button type="submit" class="btn btn-primary upload-kit-image-button">
+                Upload
+			</button>
+		}
+
+		<script type="text/javascript">
+			(function ($) {
+				$('.js-close').click(function (event) {
+					window.close();
+					event.preventDefault();
+				});
+			})(adnsf$);
+		</script>
+	</div>
+</div>
+@if(Model.UploadSuccessful)
+{
+	<script type="text/javascript">
+		opener.adnsf$.kitForm.updateFileUpload(@Model.ItemId, @Html.JavascriptString(Model.ImageUrl));
+		window.close();
+	</script>
+}

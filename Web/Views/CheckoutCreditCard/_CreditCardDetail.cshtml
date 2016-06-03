@@ -1,0 +1,13 @@
+﻿@model CheckoutCreditCardViewModel
+<span>
+	@if(Model.CardImage != null)
+	{
+		<img src="@Url.Content(Model.CardImage)" alt="@Model.CardType" />
+	}
+</span>
+@if(!string.IsNullOrEmpty(Model.LastFour))
+{
+	<span>
+        ending in @Model.LastFour
+	</span>
+}

@@ -1,0 +1,153 @@
+.clearable {
+	clear: both;
+}
+/******* Paging Styles ********/
+@media (min-width: 992px) {
+	.paging {
+		text-align: right;
+	}
+}
+.pagesize, .catSortBy{
+	display: inline-block;
+}
+.catSortBy{
+	margin-right: 8px;
+}
+.catSortBy select, .pagesize select{
+	margin-bottom: 4px;
+}
+.productControl .input-group-addon{
+	width: auto;
+}
+.bottomPagingWrap {
+	text-align: left;
+}
+
+
+.pagerArea {
+	padding: 8px;
+	border-radius: 3px;
+	box-shadow: inset 0px 0px 2px rgba(0,0,0,0.4);
+	margin: 8px 0px;
+}
+
+.entityPageSortWrap {
+	margin-bottom: 5px;
+}
+/******* End Paging Styles ********/
+
+.guidedNavProductCell {
+	text-align: center;
+	padding-bottom: 12px;
+	padding-top: 4px;
+}
+
+.sectionHeader {
+	font-weight: bold;
+}
+
+.guidedNavBlock {
+	margin-bottom: 8px;
+}
+
+.guidedNavGroup {
+	padding: 0px 8px;
+}
+
+.entityDescriptionWrapper {
+	margin-bottom: 8px;
+}
+
+#guidedNavigationSearchGo {
+	margin-left: 4px;
+}
+
+.guidedNavHeader {
+	background: #eee;
+	padding: 5px 10px;
+	margin-bottom: 8px;
+	line-height: normal;
+	border-radius: 3px;
+	box-shadow: 0px 0px 2px rgba(0,0,0,0.4);
+}
+
+.nonSelectedSection {
+	color: #aaa;
+}
+
+.guidedNavigationHeadingToggle{
+	display: block;
+	font-size: 1.2em;
+}
+
+.guidedNavigationHeadingToggle.collapsed .glyphicon-chevron-up, .guidedNavigationHeadingToggle .glyphicon-chevron-down{
+	display: none;
+}
+.guidedNavigationHeadingToggle.collapsed .glyphicon-chevron-down{
+	display: inline-block;
+}
+
+/* layout appconfig options*/
+
+/* two column */
+@media (min-width: 992px) {
+	.guidedNavTwoCol .guidedNavWrapper {
+		float: left;
+		width: 23%;
+	}
+	.guidedNavTwoCol .guidedNavContents {
+		float: right;
+		width: 75%;
+	}
+}
+
+/* one column */
+.guidedNavOneCol .sectionHeader, .guidedNavOneCol .guidedNavGroup, .guidedNavOneCol .navSection, .guidedNavOneCol .removeAllWrap, .guidedNavOneCol .guidedNavGroup, .guidedNavOneCol .guidedNavigationAttributes {
+	display: inline-block;
+}
+
+.guidedNavOneCol .navSection {
+	border-left: solid 1px #888;
+	margin-left: 6px;
+	padding-left: 8px;
+}
+
+	.guidedNavOneCol .navSection:first-child {
+		border-left: none 0px;
+		margin-left: 0px;
+		padding-left: 0px;
+	}
+
+.guidedNavOneCol .filterOptions .guidedNavBlock {
+	display: inline-block;
+	background: #eee;
+	padding: 4px;
+	margin: 4px;
+	border-radius: 4px;
+	border: solid 1px #ddd;
+	zoom: 1;
+}
+
+
+
+.guidedNavOneCol .allSelections, .guidedNavOneCol .guidedSearchBlock {
+	border-bottom: solid 1px #ddd;
+	padding-bottom: 8px;
+	margin-bottom: 8px;
+}
+
+.guidedNavOneCol .guidedNavHeader {
+	font-size: 1.2em;
+}
+
+
+/* end layout appconfig options */
+
+/* hide search box on older versions of AspDotNetStorefront */
+#content .search {
+	display: none;
+}
+
+.guidedNavContents .pagelink {
+	padding: 3px 10px;
+}    

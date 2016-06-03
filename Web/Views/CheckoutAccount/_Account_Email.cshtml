@@ -1,0 +1,40 @@
+﻿@model CheckoutAccountViewModel
+
+<div class="col-md-6">
+	@using(Html.BeginForm(
+		actionName: ActionNames.SetEmail,
+		controllerName: ControllerNames.CheckoutAccount,
+		method: FormMethod.Post,
+		htmlAttributes: new { @class = "form email-form" }))
+	{
+		<div class="form-group">
+			@Html.LabelEntryFor(m => m.Email)
+
+			<div class="input-group">
+				@Html.EditorFor(
+                    expression: m => m.Email,
+                    additionalViewData: new
+                    {
+                        htmlAttributes = new
+                        {
+                            @class = "form-control js-account-email",
+                            placeholder = "name@domain.com",
+
+                            autocomplete = "email"
+                        }
+                    })
+				<span class="input-group-btn">
+					<button class="btn btn-default save-email-button" type="submit">
+                        Save
+					</button>
+				</span>
+			</div>
+
+			@Html.ValidationMessageFor(m => m.Email)
+
+			<div class="form-description">
+                (For new and returning customers)
+			</div>
+		</div>
+	}
+</div>

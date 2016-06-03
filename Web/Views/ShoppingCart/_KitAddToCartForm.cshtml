@@ -1,0 +1,134 @@
+﻿@model KitAddToCartViewModel
+
+
+@using(Html.BeginForm(
+	actionName: ActionNames.KitAddToCart,
+	controllerName: ControllerNames.ShoppingCart,
+	method: FormMethod.Post,
+	htmlAttributes: new { @class = "kit-add-to-cart-form" }))
+{
+	@Html.HiddenFor(m => m.ProductId, new { id = string.Format("product-id-{0}", Model.VariantId) })
+	@Html.HiddenFor(m => m.VariantId, new { id = string.Format("variant-id-{0}", Model.VariantId) })
+	@Html.HiddenFor(m => m.CartRecordId, new { id = string.Format("cart-record-id-{0}", Model.VariantId) })
+	@Html.HiddenFor(m => m.UpsellProducts, new { id = string.Format("upsell-prodcut-ids-{0}", Model.VariantId) })
+	@Html.HiddenFor(m => m.ReturnUrl, new { id = string.Format("return-url-{0}", Model.VariantId) })
+	@Html.HiddenFor(m => m.IsWishlist, new { id = string.Format("is-wishlist-{0}", Model.VariantId), @class = "js-is-wishlist" })
+	@Html.HiddenFor(m => m.TemporaryImageNameStub, new { id = string.Format("temporary-image-stub-{0}", Model.VariantId), @class = "js-temporary-file-stub" })
+
+	<div class="row">
+		<div class="kit-options col-sm-8">
+			@if(Model.IsUnorderable)
+			{
+				<div class="alert alert-danger" role="alert">
+                    This kit contains one or more unorderable group(s). Please call to Order.
+				</div>
+			}
+
+			@Html.EditorForMany(
+				expression: model => Model.KitGroups,
+				templateName: "KitGroup",
+				fieldName: "KitGroups")
+		</div>
+		<div class="kit-cart-form col-sm-4">
+			<div class="panel panel-default">
+				<div class="panel-heading kit-panel-heading">
+					<label class="form-label">
+                        Summary
+					</label>
+				</div>
+				<div class="panel-body">
+					<div class="kit-summary js-kit-summary">
+						@Html.Partial(ViewNames.KitSummaryPartial, Model)
+					</div>
+
+					@if(Model.IsCallToOrder)
+					{
+						@Html.Partial("_CallToOrder")
+					}
+					else if(Model.ShowBuyButton && !Model.IsUnorderable)
+					{
+						<div class="js-add-to-cart-errors">
+							@* Javascript will display errors here *@
+						</div>
+						<div class="form-group">
+							@if(Model.ShowQuantity)
+							{
+								<span class="add-to-cart-quantity">
+									@Html.LabelFor(m => m.Quantity)
+									@if(Model.RestrictedQuantities.Any())
+									{
+										@Html.DropDownListFor(
+											expression: m => m.Quantity, 
+											selectList: Model.RestrictedQuantities,
+											htmlAttributes: new
+											{
+												@class = "form-control quantity-select js-kit-quantity",
+												id = string.Format("quantity-{0}", Model.VariantId)
+											});
+									}
+									else
+									{
+										@Html.EditorFor(
+											expression: m => m.Quantity,
+											additionalViewData: new
+											{
+												htmlAttributes = new
+												{
+													@class = "form-control quantity-field js-kit-quantity",
+													id = string.Format("quantity-{0}", Model.VariantId),
+													min = 0
+												}
+											})
+									}
+								</span>
+							}
+							@if(Model.CartRecordId > 0)
+							{
+								if(Model.CartType == CartTypeEnum.ShoppingCart)
+								{
+									<span class="kit-add-to-cart-button-wrap">
+										<button type="submit" class="btn btn-primary update-kit-item-button js-add-to-cart-button">
+                                            Update Item
+										</button>
+									</span>
+								}
+								else if(Model.ShowWishlistButton)
+								{
+									<span class="kit-add-to-cart-button-wrap">
+										<input type="submit" value="Update Item" class="btn btn-default add-to-wishlist js-wishlist-button" />
+									</span>
+								}
+							}
+							else
+							{
+								<span class="kit-add-to-cart-button-wrap">
+									<button type="submit" class="btn btn-primary js-add-to-cart-button">
+										Add to Cart
+									</button>
+								</span>
+								if(Model.ShowWishlistButton)
+								{
+									<span class="kit-add-to-cart-button-wrap">
+										<input type="submit" value="Add to Wishlist" class="btn btn-default add-to-wishlist js-wishlist-button" />
+									</span>
+								}
+							}
+						</div>
+						if(Model.PayPalAd != null && Model.PayPalAd.Show)
+						{
+							@Html.Raw(Model.PayPalAd.ImageScript)
+						}
+					}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="~/Scripts/kitProduct.js"></script>
+	<script type="text/javascript">
+		adnsf$.kitForm.initialize({
+			url: @Html.JavascriptString(Url.Action(ActionNames.AjaxGetKitData, ControllerNames.ShoppingCart)),
+			kitUploadUrl: @Html.JavascriptString(Url.Action(ActionNames.Detail, ControllerNames.KitUpload)),
+		});
+	</script>
+}

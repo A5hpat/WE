@@ -1,0 +1,16 @@
+﻿@model LoginLinksViewModel
+
+@if(Model.UserIsRegistered)
+{
+	<a href="@Url.Action(ActionNames.SignOut, ControllerNames.Account)" class="user-link log-out-link">
+		<i class="fa fa-sign-out"></i>
+		Logout
+	</a>
+}
+else
+{
+	<a href="@Url.Action(ActionNames.SignIn, ControllerNames.Account)" class="user-link log-in-link">
+		<i class="fa fa-sign-in"></i>
+        Login
+	</a>
+}

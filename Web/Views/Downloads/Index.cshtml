@@ -1,0 +1,167 @@
+﻿@model DownloadsViewModel
+
+<div class="page-wrap downloads-page">
+	<h4>Your Downloads</h4>
+
+	<div class="downloads-info">
+        Here are your downloads
+	</div>
+
+	<div class="downloads-wrap">
+
+		<ul id="pagetabs" class="tabbitTabs">
+			<li>
+				<a href="#available">
+                    Available
+				</a>
+			</li>
+			<li>
+				<a href="#pending">
+					Pending
+				</a>
+			</li>
+			<li>
+				<a href="#expired">
+                    Expired
+				</a>
+			</li>
+		</ul>
+		<div id="tabcontent" class="tabbitTabWrap">
+			<div id="available">
+				<div class="tabContentItem">
+					@if(!Model.Available.Any())
+                    {
+                        @String.Format("You have no available downloads.");
+
+                    }
+                    else
+                    {
+						<table class="table table-striped download-table">
+							<thead>
+								<tr>
+									<th>Id</th>
+									<th>Name</th>
+									<th>Category</th>
+									<th>Available Until</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach(var download in Model.Available)
+								{
+									<tr>
+										<td>@download.ShoppingCartRecordId</td>
+										<td>@download.Name</td>
+										<td>@download.Category</td>
+										<td>
+											@if(download.ExpiresOn != null)
+											{
+												@download.ExpiresOn
+}
+                                            else
+                                            {
+                                                @String.Format("Does not expire");
+
+                                            }
+										</td>
+										<td>
+											<a class="btn btn-primary download-button" href="@download.DownloadLocation">Download</a>
+										</td>
+									</tr>
+								}
+							</tbody>
+						</table>
+					}
+				</div>
+			</div>
+			<div id="pending">
+				<div class="tabContentItem">
+					@if(!Model.Pending.Any())
+					{
+						@String.Format("You have no pending downloads.");
+					}
+					else
+					{
+						<table class="table table-striped download-table">
+							<thead>
+								<tr>
+									<th>Id</th>
+									<th>Name</th>
+									<th>Category</th>
+									<th>Purchased On</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach(var download in Model.Pending)
+								{
+									<tr>
+										<td>@download.ShoppingCartRecordId</td>
+										<td>@download.Name</td>
+										<td>@download.Category</td>
+										<td>@download.PurchasedOn</td>
+									</tr>
+								}
+							</tbody>
+						</table>
+					}
+				</div>
+			</div>
+			<div id="expired">
+				<div class="tabContentItem">
+					@if(!Model.Expired.Any())
+					{
+						@String.Format("You have no expired downloads.")
+					}
+					else
+					{
+						<table class="table table-striped download-table">
+							<thead>
+								<tr>
+									<th>Id</th>
+									<th>Name</th>
+									<th>Category</th>
+									<th>Expired On</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach(var download in Model.Expired)
+								{
+									<tr>
+										<td>@download.ShoppingCartRecordId</td>
+										<td>@download.Name</td>
+										<td>@download.Category</td>
+										<td>@download.ExpiresOn</td>
+									</tr>
+								}
+							</tbody>
+						</table>
+					}
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="~/scripts/tabbit.js"></script>
+	</div>
+
+	@if(Model.RelatedProducts.Any())
+	{
+		<h4>
+            Related Products
+		</h4>
+
+		<div class="related-product-wrap">
+			@foreach(var relatedProduct in Model.RelatedProducts)
+			{
+				<div class="related-product">
+					<div class="product-image">
+						<img src="@relatedProduct.ImageUrl" />
+					</div>
+					<div class="product-name">
+						<a href="@relatedProduct.Url">@relatedProduct.Name</a>
+					</div>
+				</div>
+			}
+			<div class="clearfix"></div>
+		</div>
+	}
+</div>

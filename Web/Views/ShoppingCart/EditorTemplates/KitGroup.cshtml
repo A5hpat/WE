@@ -1,0 +1,259 @@
+﻿@model KitGroupViewModel
+@{
+	var namePrefix = Html.ViewData.TemplateInfo.HtmlFieldPrefix;
+}
+<div class="kit-group js-kit-group">
+	@Html.HiddenFor(model => model.Id)
+	<div class="panel panel-default">
+		<div class="panel-heading kit-panel-heading" role="tab" id="heading-@Model.Id">
+			<div class="panel-title">
+				<a class="@Html.AttributeBool(!string.IsNullOrWhiteSpace(Model.Description) || !string.IsNullOrWhiteSpace(Model.ImageUrl), "kit-panel-title-link")" role="button" data-toggle="collapse" href="#description-@Model.Id" aria-expanded="false" aria-controls="description-@Model.Id">
+					@if(!string.IsNullOrWhiteSpace(Model.Description)
+						|| !string.IsNullOrWhiteSpace(Model.ImageUrl))
+					{
+						<div class="kit-description-toggle">
+							<i class="fa fa-chevron-down expand-control"></i>
+							<i class="fa fa-chevron-up collapse-control"></i>
+						</div>
+					}
+					@if(Model.IsRequired)
+					{
+						<label class="form-label form-label-required">
+							<span class="form-label-prefix form-label-prefix-required">
+								label.requiredPrefix
+							</span>
+							<span class="form-label-wrap">@Model.Name</span>
+							<span class="form-label-suffix form-label-suffix-required">(required)</span>
+						</label>
+					}
+					else
+					{
+						<label class="form-label form-label-optional">
+							<span class="form-label-prefix form-label-prefix-optional">
+                                label.optionalPrefix
+							</span>
+							<span class="form-label-wrap">@Model.Name</span>
+							<span class="form-label-suffix form-label-suffix-optional">(optional)</span>
+						</label>
+					}
+					@if(!string.IsNullOrWhiteSpace(Model.Summary))
+					{
+						<span class="whats-this js-whats-this" data-content="@Model.Summary" data-placement="auto top" rel="popover">
+							<i class="fa fa-question-circle"></i>
+						</span>
+					}
+				</a>
+			</div>
+		</div>
+		<div class="panel-body">
+			@if(!string.IsNullOrWhiteSpace(Model.Description)
+				|| !string.IsNullOrWhiteSpace(Model.ImageUrl))
+			{
+				<div id="description-@Model.Id" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+					<div class="kit-group-description">@Html.Raw(Model.Description)</div>
+					@if(!string.IsNullOrWhiteSpace(Model.ImageUrl))
+					{
+						<div class="kit-group-image-wrap">
+							<img src="@Model.ImageUrl"
+								 class="kit-group-image img-responsive" />
+						</div>
+					}
+				</div>
+			}
+			@if(Model.IsReadOnly)
+			{
+				<ul class="read-only-kit-item-list">
+					@foreach(var item in Model.Items)
+					{
+						<li>
+							<span class="js-kit-name-display" data-kit-item-id="@item.Id">
+								@item.NameDisplay
+							</span>
+							@if(!string.IsNullOrEmpty(item.ImageUrl)
+								|| !string.IsNullOrWhiteSpace(Model.Description)
+								|| !string.IsNullOrEmpty(item.OutOfStockMessage))
+							{
+								<div class="kit-item-info clearfix">
+									@if(!string.IsNullOrEmpty(item.ImageUrl))
+									{
+										<div class="kit-item-image-wrap">
+											<img src="@item.ImageUrl"
+												 class="kit-item-image img-responsive" />
+										</div>
+									}
+									@if(!string.IsNullOrWhiteSpace(item.Description)
+										|| !string.IsNullOrEmpty(item.OutOfStockMessage))
+									{
+										<div class="kit-item-description">
+											@if(!string.IsNullOrWhiteSpace(item.Description))
+											{
+												<div class="kit-item-description">
+													@Html.Raw(item.Description)
+												</div>
+											}
+											@if(!string.IsNullOrEmpty(item.OutOfStockMessage))
+											{
+												<div class="stock-hint out-stock-hint kit-item-out-of-stock">
+													@Html.Raw(item.OutOfStockMessage)
+												</div>
+											}
+										</div>
+									}
+								</div>
+							}
+						</li>
+					}
+				</ul>
+			}
+			else
+			{
+				if(Model.KitGroupType == KitGroupData.SINGLE_SELECT_DROPDOWN_LIST)
+				{
+					var kitItemsList = Model.Items
+						.Select(item => new SelectListItem()
+						{
+							Text = item.NameDisplay,
+							Value = item.Id.ToString(),
+							Selected = item.IsSelected
+						});
+
+					<div class="form-group kit-form-group">
+						@Html.DropDownListFor(
+							expression: model => model.SelectedItemId,
+							selectList: kitItemsList,
+							htmlAttributes: new
+							{
+								@class = "form-control js-kit-select"
+							})
+					</div>
+
+					foreach(var item in Model.Items)
+					{
+						if(!string.IsNullOrEmpty(item.ImageUrl)
+							|| !string.IsNullOrWhiteSpace(item.Description)
+							|| !string.IsNullOrEmpty(item.OutOfStockMessage))
+						{
+							<div class="kit-item-info clearfix js-kit-item-info @Html.AttributeBool(!item.IsSelected, "off")" data-kit-item-id="@item.Id">
+								@if(!string.IsNullOrEmpty(item.ImageUrl))
+								{
+									<div class="kit-item-image-wrap">
+										<img src="@item.ImageUrl"
+											 class="kit-item-image img-responsive" />
+									</div>
+								}
+								@if(!string.IsNullOrWhiteSpace(item.Description)
+									|| !string.IsNullOrEmpty(item.OutOfStockMessage))
+								{
+									<div class="kit-item-description">
+										@if(!string.IsNullOrWhiteSpace(item.Description))
+										{
+											<div class="kit-item-description">
+												@Html.Raw(item.Description)
+											</div>
+										}
+										@if(!string.IsNullOrEmpty(item.OutOfStockMessage))
+										{
+											<div class="stock-hint out-stock-hint kit-item-out-of-stock">
+												@Html.Raw(item.OutOfStockMessage)
+											</div>
+										}
+									</div>
+								}
+							</div>
+
+						}
+					}
+				}
+
+				if(Model.KitGroupType == KitGroupData.SINGLE_SELECT_RADIO_LIST)
+				{
+					<div class="form-group kit-form-group">
+						@foreach(var item in Model.Items)
+						{
+							<div class="radio">
+								<label>
+									@Html.RadioButtonFor(
+										expression: model => model.SelectedItemId,
+										value: item.Id,
+										htmlAttributes: new
+										{
+											@class = "js-kit-radio"
+										})
+									<span class="js-kit-name-display" data-kit-item-id="@item.Id">
+										@item.NameDisplay
+									</span>
+								</label>
+								@if(!string.IsNullOrEmpty(item.ImageUrl)
+									|| !string.IsNullOrWhiteSpace(Model.Description)
+									|| !string.IsNullOrEmpty(item.OutOfStockMessage))
+								{
+									<div class="kit-item-info clearfix">
+										@if(!string.IsNullOrEmpty(item.ImageUrl))
+										{
+											<div class="kit-item-image-wrap">
+												<img src="@item.ImageUrl"
+													 class="kit-item-image img-responsive" />
+											</div>
+										}
+										@if(!string.IsNullOrWhiteSpace(item.Description)
+											|| !string.IsNullOrEmpty(item.OutOfStockMessage))
+										{
+											<div class="kit-item-description">
+												@if(!string.IsNullOrWhiteSpace(item.Description))
+												{
+													<div class="kit-item-description">
+														@Html.Raw(item.Description)
+													</div>
+												}
+												@if(!string.IsNullOrEmpty(item.OutOfStockMessage))
+												{
+													<div class="stock-hint out-stock-hint kit-item-out-of-stock">
+														@Html.Raw(item.OutOfStockMessage)
+													</div>
+												}
+											</div>
+										}
+									</div>
+								}
+							</div>
+						}
+					</div>
+				}
+
+				if(Model.KitGroupType == KitGroupData.MULTI_SELECT_CHECKBOX_LIST)
+				{
+					<div class="form-group kit-form-group">
+						@Html.EditorForMany(
+							expression: model => Model.Items,
+							templateName: "KitItemMultiSelectCheckbox",
+							fieldName: "Items")
+					</div>
+				}
+
+				if(Model.KitGroupType == KitGroupData.TEXT_OPTION)
+				{
+					@Html.EditorForMany(
+						expression: model => Model.Items,
+						templateName: "KitItemTextOption",
+						fieldName: "Items")
+				}
+
+				if(Model.KitGroupType == KitGroupData.TEXT_AREA)
+				{
+					@Html.EditorForMany(
+						expression: model => Model.Items,
+						templateName: "KitItemTextArea",
+						fieldName: "Items")
+				}
+
+				if(Model.KitGroupType == KitGroupData.FILE_OPTION)
+				{
+					@Html.EditorForMany(
+						expression: model => Model.Items,
+						templateName: "KitItemFileUpload",
+						fieldName: "Items")
+				}
+			}
+		</div>
+	</div>
+</div>

@@ -1,0 +1,36 @@
+﻿@model ContactUsRenderModel
+
+<div class="page-wrap contact-us-page">
+	<h1>
+		@Model.PageHeader
+	</h1>
+
+	<div class="page-row">
+		@Html.Topic("contact")
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			@using(Html.BeginForm())
+			{
+				<div class="form contact-form">
+					@Html.EditorEntryFor(m => m.From)
+					@Html.EditorEntryFor(m => m.Phone)
+					@Html.EditorEntryFor(m => m.Email)
+					@Html.EditorEntryFor(m => m.Subject)
+					@Html.EditorEntryFor(m => m.Message)
+
+					@if(Model.UseCaptcha)
+				{
+						@Html.CaptchaEntryFor(
+						expression: m => m.CaptchaCode,
+						scope: string.Concat(ControllerNames.ContactUs, ActionNames.Index))
+				}
+
+					<div class="page-action-bar contact-us-actions">
+						<input type="submit" class="btn btn-primary submit-contact-button" value="Submit" />
+					</div>
+				</div>
+			}
+		</div>
+	</div>
+</div>

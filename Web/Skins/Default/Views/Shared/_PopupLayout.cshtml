@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	@Html.Partial("_Head")
+</head>
+<body id="popup-body">
+	@Html.Partial("_BodyOpen")
+
+	<!-- Contents start -->
+	@RenderBody()
+	<!-- Contents end -->
+
+	@Html.Partial("_BodyClose")
+</body>
+</html>
